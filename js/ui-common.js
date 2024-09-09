@@ -93,17 +93,33 @@
 
 
 
+// window.addEventListener('load', function() {
+//     var allElements = document.getElementsByTagName('*');
+//     Array.prototype.forEach.call(allElements, function(el) {
+//         var includePath = el.dataset.includePath;
+//         if (includePath) {
+//             var xhttp = new XMLHttpRequest();
+//             xhttp.onreadystatechange = function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             el.outerHTML = this.responseText;
+//         }
+//             };
+//             xhttp.open('GET', includePath, true);
+//             xhttp.send();
+//         }
+//     });
+// });
+
 
 $(document).ready(function() {
-    // 헤더 로드
-    $("*[data-include-path]")
-    var compChk = $("*[data-include-path]").each(function(){
-        console.log($(this).attr("data-include-path"));
-        var compFile = $(this).attr("data-include-path")
-        $(this).load(compFile)
-    })
+    // 공통파일 로드
+    // $("*[data-include-path]")
+    // var compChk = $("*[data-include-path]").each(function(){
+    //     console.log($(this).attr("data-include-path"));
+    //     var compFile = $(this).attr("data-include-path")
+    //     $(this).load(compFile)
+    // })
 
-    // // 
 
     // 인트로 처리
     $('.main_con').addClass('play')
@@ -114,6 +130,8 @@ $(document).ready(function() {
         $('.intro_wrap').addClass('end');
         $('.main_con').addClass('end');
     }, 2000);
+
+    
 });
 
 
@@ -168,7 +186,7 @@ $(".dr_wrap").hover(function(){
 
 // 메인 스크롤 fade
 // 스크롤 체크할 객체
-const maminScrEl = document.querySelectorAll(".scr_chk")
+let maminScrEl = document.querySelectorAll(".scr_chk")
 // 영역설정 
 const option = {
     rootMargin: '0px'
@@ -178,11 +196,9 @@ const mainScrEfect = (entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
         // 영역 벗어남
-        // console.log('out', entry.target)
         entry.target.classList.remove('active')
     } else {
         // 영역안으로 들어옴
-        // console.log('in',entry.target)
         entry.target.classList.add('active')
     }
   });

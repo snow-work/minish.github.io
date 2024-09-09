@@ -353,8 +353,7 @@ gnb 200
 .sns_fixed_con.open .btn_wrap button {
 	transform: rotate(45deg);
 }
-.sns_fixed_con.open {}
-.sns_fixed_con.open {}
+
 
 /* 공통 - 지도 */
 .footer_top {
@@ -364,19 +363,23 @@ gnb 200
 }
 .footer_top .wrap {
 	display: flex;
-	max-width: 165rem;
+	max-width: 167rem;
     width: 100%;
 	padding-top: 7.4rem;
     justify-content: space-between;
 }
 .footer_top .info_wrap {
-	padding: 0 1rem;
+	padding: 0 3rem;
 }
 .footer_top .info_wrap .tit {
 	font-family: 'AmstelvarAlpha';
 	font-size: 3rem;
 	letter-spacing: -0.1rem;
 	color:#AA9B7A;
+}
+.footer_top .location_wrap {
+	opacity: 0;
+	transform: translateY(20rem);
 }
 .footer_top .location_wrap .addr {
     margin-top: 2.6rem;
@@ -400,6 +403,8 @@ gnb 200
 }
 .footer_top .time_wrap {
     margin-top: 5.2rem;
+	opacity: 0;
+	transform: translateY(20rem);
 }
 .footer_top .time_wrap ul {
 	margin-top: 3.4rem;
@@ -427,17 +432,32 @@ gnb 200
 	max-width: 107.2rem;
     width: 65%;
     height: 52.6rem;
+	opacity: 0;
+	transform: translateY(20rem);
 }
-.footer_top .map_wrap {}
-
+.footer_top.active .location_wrap {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s;
+}
+.footer_top.active .time_wrap {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s 0.3s;
+}
+.footer_top.active .map_wrap {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 0.6s;
+}
 
 /* 공통 - 푸터 */
 .footer_bottom {
 	background-color: #A8B9C3;
 }
 .footer_bottom .wrap {
-	max-width: 160rem;
-	padding: 3.7rem 1rem 2.5rem;
+	max-width: 164rem;
+	padding: 3.7rem 3rem 2.5rem;
 	margin: 0 auto;
 }
 .footer_bottom ul {
