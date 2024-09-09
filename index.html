@@ -21,13 +21,12 @@
 <body>
 	 <div class="page_wrap main">
 		<!-- 헤더 공통 start -->
-		 <div id="header" data-include-html="../component/header.html">
-		<!-- @@include('./component/deal_product_collection.html') -->
-
-		 </div>
+		<div id="header" data-include-path="./html/component/header.html">
+			<!-- /html/component/header.html 내용 삽입 -->
+		</div>
 		<!-- 헤더 공통 end -->
 
-		<!-- 메인페이지 -->
+		<!-- 메인 start -->
 		<div id="content" class="main_con">
 			<div class="main_visual_wrap">
 				<div class="intro_wrap">
@@ -271,10 +270,15 @@
 				</div>
 			</div>
 		</div>
+		<!-- 메인 end -->
 
 		<!-- 하단 공통 start -->
-		<div id="btn_float"></div>		
-		<div id="footer"></div>
+		<div id="btn_float" data-include-path="./html/component/btn_float.html">
+			<!-- /html/component/btn_float.html 내용 삽입 -->
+		</div>
+		<div id="footer" data-include-path="./html/component/footer.html">
+			<!-- /html/component/footer.html 내용 삽입 -->
+		</div>
 		<!-- 하단 공통 end -->
 
 	</div>
