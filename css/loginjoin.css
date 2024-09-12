@@ -1,0 +1,80 @@
+.join_con {
+    padding: 28.2rem 1rem 0;
+    background-color: #F8F6F0;
+}
+.join_page_con {
+    max-width: 142rem;
+    padding: 10rem 2rem 0;
+    margin:0 auto;
+    background-color: #fff;
+    border-radius: 1.2rem;
+}
+.join_page_con .wrap {
+    max-width: 98rem;
+    margin:0 auto;
+}
+
+.join_page_con .ui_textarea {
+    height: 22rem;
+}
+
+.page_title.type01 {
+    /* margin-top: 28.2rem; */
+    margin-bottom: 10rem;
+}
+.page_title.type01 p {
+    margin-bottom: 3rem;
+}
+
+.join_tab {
+    display: flex;
+    max-width: 98rem;
+    justify-content: space-around;
+}
+.join_tab li {
+    width: 32%;
+    /* height: 20rem; */
+    padding: 5.7rem 2rem 6.7rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    color: #433a34;
+    background-color: rgba(211,209,180,0.2);
+}
+.join_tab .on {
+    background-color: #888;
+    color: #fff;
+}
+.join_tab span {
+    font-family: "AmstelvarAlpha";
+    font-size: 1.8rem;
+}
+.join_tab p {
+    margin-top: 2.8rem;
+    font-size: 2.2rem;
+}
+
+.step01_txt {
+    margin-top: 10rem;
+    margin-bottom: 14.8rem;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 3rem;
+    color: #888;
+}
+
+.join_stpe01 .input_box .input_tit {
+    margin-bottom: 3rem;
+}
+.join_stpe01 .input_box .ui_radio_set {
+    text-align: right;
+    margin-top: 1.2rem;
+}
+.join_stpe01 .input_box~.input_box {
+    margin-top: 6rem;
+}
+
+.join_stpe01 .join_info {
+    padding: 3.2rem 63.9rem 2.5rem 3.9rem;
+    color:#433A34;
+    background-color: rgba(186,183,194,0.2);
+}

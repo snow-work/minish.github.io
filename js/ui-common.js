@@ -112,15 +112,6 @@
 
 
 $(document).ready(function() {
-    // 공통파일 로드
-    // $("*[data-include-path]")
-    // var compChk = $("*[data-include-path]").each(function(){
-    //     console.log($(this).attr("data-include-path"));
-    //     var compFile = $(this).attr("data-include-path")
-    //     $(this).load(compFile)
-    // })
-
-
     // 인트로 처리
     $('.main_con').addClass('play')
     setTimeout(() => {
@@ -131,7 +122,10 @@ $(document).ready(function() {
         $('.main_con').addClass('end');
     }, 2000);
 
-    
+    // 로그인, 회원가입, 인재채용 검은헤더
+    if($(".page_wrap").hasClass("join")||$(".page_wrap").hasClass("login")){
+        $('.header_con .top_wrap').addClass("black")
+    }
 });
 
 
@@ -186,7 +180,7 @@ $(".dr_wrap").hover(function(){
 
 // 메인 스크롤 fade
 // 스크롤 체크할 객체
-let maminScrEl = document.querySelectorAll(".scr_chk")
+const maminScrEl = document.querySelectorAll(".scr_chk")
 // 영역설정 
 const option = {
     rootMargin: '0px'
@@ -207,31 +201,74 @@ const observer = new IntersectionObserver(mainScrEfect, option);
 maminScrEl.forEach(scr => observer.observe(scr));
 
 
+let lastScr = 0;
 document.addEventListener("scroll", (e) => {
-    if($(document).width()>768){
-        // oao 텍스트 fiexd 범위 
-        let startPoint= $('.chk_point01').offset().top;
-        let endPoint= $('.chk_point02').offset().top;
-        let nowScr = window.scrollY+window.innerHeight/2;
-        // 현 스크롤 위치가 범위 안이면 fiexd 처리
-        if(startPoint<=nowScr&&endPoint>=nowScr){
-            // 범위 내 fiexd
-            $(".main_oao_con .txt_wrap").addClass('fixed')
-        }else{
-            // 범위 밖, fixed 삭제
-            $(".main_oao_con .txt_wrap").removeClass('fixed')
-            // 타이틀 위치 지정
-            if(startPoint>=nowScr){
-                // 위로 스크롤 되었을 때
-                $(".main_oao_con .txt_wrap").removeClass('bottom')
+    // oao 텍스트, 이미지 fixed
+    if($(".main_oao_con").length>0){
+        // PC에서만
+        if($(document).width()>768){
+            // oao fiexd 범위 
+            let titStartPoint= $('.scr_chk_point.point01').offset().top;
+            let titEndPoint= $('.scr_chk_point.point02').offset().top;
+            // let nowScr = window.scrollY+window.innerHeight/2;
+            let imgStartPoint= $('.scr_chk_point.point03').offset().top;
+            let imgEndPoint= $('.scr_chk_point.point04').offset().top;
+            let nowScr = window.scrollY+window.innerHeight/2;
+        //    console.log(imgStartPoint, imgEndPoint)
+            // 타이틀 고정 처리
+            if(titStartPoint<=nowScr&&titEndPoint>=nowScr){
+                // 범위 내 fiexd  
+                $(".main_oao_con .txt_wrap").addClass('fixed')
             }else{
-                $(".main_oao_con .txt_wrap").addClass('bottom')
+                // 범위 밖, fixed 삭제
+                $(".main_oao_con .txt_wrap").removeClass('fixed')
+                // 타이틀 위치 지정
+                if(imgStartPoint>=nowScr){
+                    // 위로 스크롤 되었을 때
+                    $(".main_oao_con .txt_wrap").removeClass('bottom')
+                }else{
+                    $(".main_oao_con .txt_wrap").addClass('bottom')
+                }
             }
+            // 이미지 고정 처리
+            if(imgStartPoint<=nowScr&&imgEndPoint>=nowScr){
+                console.log("인")
+                // 범위 내 fiexd// 범위 내 fiexd
+                $(".main_oao_con .img_04").addClass('fixed')
+            }else{
+                // 범위 밖, fixed 삭제
+                $(".main_oao_con .img_04").removeClass('fixed')
+                // 타이틀 위치 지정
+                if(titStartPoint>=nowScr){
+                    // 위로 스크롤 되었을 때
+                    $(".main_oao_con .img_04").removeClass('bottom')
+                }else{
+                    $(".main_oao_con .img_04").addClass('bottom')
+                }
+            }
+        }else{
+            $(".main_oao_con .txt_wrap").removeClass('fixed')
+            $(".main_oao_con .img_04").removeClass('fixed')
         }
-    }else{
-        $(".main_oao_con .txt_wrap").removeClass('fixed')
     }
-
+    
+    let currScr = window.scrollY;
+    // 스크롤시 헤더 픽스
+    if(window.scrollY>0){
+        $(".top_wrap").addClass("fixed");
+        // 스크롤 올리면 나타남
+        if (lastScr > currScr){
+            $(".top_wrap").addClass("down");
+        }else{
+            $(".top_wrap").removeClass("down");
+        }
+        // 스크롤 내리면 사라짐
+    }else{
+        // 스크롤 0일때 픽스 풂}
+        console.log("0")
+        $(".top_wrap").removeClass("fixed");
+    }
+    lastScr = currScr;
 })
 
 
