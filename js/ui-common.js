@@ -153,6 +153,13 @@ $(".gnb_list strong").click(function(){
     }
 })
 
+$(window).resize(function(){
+    // 모바일에서 태블릿으로 넘어갈때 아코디언 처리 해제
+    if($(document).width()>768){
+        $(".gnb_list ul").attr("style","");
+    }
+})
+
 
 // 하단 sns 버튼
 $(".sns_fixed_con button").click(function(){
@@ -167,7 +174,6 @@ $(".notice_wrap button").click(function(){
 
 
 // 의사 마우스오버 이벤트
-// $(".main_dr_con").hover()
 $(".dr_wrap").hover(function(){
     if($(document).width()>768){
         $(".dr_wrap").toggleClass('off');
@@ -175,8 +181,6 @@ $(".dr_wrap").hover(function(){
         $(this).toggleClass('on');
     }
 })
-
-
 
 // 메인 스크롤 fade
 // 스크롤 체크할 객체
@@ -214,7 +218,7 @@ document.addEventListener("scroll", (e) => {
             let imgStartPoint= $('.scr_chk_point.point03').offset().top;
             let imgEndPoint= $('.scr_chk_point.point04').offset().top;
             let nowScr = window.scrollY+window.innerHeight/2;
-        //    console.log(imgStartPoint, imgEndPoint)
+            //  console.log(imgStartPoint, imgEndPoint)
             // 타이틀 고정 처리
             if(titStartPoint<=nowScr&&titEndPoint>=nowScr){
                 // 범위 내 fiexd  
@@ -235,11 +239,12 @@ document.addEventListener("scroll", (e) => {
                 console.log("인")
                 // 범위 내 fiexd// 범위 내 fiexd
                 $(".main_oao_con .img_04").addClass('fixed')
+                $(".main_oao_con .img_04").removeClass('bottom')
             }else{
                 // 범위 밖, fixed 삭제
                 $(".main_oao_con .img_04").removeClass('fixed')
                 // 타이틀 위치 지정
-                if(titStartPoint>=nowScr){
+                if(imgStartPoint>=nowScr){
                     // 위로 스크롤 되었을 때
                     $(".main_oao_con .img_04").removeClass('bottom')
                 }else{
@@ -249,6 +254,7 @@ document.addEventListener("scroll", (e) => {
         }else{
             $(".main_oao_con .txt_wrap").removeClass('fixed')
             $(".main_oao_con .img_04").removeClass('fixed')
+            $(".main_oao_con .img_04").removeClass('bottom')
         }
     }
     
@@ -272,9 +278,11 @@ document.addEventListener("scroll", (e) => {
 })
 
 
-$(window).resize(function(){
-    // console.log($(window).width(), $(document).width())
-    if($(document).width()>768){
-        $(".gnb_list ul").attr("style","");
+// 회원가입 전체동의
+$(".btn_chk_all input").change(function(){
+    if($(this).is(':checked')){
+        $(".join_stpe01 .join_terms input[value='agree']").prop('checked',true)
+    }else{
+        $(".join_stpe01 .join_terms input[value='agree']").prop('checked',false)
     }
 })

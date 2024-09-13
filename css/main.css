@@ -191,7 +191,7 @@
 	top:calc(50% - 20rem);
 }
 .main_oao_con .scr_chk_point {
-	/* visibility: hidden; */
+	visibility: hidden;
 	position: absolute;
 	left: 80%;
 }
@@ -202,10 +202,10 @@
 	bottom: 24vw;
 }
 .main_oao_con .scr_chk_point.point03 {
-	top: 43rem;
+	top: 57rem;
 }
 .main_oao_con .scr_chk_point.point04 {
-	top: 27rem;
+	top: 52rem;
 }
 .main_oao_con .txt_wrap .sub_tit {
 	font-size: 2rem;
@@ -250,6 +250,7 @@
 }
 .main_oao_con .oao_wrap {
 	display: flex;
+	position: relative;
 	height: calc(31.36vw + 30.3rem);
     justify-content: space-between;
 }
@@ -270,13 +271,15 @@
 }
 .main_oao_con .img_04.fixed {
 	position: fixed;
-	top: calc(50% - 20rem);
+	top: calc(50% - 30rem);
 	right: 5rem;
+	width: 29%;
 	margin-top: 0;
 }
-.main_oao_con .img_06 {
-	/* visibility: hidden; */
+.main_oao_con .img_04.bottom {
+	top: calc(31.36vw + 47.3rem);
 }
+
 .main_oao_con .img_wrap a {
     display: block;
     overflow: hidden;

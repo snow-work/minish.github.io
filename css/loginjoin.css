@@ -1,10 +1,10 @@
 .join_con {
-    padding: 28.2rem 1rem 0;
+    padding: 28.2rem 1rem 20rem;
     background-color: #F8F6F0;
 }
 .join_page_con {
     max-width: 142rem;
-    padding: 10rem 2rem 0;
+    padding: 10rem 2rem 13rem;
     margin:0 auto;
     background-color: #fff;
     border-radius: 1.2rem;
@@ -72,9 +72,51 @@
 .join_stpe01 .input_box~.input_box {
     margin-top: 6rem;
 }
+.join_stpe01 .btn_chk_all input {
+	display: none;
+}
+
+.join_stpe01 .btn_chk_all {
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+}
+.join_stpe01 .btn_chk_all p {
+	position: relative;
+    display: flex;
+    height: 4.6rem;
+    justify-content: center;
+    align-items: center;
+	font-size: 2rem;
+    border-radius: 0.6rem;
+	color:#fff;
+    background-color: #A2B3BE;
+}
+.join_stpe01 .btn_chk_all p::before {
+	content: '';
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+    margin-right: 1rem;
+	background-image: url(../images/icon_ui_radio.svg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+.join_stpe01 input:checked + p::before {
+	background-image: url(../images/icon_ui_radio_chk.svg);
+}
+
 
 .join_stpe01 .join_info {
-    padding: 3.2rem 63.9rem 2.5rem 3.9rem;
+    padding: 3.2rem 3.9rem 3.5rem;
     color:#433A34;
-    background-color: rgba(186,183,194,0.2);
+    background-color: rgba(166,183,194,0.2);
+}
+.join_stpe01 .join_info b {
+    font-size: 2.2rem;
+}
+.join_stpe01 .join_info p {
+    margin-top: 3.3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    border-radius: 1.2rem;
 }
