@@ -45,6 +45,11 @@
     font-size: 2.2rem;
     font-weight: 500;
 }
+.join_stpe02 .join_tab,
+.join_stpe03 .join_tab {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(166,183,194,0.5);
+}
 
 .step01_txt {
     margin-top: 10rem;
@@ -116,10 +121,24 @@
     line-height: 2rem;
     letter-spacing: -0.03rem;
 }
+
+
+.step03_txt {
+    margin-top: 5rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #433a34;
+}
+.step03_txt img {
+    width: 2rem;
+    margin-bottom: 1.5rem;
+}
+
 /* 모바일 */
 @media screen and (max-width:768px) {
     .join_con {
-        padding: 13rem 1.5rem 10rem;
+        padding: 13rem 1.5rem 0;
     }
     .join_page_con {
         margin-top: 5rem;
@@ -193,5 +212,14 @@
         margin-top: 2rem;
         font-size: 1.2rem;
         line-height: 1.8rem;
+    }
+
+    
+    .step03_txt {
+        margin-top: 10rem;
+        font-size: 1.8rem;
+    }
+    .step03_txt img {
+        width: 2.4rem;
     }
  }
