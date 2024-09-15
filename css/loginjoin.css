@@ -5,7 +5,7 @@
 .join_page_con {
     max-width: 142rem;
     padding: 10rem 2rem 13rem;
-    margin:0 auto;
+    margin: 10rem auto 0;
     background-color: #fff;
     border-radius: 1.2rem;
 }
@@ -16,14 +16,6 @@
 
 .join_page_con .ui_textarea {
     height: 22rem;
-}
-
-.page_title.type01 {
-    /* margin-top: 28.2rem; */
-    margin-bottom: 10rem;
-}
-.page_title.type01 p {
-    margin-bottom: 3rem;
 }
 
 .join_tab {
@@ -40,7 +32,7 @@
     color: #433a34;
     background-color: rgba(211,209,180,0.2);
 }
-.join_tab .on {
+.join_tab li.on {
     background-color: #888;
     color: #fff;
 }
@@ -51,14 +43,16 @@
 .join_tab p {
     margin-top: 2.8rem;
     font-size: 2.2rem;
+    font-weight: 500;
 }
 
 .step01_txt {
     margin-top: 10rem;
-    margin-bottom: 14.8rem;
+    margin-bottom: 15rem;
     font-size: 1.8rem;
     text-align: center;
     line-height: 3rem;
+    letter-spacing: -0.025rem;
     color: #888;
 }
 
@@ -107,16 +101,97 @@
 
 
 .join_stpe01 .join_info {
-    padding: 3.2rem 3.9rem 3.5rem;
+    padding: 3rem 3.9rem 3.5rem;
+    border-radius: 1.2rem;
     color:#433A34;
     background-color: rgba(166,183,194,0.2);
 }
 .join_stpe01 .join_info b {
     font-size: 2.2rem;
+    letter-spacing: -0.03rem;
 }
 .join_stpe01 .join_info p {
-    margin-top: 3.3rem;
+    margin-top: 3rem;
     font-size: 1.5rem;
     line-height: 2rem;
-    border-radius: 1.2rem;
+    letter-spacing: -0.03rem;
 }
+/* 모바일 */
+@media screen and (max-width:768px) {
+    .join_con {
+        padding: 13rem 1.5rem 10rem;
+    }
+    .join_page_con {
+        margin-top: 5rem;
+        padding: 1.3rem 1.3rem 10rem;
+    }
+    .join_page_con .ui_textarea {
+        height: 26rem;
+    }
+
+    .join_tab {
+        display: block;
+    }
+    .join_tab li {
+        width: 100%;
+        padding: 1.8rem 3rem;
+        border-radius: 0.6rem;
+        text-align: left;
+    }
+    .join_tab li~li {
+        margin-top: 0.8rem;
+    }
+    .join_tab span {
+        display: inline-block;
+        width: 6.4rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    .join_tab p {
+        display: inline-block;
+        margin-top: 0;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .join_tab li.on {
+        box-shadow:inset 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
+    }
+    .step01_txt {
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    .join_stpe01 .input_box~.input_box {
+        margin-top: 4rem;
+    }
+    .join_stpe01 .input_box .input_tit {
+        margin-bottom: 1rem;
+    }
+    .join_stpe01 .input_box .ui_radio_set {
+        margin-top: 1rem;
+    }
+    .join_stpe01 .btn_chk_all {
+        margin: 4rem 0;
+    }
+    .join_stpe01 .btn_chk_all p {
+        height: 4.8rem;;
+        font-size: 1.6rem;
+    }
+    .join_stpe01 .btn_chk_all p::before {
+        margin-right:2.1rem;
+    }
+    .join_stpe01 .join_info {
+        padding: 2rem 1.5rem;
+        border-radius: 0.6rem;
+    }
+    .join_stpe01 .join_info b {
+        font-size: 1.6rem;
+    }
+    .join_stpe01 .join_info p {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+ }

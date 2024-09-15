@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta property="og:type" content="website"> -->
+	<!-- <meta property="og:image" content="../../images/og_img.png"> -->
+	<title>MINISH</title>
+
+	<script src="../../js/swiper-bundle.min.js"></script>
+	<script src="../../js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="../../js/ui-common.js" defer ></script>
+	
+	<link href="../../css/common.css" rel="stylesheet" type="text/css">
+	<link href="../../css/loginjoin.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+
+<body>
+	 <div class="page_wrap join">
+		<!-- 헤더 공통 start -->
+		<div id="header">
+			<div class="header_con">
+				<div class="top_wrap">
+					<h1 class="top_logo">
+						<a href="../../index.html" title="헤더 로고">
+						</a>
+					</h1>
+					<div class="top_tnb">
+						<p>More +</p>
+						<ul>
+							<li>
+								<a href="">신념 & 비전</a>
+							</li>
+							<li>
+								<a href="">의료진</a>
+							</li>
+							<li>
+								<a href="">위치 및 진료</a>
+							</li>
+							<li>
+								<a href="">공간 안내</a>
+							</li>
+						</ul>
+					</div>
+					<div class="top_addr">
+						<p>서울시 서초구 사평대로 373 삼흥빌딩 2층</p>
+					</div>
+					<div class="top_menu">
+						<button class="gnb_open"></button>
+					</div>
+				</div>
+				<div class="gnb_wrap">
+					<div class="gnb_top">
+						<div class="wrap">
+							<div class="gnb_logo"></div>
+							<!-- 비로그인 start -->
+							<ul class="gnb_guest">
+								<li>
+									<a href="../../html/login/login.html">로그인</a>
+								</li>
+								<li>
+									<a href="../../html/join/join.html">회원가입</a>
+								</li>
+							</ul>
+							<!-- 비로그인 end -->
+							<!-- 로그인 start -->
+							<!-- <div class="gnb_member">
+								<img src="../../images/gnb_member_img_sample.png" alt="">
+								<p>
+									<span class="name">최혜진</span>고객님
+								</p>
+							</div> -->
+							<!-- 로그인 end -->
+							<button class="gnb_close">
+								<img src="../../images/header_icon_close.svg" alt="">
+							</button>
+						</div>
+					</div>
+					<div class="gnb_bot">
+						<div class="wrap">
+							<ul class="gnb_list">
+								<li>
+									<strong>병원 소개</strong>
+									<ul>
+										<li><a href="">신념 & 비전</a></li>
+										<li><a href="">의료진</a></li>
+										<li><a href="">위치 및 진료</a></li>
+										<li><a href="">공간 안내</a></li>
+									</ul>
+								</li>
+								<li>
+									<strong>미니쉬</strong>
+									<ul>
+										<li><a href="">미니쉬</a></li>
+										<li><a href="">미니쉬타입</a></li>
+										<li><a href="">미니쉬 제작 과정</a></li>
+										<li><a href="">Before & After</a></li>
+										<li><a href="">미니쉬 정품 인증</a></li>
+									</ul>
+								</li>
+								<li>
+									<strong>진료과목</strong>
+									<ul>
+										<li><a href="">전체 보기</a></li>
+										<li><a href="">심미 클리닉</a></li>
+										<li><a href="">미백 클리닉</a></li>
+										<li><a href="">충치 클리닉</a></li>
+										<li><a href="">잇몸 클리닉</a></li>
+									</ul>
+								</li>
+								<li>
+									<strong>미디어</strong>
+									<ul>
+										<li><a href="">공지사항/ 새로운소식</a></li>
+										<li><a href="">리얼 후기</a></li>
+										<li><a href="">미니쉬 유튜브</a></li>
+										<li><a href="">인재 채용</a></li>
+									</ul>
+								</li>
+								<li>
+									<strong>상담/예약</strong>
+									<ul>
+										<li><a href="">상담 신청/예약</a></li>
+										<li><a href="">모델 지원</a></li>
+									</ul>
+								</li>
+							</ul>
+							<div class="gnb_img">
+								<img src="../../images/gnb_img.png" alt="">
+							</div>
+						</div>
+						<div class="login_wrap">
+							
+						</div>
+					</div>
+					
+			
+				</div>
+			</div>
+		</div>
+		<!-- 헤더 공통 end -->
+
+		<!-- 회원가입페이지 -->
+		<div id="content" class="join_con join_stpe01">
+			<div class="page_title type01">
+				<p>강남 미니쉬치과의원</p>
+				<h2>회원가입</h2>
+			</div>
+			<div class="join_page_con">
+				<div class="wrap">
+					<ul class="join_tab">
+						<li class="on">
+							<span>STEP 1</span>
+							<p>약관 동의</p>
+						</li>
+						<li>
+							<span>STEP 2</span>
+							<p>회원 정보 입력</p>
+						</li>
+						<li>
+							<span>STEP 3</span>
+							<p>회원가입 완료</p>
+						</li>
+					</ul>
+					<p class="step01_txt">강남 미니쉬치과의원은 회원 가입에 필요한 <br class="ver_mo">최소한의 개인정보만을 취득하며,<br>
+						수집된 정보는 홈페이지 회원 관리를 <br class="ver_mo">위한 용도로 사용합니다.<br><br>
+						
+						‘서비스 이용 및 개인정보 수집 · 이용’에 대한 안내를 <br class="ver_mo">반드시 읽고 동의해주시기 바랍니다.</p>
+					<div class="join_terms">
+						<div class="input_box">
+							<p class="input_tit">이용 약관<span>[ 필수 ]</span></p>
+							<div class="ui_textarea">
+								<textarea name="" readonly>
+[강남 미니쉬치과의원 온라인 회원 약관]
+
+이용약관 (동의 필수)
+
+제 1장 총칙
+
+제1조 (목 적)
+이 서비스 약관은 회원이 미니쉬치과병원(이하 "병원")에서 제공하는 서비스(이하 "서비스")신청을 이용함에 있어 회원과 병원간의 권리,의무 및 책임사항, 이용조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.&#13;&#10;
+								</textarea>
+							</div>							
+							<div class="ui_radio_set">
+								<label class="ui_radio">
+									<input type="radio" name="join_terms01" value="agree">
+									<span>동의합니다</span>
+								</label>
+								<label class="ui_radio">
+									<input type="radio" name="join_terms01" value="">
+									<span>동의하지 않습니다</span>
+								</label>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">개인정보의 수집 및 이용목적<span>[ 필수 ]</span></p>
+							<div class="ui_textarea">
+								<textarea name="" readonly>
+강남 미니쉬치과의원은 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+
+이용자가 제공한 모든 정보는 하기 목적에 필요한 용도 이외로는 사용되지 않으며 이용 목적이 변경될 시에는 사전 동의를 구할 것입니다.
+
+• 진단 및 치료를 위한 진료서비스 제공
+• 진료비 청구, 수납, 환급 등 진료지원을 위한 자료
+• 제증명서 발송, 검진 관련 물품 발송
+• 교육, 연구, 진료서비스에 필요한 최소한의 분석 자료
+								</textarea>
+							</div>							
+							<div class="ui_radio_set">
+								<label class="ui_radio">
+									<input type="radio" name="join_terms02" value="agree">
+									<span>동의합니다</span>
+								</label>
+								<label class="ui_radio">
+									<input type="radio" name="join_terms02" value="">
+									<span>동의하지 않습니다</span>
+								</label>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">개인정보의 수집 및 이용목적<span>[ 필수 ]</span></p>
+							<div class="ui_textarea">
+								<textarea name="" readonly>
+강남 미니쉬치과의원은 회원가입 시 서비스 이용을 위해 필요한 최소한의 개인정보만을 수집합니다.
+
+강남 미니쉬치과의원의 개인정보 수집항목은 아래와 같습니다. 필수항목과 선택항목이 있는데,
+선택항목은 입력하지 않더라도 서비스 이용에는 제한이 없습니다.
+
+일반 회원 가입
+
+• 필수항목 : 아이디, 비밀번호, 이름, 휴대폰번호, 이메일
+• 선택항목 : SMS 수신여부, 이메일 수신여부
+								</textarea>
+							</div>							
+							<div class="ui_radio_set">
+								<label class="ui_radio">
+									<input type="radio" name="join_terms03" value="agree">
+									<span>동의합니다</span>
+								</label>
+								<label class="ui_radio">
+									<input type="radio" name="join_terms03" value="">
+									<span>동의하지 않습니다</span>
+								</label>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">개인정보의 수집 및 이용목적<span>[ 필수 ]</span></p>
+							<div class="ui_textarea">
+								<textarea name="" readonly>
+강남 미니쉬치과의원은 회원가입 시 서비스 이용을 위해 필요한 최소한의 개인정보만을 수집합니다.
+
+강남 미니쉬치과의원의 개인정보 수집항목은 아래와 같습니다. 필수항목과 선택항목이 있는데,
+선택항목은 입력하지 않더라도 서비스 이용에는 제한이 없습니다.
+
+일반 회원 가입
+
+• 필수항목 : 아이디, 비밀번호, 이름, 휴대폰번호, 이메일
+• 선택항목 : SMS 수신여부, 이메일 수신여부
+								</textarea>
+							</div>							
+							<div class="ui_radio_set">
+								<label class="ui_radio">
+									<input type="radio" name="join_terms04" value="agree">
+									<span>동의합니다</span>
+								</label>
+								<label class="ui_radio">
+									<input type="radio" name="join_terms04">
+									<span>동의하지 않습니다</span>
+								</label>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">개인정보의  보유 및 이용기간<span>[ 필수 ]</span></p>
+							<div class="ui_textarea">
+								<textarea name="" readonly>
+개인정보의 보유 및 이용기간 (동의 필수)
+
+강남 미니쉬치과의원은 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다.
+
+• 회원가입정보의 경우 : 회원가입을 탈퇴하거나 회원에서 제명된 때
+• 설문조사, 행사 등의 목적을 위하여 수집한 경우 : 당해 설문조사, 행사 등이 종료한 때
+• 진료목적을 위하여 수집한 경우 : 『의료법』시행규칙 제 15조 "진료에 관한 기록의 보존"에 명시된 기간에 준하여 보존 (보존 항목 : 성명, 주소, 주민등록번호, 진료정보)
+• 신용정보의 수집 / 처리 및 이용 등에 관한 정보의 경우 : 신용정보의 이용 및 보호에 관한 법률에 따라 3년간 보존 (보존 항목 : 카드사명, 카드번호 등 카드결제 승인 정보)									
+								</textarea>
+							</div>							
+							<div class="ui_radio_set">
+								<label class="ui_radio">
+									<input type="radio" name="join_terms05" value="agree">
+									<span>동의합니다</span>
+								</label>
+								<label class="ui_radio">
+									<input type="radio" name="join_terms05">
+									<span>동의하지 않습니다</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="btn_chk_all">
+						<label>
+							<input type="checkbox"></input>
+							<p>전체 동의하기</p>
+						</label>
+					</div>
+					<div class="join_info">
+						<b>[ 동의 거부 시 불이익에 관한 사항 ]</b>
+						<p>귀하는 위 항목에 대하여 동의를 거부할 수 있으며, 동의 후에도 언제든지 철회 가능합니다.<br><br>
+
+							다만, 수집하는 개인정보는 원활한 서비스 제공을 위해 필요한 최소한의 기본 정보로서,<br>
+							동의를 거부하실 경우에는 회원에게 제공되는 서비스 이용에 제한될 수 있음을 알려드립니다.</p>
+					</div>
+					<div class="btn_confirm_set">
+						<button class="btn_border">취소</button>
+						<button class="btn_main">다음으로 넘어가기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 하단 공통 start -->
+		<div id="btn_float">
+			<div class="sns_fixed_con">
+				<div class="wrap">
+					<ul class="sns_list">
+						<li class="sns_youtube">
+							<a href="" target="_blank">
+								<img src="../../images/icon_sns_youtube.png">
+							</a>
+						</li>
+						<li class="sns_insta">
+							<a href="" target="_blank">
+								<img src="../../images/icon_sns_insta.png">
+							</a>
+						</li>
+						<li class="sns_blog">
+							<a href="" target="_blank">
+								<img src="../../images/icon_sns_blog.png">
+							</a>
+						</li>
+						<li class="sns_kakao">
+							<a href="" target="_blank">
+								<img src="../../images/icon_sns_kakao.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_wrap">
+					<button>
+						<img src="../../images/icon_sns_btn.svg">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer_con">
+				<div class="footer_top scr_chk">
+					<div class="wrap">
+						<div class="info_wrap">
+							<div class="location_wrap">
+								<p class="tit">Location</p>
+								<p class="addr">서울시 서초구 사평대로 373 삼흥빌딩 2층</p>
+								<p class="addr_sub">미니쉬치과병원은 논현역 4번 출구에 위치해 있습니다</p>
+								<p class="tel">02-1234-1234</p>
+							</div>
+							<div class="time_wrap">
+								<p class="tit">Time</p>
+								<ul>
+									<li>
+										<b>일목금</b>
+										<span>09:00 - 18:30</span>
+									</li>
+									<li>
+										<b>화&수</b>
+										<span>12:00 - 13:00</span>
+									</li>
+									<li>
+										<b>토요일</b>
+										<span>10:00 - 15:00</span>
+									</li>
+									<li>
+										<b>점심시간</b>
+										<span>13:00 - 14:00</span>
+									</li>
+								</ul>
+								<p class="txt">단, 공휴일은 휴진입니다<br>
+									토요일은 점심시간 없이 진료합니다</p>
+							</div>
+						</div>
+						<div class="map_wrap">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12657.98169483382!2d127.0349014!3d37.5198172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca38b8afad169%3A0xe5030b5ca0b9ad5a!2z66-464uI7Ims7LmY6rO867OR7JuQ!5e0!3m2!1sko!2skr!4v1725243560315!5m2!1sko!2skr" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="wrap">
+						<ul class="footer_fnb">
+							<li>
+								<a href="">개인정보처리방침</a>
+							</li>
+							<li>
+								<a href="">비급여진료비용 안내</a>
+							</li>
+							<li>
+								<a href="">고객센터</a>
+							</li>
+							<li class="ver_pc">
+								<a href="">오시는길</a>
+							</li>
+						</ul>
+						<p>
+							<span>서울시 강남구 언주로 729 마스터스729빌딩, 12층</span>
+							<span>02-1234-1234</span><br>
+							<span>ⓒ 2024. MINISH Clinic All rights reserved.</span>
+						</p>
+						<img class="footer_logo" src="../../images/footer_logo.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 하단 공통 end -->
+
+	</div>
+	
+</body>
+</html>
