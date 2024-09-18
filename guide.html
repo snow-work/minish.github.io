@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta property="og:type" content="website"> -->
+	<!-- <meta property="og:image" content="./images/og_img.png"> -->
+	<title>MINISH</title>
+
+	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="./js/ui-common.js" defer ></script>
+	
+	<link href="./css/common.css" rel="stylesheet" type="text/css">
+	<link href="./css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+
+<body>
+    <style>
+        html, body {height: 100%;}
+        #content {position: relative; background: #fff; height: 100%;}
+    </style>
+
+    <div id="content">
+        <button onClick="javascript:layer_popup_open('.popup_login_fail')">로그인 실패 팝업</button>
+
+        <button onClick="javascript:layer_popup_open('.popup_join_fail')">회원가입 실패 팝업</button>
+    </div>
+    
+
+    <!-- 레이어팝업 -->
+    <!-- 기본 클래스 layer_popup
+        성공 팝업은 success 클래스 추가
+        실패 팝업은 fail 클래스 추가
+    -->
+
+    <!-- 회원가입 실패 -->
+    <div class="layer_popup fail popup_login_fail">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <button class="btn_pop_close">
+                <img src="../../images/icon_close_black.svg" alt="">
+            </button>
+            <div class="wrap">
+                <span class="icon_pop"></span>
+                <p class="main_txt">로그인에 실패하였습니다</p>
+                <p class="sub_txt">아이디 . 비밀번호를 다시 입력해주세요.</p>
+            </div>
+            <p class="close_txt">
+                <span>3초 뒤에 자동으로 꺼집니다</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 회원가입 실패 -->
+    <div class="layer_popup fail popup_join_fail">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <button class="btn_pop_close">
+                <img src="../../images/icon_close_black.svg" alt="">
+            </button>
+            <div class="wrap">
+                <span class="icon_pop"></span>
+                <p class="main_txt">회원 가입이 실패하였습니다</p>
+                <p class="sub_txt">회원 가입이 중복으로 되었는지 확인해주세요</p>
+            </div>
+            <p class="close_txt">
+                <span>3초 뒤에 자동으로 꺼집니다</span>
+            </p>
+        </div>
+    </div>
+
+    
+</body>

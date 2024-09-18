@@ -29,28 +29,11 @@
 						<a href="../../index.html" title="헤더 로고">
 						</a>
 					</h1>
-					<div class="top_tnb">
-						<p>More +</p>
-						<ul>
-							<li>
-								<a href="">신념 & 비전</a>
-							</li>
-							<li>
-								<a href="">의료진</a>
-							</li>
-							<li>
-								<a href="">위치 및 진료</a>
-							</li>
-							<li>
-								<a href="">공간 안내</a>
-							</li>
-						</ul>
-					</div>
 					<div class="top_addr">
 						<p>서울시 서초구 사평대로 373 삼흥빌딩 2층</p>
 					</div>
 					<div class="top_menu">
-						<button class="gnb_open"></button>
+						<button class="btn_gnb_open"></button>
 					</div>
 				</div>
 				<div class="gnb_wrap">
@@ -63,7 +46,7 @@
 									<a href="../../html/login/login.html">로그인</a>
 								</li>
 								<li>
-									<a href="../../html/join/join.html">로그인</a>
+									<a href="../../html/join/join.html">회원가입</a>
 								</li>
 							</ul>
 							<!-- 비로그인 end -->
@@ -75,8 +58,8 @@
 								</p>
 							</div> -->
 							<!-- 로그인 end -->
-							<button class="gnb_close">
-								<img src="../../images/header_icon_close.svg" alt="">
+							<button class="btn_gnb_close">
+								<img src="../../images/icon_close_black.svg" alt="">
 							</button>
 						</div>
 					</div>
@@ -145,32 +128,62 @@
 		<!-- 헤더 공통 end -->
 
 		<!-- 로그인페이지 -->
-		<div id="content" class="login_con">
+		<div id="content" class="login_page">
 			<div class="login_page_con">
 				<div class="wrap">
-					<div class="login_terms">
+					<div class="login_wrap">
 						<div class="input_box">
 							<p class="input_tit">강남 미니쉬치과의원 로그인하기</span></p>
-											
-							
+                            <input type="text" class="ui_input" placeholder="아이디를 입력해주세요">
+                            <input type="password" class="ui_input" placeholder="비밀번호를 입력해주세요">
 						</div>
+                        <button class="btn_find_idpw">아이디/비밀번호 찾기</button>
 					</div>
-					<div class="btn_chk_all">
-						<button class="btn_main"></button>
+					<div class="btn_wrap">
+						<button class="btn_login" onclick="">로그인</button>
 					</div>
-					<div class="login_info">
-						<b>[ 동의 거부 시 불이익에 관한 사항 ]</b>
-						<p>귀하는 위 항목에 대하여 동의를 거부할 수 있으며, 동의 후에도 언제든지 철회 가능합니다.<br><br>
-
-							다만, 수집하는 개인정보는 원활한 서비스 제공을 위해 필요한 최소한의 기본 정보로서,<br>
-							동의를 거부하실 경우에는 회원에게 제공되는 서비스 이용에 제한될 수 있음을 알려드립니다.</p>
-					</div>
-					<div class="btn_confirm_set">
-						<button class="btn_border">취소</button>
-						<button class="btn_main">다음으로 넘어가기</button>
-					</div>
+                    <div class="easy_login_wrap">
+                        <p class="input_tit">간편 로그인하기</span></p>
+                        <button class="btn_login_naver">
+                            <img src="../../images/icon_login_naver.png" alt="">
+                            네이버로 로그인하기
+                        </button>
+                        <button class="btn_login_kakao">
+                            <img src="../../images/icon_login_kakao.png" alt="">
+                            카카오톡으로 로그인하기
+                        </button>
+                        <button class="btn_login_google">
+                            <img src="../../images/icon_login_google.png" alt="">
+                            구글로 로그인하기
+                        </button>
+                    </div>
+                    <div class="join_wrap">
+                        <p>강남 미니쉬치과의원 회원이 아니시라면, <br class="ver_mo">지금 바로 회원가입을 해주세요 </p>
+                        <a herf="">회원가입하기</a>
+                    </div> 
 				</div>
 			</div>
+            <!-- 레이어팝업 -->
+            <!-- 기본 클래스 layer_popup
+                성공 팝업은 success 클래스 추가
+                실패 팝업은 fail 클래스 추가
+            -->
+            <div class="layer_popup fail">
+                <div class="pop_bg"></div>
+                <div class="pop_con">
+                    <button class="btn_pop_close">
+                        <img src="../../images/icon_close_black.svg" alt="">
+                    </button>
+                    <div class="wrap">
+                        <span class="icon_pop"></span>
+                        <p class="main_txt">로그인에 실패하였습니다</p>
+                        <p class="sub_txt">아이디 . 비밀번호를 다시 입력해주세요.</p>
+                    </div>
+                    <p class="close_txt">
+                        <span>3초 뒤에 자동으로 꺼집니다</span>
+                    </p>
+                </div>
+            </div>
 		</div>
 
 		<!-- 하단 공통 start -->

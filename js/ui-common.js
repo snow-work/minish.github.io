@@ -136,11 +136,11 @@ $(".top_tnb").hover(function(){
 
 
 // gnb
-$(".gnb_open").click(function(){
+$(".btn_gnb_open").click(function(){
     $(".gnb_wrap").slideDown()
     $("body").addClass("fixed")
 })
-$(".gnb_close").click(function(){
+$(".btn_gnb_close").click(function(){
     $(".gnb_wrap").slideUp()
     $("body").removeClass("fixed")
 })
@@ -161,9 +161,47 @@ $(window).resize(function(){
 })
 
 
+
+
 // 하단 sns 버튼
 $(".sns_fixed_con button").click(function(){
     $(".sns_fixed_con").toggleClass("open")
+})
+
+
+
+// 레이어팝업
+// 팝업오픈
+function layer_popup_open(popname){
+    $(popname).addClass("active");
+    // 3초뒤 팝업닫기
+    setTimeout(function(){
+        $(popname).removeClass("active");
+    }, 3000);
+}
+// 닫기버튼으로 팝업 닫기
+$(".btn_pop_close").click(function(){
+    $(this).parents(".layer_popup").removeClass("active");
+})
+
+
+
+// 셀렉트박스 열림/닫힘
+$(".ui_select button").click(function(){
+    if($(this).parents(".ui_select").hasClass("active")) {
+        $(this).parents(".ui_select").removeClass("active");
+    } else {
+        $(".ui_select").removeClass("active");
+        $(this).parents(".ui_select").addClass("active");
+    }
+});
+
+// 셀렉트박스 옵션 처리
+$(".ui_select .option label").click(function(){
+    let optionValue = $(this).children("span").text();
+    let el =  $(this).parents(".ui_select");
+    el.find("button").html(optionValue);
+    el.removeClass("active")
 })
 
 
@@ -171,6 +209,7 @@ $(".sns_fixed_con button").click(function(){
 $(".notice_wrap button").click(function(){
     $(".notice_wrap").hide()
 })
+
 
 
 // 의사 마우스오버 이벤트
@@ -182,7 +221,9 @@ $(".dr_wrap").hover(function(){
     }
 })
 
-// 메인 스크롤 fade
+
+
+// 메인 스크롤 fade  
 // 스크롤 체크할 객체
 const maminScrEl = document.querySelectorAll(".scr_chk")
 // 영역설정 
@@ -194,10 +235,10 @@ const mainScrEfect = (entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
         // 영역 벗어남
-        entry.target.classList.remove('active')
+        entry.target.classList.remove("active")
     } else {
         // 영역안으로 들어옴
-        entry.target.classList.add('active')
+        entry.target.classList.add("active")
     }
   });
 }
@@ -205,6 +246,9 @@ const observer = new IntersectionObserver(mainScrEfect, option);
 maminScrEl.forEach(scr => observer.observe(scr));
 
 
+
+
+// oao 영역, 헤더 스크롤 이벤트
 let lastScr = 0;
 document.addEventListener("scroll", (e) => {
     // oao 텍스트, 이미지 fixed
@@ -281,8 +325,8 @@ document.addEventListener("scroll", (e) => {
 // 회원가입 전체동의
 $(".btn_chk_all input").change(function(){
     if($(this).is(':checked')){
-        $(".join_stpe01 .join_terms input[value='agree']").prop('checked',true)
+        $(".join_step01 .join_terms input[value='agree']").prop('checked',true)
     }else{
-        $(".join_stpe01 .join_terms input[value='agree']").prop('checked',false)
+        $(".join_step01 .join_terms input[value='agree']").prop('checked',false)
     }
 })

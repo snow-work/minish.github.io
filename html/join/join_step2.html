@@ -145,7 +145,7 @@
 		<!-- 헤더 공통 end -->
 
 		<!-- 회원가입페이지 -->
-		<div id="content" class="join_page join_step03">
+		<div id="content" class="join_page join_step02">
 			<div class="page_title type01">
 				<p>강남 미니쉬치과의원</p>
 				<h2>회원가입</h2>
@@ -157,21 +157,219 @@
 							<span>STEP 1</span>
 							<p>약관 동의</p>
 						</li>
-						<li>
+						<li class="on">
 							<span>STEP 2</span>
 							<p>회원 정보 입력</p>
 						</li>
-						<li class="on">
+						<li>
 							<span>STEP 3</span>
 							<p>회원가입 완료</p>
 						</li>
 					</ul>
-					<p class="step03_txt">
-						<img src="../../images/icon_deco01.png" alt=""><br>
-						회원가입이 완료되었습니다.</p>
 					
+					
+					<div class="join_terms">
+						<div class="input_box">
+							<p class="input_tit">아이디<span class="imp">[ 필수 ]</span></p>
+							<input type="text" class="ui_input" placeholder="사용 하실 아이디를 입력해주세요.">
+							<div class="input_info">
+								<p class="warning_txt">* 6~20자여야 하며, 한글/특수문자는 입력이 불가능합니다.</p>
+								<button class="btn_join_chk">ID 중복 확인</button>
+								<button class="btn_join_chk checked">ID 중복 확인이 완료 되었습니다</button>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">비밀번호<span class="imp">[ 필수 ]</span></p>
+							<div class="ui_grid2">
+								<div class="wrap">
+									<input type="password" class="ui_input" placeholder="비밀번호를 입력해주세요.">
+									<div class="input_info">
+										<p class="warning_txt">* 영문, 숫자, 특수문자 조합으로 6~20자 이어야 합니다.</p>
+									</div>
+								</div>
+								<div class="wrap">
+									<input type="password" class="ui_input" placeholder="비밀번호를 입력해주세요.">
+									<div class="input_info">
+										<p class="info_txt">* 비밀번호 확인 완료 되었습니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui_grid2">
+							<div class="wrap">
+								<div class="input_box">
+									<p class="input_tit">성함<span class="imp">[ 필수 ]</span></p>
+									<input type="text" class="ui_input" placeholder="성함을 입력해주세요.">
+								</div>
+							</div>
+							<div class="wrap">
+								<div class="input_box">
+									<p class="input_tit">생년월일<span class="imp">[ 필수 ]</span></p>
+									<input type="text" class="ui_input" placeholder="생년월일 8글자를 입력해주세요.  ex. 19971106">
+								</div>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">핸드폰 번호<span class="imp">[ 필수 ]</span></p>
+							<input type="text" class="ui_input" placeholder="핸드폰 번호를 입력해주세요.">
+							<div class="input_info">
+								<label class="ui_radio">
+									<input type="checkbox"></input>
+									<span>SMS 수신에 동의합니다</span>
+								</label>
+								<button class="btn_join_chk">중복 확인</button>
+								<button class="btn_join_chk checked">중복 확인이 완료 되었습니다</button>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="input_tit">이메일<span class="imp">[ 필수 ]</span></p>
+							<div class="email_wrap">
+								<input type="text" class="ui_input" placeholder="이메일을 입력해주세요">
+								<span>@</span>
+								<div class="ui_select">
+									<div class="wrap">
+										<button>이메일 주소를 선택해주세요</button>
+										<ul>
+											<li class="option">
+												<label>
+													<input type="radio" name="select_mail"></input>
+													<span>naver.com</span>
+												</label>
+											</li>
+											<li class="option">
+												<label>
+													<input type="radio" name="select_mail"></input>
+													<span>gmail.com</span>
+												</label>
+											</li>
+											<li class="option">
+												<label>
+													<input type="radio" name="select_mail"></input>
+													<span>hanmail.com</span>
+												</label>
+											</li>
+											<li class="option">
+												<label>
+													<input type="radio" name="select_mail"></input>
+													<span>nate.net</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<span class="ver_mo">@</span>
+								<input type="text" class="ui_input" placeholder="직접 입력">
+							</div>
+							<div class="input_info">
+								<label class="ui_radio">
+									<input type="checkbox"></input>
+									<span>이메일 수신에 동의합니다</span>
+								</label>
+								<button class="btn_join_chk">중복 확인</button>
+								<button class="btn_join_chk checked">중복 확인이 완료 되었습니다</button><br>
+								<p class="info_txt">* 비밀번호 분실시, 상담게시판 답변 등은 회원가입시 작성해주신 이메일로 보내드리오니 정확히 기재 부탁드립니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="join_terms">
+						<div class="ui_grid2">
+							<div class="wrap">
+								<div class="input_box">
+									<p class="input_tit">성별<span class="nor">[ 선택 ]</span></p>
+									<div class="ui_select">
+										<div class="wrap">
+											<button>성별을 선택해 주세요</button>
+											<ul>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_gender"></input>
+														<span>남자</span>
+													</label>
+												</li>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_gender"></input>
+														<span>여자</span>
+													</label>
+												</li>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_gender"></input>
+														<span>그외</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wrap">
+								<div class="input_box">
+									<p class="input_tit">거주 지역<span class="nor">[ 선택 ]</span></p>
+									<input type="text" class="ui_input" placeholder="거주지역을 작성해 주세요.">
+								</div>
+							</div>
+						</div>		
+						<div class="ui_grid2">
+							<div class="wrap">
+								<div class="input_box">
+									<p class="input_tit">관심 진료<span class="nor">[ 선택 ]</span></p>
+									<div class="ui_select">
+										<div class="wrap">
+											<button>관심가는 진료를 선택해 주세요</button>
+											<ul>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_mail"></input>
+														<span>충치 (인레이,온레이,크라운)</span>
+													</label>
+												</li>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_mail"></input>
+														<span>잇몸 (치주질환)</span>
+													</label>
+												</li>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_mail"></input>
+														<span>치아 미백</span>
+													</label>
+												</li>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_mail"></input>
+														<span>미니쉬</span>
+													</label>
+												</li>
+												<li class="option">
+													<label>
+														<input type="radio" name="select_mail"></input>
+														<span>라미네이트 (라미네이트, 무삭제라미네이트)</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wrap">
+								<div class="input_box">
+									<p class="input_tit">가입 경로<span class="nor">[ 선택 ]</span></p>
+									<input type="text" class="ui_input" placeholder="강남 미니쉬치과의원을 알게된 경로를 적어주세요.">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="btn_confirm_set">
+						<button class="btn_cancel">취소</button>
+						<button class="btn_ok" onClick="location.href='join_step3.html'">회원가입 제출하기</button>
+					</div>
 				</div>
-			</div> 
+			</div>
 		</div>
 
 		<!-- 하단 공통 start -->
