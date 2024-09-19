@@ -424,6 +424,7 @@ gnb : 200
 .header_con .top_menu button {
 	width: 4rem;
 	height: 4rem;
+	font-size: 0;
 	background-image: url(../images/header_icon_menu.png);
     background-repeat: no-repeat;
     background-size: 4rem;
@@ -542,7 +543,11 @@ gnb : 200
     right: 16rem;
 	width: 4rem;
 	height: 4rem;
-	background: none;
+	font-size: 0;
+	background-image: url(../images/icon_close_black.svg);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+	background-color: transparent;
 }
 .gnb_top .btn_gnb_close img {
 	width: 100%
@@ -606,23 +611,44 @@ gnb : 200
 	height: 6.5rem;
 	margin-bottom: 2rem;
 	border-radius: 50%;
-	background:#f9f9f9;
 	justify-content: center;
 	align-items: center;
+	font-size: 0;
+    background-repeat: no-repeat;
+	background-position: center center;
+	background-color:#f9f9f9;
     opacity:0; 
 	transform: translateY(30%);
 	transition: all 1s;
+}
+.sns_fixed_con .sns_list .sns_youtube a {
+	background-image: url(../images/icon_sns_youtube.png);
+    background-size: 3.1rem;
+}
+.sns_fixed_con .sns_list .sns_insta a {
+	background-image: url(../images/icon_sns_insta.png);
+    background-size: 2.7rem;
+}
+.sns_fixed_con .sns_list .sns_blog a {
+	background-image: url(../images/icon_sns_blog.png);
+    background-size: 3.2rem;
+}
+.sns_fixed_con .sns_list .sns_kakao a {
+	background-image: url(../images/icon_sns_kakao.png);
+    background-size: 3rem;
 }
 .sns_fixed_con .btn_wrap button {
 	width: 6.5rem;
 	height: 6.5rem;
 	border-radius: 50%;
-	background:#A2B3BE;
+	font-size: 0;
+	background-image: url(../images/icon_sns_btn.svg);
+    background-repeat: no-repeat;
+    background-size: 3.2rem;
+	background-position: center center;
+	background-color: #A2B3BE;
 	box-shadow: 0.2rem 0.2rem 0.2rem rgba(47,58,52,0.2);
 	transition: all 1s;
-}
-.sns_fixed_con .btn_wrap button img {
-	vertical-align: middle;
 }
 .sns_fixed_con.open .sns_list {
 	/* width: auto; */
@@ -826,6 +852,11 @@ gnb : 200
 	top: 2rem;
 	right: 2rem;
     width: 4rem;
+	height: 4rem;
+	font-size: 0;
+	background-image: url(../images/icon_close_black.svg);
+    background-repeat: no-repeat;
+    background-size: 4rem;
 	background-color: transparent;
 }
 .layer_popup .icon_pop {
@@ -1099,12 +1130,25 @@ gnb : 200
 		width: 4rem;
 		height: 4rem;
         padding: 1rem;
+		background-size: 2rem;
 	}
 	.sns_fixed_con .sns_list li a {
 		width: 4rem;
 		height: 4rem;
         padding: 1.2rem 1rem;
     }
+	.sns_fixed_con .sns_list .sns_youtube a {
+		background-size: 1.9rem;
+	}
+	.sns_fixed_con .sns_list .sns_insta a {
+		background-size: 1.6rem;
+	}
+	.sns_fixed_con .sns_list .sns_blog a {
+		background-size: 2rem;
+	}
+	.sns_fixed_con .sns_list .sns_kakao a {
+		background-size: 1.8rem;
+	}
 	.footer_top .wrap {
 		display: block;		
         padding: 8rem 2.7rem 2rem 2.7rem;
