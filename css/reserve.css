@@ -2,10 +2,10 @@
     background-color: #f9f9f9;
 }
 .reservation_page .sub_visual_con {
-    background-image: url(../../images/sub_visual_reservation.png);
+    background-image: url(./../images/sub_visual_reservation.png);
 }
 .reserve_page_con {
-    /* padding-top: 8.5rem; */
+    padding-bottom: 13rem;
 }
 .reserve_page_con .tab_wrap {
     width: 64rem;
@@ -79,13 +79,13 @@
     color: #89A6B9;
 }
 .reserve_page_con .reserve_step_guide {}
-.reserve_page_con .reserve_content {
+.reserve_content {
     max-width: 140rem;
     width: calc(100% - 2rem);
     margin: 0 auto;
     background-color: #FFFFFF;
 }
-.reserve_page_con .reserve_content > .wrap {
+.reserve_content > .wrap {
     max-width: 102rem;
     margin: 0 auto;
     padding: 7.5rem 2rem 13rem;
@@ -284,15 +284,15 @@
     color:#59589c;
 }
 
-.input_radio_box {
+.reserve_page_con .input_radio_box {
     margin-top: 6.2rem;
     margin-bottom: 2.3rem;
 }
-.input_radio_box label {
+.reserve_page_con .input_radio_box label {
     display: block;
     margin-top: 1.3rem;
 }
-.input_radio_box label b {
+.reserve_page_con .input_radio_box label b {
     font-weight: 400;
     color:#1F1E6A;
 }
@@ -300,6 +300,164 @@
 .reCaptcha_wrap img {
     width: 100%;
     max-width: 48.4rem;
+}
+
+
+/* 예약 조회 */
+.reserve_content.content02 {
+    max-width: 98rem;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+.reserve_content.content02 > .wrap {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 9.5rem 2rem 10rem;
+}
+.reserve_chk_txt {
+    margin-bottom: 3.4rem;
+    text-align: center;
+}
+.reserve_chk_txt h3 {
+	font-size: 2.4rem;
+    letter-spacing: -0.03rem;
+	color:#433A34;
+}
+.reserve_chk_txt p {
+    margin-top: 1.5rem;
+	font-size: 1.5rem;
+    letter-spacing: -0.025rem;
+	color:#433A34;
+}
+.rc_input_box {
+    margin-bottom: 8rem;;
+}
+.rc_input_box input~input {
+    margin-top: 1rem;
+}
+.btn_reserve_chk button {
+    display: flex;
+	width: 100%;
+    height: 7rem;
+    justify-content: center;
+    align-items: center;
+	font-family: "Pretendard";
+	font-size: 2rem;
+    letter-spacing: -0.03rem;
+    border-radius: 0.6rem;
+	color:#fff;
+    background-color: #7593A7;
+}
+
+
+
+/* 예약정보 없음 */
+.reserve_content.content03 > .wrap {
+    padding:17.5rem 2rem 17rem;
+    text-align: center;
+}
+.reserve_none_txt {
+    margin-bottom: 10rem;
+	font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: -0.03rem;
+	color:#7593a7;
+}
+
+.btn_reserve_go button {
+    display: inline-block;
+	position: relative;
+	width: 30rem;
+	height: 4.8rem;
+	padding-left: 2.7rem;
+	border-radius: 2.4rem;
+	font-size: 1.5rem;
+	letter-spacing: -0.1rem;
+    line-height: 4.8rem;
+	text-align: left;
+	background-image: url(../images/btn_icon_arr_dark.svg);
+	background-repeat: no-repeat;
+	background-position: center right 3.8rem;
+	background-size: 3rem;
+    background-color: transparent;
+	border: 0.1rem solid #8D7F74;
+	color: #433A34;
+}
+
+
+
+
+/* 예약정보 있음 */
+.reserve_content.content04 > .wrap {
+    padding:7.5rem 2rem 17rem;
+}
+.reserve_list_txt {
+    margin-bottom: 7.3rem;
+}
+.reserve_list_txt .tit {
+    margin-bottom: 1.8rem;
+	font-size: 2.4rem;
+    letter-spacing: -0.03rem;
+	color:#4c6677;
+}
+.reserve_list_txt .tit span {
+	font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing:0.1rem;
+	color:#59589c;
+}
+.reserve_list_txt .txt {
+	font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: -0.03rem;
+	color:#7593A7;
+}
+.reserve_list_txt .txt span {
+    font-weight: 500;
+	color:#59589c;
+}
+.reserve_list {}
+.reserve_list .tit {
+    margin-bottom: 1.2rem;;
+	font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+	color: #4c6677;
+}
+.reserve_list table {
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    border-top: 3px solid #000000;
+}
+.reserve_list table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+.reserve_list table th,
+.reserve_list table td {
+    border-bottom: 1px solid #A6B7C2;
+    
+}
+.reserve_list table th {
+    height: 6rem;
+    color: #4C6677;
+}
+.reserve_list table td {
+    height: 8rem;
+    color: #4c6677;
+}
+.reserve_list table .past td {
+    color: #A2B3BE;
+}
+.reserve_list table .cancle td {
+    color: #A2B3BE;
+}
+.reserve_list table .cancel td:last-child {
+    color: rgba(213,100,86,0.5);
+}
+.reserve_content .rc_view_btn {
+    display: none;
 }
 
 @media screen and (min-width:768px){
@@ -316,8 +474,11 @@
 
 /* 모바일 */
 @media screen and (max-width:768px){
+    .reserve_page_con {
+        padding-bottom: 8rem;
+    }
     .reservation_page .sub_visual_con {
-        background-image: url(../../images/sub_visual_reservation_mo.png);
+        background-image: url(./../images/sub_visual_reservation_mo.png);
     }
     .sub_visual_txt h2 {
         font-size: 3.6rem;
@@ -368,10 +529,10 @@
         padding: 4rem 2.8rem 5rem; 
     }
 
-    .reserve_page_con .reserve_content {
+    .reserve_content {
         width: calc(100% - 3rem);
     }
-    .reserve_page_con .reserve_content > .wrap {
+    .reserve_content > .wrap {
         max-width: 98rem;
         margin: 0 auto;
         padding: 3rem 1.3rem 10rem;
@@ -392,9 +553,11 @@
         flex-wrap: wrap;
     }
     .time_select_wrap .fc-direction-ltr {
-        width: 100%;
+        width: calc(100% + 1rem);
+        margin-left: -0.5rem;
     }
     .fc .fc-toolbar.fc-header-toolbar {
+        margin-top: 1rem;
         margin-bottom: 1.8rem;
     }
     .fc .fc-button-group {
@@ -408,7 +571,7 @@
         font-size: 1.4rem;
     }
     .fc .fc-view-harness-active > .fc-view {
-        padding: 1.5rem 0.5rem 2rem;
+        padding: 1.5rem 1rem 2rem;
     }
     .fc .fc-daygrid-day-frame {
         padding-top: 93%;
@@ -424,4 +587,122 @@
     .time_select_wrap .time_list {
         width: calc(50% - 1rem);
     }
+    .time_select_wrap .time_list .tit {
+        margin-bottom: 0.6rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .time_select_wrap .time_list ul {
+        padding: 0.8rem 0;
+    }
+    .time_select_wrap .time_list label span {
+        font-size: 1.4rem;
+        line-height: 3.6rem;
+    }
+    .reserve_page_con .input_radio_box {
+        margin-top: 8.2rem;
+        margin-bottom: 2rem;
+    }
+    .reserve_page_con .input_radio_box label {
+        margin-top: 0.8rem;
+    }
+
+
+
+    .reserve_content.narrow > .wrap {
+        padding: 4.5rem 1.3rem 6rem;
+    }
+    .reserve_chk_txt {
+        margin-bottom: 3rem;
+    }
+    .reserve_chk_txt h3 {
+        font-size: 1.6rem;
+    }
+    .reserve_chk_txt p {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+    .rc_input_box {
+        margin-bottom: 4rem;;
+    }
+    .btn_reserve_chk button {
+        height: 5.2rem;
+        font-size: 1.4rem;
+    }
+
+
+    .reserve_content.content03 > .wrap {
+        padding:5.5rem 2rem 9.5rem;
+    }
+    .reserve_none_txt {
+        margin-bottom: 4rem;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+    
+    .btn_reserve_go button {
+        width: 25rem;
+        padding-left: 2rem;
+        font-size: 1.4rem;
+        background-position: center right 2rem;
+        background-size: 2.6rem;
+    }
+
+
+
+    .reserve_content.content04 > .wrap {
+        padding: 5rem 2rem 4.5rem;
+    }
+    .reserve_list_txt {
+        margin-bottom: 5.8rem;
+    }
+    .reserve_list_txt .tit {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+    .reserve_list_txt .tit span {
+        font-size: 2rem;
+    }
+    .reserve_list_txt .txt {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+    .reserve_list {
+        overflow-x: scroll;
+    }
+    .reserve_list .tit {
+        width: 50rem;
+        margin-bottom: 1.2rem;;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .reserve_list table {
+        width: 50rem;
+        font-size: 1.2rem;
+    }
+    .reserve_list table th {
+        height: 5rem;
+        font-size: 1.4rem;
+    }
+    .reserve_list table td {
+        height: 6rem;
+    }
+    .reserve_content .btn_wrap {
+        text-align: right;
+    }
+    .reserve_content .rc_view_btn {
+        display: inline-block;
+        margin-top: 1.2rem;
+        padding-right: 1.2rem;
+        font-size: 1.2rem;
+        letter-spacing: -0.03rem;
+        background-image: url(../images/icon_reserve_btn.png);
+        background-repeat: no-repeat;
+        background-size: 0.9rem;
+        background-position: center right;
+        color:#7593a7;
+    }
+
 }

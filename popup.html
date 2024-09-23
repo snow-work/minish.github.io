@@ -27,8 +27,14 @@
 
     <div id="content">
         <button onClick="javascript:layer_popup_open('.popup_login_fail')">로그인 실패 팝업</button>
-
+        <br>
         <button onClick="javascript:layer_popup_open('.popup_join_fail')">회원가입 실패 팝업</button>
+        <br>
+        <button onClick="javascript:layer_popup_open('.popup_reserve_success')">진료 상담 예약 성공 팝업</button>
+        <br>
+        <button onClick="javascript:layer_popup_open('.popup_reserve_fail')">진료 상담 예약 실패 팝업</button>
+        <br>
+        <br>
     </div>
     
 
@@ -63,6 +69,38 @@
                 <span class="pop_icon"></span>
                 <p class="main_txt">회원 가입이 실패하였습니다</p>
                 <p class="sub_txt">회원 가입이 중복으로 되었는지 확인해주세요</p>
+            </div>
+            <p class="close_txt">
+                <span>3초 뒤에 자동으로 꺼집니다</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 진료 상담 예약 성공 -->
+    <div class="layer_popup success popup_reserve_success">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <button class="btn_pop_close">팝업닫기</button>
+            <div class="wrap">
+                <span class="pop_icon"></span>
+                <p class="main_txt">예약 신청이 성공적으로 완료 되었습니다</p>
+                <p class="sub_txt">강남 미니쉬치과의원에서 고객님을 기다리겠습니다</p>
+            </div>
+            <p class="close_txt">
+                <span>3초 뒤에 자동으로 꺼집니다</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 진료 상담 예약  실패 -->
+    <div class="layer_popup fail popup_reserve_fail">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <button class="btn_pop_close">팝업닫기</button>
+            <div class="wrap">
+                <span class="pop_icon"></span>
+                <p class="main_txt">예약 신청이 실패하였습니다</p>
+                <p class="sub_txt">신청 예약일이 중복으로 체크 되었는지 확인해주세요</p>
             </div>
             <p class="close_txt">
                 <span>3초 뒤에 자동으로 꺼집니다</span>

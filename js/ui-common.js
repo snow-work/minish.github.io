@@ -235,7 +235,17 @@ $(".ui_tab .btn_tab_open").click(function(){
         $(this).parents(".ui_tab").addClass("active");
     }
 });
-
+// 특정탭으로 이동
+function moveTab(tgTab, tgIndex){
+    // tgTab 이동할 탭
+    // tgIndex 이동할 탭 순서
+    tgTabBox = $(tgTab).next(".tab_box_wrap");
+    tgTxt = $(tgTab).find(".ui_tab ul li").eq(tgIndex).find("button").text();
+    $(tgTab).find(".btn_tab_open").html(tgTxt);
+    $(tgTab).find(".ui_tab ul li").eq(tgIndex).find("button").addClass("on")
+    tgTabBox.find(".tab_box").addClass("on");
+    
+}
 
 
 //----------메인페이지 start------------- //
@@ -437,10 +447,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function calSet(){
-    // console.log($(".fc-daygrid-day-top").text().replace("일",""))
     // 날짜 "일"삭제
     $(".fc-daygrid-day-top a").each(function(index, item){
         var txt = $(item).text().replace("일","");
         $(item).text(txt);
     })
 }
+
