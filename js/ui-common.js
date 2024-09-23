@@ -113,14 +113,16 @@
 
 $(document).ready(function() {
     // 인트로 처리
-    $('.main_con').addClass('play')
+    $('.main_page').addClass('play')
     setTimeout(() => {
         $('.intro_wrap').addClass('play');
     }, 1000);
     setTimeout(() => {
         $('.intro_wrap').addClass('end');
-        $('.main_con').addClass('end');
+        $('.main_page').addClass('end');
     }, 2000);
+
+
 
     // 로그인, 회원가입, 인재채용 검은헤더
     if($(".page_wrap").hasClass("join")||$(".page_wrap").hasClass("login")){
@@ -129,10 +131,12 @@ $(document).ready(function() {
 });
 
 
+
 // 헤더 퀵
 $(".top_tnb").hover(function(){
     $(".top_tnb ul").slideToggle("fast");	
 });
+
 
 
 // gnb
@@ -152,7 +156,6 @@ $(".gnb_list strong").click(function(){
         $(this).next().slideDown();
     }
 })
-
 $(window).resize(function(){
     // 모바일에서 태블릿으로 넘어갈때 아코디언 처리 해제
     if($(document).width()>768){
@@ -205,6 +208,37 @@ $(".ui_select .option label").click(function(){
 })
 
 
+// 탭 동작
+$(".ui_tab ul li button").click(function(){
+    let elTab = $(this).parents(".tab_wrap");
+    let elContants = elTab.next(".tab_box_wrap");
+    let elIndex = $(this).parent().index();
+    let eltxt = $(this).text();
+    if($(this).hasClass("on")==0){
+        // console.log(elContants.find(".tab_box").eq(elIndex))
+        elTab.find("button").removeClass("on");
+        elContants.find(".tab_box").removeClass("on");
+        $(this).addClass("on")
+        elContants.find(".tab_box").eq(elIndex).addClass("on")
+        elTab.find(".btn_tab_open").html(eltxt);
+        elTab.find(".ui_tab").removeClass("active")
+    }else{
+        elTab.find(".ui_tab").removeClass("active")
+    }
+})
+// 모바일 탭 열림/닫힘
+$(".ui_tab .btn_tab_open").click(function(){
+    if($(this).parents(".ui_tab").hasClass("active")) {
+        $(this).parents(".ui_tab").removeClass("active");
+    } else {
+        $(".ui_tab").removeClass("active");
+        $(this).parents(".ui_tab").addClass("active");
+    }
+});
+
+
+
+//----------메인페이지 start------------- //
 // 메인 공지사항
 $(".notice_wrap button").click(function(){
     $(".notice_wrap").hide()
@@ -239,13 +273,21 @@ const mainScrEfect = (entries, observer) => {
     } else {
         // 영역안으로 들어옴
         entry.target.classList.add("active")
+        // 비디오영역 영상재생
+        if(entry.target.classList.contains("main_video_con")) {
+            if(window.visualViewport.width>768){
+                // PC 재생
+                new Vimeo.Player(entry.target.querySelector(".ver_pc iframe")).play()
+            }else{
+                // MO 재생
+                new Vimeo.Player(entry.target.querySelector(".ver_mo iframe")).play()
+            }
+        }
     }
   });
 }
 const observer = new IntersectionObserver(mainScrEfect, option);
 maminScrEl.forEach(scr => observer.observe(scr));
-
-
 
 
 // oao 영역, 헤더 스크롤 이벤트
@@ -280,7 +322,6 @@ document.addEventListener("scroll", (e) => {
             }
             // 이미지 고정 처리
             if(imgStartPoint<=nowScr&&imgEndPoint>=nowScr){
-                console.log("인")
                 // 범위 내 fiexd// 범위 내 fiexd
                 $(".main_oao_con .img_04").addClass('fixed')
                 $(".main_oao_con .img_04").removeClass('bottom')
@@ -315,18 +356,91 @@ document.addEventListener("scroll", (e) => {
         // 스크롤 내리면 사라짐
     }else{
         // 스크롤 0일때 픽스 풂}
-        console.log("0")
         $(".top_wrap").removeClass("fixed");
     }
     lastScr = currScr;
 })
+//----------메인페이지 end------------- //
+
+
 
 
 // 회원가입 전체동의
 $(".btn_chk_all input").change(function(){
     if($(this).is(':checked')){
-        $(".join_step01 .join_terms input[value='agree']").prop('checked',true)
+        $(".join_step01 .join_input_wrap input[value='agree']").prop('checked',true)
     }else{
-        $(".join_step01 .join_terms input[value='agree']").prop('checked',false)
+        $(".join_step01 .join_input_wrap input[value='agree']").prop('checked',false)
     }
 })
+
+
+
+// 상담예약 캘린더
+    // calMonth => 현재 달 설정, 오늘 기준 이전 달 버튼 비활성화
+    // calTomorrow => 내일, 초기 날짜 선택
+const sToday = new Date();
+const nowYear = sToday.getFullYear();
+const nowMonth = sToday.getMonth() + 1;
+const nowDate = sToday.getDate() + 1;
+let calMonth = nowYear + "-"; 
+let calTomorrow = nowYear + "-"; 
+if (nowMonth < 10) {
+	calMonth += "0";
+    calTomorrow += "0";
+}
+calMonth += nowMonth + "-" + "01";
+calTomorrow += nowMonth + "-";
+if (nowDate < 10) {
+    calTomorrow += "0";
+}
+calTomorrow += nowDate;
+console.log(calMonth ,calTomorrow)
+    // FullCalendar 플러그인
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+            left: 'prev,next title',
+            center: '',
+            right: ''
+            // left: 'prev,next today',
+            // center: 'title',
+            // right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        locale: "ko",
+        // selectable: true,
+        // unselectAuto: false,
+        fixedWeekCount:false,
+        showNonCurrentDates: false,
+        validRange: {
+            start: calMonth
+        },
+        dateClick: function(info) {
+            // console.log(info.dateStr,  info);
+            if(info.dayEl.classList.contains("fc-day-future")){
+                if(document.querySelector(".fc-daygrid-day.on")){
+                    document.querySelector(".fc-daygrid-day.on").classList.remove("on")
+                }
+                info.dayEl.classList.add("on")
+            }
+        }
+    });
+    calendar.render();
+    document.querySelector(".fc-day-future[data-date='" +calTomorrow+ "']").classList.add("on")
+    calSet()
+
+    $(".fc-button-group button").click(function(){
+        calSet()
+     });
+});
+
+function calSet(){
+    // console.log($(".fc-daygrid-day-top").text().replace("일",""))
+    // 날짜 "일"삭제
+    $(".fc-daygrid-day-top a").each(function(index, item){
+        var txt = $(item).text().replace("일","");
+        $(item).text(txt);
+    })
+}

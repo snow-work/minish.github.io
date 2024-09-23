@@ -1,10 +1,10 @@
 
 /* 인트로, 메인비주얼 */
-.main_visual_wrap {
+.main_visual_con {
 	overflow: hidden;
 	position: relative;
 }
-.main_visual_wrap .intro_wrap {
+.main_visual_con .intro_wrap {
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -15,7 +15,7 @@
 	z-index: 1000;
 	
 }
-.main_visual_wrap .intro_wrap .intro_bg {
+.main_visual_con .intro_wrap .intro_bg {
 	position: absolute;
 	top: calc(100% - 100vw);
     left: calc(50% - 100vw);
@@ -27,7 +27,7 @@
 	opacity: 100%;
 	transition: all 0.5s 0.5s;
 }
-.main_visual_wrap .intro_wrap .intro_logo {
+.main_visual_con .intro_wrap .intro_logo {
 	position: absolute;
     top: calc(50% - 10.7rem);
     left: calc(50% - 29rem);
@@ -35,7 +35,7 @@
 	transition: opacity 0.5s;
 }
 
-.main_visual_wrap .intro_wrap.play .intro_bg{
+.main_visual_con .intro_wrap.play .intro_bg{
 	/* top: -42rem; */
 	top: -39%;
     left: -28vw;
@@ -45,16 +45,34 @@
     opacity: 80%;
     border: 28vw solid #433A34;
 }
-.main_visual_wrap .intro_wrap.play .intro_logo{
+.main_visual_con .intro_wrap.play .intro_logo{
 	opacity: 0%;
 }
-.main_visual_wrap .intro_wrap.end{
-	z-index: 0;
+.main_visual_con .intro_wrap.end{
+	z-index: 1;
 }
-.main_visual_wrap .intro_wrap.end .intro_bg{
+.main_visual_con .intro_wrap.end .intro_bg{
 	transition: none;
 }
-.main_visual_wrap .visual_txt {
+.main_visual_con .visual_wrap {
+	
+}
+.main_visual_con .visual_wrap .ver_pc {
+	position:relative;
+	/* padding:56.25% 0 0 0; */
+}
+.main_visual_con .visual_wrap .ver_mo {
+	position:relative;
+	/* padding:217.11% 0 0 0; */
+}
+.main_visual_con .visual_wrap iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.main_visual_con .visual_txt {
 	position: absolute;
     top: 20.5vw;
     left: calc(50% - 29rem);
@@ -67,20 +85,20 @@
 	color: #fff;
     transform: scaleX(0.9);
 }
-.main_visual_wrap .notice_wrap {
+.main_visual_con .notice_wrap {
 	position: absolute;
 	top: 8.7rem;
 	right: 16rem;
-	z-index: 20;
+	z-index: 10;
 }
-.main_visual_wrap .notice_wrap .wrap {
+.main_visual_con .notice_wrap .wrap {
 	display: flex;
 	padding: 0.5rem 1rem 0.5rem 2rem;
 	background: #000;
 	border-radius: 3rem;
 	align-items: center;
 }
-.main_visual_wrap .notice_wrap b{
+.main_visual_con .notice_wrap b{
 	margin-right: 1.1rem;
 	font-size: 1.2rem;
 	line-height: 2rem;
@@ -88,7 +106,7 @@
 	color: #fff;
 	font-weight: 500;
 }
-.main_visual_wrap .notice_wrap p {
+.main_visual_con .notice_wrap p {
     overflow: hidden;
 	width: 14.4rem;
 	margin-right: 1.9rem;
@@ -99,16 +117,16 @@
     white-space: nowrap;
 	color: rgba(255,255,255,0.5);
 }
-.main_visual_wrap .notice_wrap button {
+.main_visual_con .notice_wrap button {
 	background: none;
 }
 
-.main_visual_wrap .btn_wrap {
+.main_visual_con .btn_wrap {
 	position: absolute;
 	bottom: 6.56vw;
     left: calc(50% - 15rem);
 }
-.main_visual_wrap .btn_wrap::before {
+.main_visual_con .btn_wrap::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -126,13 +144,13 @@
 	100% {transform: rotate(360deg)}
 }
 
-.main_visual_wrap .btn_wrap a {	
+.main_visual_con .btn_wrap a {	
 	display: block;
     position: relative;
 	border-radius: 2.7rem;
 	background: linear-gradient(to right, rgb(255, 255, 255), rgb(170, 155, 122));
 }
-.main_visual_wrap .btn_wrap a span {
+.main_visual_con .btn_wrap a span {
 	display: block;
 	position: relative;
 	width: 30rem;
@@ -153,16 +171,35 @@
 	color: #AA9B7A;
 	transition: all 0.3s;
 }
-.main_visual_wrap .btn_wrap a:hover span {
+.main_visual_con .btn_wrap a:hover span {
 	background-image: url(../images/btn_icon_arr_white.svg);
 	background-color: transparent;
 	box-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.25);
 }
 
 
-.main_video_wrap img {
-	width: 100%;
+.main_video_con .wrap {
+	max-width:140rem;
+	margin: 0 auto;
+	padding: 16rem 0;
 }
+.main_video_con .ver_pc {
+	position:relative;
+	padding:56.25% 0 0 0;
+}
+.main_video_con .ver_mo {
+	position:relative;
+	padding:106.95% 0 0 0;
+}
+.main_video_con iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+
 
 /*  */
 .main_oao_con {}
@@ -863,6 +900,9 @@
 /*  */
 
 @media screen and (max-width:1600px){
+	.main_visual_con .notice_wrap {
+		right: 3rem;
+	}
 	.main_care_con .care_wrap {margin-left:0}
 }
 @media screen and (max-width:1400px){
@@ -938,21 +978,21 @@
 	}
 
 	/* 메인비주얼 */
-	.main_visual_wrap .intro_wrap {
+	.main_visual_con .intro_wrap {
 		height: 81.2rem;
         padding-top: 0;
 	}
-	.main_visual_wrap .intro_wrap .intro_logo {
+	.main_visual_con .intro_wrap .intro_logo {
 		top: 35.3rem;
 		left: calc(50% - 14.25rem);
 		width: 28.5rem;
 	}
-	.main_visual_wrap .intro_wrap .intro_bg {
+	.main_visual_con .intro_wrap .intro_bg {
 		top: calc(100% - 100rem);
         left: calc(50% - 100rem);
         border: 100rem solid #433A34;
     }
-	.main_visual_wrap .intro_wrap.play .intro_bg {
+	.main_visual_con .intro_wrap.play .intro_bg {
 		top: -14.5rem;
         left: -44.5rem;
         width: 76.5rem;
@@ -960,27 +1000,27 @@
 		padding-top: 0;
 		border: 25rem solid #433A34;
 	}
-	.main_visual_wrap .visual_txt {
+	.main_visual_con .visual_txt {
 		top: 22.3rem;
 		left: 0;
 		width: 100%;
 		font-size: 3.4rem;
 	}
-	.main_visual_wrap .btn_wrap {
+	.main_visual_con .btn_wrap {
 		bottom: 11.7rem;
 		left: 8.7rem;
 	}
-	.main_visual_wrap .btn_wrap::before {
+	.main_visual_con .btn_wrap::before {
 		width: 9rem;
 		height: 9rem;
 		bottom: -1.2rem;
 		right: -3.8rem;
 		background-size: 9rem;
 	}
-	.main_visual_wrap .btn_wrap a {
+	.main_visual_con .btn_wrap a {
 		border-radius: 4rem;
 	}
-	.main_visual_wrap .btn_wrap a span {
+	.main_visual_con .btn_wrap a span {
 		width: 20rem;
 		height: 4rem;
 		padding-left: 2rem;
@@ -990,17 +1030,19 @@
 		background-position: center right 2rem;
 		background-size: 2.6rem;
 	}
-	.main_visual_wrap .btn_wrap a span {
+	.main_visual_con .btn_wrap a span {
         letter-spacing: -0.03rem;
 	}
-	.main_visual_wrap .notice_wrap {
+	.main_visual_con .notice_wrap {
 		top: 7.5rem;
 		right:1.5rem
 	}
-	.main_visual_wrap .notice_wrap .wrap {
+	.main_visual_con .notice_wrap .wrap {
 		padding: 0.4rem 1rem 0.4rem 2rem;
 	}
-
+	.main_video_con .wrap {
+		padding: 0;
+	}
 	.main_oao_con .wrap {
 		padding: 0 1.5rem;
 		margin-top: 12rem;

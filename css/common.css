@@ -60,11 +60,10 @@ button, a {
 	border: none;
 	cursor: pointer;
 }
-
 a {
 	text-decoration: none;
 } 
-li {
+ul li {
 	list-style: none;
 }
 img {max-width: 100%;}
@@ -87,9 +86,9 @@ img {max-width: 100%;}
 /*   zindex 정리 
 
 셀렉트박스 : 1
-헤더 : 10  (스크롤시 픽스 고려) 
-메인비주얼 공지사항 : 20
-인트로 : 시작시 1000 -> 종료시 0
+헤더 : 20  (스크롤시 픽스 고려) 
+메인비주얼 공지사항 : 10
+인트로 : 시작시 1000 -> 종료시 1  (메인 비디오 때문에 1이상 줘야함)
 gnb : 200
 하단 플로트 300
 레이어 팝업 : 1000
@@ -137,14 +136,15 @@ gnb : 200
 .input_tit span.nor {
 	color:#7593A7;
 }
-.warning_txt {
+.input_info .txt {
+    margin-top: 1rem;
 	font-size: 1.5rem;
     letter-spacing: -0.03rem;
+}
+.input_info .txt.warning {
 	color: #DB8A8A;
 }
-.info_txt {
-	font-size: 1.5rem;
-    letter-spacing: -0.03rem;
+.input_info .txt.info {
 	color: #7593A7;
 }
 
@@ -152,7 +152,7 @@ gnb : 200
 
 /* 공통 input */
 .ui_radio {
-	display: inline-block;
+	display: block;
 }
 .ui_radio input {
 	display: none;
@@ -181,6 +181,9 @@ gnb : 200
 	background-image: url(../images/icon_ui_radio_chk.svg);
 }
 
+.ui_radio_set .ui_radio {
+	display: inline-block;
+}
 .ui_radio_set .ui_radio~.ui_radio{
 	margin-left: 2rem;
 }
@@ -308,15 +311,22 @@ gnb : 200
 .ui_select ul::-webkit-scrollbar-track {background: transparent; }
 .ui_select ul::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
 .ui_select .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+.input_grid2 {
+	display: flex;
+    gap: 2rem;
+}
+.input_grid2 > .wrap {
+	width: 100%;
+}
 
 
 
 /* 공통 button */
-.btn_confirm_set {
+.btn_confirm_wrap {
 	display: flex;
 	margin-top: 10.5rem;
 }
-.btn_confirm_set button {
+.btn_confirm_wrap button {
 	display: flex;
 	width: 100%;
     height: 7rem;
@@ -327,25 +337,54 @@ gnb : 200
     letter-spacing: -0.03rem;
     border-radius: 0.6rem;
 }
-.btn_confirm_set .btn_cancel {
+.btn_confirm_wrap .btn_cancel {
     flex: 0 0 19rem;
 	margin-right: 1rem;
 	border: 1px solid #7593A7;
 	color:#7593A7;
     background-color: transparent;
 }
-.btn_confirm_set .btn_ok {
+.btn_confirm_wrap .btn_ok {
     flex: 1 1 auto;
 	color:#fff;
     background-color: #6D8A9D;
 }
 
-.ui_grid2 {
+
+
+/* 공통 탭, 모바일은 셀렉트박스와 동일 디자인 */
+.ui_tab ul{
 	display: flex;
-    gap: 2rem;
 }
-.ui_grid2 .wrap {
+.ui_tab .btn_tab_open {
+	display: none;
+}
+.ui_tab li {
+	flex: 1 1 0;
+}
+.ui_tab ul button {
+	display: block;
 	width: 100%;
+	padding: 1.5rem 0;
+	font-family: "NanumMyeongjo";
+	font-size: 2.2rem;
+	line-height: 3.4rem;
+	font-weight: 700;
+    letter-spacing: -0.025rem;
+	text-align: center;
+	border-bottom: 0.3rem solid #D9D9D9;
+	color:rgba(67,58,53,0.4);
+	background:transparent;
+}
+.ui_tab ul button.on {
+	color:#433A34;
+	border-bottom: 0.3rem solid #A6B7C2;
+}
+.tab_box {
+	display: none;
+}
+.tab_box.on {
+	display: block;
 }
 
 
@@ -356,7 +395,7 @@ gnb : 200
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 20;
 	color:#fff;
 }
 .header_con .top_logo {
@@ -384,8 +423,9 @@ gnb : 200
 }
 .header_con .top_tnb ul {
 	display: none;
-    height: 13.4rem;
-    padding: 2rem 0.9rem 1.2rem;
+    /* height: 13.4rem; */
+	margin-top: 0.5rem;
+    padding: 1.6rem 0.9rem 1.2rem;
     background: rgba(59, 50, 66, 0.2);
     border-radius: 0.6rem;
 	transition: height 0.5s;
@@ -690,10 +730,10 @@ gnb : 200
 	padding-top: 7.4rem;
     justify-content: space-between;
 }
-.footer_top .info_wrap {
+.footer_top .footer_info {
 	padding: 0 3rem;
 }
-.footer_top .info_wrap .tit {
+.footer_top .footer_info .tit {
 	font-family: 'AmstelvarAlpha';
 	font-size: 3rem;
 	letter-spacing: -0.1rem;
@@ -750,7 +790,7 @@ gnb : 200
 	letter-spacing: -0.1rem;
 	color:rgba(67,58,52,0.6);
 }
-.footer_top .map_wrap {
+.footer_top .footer_map {
 	max-width: 107.2rem;
     width: 65%;
     height: 52.6rem;
@@ -767,7 +807,7 @@ gnb : 200
 	transform: translateY(0rem);
 	transition: all 1s 0.3s;
 }
-.footer_top.active .map_wrap {
+.footer_top.active .footer_map {
 	opacity: 1;
 	transform: translateY(0rem);
 	transition: all 0.6s;
@@ -859,7 +899,7 @@ gnb : 200
     background-size: 4rem;
 	background-color: transparent;
 }
-.layer_popup .icon_pop {
+.layer_popup .pop_icon {
 	display: inline-block;
 	width: 3rem;
 	height: 3rem;
@@ -900,7 +940,7 @@ gnb : 200
 	width: 100%;
 	border-bottom: 1px solid #A6B7C2;
 }
-.layer_popup.fail .icon_pop {
+.layer_popup.fail .pop_icon {
 	background-image: url(../images/icon_pop_fail.png);
 }
 .layer_popup.fail .sub_txt {
@@ -915,6 +955,41 @@ gnb : 200
 .layer_popup.active {}
 .layer_popup.active {}
 .layer_popup.active {}
+
+
+/* 서브비주얼 */
+.sub_visual_con {
+	height: 71rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.sub_visual_txt {
+	max-width: 146rem;
+    margin: 0 auto;
+    padding-top: 24rem;
+    padding-left: 3rem;
+}
+.sub_visual_txt h2 {
+	font-family: "YaldeviColombo";
+	font-size: 6rem;
+	font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.025rem;
+    color: #fff;
+	/* 폰트이슈로 임시 처리, 폰트파일 교체시 삭제 */
+    font-size: 4.8rem;
+    transform: scaley(1.2);
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+.sub_visual_txt p {
+	margin-top: 1rem;
+	font-size: 2rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.03rem;
+    color: #fff;
+}
 
 
 @media screen and (max-width:1600px){
@@ -986,12 +1061,12 @@ gnb : 200
 		margin-left: 0.6rem;
 		font-size: 1.4rem;
 	}
-		
-	.warning_txt,
-	.info_txt {
-		font-size: 1.2rem;
-	}
 	
+    .input_info .txt {
+        margin-top: 0.6rem;
+		font-size: 1.2rem;
+    }
+
 	.ui_radio span {
 		font-size: 1.2rem;
 	}
@@ -1013,6 +1088,8 @@ gnb : 200
 	.ui_select button {
 		height: 5.2rem;
 		font-size: 1.2rem;
+		background-size: 1.4rem;
+		background-position: center right 2.4rem;
 	}
 	.ui_select ul {
 		padding: 0 2.4rem 0.7rem 1.5rem;
@@ -1024,21 +1101,89 @@ gnb : 200
 		padding:0 0.5rem;
 		font-size: 1.4rem;
 	}
-	.btn_confirm_set {
+	.btn_confirm_wrap {
 		margin-top: 6rem;
 	}
-	.btn_confirm_set button {
+	.btn_confirm_wrap button {
 		height: 5.2rem;
 		font-size: 1.4rem;
-		background-size: 1.4rem;
-		background-position: center right 2.4rem;
 	}
-	.btn_confirm_set .btn_cancel {
+	.btn_confirm_wrap .btn_cancel {
 		flex: 0 0 8rem;
 		margin-right: 1rem;
 	}
-	.ui_grid2 {
+	.input_grid2 {
 		display: block;
+	}
+
+	.ui_tab {
+		position: relative;
+		width: 100%;
+		height: 5.2rem;
+	}
+	.ui_tab > .wrap {
+		overflow: hidden;
+		width: 100%;
+		height: 5.2rem;
+		border: 1px solid #A6B7C2;
+		border-radius: 0.6rem;
+	}
+	.ui_tab .btn_tab_open {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 5.2rem;
+		border: 0 none;
+		outline: 0 none;
+		padding-left: 1.54rem;
+		font-family: "Pretendard";;
+		font-size: 1.2rem;
+		background-image: url(../images/icon_ui_select.png);
+		background-repeat: no-repeat;
+		background-size: 1.4rem;
+		background-position: center right 2.4rem;
+		background-color: #E8ECEE;
+		color: #A2B3BE;
+	}
+	.ui_tab ul{
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		padding: 0 2.4rem 0.7rem 1.5rem;
+		list-style-type: none;
+		border-radius: 0 0 0.6rem 0.6rem;
+		background-color: #EDF1F3;
+		color: #fff;
+		transition: .3s ease-in;
+	}
+	.ui_tab ul li {
+		flex: unset;
+	}
+	.ui_tab ul button,
+	.ui_tab ul button.on  {
+		padding: 0 1.5rem;
+		font-family: "Pretendard";
+		font-size: 1.4rem;
+		line-height: 3.2rem;
+		border-top: 1px solid rgba(166, 183, 194, 0.15);
+        border-bottom: none;
+		text-align: left;
+		color: rgba(76, 102, 119, 0.5);
+	}
+	.ui_tab ul button:hover {
+		font-weight: 500;
+		color:#FAEFD8;
+		background: #A6B7C2
+	}
+	.ui_tab.active {
+		z-index: 1;
+	}
+	.ui_tab.active > .wrap {
+		height: auto;
+	}
+	.ui_tab.active .btn_tab_open {
+		color: #4C6677;
+		background-image: url(../images/icon_ui_select_on.png);
 	}
 
 	
@@ -1153,10 +1298,10 @@ gnb : 200
 		display: block;		
         padding: 8rem 2.7rem 2rem 2.7rem;
 	}
-	.footer_top .info_wrap {
+	.footer_top .footer_info {
 		padding: 0;
 	}
-	.footer_top .info_wrap .tit {
+	.footer_top .footer_info .tit {
 		font-size: 2rem;
 	}
 	.footer_top .location_wrap .addr {
@@ -1189,7 +1334,7 @@ gnb : 200
 		font-size: 1.2rem;
 		line-height: 1.8rem;
 	}
-	.footer_top .map_wrap {
+	.footer_top .footer_map {
 		width: 100%;
 		height: 18rem;
 		margin-top: 2rem;
@@ -1226,4 +1371,23 @@ gnb : 200
 		margin: 1.8rem 0 2rem;
 	}
 	
+		
+	/* 서브비주얼 */
+	.sub_visual_con {
+		height: 40rem;
+	}
+	.sub_visual_txt {
+		padding-top: 12rem;
+		padding-left: 2rem;
+	}
+	.sub_visual_txt h2 {
+		font-size: 3.4rem;	
+        line-height: 4.5rem;
+		text-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
+	}
+	.sub_visual_txt p {
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		text-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2)
+	}
 }

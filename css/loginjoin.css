@@ -125,12 +125,12 @@
     height: 22rem;
 }
 
-.join_tab {
+.join_step_guide {
     display: flex;
     max-width: 98rem;
     justify-content: space-between;
 }
-.join_tab li {
+.join_step_guide li {
     width: 32%;
     padding: 5.7rem 2rem 6.7rem;
     text-align: center;
@@ -138,15 +138,15 @@
     color: #433a34;
     background-color: rgba(211,209,180,0.2);
 }
-.join_tab li.on {
+.join_step_guide li.on {
     background-color: #888;
     color: #fff;
 }
-.join_tab span {
+.join_step_guide span {
     font-family: "AmstelvarAlpha";
     font-size: 1.8rem;
 }
-.join_tab p {
+.join_step_guide p {
     margin-top: 2.8rem;
     font-size: 2.2rem;
     font-weight: 500;
@@ -205,8 +205,6 @@
 .join_step01 input:checked + p::before {
 	background-image: url(../images/icon_ui_radio_chk.svg);
 }
-
-
 .join_step01 .join_info {
     padding: 3rem 3.9rem 3.5rem;
     border-radius: 1.2rem;
@@ -227,14 +225,14 @@
 
 
 /* step2 */
-.join_step02 .join_tab {
+.join_step02 .join_step_guide {
     padding-bottom: 5rem;
 }
-.join_step02 .join_terms {
+.join_step02 .join_input_wrap {
     padding-top: 5rem;
     border-top: 1px solid rgba(166,183,194,0.5);
 }
-.join_step02 .join_terms:first-of-type {
+.join_step02 .join_input_wrap:first-of-type {
     padding-bottom: 5rem;
 }
 .join_step02 .input_box {
@@ -243,12 +241,11 @@
 .join_step02 .input_tit {
     margin-bottom: 2rem;
 }
-.input_info .warning_txt,
-.input_info .info_txt {
+.input_info .txt {
     display: inline-block;
-    margin-top: 1rem;
 }
 .input_info .ui_radio {
+    display: inline-block;
     margin-top: 1.5rem;
 }
 .input_info .btn_join_chk {
@@ -281,12 +278,12 @@
 .email_wrap .ui_select {
     flex: 1 1 30rem;
 }
-.email_wrap + .input_info .info_txt {
+.email_wrap + .input_info .txt {
     margin-top: 1.5rem;
 }
 
 /* step3 */
-.join_step03 .join_tab {
+.join_step03 .join_step_guide {
     padding-bottom: 5rem;
     border-bottom: 1px solid rgba(166,183,194,0.5);
 }
@@ -370,31 +367,31 @@
         height: 26rem;
     }
 
-    .join_tab {
+    .join_step_guide {
         display: block;
     }
-    .join_tab li {
+    .join_step_guide li {
         width: 100%;
         padding: 1.8rem 3rem;
         border-radius: 0.6rem;
         text-align: left;
     }
-    .join_tab li~li {
+    .join_step_guide li~li {
         margin-top: 0.8rem;
     }
-    .join_tab span {
+    .join_step_guide span {
         display: inline-block;
         width: 6.4rem;
         font-size: 1.4rem;
         line-height: 2rem;
     }
-    .join_tab p {
+    .join_step_guide p {
         display: inline-block;
         margin-top: 0;
         font-size: 1.6rem;
         line-height: 2rem;
     }
-    .join_tab li.on {
+    .join_step_guide li.on {
         box-shadow:inset 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
     }
     .step01_txt {
@@ -437,7 +434,7 @@
     }
 
 
-    .join_step02 .join_terms {
+    .join_step02 .join_input_wrap {
         padding-top: 2rem;
         padding-bottom: 3rem;
     }
@@ -446,10 +443,6 @@
     }
     .join_step02 .input_tit {
         margin-bottom: 1rem;
-    }
-    .input_info .warning_txt,
-    .input_info .info_txt {
-        margin-top: 0.6rem;
     }
     .input_info .ui_radio {
         margin-top: 1rem;
@@ -461,7 +454,7 @@
         margin-top: 1rem;
         font-size: 1.2rem;
     }
-    .input_box .ui_grid2 .wrap~.wrap {
+    .input_box .input_grid2 .wrap~.wrap {
         margin-top: 1rem;
     }
     .email_wrap {
@@ -481,12 +474,10 @@
     .email_wrap .ui_input, .email_wrap .ui_select {
         flex: unset;
     }
-    .email_wrap + .input_info .info_txt {
+    .email_wrap + .input_info .txt {
         margin-top: 3rem;
         line-height: 1.8rem;
     }
-
-        
     .step03_txt {
         margin-top: 10rem;
         font-size: 1.8rem;
