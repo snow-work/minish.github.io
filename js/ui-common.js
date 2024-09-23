@@ -188,6 +188,14 @@ $(".btn_pop_close").click(function(){
 })
 
 
+// textarea 포커스
+$(".ui_textarea textarea").focus(function(){
+    $(this).parent().addClass("active")
+})
+$(".ui_textarea textarea").focusout(function(){
+    $(this).parent().removeClass("active")
+})
+
 
 // 셀렉트박스 열림/닫힘
 $(".ui_select button").click(function(){
@@ -454,3 +462,15 @@ function calSet(){
     })
 }
 
+
+// function readURL(input) {
+//     if (input.files && input.files[0]) {
+//       var reader = new FileReader();
+//       reader.onload = function(e) {
+//         document.getElementById('preview').src = e.target.result;
+//       };
+//       reader.readAsDataURL(input.files[0]);
+//     } else {
+//       document.getElementById('preview').src = "";
+//     }
+// }

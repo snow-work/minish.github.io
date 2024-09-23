@@ -117,7 +117,56 @@ gnb : 200
 	line-height: 7.5rem;
 	color: #433a34;
 }
+.page_title.type02 {
+	padding: 13.8rem 0 10rem;
+	text-align: center;
+	background-image: url(../images/icon_title_deco.png);
+	background-repeat: no-repeat;
+	background-position: top 9.1rem center ;
+	background-size: 2.7rem ;
+}
+.page_title.type02 .txt {
+    margin-bottom: 1.1rem;
+	font-family: "NanumMyeongjo";
+	font-size: 1.8rem;
+	line-height: 2.3rem;
+	color: #AA9B7A;
+}
+.page_title.type02 h2 {
+	font-family: "NanumMyeongjo";
+	font-size: 6rem;
+	line-height: 7.5rem;
+	color: #433a34;
+}
+.page_title.type02 h2:first-child {
+	/* padding-top: 2rem; */
+}
+.page_title.type02 .sub {
+	margin-top: 1.6rem;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	color: #433a34;
+    /* transform: translateY(3rem);
+	opacity: 0; */
+}
+/* .page_title.type02.active .wrap {
+	opacity: 1;
+	background-position: top 11.2rem center ;
+	transition: all 1s;
+}
+.page_title.type02.active h2 {
+	opacity: 1;
+    transform: scaleX(0.9) translateY(0);
+	transition: all 1s 0.5s;
+}
+.page_title.type02.active .txt {
+	opacity: 1;
+    transform: translateY(0);
+	transition: all 1s 1s;
+} */
+
 .input_tit {
+	margin-bottom: 4.5rem;
 	font-size: 2.2rem;
 	line-height: 2rem;
 	font-weight: 500;
@@ -201,8 +250,19 @@ gnb : 200
 	font-size: 1.5rem;
 	line-height: 2rem;
     letter-spacing: -0.03rem;
-	color:#A2B3BE;
+	color:#4C6677;
 	border:none;
+}
+.ui_textarea textarea:read-only {
+	/* 약관때문에 컬러 변경, 필요시 loginjoin css로 뺄것 */
+	color:#A2B3BE;
+}
+.ui_textarea textarea::placeholder {
+	color:#A2B3BE;
+}
+.ui_textarea.active {
+	border-color: #4C6677;
+	outline: none;
 }
 .ui_textarea textarea:active,
 .ui_textarea textarea:focus {
@@ -311,12 +371,42 @@ gnb : 200
 .ui_select ul::-webkit-scrollbar-track {background: transparent; }
 .ui_select ul::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
 .ui_select .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+.ui_file {}
+.ui_file span{
+    display: inline-block;
+    position: relative;
+	padding-left: 4.4rem;
+	font-family: "Pretendard";
+	font-size: 2rem;
+	line-height: 3rem;
+    letter-spacing: -0.03rem;
+	background-image: url(../images/icon_ui_file_.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 3rem;
+    color: #433A34;
+    cursor: pointer;
+}
+.ui_file span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0;
+    width: calc(100% - 4.4rem);
+    border-bottom: 1px solid #433A34;
+}
+.ui_file input[type="file"] {
+    display: none;
+}
+
 .input_grid2 {
 	display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 .input_grid2 > .wrap {
-	width: 100%;
+    width: calc(50% - 1rem);
 }
 
 
@@ -1053,8 +1143,29 @@ gnb : 200
 		font-size: 3rem;
 		line-height: 3.8rem;
 	}
+	
+	.page_title.type02 {
+		padding: 12.4rem 0 10rem;
+		background-position: top 8rem center ;
+		background-size: 2.4rem;
+	}
+	.page_title.type02 .txt {
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+		line-height: 1;
+	}
+	.page_title.type02 h2 {
+		font-size: 3rem;
+		line-height: 4.2rem;
+	}
+	.page_title.type02 .sub {
+		margin-top: 2rem;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+	}
 
 	.input_tit {
+		margin-bottom: 1rem;
 		font-size: 1.6em;
 	}
 	.input_tit span {
@@ -1070,8 +1181,11 @@ gnb : 200
 	.ui_radio span {
 		font-size: 1.2rem;
 	}
+	.ui_textarea {
+		padding: 1.5rem 0.85rem 1.5rem 1.5rem
+	}
 	.ui_textarea textarea {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 	.ui_input {
 		height: 5.2rem;
@@ -1101,6 +1215,16 @@ gnb : 200
 		padding:0 0.5rem;
 		font-size: 1.4rem;
 	}
+	.ui_file span{
+		padding-left: 3.6rem;
+		font-size: 1.2rem;
+		line-height: 2.6rem;
+		background-size: 2.6rem;
+	}
+	.ui_file span::before {
+		bottom: 0.5rem;
+		width: calc(100% - 3.6rem);
+	}
 	.btn_confirm_wrap {
 		margin-top: 6rem;
 	}
@@ -1114,6 +1238,9 @@ gnb : 200
 	}
 	.input_grid2 {
 		display: block;
+	}
+	.input_grid2 > .wrap {
+		width: 100%;
 	}
 
 	.ui_tab {

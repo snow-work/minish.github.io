@@ -137,295 +137,220 @@
 		</div>
 		<!-- 헤더 공통 end -->
 
-		<!-- 상담예약 페이지 -->
-		<!-- 헤더에 <script src="../../js/index.global.min.js"></script> 추가  -->
-		<div id="content" class="reservation_page">
-			<div class="sub_visual_con">
+		<div id="content" class="model_page">
+			<div class="sub_visual_con scr_chk">
                 <div class="sub_visual_txt">
-                    <h2>Online<br class="ver_mo"> Reservation</h2>
+                    <h2>MINISH<br class="ver_mo"> MODEL</h2>
                     <p>강남 미니쉬치과의원은 자연치아 손상없이<br>
                         고객님의 자연스러운 아름다움을 위해<br>
                         최고의 고객 만족 서비스를 제공하겠습니다
                     </p>
                 </div>
             </div>
-            <div class="reserve_page_con">
-                <div class="tab_wrap">
-					<div class="ui_tab">
-						<div class="wrap">
-							<button class="btn_tab_open">진료 / 상담 예약하기</button>
-							<ul>
-								<li>
-									<button  class="on">진료 / 상담 예약하기</button>
-								</li>
-								<li>
-									<button>예약내역 / 예약 관리</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="tab_box_wrap">
-					<div class="tab_box on">
-						<div class="reserve_info">
-							<div class="wrap">
-								<ol>
-									<li>강남 미니쉬치과의원은 <span>100% 예약제</span>로 진행하고 있습니다. </li>
-									<li>상담 예약하신 분들께는 별도의 확인 전화를 드립니다.</li>
-									<li>상담 예약 변경 및 취소시, 다른 대기 고객분들을 위해 최소 하루 전까지 전화 부탁드립니다.</li>
-								</ol>
-								<p class="tel">문의 전화 : 1899 - 2854</p>
-							</div>
-						</div>
-						<div class="reserve_step_guide">
-							<ul>
-								<li>
-									<img src="../../images/icon_reserve_step_01.png" alt="">
-									<span>예약정보 입력</span>
-								</li>
-								<li>
-									<img src="../../images/icon_reserve_step_02.png" alt="">
-									<span>진료 상담<br>항목 선택</span>
-								</li>
-								<li>
-									<img src="../../images/icon_reserve_step_03.png" alt="">
-									<span>예약일 선택</span>
-								</li>
-								<li>
-									<img src="../../images/icon_reserve_step_04.png" alt="">
-									<span>예약 완료</span>
-								</li>
-							</ul>
-						</div>
-						<div class="reserve_content content01">
-							<div class="wrap">
-								<div class="reserve_input_wrap">
-									<div class="input_box">
-										<p class="input_tit">예약자 정보 입력</p>
-										<div class="input_grid2">
-											<div class="wrap">
-												<input type="text" class="ui_input" placeholder="성함을 입력해주세요">
-												<div class="input_info">
-													<p class="txt warning">성함을 입력해주세요</p>
-												</div>
-											</div>
-											<div class="wrap">
-												<input type="text" class="ui_input" placeholder="핸드폰 번호를 입력해주세요">
-												<div class="input_info">
-													<p class="txt warning">입력 숫자를 초과하였습니다</p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="input_box">
-										<p class="input_tit">진료 상담 항목</p>
-										<div class="input_grid2">
-											<div class="wrap">
-												<div class="ui_select">
-													<div class="wrap">
-														<button>상담 항목을 선택해 주세요</button>
-														<ul>
-															<li class="option">
-																<label>
-																	<input type="radio" name="select_consultation"></input>
-																	<span>충치 (인레이,온레이,크라운)</span>
-																</label>
-															</li>
-															<li class="option">
-																<label>
-																	<input type="radio" name="select_consultation"></input>
-																	<span>잇몸 (치주질환)</span>
-																</label>
-															</li>
-															<li class="option">
-																<label>
-																	<input type="radio" name="select_consultation"></input>
-																	<span>치아 미백</span>
-																</label>
-															</li>
-															<li class="option">
-																<label>
-																	<input type="radio" name="select_consultation"></input>
-																	<span>미니쉬</span>
-																</label>
-															</li>
-															<li class="option">
-																<label>
-																	<input type="radio" name="select_consultation"></input>
-																	<span>라미네이트 (라미네이트, 무삭제라미네이트)</span>
-																</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<div class="input_info">
-													<p class="txt warning">항목을 선택해주세요</p>
-												</div>
-											</div>
-											<div class="wrap">
-											</div>
-										</div>
-									</div>
-									<div class="input_box">
-										<p class="input_tit">예약일 선택</p>
-										<div class="time_select_wrap">
-											<div class="calendar_wrap">
-												<div id="calendar"></div>
-												<div class="input_info">
-													<p class="txt info">※ 예약 당일로부터 1일 후 예약 가능합니다 </p>
-													<p class="txt info">※ 당일 예약은 전화 문의 부탁드립니다</p>
-													<p class="txt warning">신청일이 마감되었습니다. 다른 시간대를 선택해주세요</p>
-												</div>
-											</div>
-											<div class="time_list">
-												<p class="tit">AM 오전</p>
-												<ul>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>10:00</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>10:30</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio" disabled>
-															<p><span>11:00</span><span>( 예약 마감 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>10:00</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-												</ul>
-											</div>
-											<div class="time_list">
-												<p class="tit">PM 오후</p>
-												<ul>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>2:00</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>2:30</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio" disabled>
-															<p><span>3:00</span><span>( 예약 마감 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>3:30</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>4:00</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>4:30</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>5:00</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>5:30</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>6:00</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio">
-															<p><span>6:30</span><span>( 예약 가능 )</span></p>
-														</label>
-													</li>
-													<li>
-														<label>
-															<input type="radio" name="reserve_time_radio" disabled>
-															<p><span>7:00</span><span>( 예약 마감 )</span></p>
-														</label>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="input_radio_box">
-										<label class="ui_radio">
-											<input type="checkbox" value="">
-											<span><b>[필수]</b> 예약 내용을 SMS으로 받습니다</span>
-										</label>
-										<label class="ui_radio">
-											<input type="checkbox" value="">
-											<span><b>[필수]</b> <u>개인정보취급방침에 동의합니다</u></span>
-										</label>
-									</div>
-								</div>
-								
-								<div class="reCaptcha_wrap">
-									<!-- 샘플이미지, 개발시 삭제 -->
-									<img src="../../images/sample_recaptcha.png" alt="">
-								</div>
-
-								<div class="btn_confirm_wrap">
-									<button class="btn_cancel">취소</button>
-									<button class="btn_ok">상담 예약</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab_box">
-						<!-- 예약정보 입력 start -->
-						<div class="reserve_content content02">
-							<div class="wrap">
-								<div class="reserve_chk_txt">
-									<h3>예약 정보를 입력해주세요</h3>
-									<p>예약 내역 확인을 위하여 예약시<br class="ver_mo"> 작성하셨던 핸드폰 번호를 입력해주세요</p>
-								</div>
-								<div class="rc_input_box">
-									<input type="text" class="ui_input" placeholder="성함을 입력해주세요">
-									<input type="text" class="ui_input" placeholder="핸드폰 번호를 입력해주세요">
-								</div>
-								<div class="btn_reserve_chk">
-									<button>확인</button>
-								</div>
-							</div>
-						</div>
-						<!-- 예약정보 입력 end -->
-					</div>
-				</div>
-                
+            <div class="page_title scr_chk type02">
+                <p class="txt">MINISH MODEL</p>
+                <h2>미니쉬 모델 지원하기</h2>
             </div>
-            
+
+            <div class="model_page_con">
+                <div class="wrap">
+                    <div class="model_info">
+                        <p class="input_tit">지원 대상</p>
+                        <p class="txt">변색된 치아, 벌어진 치아, 마모된 치아, 시린 치아,토끼 치아, 왜소치 등 치아에<br class="ver_pc">
+                            불편함을 겪고 있는 사람이라면 남녀노소 누구나 지원이 가능합니다.</p>
+                        <p class="sub_txt">
+                            의료법상 치료 비용 100% 지원은 진행되지 않는다는 점<br class="ver_mo"> 참고부탁드립니다
+                        </p>
+                    </div>
+                    <div class="model_step_guide">
+                        <p class="input_tit">선정 과정</p>
+                        <div class="">
+                            <ul class="step_guide">
+                                <li>
+                                    <img src="../../images/icon_model_step_01.png" alt="">
+                                    <span>온라인 지원</span>
+                                </li>
+                                <li>
+                                    <img src="../../images/icon_model_step_02.png" alt="">
+                                    <span>1차 모델<br class="ver_mo"> 선정</span>
+                                </li>
+                                <li>
+                                    <img src="../../images/icon_model_step_03.png" alt="">
+                                    <span>개별 전화<br class="ver_mo"> 연락</span>
+                                </li>
+                                <li>
+                                    <img src="../../images/icon_model_step_04.png" alt="">
+                                    <span>병원 내원<br class="ver_mo"> 상담</span>
+                                </li>
+                                <li>
+                                    <img src="../../images/icon_model_step_05.png" alt="">
+                                    <span>최종 모델<br class="ver_mo"> 선정</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="input_box ">
+                        <div class="apply_wrap">
+                            <div class="left_con">
+                                <p class="input_tit">초상권 제공 환자 신청하기<span class="imp">[ 필수 ]</span></p>
+                                <input type="text" class="ui_input" placeholder="성함을 입력해주세요">
+                                <input type="text" class="ui_input" placeholder="핸드폰 번호를 입력해주세요">
+                            </div>
+                            <div class="right_con">
+                                <p class="input_tit">성별</p>
+                                <div class="ui_select">
+                                    <div class="wrap">
+                                        <button>성별</button>
+                                        <ul>
+                                            <li class="option">
+                                                <label>
+                                                    <input type="radio" name="select_gender">
+                                                    <span>남자</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <label>
+                                                    <input type="radio" name="select_gender">
+                                                    <span>여자</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <label>
+                                                    <input type="radio" name="select_gender">
+                                                    <span>그외</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ui_select">
+                                    <div class="wrap">
+                                        <button>나이</button>
+                                        <ul>
+                                            <li class="option">
+                                                <label>
+                                                    <input type="radio" name="select_age"></input>
+                                                    <span>20</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <label>
+                                                    <input type="radio" name="select_age"></input>
+                                                    <span>21</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <label>
+                                                    <input type="radio" name="select_age"></input>
+                                                    <span>22</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input_box sns_box">
+                        <p class="input_tit">
+                            SNS 정보 <span class="nor">[ 선택 ]</span>
+                            <span class="imp">중복 작성 가능합니다.</span>
+                        </p>
+                        <div class="input_grid2">
+                            <div class="wrap">
+                                <input type="text" class="ui_input" placeholder="페이스북 URL을 입력해주세요">
+                            </div>
+                            <div class="wrap">
+                                <input type="text" class="ui_input" placeholder="인스타그램 ID를 입력해주세요">
+                            </div>
+                            <div class="wrap">
+                                <input type="text" class="ui_input" placeholder="유튜브 채널명을 입력해주세요">
+                            </div>
+                            <div class="wrap">
+                                <input type="text" class="ui_input" placeholder="블로그 URL을 입력해주세요">
+                            </div>
+                            
+                            <div class="wrap">
+                                <input type="text" class="ui_input" placeholder="틱톡 채널 ID를 입력해주세요">
+                            </div>
+                            <div class="wrap">
+                                <input type="text" class="ui_input" placeholder="기타 SNS URL을 입력해주세요">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input_box stroy_box">
+                        <p class="input_tit">상세 내용 및 사연 작성</p>
+                        <div class="ui_textarea">
+                            <textarea name="" placeholder="성심 성의껏 작성해 주실수록 미니쉬 모델이 될 확률이 높아집니다"></textarea>
+                        </div>			
+                    </div>
+
+                    <div class="model_info">
+                        <p class="input_tit">사진 첨부 가이드</p>
+                        <p class="txt">얼굴 전체와 치아가 선명하게 보이는<br class="ver_mo"> 셀카사진 3장 이상 첨부 부탁드립니다</p>
+                        <p class="sub_txt ver_pc">
+                            흐릿한 사진, 심하게 보정된 사진, 오래된 사진, 이미지 사이즈가 작아 화질이 떨어지는 사진 등 왜곡 및 현재 상태와 다른 이미지는 모델 선정에서 제외됨을 알려드립니다.
+                        </p>
+                        <p class="sub_txt ver_mo">
+                        흐릿한 사진, 심하게 보정된 사진, 오래된 사진 등 왜곡 및<br>
+                        현재 상태와 다른 이미지는 모델 선정에서 제외됨을 알려드립니다.
+                        </p>
+                        <div class="sample_images">
+                            <div>
+                                <img src="../../images/model_sample_img01.png" alt="">
+                                <p>예시 사진</p>
+                            </div>
+                            <div>
+                                <img src="../../images/model_sample_img02.png" alt="">
+                                <p>예시 사진</p>
+                            </div>
+                            <div>
+                                <img src="../../images/model_sample_img03.png" alt="">
+                                <p>예시 사진</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input_file_box">
+                        <div class="upload_imgs_wrap">
+                            <div class="img_wrap">
+                                <!-- 파일 첨부시 미리보기 이미지 삽입
+                                    <img src="" alt="">
+                                -->
+                            </div>
+                            <div class="img_wrap">
+                                <!-- <img src="" alt=""> -->
+                            </div>
+                            <div class="img_wrap">
+                                <!-- <img src="" alt=""> -->
+                            </div>
+                        </div>
+                        <label class="ui_file">
+                            <input type="file" onchange="readURL(this);">
+                            <span>사진 첨부하기</span>
+                        </label> 
+                    </div>
+                    <div class="input_radio_box">
+                        <label class="ui_radio">
+                            <input type="checkbox" value="">
+                            <span><b>[필수]</b> <u>개인정보취급방침에 동의합니다</u></span>
+                        </label>
+                    </div>
+                
+                    <div class="reCaptcha_wrap">
+                        <!-- 샘플이미지, 개발시 삭제 -->
+                        <img src="../../images/sample_recaptcha.png" alt="">
+                    </div>
+
+
+					<div class="btn_confirm_wrap">
+						<button class="btn_cancel">취소</button>
+						<button class="btn_ok" onClick="">모델 신청하기</button>
+					</div>
+                </div>
+            </div>
 		</div>
 
 		<!-- 하단 공통 start -->

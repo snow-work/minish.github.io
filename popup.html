@@ -34,6 +34,10 @@
         <br>
         <button onClick="javascript:layer_popup_open('.popup_reserve_fail')">진료 상담 예약 실패 팝업</button>
         <br>
+        <button onClick="javascript:layer_popup_open('.popup_model_success')">모델지원 성공 팝업</button>
+        <br>
+        <button onClick="javascript:layer_popup_open('.popup_model_fail')">모델지원 실패 팝업</button>
+        <br>
         <br>
     </div>
     
@@ -101,6 +105,38 @@
                 <span class="pop_icon"></span>
                 <p class="main_txt">예약 신청이 실패하였습니다</p>
                 <p class="sub_txt">신청 예약일이 중복으로 체크 되었는지 확인해주세요</p>
+            </div>
+            <p class="close_txt">
+                <span>3초 뒤에 자동으로 꺼집니다</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 모델지원 성공 -->
+    <div class="layer_popup success popup_model_success">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <button class="btn_pop_close">팝업닫기</button>
+            <div class="wrap">
+                <span class="pop_icon"></span>
+                <p class="main_txt">모델 지원이 성공적으로 완료 되었습니다</p>
+                <p class="sub_txt">강남 미니쉬치과의원에 새로운 미소를 띄어주시길<br>진심으로 바라겠습니다.</p>
+            </div>
+            <p class="close_txt">
+                <span>3초 뒤에 자동으로 꺼집니다</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 모델지원  실패 -->
+    <div class="layer_popup fail popup_model_fail">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <button class="btn_pop_close">팝업닫기</button>
+            <div class="wrap">
+                <span class="pop_icon"></span>
+                <p class="main_txt">모델 지원이 실패하였습니다</p>
+                <p class="sub_txt">규격에 맞는 이미지를 첨부하였는지 확인해주세요.</p>
             </div>
             <p class="close_txt">
                 <span>3초 뒤에 자동으로 꺼집니다</span>

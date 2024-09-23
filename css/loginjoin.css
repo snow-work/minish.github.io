@@ -365,7 +365,11 @@
     }
     .join_page_con .ui_textarea {
         height: 26rem;
+        padding: 2rem 0.85rem 2rem 1.5rem
     }
+    .join_page_con .ui_textarea textarea {
+		font-size: 1.4rem;
+	}
 
     .join_step_guide {
         display: block;
