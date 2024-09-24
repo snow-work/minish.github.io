@@ -13,13 +13,14 @@
 	<script type="text/javascript" src="../../js/ui-common.js" defer ></script>
 	
 	<link href="../../css/common.css" rel="stylesheet" type="text/css">
+	<link href="../../css/loginjoin.css" rel="stylesheet" type="text/css">
 </head>
 
 
 
 
 <body>
-	 <div class="page_wrap sub">
+	 <div class="page_wrap login">
 		<!-- 헤더 공통 start -->
 		<div id="header">
 			<div class="header_con">
@@ -28,23 +29,6 @@
 						<a href="../../index.html" title="헤더 로고">
 						</a>
 					</h1>
-					<div class="top_tnb">
-						<p>More +</p>
-						<ul>
-							<li>
-								<a href="">신념 & 비전</a>
-							</li>
-							<li>
-								<a href="">의료진</a>
-							</li>
-							<li>
-								<a href="">위치 및 진료</a>
-							</li>
-							<li>
-								<a href="">공간 안내</a>
-							</li>
-						</ul>
-					</div>
 					<div class="top_addr">
 						<p>서울시 서초구 사평대로 373 삼흥빌딩 2층</p>
 					</div>
@@ -130,24 +114,73 @@
 								<img src="../../images/gnb_img.png" alt="">
 							</div>
 						</div>
-						<div class="login_wrap">
-							
-						</div>
 					</div>
-					
-			
 				</div>
 			</div>
 		</div>
 		<!-- 헤더 공통 end -->
 
-		<!-- 회원가입페이지 -->
-		<div id="content" class="sub_con">
-			<div class="sub_page_title">
-				
+		<!-- 아이디찾기 페이지 -->
+		<div id="content">
+			<div class="find_idpw_page_con scr_chk">
+                <div class="wrap">
+                    <div class="find_con">
+                        <ul class="find_tab">
+                            <li>
+                                <button class="on">아이디 찾기</button>
+                            </li>
+                            <li>
+                                <button>비밀번호 찾기</button>
+                            </li>
+                        </ul>
+                        
+                        <!-- 아이디 찾기 탭 -->
+                        <div class="tab_box find_id on">
+                            <div class="find_info">
+                                <p>
+                                    고객님의 이름과 등록했던 이메일을 입력해주세요.<br>입력해주신 고객님의 메일 주소로 아이디를<br class="ver_mo"> 전달해드리겠습니다.
+                                </p>
+                            </div>
+                            <div class="find_input_wrap">
+                                <div class="input_box">
+                                    <input type="text" class="ui_input" placeholder="고객님의 성명을 입력해주세요">
+                                    <input type="text" class="ui_input" placeholder="회원가입시 등록한 이메일을 입력해주세요">
+                                </div>
+                                <button class="btn_main" onclick="">전달하기</button>
+                            </div>
+                        </div>
+
+                        <!-- 비밀번호 찾기 탭 -->
+                        <div class="tab_box find_pw">
+                            <div class="find_info">
+                                <p>
+                                    고객님의 이름과 등록했던 이메일을 입력해주세요.<br>
+                                    입력해주신 고객님의 메일 주소로<br class="ver_mo"> 비밀번호를 전달해드리겠습니다.
+                                </p>
+                            </div>
+                            <div class="find_input_wrap">
+                                <div class="input_box">
+                                    <input type="text" class="ui_input" placeholder="고객님의 성명을 입력해주세요">
+                                    <input type="text" class="ui_input" placeholder="아이디를 입력해주세요">
+                                    <input type="text" class="ui_input" placeholder="회원가입시 등록한 이메일을 입력해주세요">
+                                    <div class="input_info">
+                                        <p class="txt warning">* 비밀번호를 전달 받으실 이메일을 입력해주세요.</p>
+                                    </div>
+                                </div>
+                                <button class="btn_main" onclick="">전달하기</button>
+                            </div>
+                        </div>
+
+                        <div class="join_wrap">
+                            <p>강남 미니쉬치과의원 회원이 아니시라면, <br class="ver_mo">지금 바로 회원가입을 해주세요 </p>
+                            <a herf="../../join/join.html">회원가입하기</a>
+                        </div> 
+                    </div>
+                    <div class="img_con">
+                        <img src="../../images/find_idpw_img.png" alt="">
+                    </div>
+                </div>
 			</div>
-			<p>강남 미니쉬치과의원</p>
-			<p>회원가입</p>
 		</div>
 
 		<!-- 하단 공통 start -->
@@ -157,29 +190,29 @@
 					<ul class="sns_list">
 						<li class="sns_youtube">
 							<a href="" target="_blank">
-								<img src="../../images/icon_sns_youtube.png">
+								유튜브 버튼
 							</a>
 						</li>
 						<li class="sns_insta">
 							<a href="" target="_blank">
-								<img src="../../images/icon_sns_insta.png">
+								인스타 버튼
 							</a>
 						</li>
 						<li class="sns_blog">
 							<a href="" target="_blank">
-								<img src="../../images/icon_sns_blog.png">
+								블로그 버튼
 							</a>
 						</li>
 						<li class="sns_kakao">
 							<a href="" target="_blank">
-								<img src="../../images/icon_sns_kakao.png">
+								카카오 버튼
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="btn_wrap">
 					<button>
-						<img src="../../images/icon_sns_btn.svg">
+						하단 sns버튼
 					</button>
 				</div>
 			</div>

@@ -177,15 +177,22 @@ $(".sns_fixed_con button").click(function(){
 // 팝업오픈
 function layer_popup_open(popname){
     $(popname).addClass("active");
-    // 3초뒤 팝업닫기
-    setTimeout(function(){
-        $(popname).removeClass("active");
-    }, 3000);
+    // 3초뒤 팝업닫기, 닫기 텍스트 있을때만 
+    if($(popname).find(".close_txt").length>0){  
+        setTimeout(function(){
+            $(popname).removeClass("active");
+        }, 3000);
+    }
 }
 // 닫기버튼으로 팝업 닫기
 $(".btn_pop_close").click(function(){
     $(this).parents(".layer_popup").removeClass("active");
 })
+// 개인정보 취급방침 확인버튼
+function policy_check(radioName){
+    $("input[name='"+radioName+"']").prop('checked',true)
+    $(".layer_popup").removeClass("active");
+}
 
 
 // textarea 포커스
@@ -256,34 +263,15 @@ function moveTab(tgTab, tgIndex){
 }
 
 
-//----------메인페이지 start------------- //
-// 메인 공지사항
-$(".notice_wrap button").click(function(){
-    $(".notice_wrap").hide()
-})
-
-
-
-// 의사 마우스오버 이벤트
-$(".dr_wrap").hover(function(){
-    if($(document).width()>768){
-        $(".dr_wrap").toggleClass('off');
-        $(this).removeClass('off');
-        $(this).toggleClass('on');
-    }
-})
-
-
-
-// 메인 스크롤 fade  
+// 스크롤 fade  
 // 스크롤 체크할 객체
-const maminScrEl = document.querySelectorAll(".scr_chk")
+const scrEl = document.querySelectorAll(".scr_chk")
 // 영역설정 
 const option = {
     rootMargin: '0px'
 }
 
-const mainScrEfect = (entries, observer) => {
+const scrEfect = (entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
         // 영역 벗어남
@@ -291,7 +279,7 @@ const mainScrEfect = (entries, observer) => {
     } else {
         // 영역안으로 들어옴
         entry.target.classList.add("active")
-        // 비디오영역 영상재생
+        // 메인 비디오영역 영상재생
         if(entry.target.classList.contains("main_video_con")) {
             if(window.visualViewport.width>768){
                 // PC 재생
@@ -304,8 +292,26 @@ const mainScrEfect = (entries, observer) => {
     }
   });
 }
-const observer = new IntersectionObserver(mainScrEfect, option);
-maminScrEl.forEach(scr => observer.observe(scr));
+const observer = new IntersectionObserver(scrEfect, option);
+scrEl.forEach(scr => observer.observe(scr));
+
+
+
+//----------메인페이지 start------------- //
+// 메인 공지사항
+$(".notice_wrap button").click(function(){
+    $(".notice_wrap").hide()
+})
+
+
+// 의사 마우스오버 이벤트
+$(".dr_wrap").hover(function(){
+    if($(document).width()>768){
+        $(".dr_wrap").toggleClass('off');
+        $(this).removeClass('off');
+        $(this).toggleClass('on');
+    }
+})
 
 
 // oao 영역, 헤더 스크롤 이벤트
@@ -383,6 +389,24 @@ document.addEventListener("scroll", (e) => {
 
 
 
+// 아이디 찾기 탭
+// 탭 동작
+$(".find_tab button").click(function(){
+    let elTab = $(".find_tab");
+    let elIndex = $(this).parent().index();
+
+    elTab.find("button").removeClass("on");
+    $(".tab_box").removeClass("on");
+    $(this).addClass("on")
+    
+    if(elIndex==0){
+        $(".tab_box.find_id").addClass("on")
+    }else{
+        $(".tab_box.find_pw").addClass("on")
+    }
+})
+
+
 // 회원가입 전체동의
 $(".btn_chk_all input").change(function(){
     if($(this).is(':checked')){
@@ -394,9 +418,10 @@ $(".btn_chk_all input").change(function(){
 
 
 
+
 // 상담예약 캘린더
-    // calMonth => 현재 달 설정, 오늘 기준 이전 달 버튼 비활성화
-    // calTomorrow => 내일, 초기 날짜 선택
+// calMonth => 현재 달 설정, 오늘 기준 이전 달 버튼 비활성화
+// calTomorrow => 내일, 초기 날짜 선택
 const sToday = new Date();
 const nowYear = sToday.getFullYear();
 const nowMonth = sToday.getMonth() + 1;
@@ -414,53 +439,52 @@ if (nowDate < 10) {
 }
 calTomorrow += nowDate;
 console.log(calMonth ,calTomorrow)
-    // FullCalendar 플러그인
+// FullCalendar 플러그인
 document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        headerToolbar: {
-            left: 'prev,next title',
-            center: '',
-            right: ''
-            // left: 'prev,next today',
-            // center: 'title',
-            // right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        locale: "ko",
-        // selectable: true,
-        // unselectAuto: false,
-        fixedWeekCount:false,
-        showNonCurrentDates: false,
-        validRange: {
-            start: calMonth
-        },
-        dateClick: function(info) {
-            // console.log(info.dateStr,  info);
-            if(info.dayEl.classList.contains("fc-day-future")){
-                if(document.querySelector(".fc-daygrid-day.on")){
-                    document.querySelector(".fc-daygrid-day.on").classList.remove("on")
+    if(document.getElementById('calendar')){
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next title',
+                center: '',
+                right: ''
+                // left: 'prev,next today',
+                // center: 'title',
+                // right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            locale: "ko",
+            fixedWeekCount:false,
+            showNonCurrentDates: false,
+            validRange: {
+                start: calMonth
+            },
+            dateClick: function(info) {
+                if(info.dayEl.classList.contains("fc-day-future")){
+                    if(document.querySelector(".fc-daygrid-day.on")){
+                        document.querySelector(".fc-daygrid-day.on").classList.remove("on")
+                    }
+                    info.dayEl.classList.add("on")
                 }
-                info.dayEl.classList.add("on")
             }
-        }
-    });
-    calendar.render();
-    document.querySelector(".fc-day-future[data-date='" +calTomorrow+ "']").classList.add("on")
-    calSet()
-
-    $(".fc-button-group button").click(function(){
+        });
+        calendar.render();
+        document.querySelector(".fc-day-future[data-date='" +calTomorrow+ "']").classList.add("on")
         calSet()
-     });
-});
 
+        $(".fc-button-group button").click(function(){
+            calSet()
+        });
+    }
+});
 function calSet(){
     // 날짜 "일"삭제
     $(".fc-daygrid-day-top a").each(function(index, item){
-        var txt = $(item).text().replace("일","");
-        $(item).text(txt);
+        var chageD = $(item).text().replace("일","");
+        $(item).text(chageD);
     })
 }
+
 
 
 // function readURL(input) {
