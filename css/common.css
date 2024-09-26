@@ -108,6 +108,51 @@ gnb : 200
 }
 
 
+
+
+
+/* 서브비주얼 */
+.sub_visual_con {
+	height: 71rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.sub_visual_txt {
+	max-width: 143rem;
+    margin: 0 auto;
+    padding-top: 24rem;
+    padding-left: 3rem;
+}
+
+.sub_visual_txt .txt {
+    margin-bottom: 3rem;
+	font-family: "NanumMyeongjo";
+	font-size: 1.8rem;
+	line-height: 2.3rem;
+	color: #AA9B7A;
+}
+.sub_visual_txt .tit {
+	font-family: "YaldeviColombo";
+	font-size: 6rem;
+	font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.025rem;
+    color: #fff;
+	/* 이하 폰트이슈로 임시 처리, 폰트파일 교체시 삭제 */
+    font-size: 4.8rem;
+    transform: scaleY(1.1);
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+.sub_visual_txt .sub_txt {
+	margin-top: 1rem;
+	font-size: 2rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.03rem;
+    color: #fff;
+}
+
 /* 공통 타이틀&텍스트 */
 .page_title.type01 {
 	max-width: 140rem;
@@ -491,6 +536,10 @@ gnb : 200
 }
 
 
+/* 페이지 스위칭 */
+.swich_page {display: none;}
+.swich_page.on {display: block;}
+
 
 /* 공통 - 헤더 */
 .header_con .top_wrap {
@@ -517,7 +566,7 @@ gnb : 200
 	position: absolute;
     top: 3rem;
     left: 16rem;
-	width: 11.1rem;
+	min-width: 11.1rem;
 }
 .header_con .top_tnb > p {
 	font-size: 1.6rem;
@@ -823,6 +872,7 @@ gnb : 200
 /* 공통 - 지도 */
 .footer_top {
 	display: flex;
+	overflow: hidden;
     justify-content: flex-end;
 	background-color: #F8F6F0;
 }
@@ -920,6 +970,7 @@ gnb : 200
 
 /* 공통 - 푸터 */
 .footer_bottom {
+	overflow: hidden;
 	background-color: #A8B9C3;
 }
 .footer_bottom .wrap {
@@ -1111,43 +1162,6 @@ gnb : 200
 
 
 
-
-
-
-
-/* 서브비주얼 */
-.sub_visual_con {
-	height: 71rem;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-.sub_visual_txt {
-	max-width: 146rem;
-    margin: 0 auto;
-    padding-top: 24rem;
-    padding-left: 3rem;
-}
-.sub_visual_txt h2 {
-	font-family: "YaldeviColombo";
-	font-size: 6rem;
-	font-weight: 300;
-    line-height: 8rem;
-    letter-spacing: -0.025rem;
-    color: #fff;
-	/* 폰트이슈로 임시 처리, 폰트파일 교체시 삭제 */
-    font-size: 4.8rem;
-    transform: scaley(1.2);
-    margin-top: -0.5rem;
-    margin-bottom: 1.5rem;
-}
-.sub_visual_txt p {
-	margin-top: 1rem;
-	font-size: 2rem;
-    line-height: 3.2rem;
-    letter-spacing: -0.03rem;
-    color: #fff;
-}
 
 
 @media screen and (max-width:1600px){
@@ -1365,8 +1379,7 @@ gnb : 200
 	.ui_tab ul li {
 		flex: unset;
 	}
-	.ui_tab ul button,
-	.ui_tab ul button.on  {
+	.ui_tab ul button {
 		padding: 0 1.5rem;
 		font-family: "Pretendard";
 		font-size: 1.4rem;
@@ -1374,6 +1387,10 @@ gnb : 200
 		border-top: 1px solid rgba(166, 183, 194, 0.15);
         border-bottom: none;
 		text-align: left;
+		color: rgba(76, 102, 119, 0.5);
+	}
+	.ui_tab ul button.on  {
+        border-bottom: none;
 		color: rgba(76, 102, 119, 0.5);
 	}
 	.ui_tab ul button:hover {
@@ -1609,12 +1626,17 @@ gnb : 200
 		padding-top: 12rem;
 		padding-left: 2rem;
 	}
-	.sub_visual_txt h2 {
+	.sub_visual_txt .txt {
+		font-size: 1.2rem;	
+        line-height: 1.5rem;
+		/* text-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2); */
+	}
+	.sub_visual_txt .tit {
 		font-size: 3.4rem;	
         line-height: 4.5rem;
 		text-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
 	}
-	.sub_visual_txt p {
+	.sub_visual_txt .sub_txt {
 		font-size: 1.4rem;
 		line-height: 2.2rem;
 		text-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2)

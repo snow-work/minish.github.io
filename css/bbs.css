@@ -1,0 +1,390 @@
+.sub_visual_con.notice {
+    background-image: url(./../images/sub_visual_notice.png);
+} 
+.sub_visual_con.news {
+    background-image: url(./../images/sub_visual_news.png);
+} 
+.sub_visual_con.review {
+    background-image: url(./../images/sub_visual_review.png);
+} 
+.sub_visual_txt {
+    padding-top: 28rem;
+}
+.sub_visual_txt .tit {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "NanumMyeongjo";
+    font-size: 6rem;
+    font-weight: 700;
+    color: #433a43;
+    transform: none;
+}
+.sub_visual_txt .sub_txt {
+    color: #8D7F74;
+}
+
+.sub_visual_con.notice .ver_news {
+    display: none;
+}
+.sub_visual_con.news .ver_notice {
+    display: none;
+}
+
+/* 공지사항&새소식 */
+.notice_page_con {}
+.notice_page_con > .wrap {
+    max-width: 146rem;
+    margin: 0 auto;
+    padding: 0 3rem 13rem;
+}
+.notice_page_con .tab_wrap {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+.notice_page_con .tab_wrap  {
+    padding-top: 8.5rem;
+    padding-bottom: 8rem; 
+}
+
+
+
+
+/* 게시판 카드형 */
+.bbs_list_card ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bbs_list_card li {
+    width: calc(50% - 2rem);
+}
+.bbs_list_card li:nth-child(n+3) {
+    margin-top: 4rem;
+}
+.bbs_list_card a,
+.bbs_list_card button {
+    display: block;
+    width: 100%;
+    padding: 3.5rem 3.5rem 2rem;
+    background-color: rgba(250,239,216,0.5);
+    text-align: left;
+    transition: all 0.5s;
+}
+.bbs_list_card a:hover,
+.bbs_list_card button:hover {
+    background-color: rgba(166,183,194,0.2);
+}
+.bbs_list_card .img_wrap {
+    overflow: hidden;
+    position: relative;
+    height: 31rem;
+}
+.bbs_list_card .img_wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.bbs_list_card .tit_wrap {
+    margin-top: 2rem;
+}
+.bbs_list_card .tit_wrap .tit {
+    overflow: hidden;
+    font-family: "Pretendard";
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    letter-spacing: -0.025rem;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #625448;
+}
+.bbs_list_card .tit_wrap .date {
+    margin-top: 2.8rem;
+    font-family: "Pretendard";
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    letter-spacing: -0.025rem;
+    color: #888;
+}
+
+/* 글 보기 화면 */
+.bbs_view_wrap {
+    padding-top: 10rem;
+}
+.bbs_view_wrap .view_head {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D3DBE1;
+}
+.bbs_view_wrap .link_wrap {
+    flex: 0 0 auto;
+}
+.bbs_view_wrap .link_wrap a,
+.bbs_view_wrap .link_wrap button {
+    display:inline-block;
+    width: 3rem;
+    height: 3rem;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center center;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.bbs_view_wrap .link_wrap .btn_home {
+    background-image: url(../images/icon_bbs_home.svg);
+}
+.bbs_view_wrap .link_wrap .btn_back {
+    margin-left: 1.5rem;
+    background-image: url(../images/icon_bbs_back.svg);
+}
+
+.bbs_view_wrap .view_head .tit { 
+    padding: 0 2.5rem;
+    flex: 1 1 auto;
+    font-family: "NanumMyeongjo";
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    color: #433A34;
+}
+
+.bbs_view_wrap .etc_wrap {
+    flex: 0 0 auto;;
+}
+.bbs_view_wrap .etc_wrap button {
+    display:inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.bbs_view_wrap .etc_wrap .btn_url {
+    background-image: url(../images/icon_bbs_url.svg);
+    background-size: 1.7rem;
+}
+.bbs_view_wrap .etc_wrap .btn_share {
+    margin-left: 0.7rem;
+    background-image: url(../images/icon_bbs_share.svg);
+    background-size: 1.9rem;
+}
+.bbs_view_wrap .etc_wrap .date {
+    margin-left: 1.2rem;
+    margin-right: 5rem;
+    font-size: 1.8rem;
+    letter-spacing: -0.025rem;
+    vertical-align: middle;
+    color: #888;
+}
+
+
+.bbs_view_wrap .view_body {}
+.bbs_view_wrap .view_body .wrap {
+    max-width: 98rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15rem 0 18rem;
+}
+.bbs_view_wrap .view_foot ul {}
+.bbs_view_wrap .view_foot ul li {
+    display: flex;
+    padding: 2rem 5rem 2rem 2.4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.bbs_view_wrap .view_foot ul li~li {
+    border-top: 1px solid #D3DBE1;
+}
+.bbs_view_wrap .view_foot ul span {
+    width: 7.6rem;
+    flex: 1 0 auto;
+    font-size: 1.8rem;
+    letter-spacing: -0.025rem;
+    color: #888;
+}
+
+.bbs_view_wrap .view_foot ul p {
+    display: block;
+    width: 100%;
+    flex: 1 1 auto;
+    padding-right: 5rem;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    letter-spacing: -0.025rem;
+    color: #433a34;
+}
+.bbs_view_wrap .view_foot ul span.date {
+    width: auto;
+}
+
+
+/* 모바일 */
+@media screen and (max-width:768px){
+    .sub_visual_con.notice {
+        background-image: url(./../images/sub_visual_notice_mo.png);
+    } 
+    .sub_visual_con.news {
+        background-image: url(./../images/sub_visual_news_mo.png);
+    } 
+    .sub_visual_con.review {
+        background-image: url(./../images/sub_visual_review_mo.png);
+    } 
+
+    .sub_visual_txt {
+        padding-top: 23rem;
+        padding-left: 2.8rem;
+    }
+    .sub_visual_txt .txt {
+        margin-bottom: 0.5rem;
+    }
+    .sub_visual_txt .tit {
+        font-size: 3rem;
+    }
+
+    .notice_page_con > .wrap {
+        padding: 0 1.5rem 9rem;
+    }
+
+
+    .notice_page_con .tab_wrap {
+        width: 32rem;
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+    }
+    .ui_tab {
+        height: auto;
+    }
+	.ui_tab > .wrap {
+        height: auto;
+        border: none;
+	}
+	.ui_tab .btn_tab_open {
+		display: none;
+	}
+	.ui_tab ul{
+        display: flex;
+        padding: 0;
+        background-color: transparent;
+	}
+	.ui_tab ul li {
+        flex: 1 1 0;
+	}
+	.ui_tab ul button {
+        text-align: center;
+        font-family: "NanumMyeongjo";
+        border-top: 0;
+        border-bottom: 0.3rem solid #D9D9D9;
+    }
+	.ui_tab ul button.on  {
+        color: #433A34;
+        border-bottom: 0.3rem solid #A6B7C2;
+	}
+	.ui_tab ul button:hover {
+        font-weight: 700;
+        background: transparent;
+        color: rgba(76, 102, 119, 0.5);
+	}
+    
+    
+    /* 게시판 카드형 */
+    .bbs_list_card ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .bbs_list_card li {
+        width: 100%;
+    }
+    .bbs_list_card li~li,
+    .bbs_list_card li:nth-child(n+3) {
+        margin-top: 2rem;
+    }
+    .bbs_list_card a,
+    .bbs_list_card button {
+        padding: 1.3rem 1.3rem 2rem;
+    }
+    .bbs_list_card .img_wrap {
+        height: 17rem;
+    }
+    .bbs_list_card .tit_wrap .tit {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .bbs_list_card .tit_wrap .date {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+
+    /* 글 보기 화면 */
+    .bbs_view_wrap {
+        padding-top: 7rem;
+    }
+    .bbs_view_wrap .view_head {
+        position: relative;
+        padding: 1rem 0;
+    }
+    .bbs_view_wrap .link_wrap a,
+    .bbs_view_wrap .link_wrap button {
+        width: 2rem;
+        height: 2rem;
+        background-size: 2rem;
+    }
+    .bbs_view_wrap .link_wrap .btn_back {
+        margin-left: 0.5rem;
+    }
+    .bbs_view_wrap .view_head .tit { 
+        padding: 0 2rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    .bbs_view_wrap .etc_wrap {
+        position: absolute;
+        bottom: -4.7rem;
+        right: 0;
+    }
+    .bbs_view_wrap .etc_wrap button {
+        width: 2rem;
+        height: 2rem;
+    }
+    .bbs_view_wrap .etc_wrap .btn_url {
+        background-image: url(../images/icon_bbs_url.svg);
+        background-size: 1.7rem;
+    }
+    .bbs_view_wrap .etc_wrap .btn_share {
+        margin-left: 0.7rem;
+        background-image: url(../images/icon_bbs_share.svg);
+        background-size: 1.9rem;
+    }
+    .bbs_view_wrap .etc_wrap .date {
+        margin-left: 0.5rem;
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+
+    .bbs_view_wrap .view_body {
+        padding: 10rem 0 5rem;
+    }
+    .bbs_view_wrap .view_foot ul li {
+        padding: 1.5rem 0;
+    }
+    .bbs_view_wrap .view_foot ul span {
+        width: 4rem;
+        flex: 1 0 auto;
+        font-size: 1.2rem;
+    }
+
+    .bbs_view_wrap .view_foot ul p {
+        padding-right: 5rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    
+}

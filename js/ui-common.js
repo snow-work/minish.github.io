@@ -138,7 +138,6 @@ $(".top_tnb").hover(function(){
 });
 
 
-
 // gnb
 $(".btn_gnb_open").click(function(){
     $(".gnb_wrap").slideDown()
@@ -252,15 +251,42 @@ $(".ui_tab .btn_tab_open").click(function(){
 });
 // 특정탭으로 이동
 function moveTab(tgTab, tgIndex){
-    // tgTab 이동할 탭
-    // tgIndex 이동할 탭 순서
+    // tgTab 이동할 탭 클래스
+    // tgIndex 이동할 탭 인덱스
     tgTabBox = $(tgTab).next(".tab_box_wrap");
     tgTxt = $(tgTab).find(".ui_tab ul li").eq(tgIndex).find("button").text();
     $(tgTab).find(".btn_tab_open").html(tgTxt);
     $(tgTab).find(".ui_tab ul li").eq(tgIndex).find("button").addClass("on")
     tgTabBox.find(".tab_box").addClass("on");
-    
 }
+// 서브비주얼 변경 함수
+function chage_subvisaul(svClass){
+    $(".sub_visual_con").attr('class', 'sub_visual_con');
+    $(".sub_visual_con").addClass(svClass)
+}
+// 페이지 스위칭 - ex 공지사항 새소식
+function page_swiching(tpage){
+    // alert($("'." + tpage + "'"))
+    $(".swich_page").removeClass("on")
+    $("." + tpage).addClass("on")
+    if(tpage=='bbs_view_wrap'){
+        // 글보기 페이지로 갔을 때
+        // 스크롤이 일정 이상이먄
+        nowScr = window.scrollY;
+        let vmPoint = $(".notice_page_con").offset().top;
+        if (vmPoint < nowScr){
+            window.scrollTo(0, vmPoint)
+        }
+        // let titEndPoint= $('.scr_chk_point.point02').offset().top;
+        // nowScr = window.scrollY+window.innerHeight/2;
+        console.log(nowScr, vmPoint)
+    }
+    // 스크롤 당겨줘
+    // 컨텐츠 시작점까지
+
+}
+
+
 
 
 // 스크롤 fade  
@@ -486,15 +512,3 @@ function calSet(){
 }
 
 
-
-// function readURL(input) {
-//     if (input.files && input.files[0]) {
-//       var reader = new FileReader();
-//       reader.onload = function(e) {
-//         document.getElementById('preview').src = e.target.result;
-//       };
-//       reader.readAsDataURL(input.files[0]);
-//     } else {
-//       document.getElementById('preview').src = "";
-//     }
-// }
