@@ -423,13 +423,13 @@
 	bottom: 10.8rem;
     left: 5.8rem;
 }
-.youtube_con .youtube_info .pos {
+.youtube_con .youtube_info .yt_type {
 	font-family: "AmstelvarAlpha";
 	font-size: 3rem;
 	letter-spacing: -0.025rem;
 	color: #AA9B7A;
 }
-.youtube_con .youtube_info .name_kr {
+.youtube_con .youtube_info .yt_name {
     margin-top: 2rem;
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
@@ -437,7 +437,7 @@
 	letter-spacing: -0.03rem;
 	color: #FAEFD8;
 }
-.youtube_con .youtube_info .name_en {
+.youtube_con .youtube_info .yt_summ {
 	margin-top: 2rem;
 	font-size: 2.8rem;
     line-height: 4rem;
@@ -487,14 +487,14 @@
     .youtube_con .youtube02 .youtube_info {
         left: 4rem;
     }
-    .youtube_con .youtube_info .pos {
+    .youtube_con .youtube_info .yt_type {
         font-size: 1.8rem;
     }
-    .youtube_con .youtube_info .name_kr {
+    .youtube_con .youtube_info .yt_name {
         margin-top: 1rem;
         font-size: 3.6rem;
     }
-    .youtube_con .youtube_info .name_en {
+    .youtube_con .youtube_info .yt_summ {
         margin-top: 0.5rem;
         font-size: 1.8rem;
         line-height: 2.6rem;
@@ -768,7 +768,7 @@
         top: 4rem;
         left: 2.8rem;
     }
-    .youtube_con .youtube_info .name_en {
+    .youtube_con .youtube_info .yt_summ {
         color:#FAEFD8;
     }
     .youtube_con .youtube_info .btn_wrap a {
