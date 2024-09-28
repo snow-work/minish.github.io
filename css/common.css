@@ -51,6 +51,7 @@ body {
 }
 /* body.fixed {position: fixed;} */
 body.fixed {overflow-y: hidden;}
+#content {position: relative;}
 * {
 	margin: 0;
 	padding: 0;
@@ -97,9 +98,14 @@ gnb : 200
  */
 
 
+/* src_chk == fade_chk */
+
+
+ /* scr_chk 수정 예정
+   광역으로 쓰려니 영역설정에 대한 문제생김 */
 .scr_chk {
 	opacity: 0;
-	transform: translateY(10rem);
+	transform: translateY(5rem);
 }
 .scr_chk.active {
 	opacity: 1;
@@ -107,7 +113,17 @@ gnb : 200
 	transition: all 1s;
 }
 
-
+/* 컨텐츠용 단순 fade효과는 fade_up 교체 (예정)*/
+/* .fade_up {overflow: hidden;}
+.fade_up > .fade_wrap {
+	opacity: 0;
+	transform: translateY(10rem);
+}
+.fade_up.active > .fade_wrap {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 1s;
+} */
 
 
 
@@ -119,10 +135,11 @@ gnb : 200
 	background-position: center center;
 }
 .sub_visual_txt {
-	max-width: 143rem;
+	max-width: 144rem;
     margin: 0 auto;
     padding-top: 24rem;
     padding-left: 3rem;
+	transform: none;
 }
 
 .sub_visual_txt .txt {
@@ -131,6 +148,8 @@ gnb : 200
 	font-size: 1.8rem;
 	line-height: 2.3rem;
 	color: #AA9B7A;
+	opacity: 0;
+	transform: translateY(10rem);
 }
 .sub_visual_txt .tit {
 	font-family: "YaldeviColombo";
@@ -139,9 +158,11 @@ gnb : 200
     line-height: 8rem;
     letter-spacing: -0.025rem;
     color: #fff;
+	opacity: 0;
+	transform: translateY(10rem);
 	/* 이하 폰트이슈로 임시 처리, 폰트파일 교체시 삭제 */
     font-size: 4.8rem;
-    transform: scaleY(1.1);
+    transform: translateY(10rem) scaleY(1.1);
     margin-top: -0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -149,9 +170,29 @@ gnb : 200
 	margin-top: 1rem;
 	font-size: 2rem;
     line-height: 3.2rem;
-    letter-spacing: -0.03rem;
+    letter-spacing: -0.035rem;
     color: #fff;
+	opacity: 0;
+	transform: translateY(10rem);
 }
+
+.sub_visual_txt.active .txt {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s;
+}
+.sub_visual_txt.active .tit {
+	opacity: 1;
+	transform: translateY(0rem)  scaleY(1.1);
+	transition: all 1s 0.5s;
+}
+.sub_visual_txt.active .sub_txt {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s 1s;
+}
+
+
 
 /* 공통 타이틀&텍스트 */
 .page_title.type01 {
@@ -1016,6 +1057,7 @@ gnb : 200
 /* 팝업 공통 */
 .layer_popup {
 	position: fixed;
+	visibility: hidden;
 	top: 0;
     left: 0;
 	width: 100%;
@@ -1064,7 +1106,7 @@ gnb : 200
 .layer_popup .main_txt {
 	margin: 2rem 0 2.6rem;
 	font-size: 2rem;
-    line-height: 2rem;
+    line-height: 3.4rem;
 	font-weight: 500;
 	color: #7593A7;
 }
@@ -1116,6 +1158,7 @@ gnb : 200
 	color: #DB8A8A;
 }
 .layer_popup.active {
+	visibility: visible;
 	z-index: 1000;
 }
 .layer_popup.active .pop_con {
@@ -1137,6 +1180,7 @@ gnb : 200
 	margin: 0;
 	margin-bottom: 3rem;
     text-align: center;
+	line-height:1; 
 }
 .popup_policy .sub_txt {
 	padding-right: 1rem;
@@ -1608,13 +1652,14 @@ gnb : 200
 		height: 100%;
 	}
 	.popup_policy .main_txt {
+        margin-top: 0;
 		margin-bottom: 3rem;
 	}
 	.popup_policy .sub_txt {
 		padding-right: 1rem;
 	}
 	.popup_policy .scroll_box {
-		height: calc(100% - 13rem);
+		height: calc(100% - 11.5rem);
 	}
 	
 		

@@ -180,18 +180,28 @@ function layer_popup_open(popname){
     if($(popname).find(".close_txt").length>0){  
         setTimeout(function(){
             $(popname).removeClass("active");
+            if($(popname).hasClass("popup_guest_login")){
+                // 로그인연결 팝업 - 종료시 페이지이동
+                window.location.href='https://meplz.co.kr/mtech/html/login/login.html'
+            }
         }, 3000);
     }
 }
 // 닫기버튼으로 팝업 닫기
 $(".btn_pop_close").click(function(){
     $(this).parents(".layer_popup").removeClass("active");
+    if($(this).parents(".layer_popup").hasClass("popup_guest_login")){
+        // 로그인연결 팝업 - 종료시 페이지이동
+        window.location.href='https://meplz.co.kr/mtech/html/login/login.html'
+    }
 })
 // 개인정보 취급방침 확인버튼
 function policy_check(radioName){
     $("input[name='"+radioName+"']").prop('checked',true)
     $(".layer_popup").removeClass("active");
 }
+
+
 
 
 // textarea 포커스
@@ -293,16 +303,16 @@ function page_swiching(tpage){
 // 스크롤 체크할 객체
 const scrEl = document.querySelectorAll(".scr_chk")
 // 영역설정 
-const option = {
-    rootMargin: '0px'
+const optionIn = {
+    rootMargin: '-100px 0px 0px 0px'
+}
+const optionOut = {
+    rootMargin: '0'
 }
 
-const scrEfect = (entries, observer) => {
+const scrEfectIn = (entries, observerIn) => {
   entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-        // 영역 벗어남
-        entry.target.classList.remove("active")
-    } else {
+    if (entry.isIntersecting) {
         // 영역안으로 들어옴
         entry.target.classList.add("active")
         // 메인 비디오영역 영상재생
@@ -318,8 +328,22 @@ const scrEfect = (entries, observer) => {
     }
   });
 }
-const observer = new IntersectionObserver(scrEfect, option);
-scrEl.forEach(scr => observer.observe(scr));
+const observerIn = new IntersectionObserver(scrEfectIn, optionIn);
+scrEl.forEach(scr => observerIn.observe(scr));
+
+
+const scrEfectOut = (entries, observerOut) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+        // 영역 벗어남
+        entry.target.classList.remove("active")
+    }
+  });
+}
+const observerOut = new IntersectionObserver(scrEfectOut, option);
+scrEl.forEach(scr => observerOut.observe(scr));
+
+
 
 
 
@@ -511,4 +535,11 @@ function calSet(){
     })
 }
 
+// 예약정보 슬라이드
+var swiper = new Swiper(".current_reserve_box", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 

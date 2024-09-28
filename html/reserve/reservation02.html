@@ -15,6 +15,7 @@
 	
 	<link href="../../css/common.css" rel="stylesheet" type="text/css">
 	<link href="../../css/reserve.css" rel="stylesheet" type="text/css">
+	<link href="../../css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -136,7 +137,8 @@
 		<!-- 헤더 공통 end -->
 
 		<!-- 상담예약 페이지 -->
-		<!-- 헤더에 <script src="../../js/index.global.min.js"></script> 추가  -->
+		<!-- <script src="../../js/index.global.min.js"></script> 추가  -->
+		<!-- <link href="../../css/swiper-bundle.min.css" rel="stylesheet" type="text/css"> 추가  -->
 		<div id="content" class="reservation">
 			<div class="sub_visual_con reservation">
                 <div class="sub_visual_txt scr_chk">
@@ -408,12 +410,42 @@
 						<!-- 예약정보 없음 start -->
 						<div class="reserve_content content03 scr_chk">
 							<div class="wrap">
-								<div class="reserve_none_txt">
-									<p>앗! 고객님의 진료 예약 내역이 존재하지 않습니다<br>
-										강남 미니쉬치과의원에서 건강하고 아름다운 미소 함께 만들어 가요</p>
+								<div class="reserve_info_wrap">
+									<p class="tit">
+										<span>최혜진</span>고객님, 안녕하세요.<br class="ver_mo"> 강남 미니쉬치과의원입니다 
+									</p>
+									<p class="txt">
+										아름다운 미소를 만들어 드리는<br class="ver_mo"> 강남 미니쉬 치과의원에 방문해주셔서 감사합니다.<br>
+										자세한 예약 안내 및 연락은 고객님의 번호로<br class="ver_mo">
+										 진료 하루 전 문자 메시지 (SMS)를 통해 안내드리겠습니다.
+									</p>
 								</div>
-								<div class="btn_reserve_go">
-									<button onclick="moveTab('.tab_wrap','0')">상담 예약 신청하러 가기</button>
+								
+								<div class="current_reserve_wrap">
+									<div class="current_reserve_top">
+										<p class="section_title">현재 예약 정보</p>
+										<button class="btn_goto_reserve" onclick="moveTab('.tab_wrap','0')">상담예약 신청하러 가기</button>
+									</div>
+									<div class="current_reserve_box data_none">
+										<div class="box_wrap">
+											<p class="name"><span>최혜진</span> 고객님</p>
+											<p class="none_txt">앗! 고객님의 진료 예약 내역이 존재하지 않습니다<br>
+											강남 미니쉬치과의원에서 건강하고 아름다운 미소 함께 만들어 가요</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="past_reserve_wrap">
+									<div class="section_title">이전 방문 기록</div>
+									<ul>
+										<li class="past_box">
+											<div class="wrap">
+												<p class="none_txt">
+													고객님의 이전 방문 내역이 없습니다.
+												</p>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>

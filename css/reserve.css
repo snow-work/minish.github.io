@@ -372,115 +372,232 @@
 
 /* 예약정보 없음 */
 .reserve_content.content03 > .wrap {
-    padding:17.5rem 2rem 17rem;
-    text-align: center;
+    padding:9.5rem 2rem 17rem;
 }
-.reserve_none_txt {
-    margin-bottom: 10rem;
+.current_reserve_box.data_none .box_wrap {
+    max-width: none
+}
+.reserve_content .none_txt {
+    margin: 16rem 0;
 	font-size: 1.8rem;
     line-height: 3rem;
     letter-spacing: -0.03rem;
-	color:#7593a7;
+    text-align: center;
+	color:#888;
 }
 
-.btn_reserve_go button {
-    display: inline-block;
-	position: relative;
-	width: 30rem;
-	height: 4.8rem;
-	padding-left: 2.7rem;
-	border-radius: 2.4rem;
-	font-size: 1.5rem;
-	letter-spacing: -0.1rem;
-    line-height: 4.8rem;
-	text-align: left;
-	background-image: url(../images/btn_icon_arr_dark.svg);
-	background-repeat: no-repeat;
-	background-position: center right 3.8rem;
-	background-size: 3rem;
-    background-color: transparent;
-	border: 0.1rem solid #8D7F74;
-	color: #433A34;
+.reserve_content .none_txt {
+    width: 100%;
+    margin: 8.5rem 0;
 }
 
 
 
 
 /* 예약정보 있음 */
-.reserve_content.content04 > .wrap {
-    padding:7.5rem 2rem 17rem;
+.section_title {
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+	color:#4C6677;
 }
-.reserve_list_txt {
+
+.reserve_data li {
+	font-size: 1.8rem;
+    line-height: 2rem;
+    letter-spacing: -0.03rem;
+}
+.reserve_data li b {
+    display: inline-block;
+    width: 13rem;
+    padding: 1rem;
+    margin-right: 1.8rem;
+    font-weight: 400;
+    color: #888888;
+}
+.reserve_data li span {
+    display: inline-block;
+    padding: 1rem;
+    color: #4C6677
+}
+.reserve_data li span.blue {
+    color: #59589C
+}
+.reserve_data li span.red {
+    color: #D56456
+}
+.reserve_info_wrap {
     margin-bottom: 7.3rem;
 }
-.reserve_list_txt .tit {
+.reserve_info_wrap .tit {
     margin-bottom: 1.8rem;
 	font-size: 2.4rem;
     letter-spacing: -0.03rem;
 	color:#4c6677;
 }
-.reserve_list_txt .tit span {
+.reserve_info_wrap .tit span {
 	font-size: 2.8rem;
     font-weight: 600;
     letter-spacing:0.1rem;
 	color:#59589c;
 }
-.reserve_list_txt .txt {
+.reserve_info_wrap .txt {
 	font-size: 1.8rem;
     line-height: 3rem;
     letter-spacing: -0.03rem;
 	color:#7593A7;
 }
-.reserve_list_txt .txt span {
+.reserve_info_wrap .txt span {
     font-weight: 500;
 	color:#59589c;
 }
-.reserve_list {}
-.reserve_list .tit {
-    margin-bottom: 1.2rem;;
-	font-size: 2.4rem;
-    font-weight: 500;
+.current_reserve_top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.current_reserve_wrap .btn_goto_reserve {
+    padding-right: 4.8rem;
+    font-size: 1.5rem;
+    line-height: 4.8rem;
     letter-spacing: -0.03rem;
-	color: #4c6677;
+    background-image: url(../images/btn_icon_arr_dark.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center right;
+    background-color: transparent;
 }
-.reserve_list table {
-    width: 100%;
-    font-size: 1.8rem;
+.current_reserve_box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.6rem;
+    background-color: rgba(168,183,194,0.15);
+}
+.current_reserve_box .box_wrap {
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 4.4rem 0 5rem;
+}
+.current_reserve_box .name {
+    margin-bottom: 4.5rem;
+	font-size: 2.4rem;
+    letter-spacing: -0.03rem;
     text-align: center;
-    border-top: 3px solid #000000;
+	color:#4c6677;
 }
-.reserve_list table {
-    border-collapse: collapse;
-    border-spacing: 0
+.current_reserve_box .name span {
+	font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing:0.1rem;
+	color:#59589c;
 }
-.reserve_list table th,
-.reserve_list table td {
+.current_reserve_box .reserve_data {
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid #A6B7C2;
-    
 }
-.reserve_list table th {
+.current_reserve_box .swiper-button-next,
+.current_reserve_box .swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    flex: none;
+    background-image: url(../images/icon_cal_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-color: transparent;
+    border: none;
+
+}
+.current_reserve_box .swiper-button-prev {
+    left: 3rem;
+    transform: rotate(180deg);
+}
+.current_reserve_box .swiper-button-next {
+    right: 3rem;
+}
+.current_reserve_box .swiper-button-next:after,
+.current_reserve_box .swiper-button-prev:after {
+    content: none;
+}
+.current_reserve_box .swiper-button-next.swiper-button-disabled,
+.current_reserve_box .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.5;
+}
+
+.current_reserve_box .sub_txt {
+    padding: 2rem 0 3rem;;
+	font-size: 1.6rem;
+    letter-spacing: -0.03rem;
+	color:#4c6677;
+}
+.current_reserve_box .btn_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.current_reserve_box .btn_wrap a {
+    display: inline-flex;
+    width: 22rem;
     height: 6rem;
-    color: #4C6677;
+    font-size: 1.8rem;
+    border-radius: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center left 3rem;
+    color:#fff;
 }
-.reserve_list table td {
-    height: 8rem;
-    color: #4c6677;
+.current_reserve_box .btn_wrap .btn_call {
+    background-image: url(../images/icon_call_white.svg);
+    background-color: #A2B3BE;
 }
-.reserve_list table .past td {
+.current_reserve_box .btn_wrap .btn_map {
+    background-image: url(../images/icon_map_white.svg);
+    background-color: #6D8A9D;
+}
+
+
+.current_reserve_box {
+}
+.past_reserve_wrap {
+    margin-top: 4rem;
+    padding-top: 7rem;
+    border-top: 1px solid #A6B7C2;
+}
+.past_reserve_wrap .past_box {
+    border-radius: 0.6rem;
+    background-color: rgba(166,183,194,0.05);
+}
+.past_reserve_wrap .past_box~.past_box {
+    margin-top: 2rem;
+}
+.past_reserve_wrap .past_box > .wrap {
+    display: flex;
+    max-width: 81.6rem;
+    padding: 3rem 0 ;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.past_box .reserve_data li span {
     color: #A2B3BE;
 }
-.reserve_list table .cancle td {
-    color: #A2B3BE;
-}
-.reserve_list table .cancel td:last-child {
-    color: rgba(213,100,86,0.5);
-}
-.reserve_content .rc_view_btn {
-    display: none;
+.past_box .reserve_data li span.red {
+    color: rgba(213,100,86,0.5)
 }
 
-
-
+.past_reserve_wrap .btn_more_reserve {
+	display: block;
+	width: 23rem;
+    margin: 5rem auto 0;
+	border-radius: 2.4rem;
+	font-size: 1.5rem;
+	letter-spacing: -0.1rem;
+    line-height: 4.8rem;
+	border: 0.1rem solid #8D7F74;
+	color: #433A34;
+    background-color: transparent;
+}
 
 
 
@@ -799,76 +916,115 @@
 
 
     .reserve_content.content03 > .wrap {
-        padding:5.5rem 2rem 9.5rem;
+        padding: 5rem 0.9rem 4.5rem;
     }
-    .reserve_none_txt {
-        margin-bottom: 4rem;
+    
+    .reserve_content .none_txt {
         font-size: 1.2rem;
         line-height: 2.2rem;
     }
-    
-    .btn_reserve_go button {
-        width: 25rem;
-        padding-left: 2rem;
-        font-size: 1.4rem;
-        background-position: center right 2rem;
-        background-size: 2.6rem;
+
+    .reserve_content .none_txt {
+        margin: 5rem 0;
     }
 
 
+
+    /* 예약정보 있음 */
+    .section_title {
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+    }
+    .reserve_data li {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    .reserve_data li b {
+        width: 13rem;
+        padding: 0.5rem 1rem;
+        margin-right: 1.1rem;
+    }
+    .reserve_data li span {
+        padding:  0.5rem 1rem;
+    }
 
     .reserve_content.content04 > .wrap {
-        padding: 5rem 2rem 4.5rem;
+        padding: 5rem 0.9rem 4.5rem;
     }
-    .reserve_list_txt {
+    .reserve_info_wrap {
         margin-bottom: 5.8rem;
     }
-    .reserve_list_txt .tit {
+    .reserve_info_wrap .tit {
         margin-bottom: 1rem;
         font-size: 1.8rem;
         line-height: 3rem;
     }
-    .reserve_list_txt .tit span {
+    .reserve_info_wrap .tit span {
         font-size: 2rem;
     }
-    .reserve_list_txt .txt {
+    .reserve_info_wrap .txt {
         font-size: 1.2rem;
         line-height: 2.2rem;
     }
-    .reserve_list {
-        overflow-x: scroll;
+    .current_reserve_wrap .btn_goto_reserve {
+        display: none;
     }
-    .reserve_list .tit {
-        width: 50rem;
-        margin-bottom: 1.2rem;;
-        font-size: 1.6rem;
-        text-align: center;
+    
+    
+    .current_reserve_box {
+        border-radius: 0.6rem;
+        background-color: rgba(168,183,194,0.15);
     }
-    .reserve_list table {
-        width: 50rem;
+    .current_reserve_box .swiper-wrapper .wrap {
+        max-width: 29rem;
+        padding: 4rem 0 2rem;
+    }
+    .current_reserve_box .name {
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+    }
+    .current_reserve_box .name span {
+        font-size: 2rem;
+    }
+    .current_reserve_box .reserve_data {
+        padding-bottom: 2rem;
+    }
+    .current_reserve_box .swiper-button-next,
+    .current_reserve_box .swiper-button-prev {
+        display: none;
+    }
+    
+    .current_reserve_box .sub_txt {
+        padding: 2rem 0;
         font-size: 1.2rem;
+        line-height: 2rem;
     }
-    .reserve_list table th {
+    .current_reserve_box .btn_wrap a {
+        width: 14rem;
         height: 5rem;
+        padding-left: 3rem;
+        font-size: 1.8rem;
+        background-size: 2.2rem;
+        background-position: center left 3rem;
+    }
+
+    .current_reserve_box {
+    }
+    .past_reserve_wrap {
+        margin-top: 5rem;
+        padding-top: 3rem;
+    }
+    .past_reserve_wrap .past_box~.past_box {
+        margin-top: 1.4rem;
+    }
+    .past_reserve_wrap .past_box > .wrap {
+        display: flex;
+        max-width: 32.5rem;
+        padding: 2.6rem 0.8rem ;
+    }
+    .past_reserve_wrap .btn_more_reserve {
+        margin: 5rem auto 0;
         font-size: 1.4rem;
-    }
-    .reserve_list table td {
-        height: 6rem;
-    }
-    .reserve_content .btn_wrap {
-        text-align: right;
-    }
-    .reserve_content .rc_view_btn {
-        display: inline-block;
-        margin-top: 1.2rem;
-        padding-right: 1.2rem;
-        font-size: 1.2rem;
-        letter-spacing: -0.03rem;
-        background-image: url(../images/icon_reserve_btn.png);
-        background-repeat: no-repeat;
-        background-size: 0.9rem;
-        background-position: center right;
-        color:#7593a7;
     }
 
 

@@ -15,6 +15,7 @@
 	
 	<link href="../../css/common.css" rel="stylesheet" type="text/css">
 	<link href="../../css/reserve.css" rel="stylesheet" type="text/css">
+	<link href="../../css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -137,6 +138,7 @@
 
 		<!-- 상담예약 페이지 -->
 		<!-- 헤더에 <script src="../../js/index.global.min.js"></script> 추가  -->
+		<!-- <link href="../../css/swiper-bundle.min.css" rel="stylesheet" type="text/css"> 추가  -->
 		<div id="content" class="reservation">
 			<div class="sub_visual_con reservation">
                 <div class="sub_visual_txt scr_chk">
@@ -404,67 +406,247 @@
 							</div>
 						</div>
 					</div>
-					<div class="tab_box">
+					<div class="tab_box ">
 						<!-- 예약정보 있음 start-->
-						<div class="reserve_content content04 scr_chk">
+						<div class="reserve_content content03 scr_chk">
 							<div class="wrap">
-								<div class="reserve_list_txt">
+								<div class="reserve_info_wrap">
 									<p class="tit">
 										<span>최혜진</span>고객님, 안녕하세요.<br class="ver_mo"> 강남 미니쉬치과의원입니다 
 									</p>
 									<p class="txt">
 										아름다운 미소를 만들어 드리는<br class="ver_mo"> 강남 미니쉬 치과의원에 방문해주셔서 감사합니다.<br>
-										고객님께선 미니쉬 상담을 위해<br class="ver_mo"> <span>2024년 8월 31일 토요일 이애나 원장님</span>과 예약되어 있습니다.<br>
 										자세한 예약 안내 및 연락은 고객님의 번호로<br class="ver_mo">
 										 진료 하루 전 문자 메시지 (SMS)를 통해 안내드리겠습니다.
 									</p>
 								</div>
-								<div class="reserve_list">
-									<div class="tit">예약 내역</div>
-									<table>
-										<thead>
-											<tr>
-												<th>고객 예약 번호</th>
-												<th>상담 항목</th>
-												<th>예약 날짜</th>
-												<th>담당 원장님</th>
-												<th>예약 상태</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>n.3497792</td>
-												<td>미니쉬</td>
-												<td>24.08.31</td>
-												<td>이애나 원장님</td>
-												<td>진료 3일 전</td>
-											</tr>
-											<tr class="past">
-												<td>n.3497792</td>
-												<td>치아미백</td>
-												<td>24.08.13</td>
-												<td>이주홍 원장님</td>
-												<td>진료완료</td>
-											</tr>
-											<tr class="past">
-												<td>n.3497792</td>
-												<td>충치 치료</td>
-												<td>24.06.18</td>
-												<td>이주홍 원장님</td>
-												<td>진료완료</td>
-											</tr>
-											<tr class="past cancel">
-												<td>n.3497792</td>
-												<td>충치 치료</td>
-												<td>24.05.26</td>
-												<td>이애나 원장님</td>
-												<td>방문취소</td>
-											</tr>
-										</tbody>
-									</table>
+								
+								<div class="current_reserve_wrap">
+									<div class="current_reserve_top">
+										<p class="section_title">현재 예약 정보</p>
+										<button class="btn_goto_reserve" onclick="moveTab('.tab_wrap','0')">상담예약 신청하러 가기</button>
+									</div>
+									<div class="current_reserve_box">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="box_wrap">
+													<p class="name"><span>최혜진</span> 고객님</p>
+													<ul class="reserve_data">
+														<li>
+															<b>고객 예약 번호 :</b>
+															<span>n.3497792</span>
+														</li>
+														<li>
+															<b>상담 항목 :</b>
+															<span>미니쉬 진료</span>
+														</li>
+														<li>
+															<b>담당 원장님 :</b>
+															<span>이애나 원장님</span>
+														</li>
+														<li>
+															<b>예약 날짜 :</b>
+															<span>24.08.31</span><span>2시 방문</span>
+														</li>
+														<li>
+															<b>예약 상태 :</b>
+															<span class="blue">진료 3일전</span>
+														</li>
+													</ul>
+													<p class="sub_txt">
+														상담 예약 변경 및 취소시, 다른 대기 고객분들을 위해 최소 하루 전까지 전화연락 부탁드립니다. 
+													</p>
+													<div class="btn_wrap">
+														<a class="btn_call" href="tel:02-123-1234">전화하기</a>
+														<a class="btn_map" href="https://naver.me/GfaMosbP" target="_blank">위치확인</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="box_wrap">
+													<p class="name"><span>최혜진</span> 고객님</p>
+													<ul class="reserve_data">
+														<li>
+															<b>고객 예약 번호 :</b>
+															<span>n.3497792</span>
+														</li>
+														<li>
+															<b>상담 항목 :</b>
+															<span>미니쉬 진료</span>
+														</li>
+														<li>
+															<b>담당 원장님 :</b>
+															<span>이애나 원장님</span>
+														</li>
+														<li>
+															<b>예약 날짜 :</b>
+															<span>24.08.31</span><span>2시 방문</span>
+														</li>
+														<li>
+															<b>예약 상태 :</b>
+															<span class="blue">진료 3일전</span>
+														</li>
+													</ul>
+													<p class="sub_txt">
+														상담 예약 변경 및 취소시, 다른 대기 고객분들을 위해 최소 하루 전까지 전화연락 부탁드립니다. 
+													</p>
+													<div class="btn_wrap">
+														<a class="btn_call">전화하기</a>
+														<a class="btn_map">위치확인</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="box_wrap">
+													<p class="name"><span>최혜진</span> 고객님</p>
+													<ul class="reserve_data">
+														<li>
+															<b>고객 예약 번호 :</b>
+															<span>n.3497792</span>
+														</li>
+														<li>
+															<b>상담 항목 :</b>
+															<span>미니쉬 진료</span>
+														</li>
+														<li>
+															<b>담당 원장님 :</b>
+															<span>이애나 원장님</span>
+														</li>
+														<li>
+															<b>예약 날짜 :</b>
+															<span>24.08.31</span>
+														</li>
+														<li>
+															<b>예약 상태 :</b>
+															<span class="blue">진료 3일전</span>
+														</li>
+													</ul>
+													<p class="sub_txt">
+														상담 예약 변경 및 취소시, 다른 대기 고객분들을 위해 최소 하루 전까지 전화연락 부탁드립니다. 
+													</p>
+													<div class="btn_wrap">
+														<a class="btn_call">전화하기</a>
+														<a class="btn_map">위치확인</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev"></div>
+									</div>
 								</div>
-								<div class="btn_wrap">
-									<a href="" class="rc_view_btn">자세히 보러가기</a>
+
+								<div class="past_reserve_wrap">
+									<div class="section_title">이전 방문 기록</div>
+									<ul>
+										<li class="past_box">
+											<div class="wrap">
+												<ul class="reserve_data">
+													<li>
+														<b>고객 예약 번호 :</b>
+														<span>n.3497792</span>
+													</li>
+													<li>
+														<b>상담 항목 :</b>
+														<span>미니쉬 진료</span>
+													</li>
+													<li>
+														<b>담당 원장님 :</b>
+														<span>이애나 원장님</span>
+													</li>
+													<li>
+														<b>예약 날짜 :</b>
+														<span>24.08.31</span>
+													</li>
+													<li>
+														<b>예약 상태 :</b>
+														<span>진료 3일전</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="past_box">
+											<div class="wrap">
+												<ul class="reserve_data">
+													<li>
+														<b>고객 예약 번호 :</b>
+														<span>n.3497792</span>
+													</li>
+													<li>
+														<b>상담 항목 :</b>
+														<span>미니쉬 진료</span>
+													</li>
+													<li>
+														<b>담당 원장님 :</b>
+														<span>이애나 원장님</span>
+													</li>
+													<li>
+														<b>예약 날짜 :</b>
+														<span>24.08.31</span><span>2시 방문</span>
+													</li>
+													<li>
+														<b>예약 상태 :</b>
+														<span>진료 3일전</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="past_box">
+											<div class="wrap">
+												<ul class="reserve_data">
+													<li>
+														<b>고객 예약 번호 :</b>
+														<span>n.3497792</span>
+													</li>
+													<li>
+														<b>상담 항목 :</b>
+														<span>미니쉬 진료</span>
+													</li>
+													<li>
+														<b>담당 원장님 :</b>
+														<span>이애나 원장님</span>
+													</li>
+													<li>
+														<b>예약 날짜 :</b>
+														<span>24.08.31</span><span>2시 방문</span>
+													</li>
+													<li>
+														<b>예약 상태 :</b>
+														<span>진료 3일전</span>
+													</li>
+												</ul>
+											</div>
+										</li>			
+										<li class="past_box">
+										<div class="wrap">
+											<ul class="reserve_data">
+												<li>
+													<b>고객 예약 번호 :</b>
+													<span>n.3497792</span>
+												</li>
+												<li>
+													<b>상담 항목 :</b>
+													<span>미니쉬 진료</span>
+												</li>
+												<li>
+													<b>담당 원장님 :</b>
+													<span>이애나 원장님</span>
+												</li>
+												<li>
+													<b>예약 날짜 :</b>
+													<span>24.08.31</span><span>2시 방문</span>
+												</li>
+												<li>
+													<b>예약 상태 :</b>
+													<span class="red">진료 3일전</span>
+												</li>
+											</ul>
+										</div>
+										</li>
+									</ul>
+									<button class="btn_more_reserve">
+										더보기
+									</button>
 								</div>
 							</div>
 						</div>
