@@ -98,11 +98,7 @@ gnb : 200
  */
 
 
-/* src_chk == fade_chk */
 
-
- /* scr_chk 수정 예정
-   광역으로 쓰려니 영역설정에 대한 문제생김 */
 .scr_chk {
 	opacity: 0;
 	transform: translateY(5rem);
@@ -112,19 +108,6 @@ gnb : 200
 	transform: translateY(0);
 	transition: all 1s;
 }
-
-/* 컨텐츠용 단순 fade효과는 fade_up 교체 (예정)*/
-/* .fade_up {overflow: hidden;}
-.fade_up > .fade_wrap {
-	opacity: 0;
-	transform: translateY(10rem);
-}
-.fade_up.active > .fade_wrap {
-	opacity: 1;
-	transform: translateY(0);
-	transition: all 1s;
-} */
-
 
 
 /* 서브비주얼 */
@@ -198,6 +181,7 @@ gnb : 200
 .page_title.type01 {
 	max-width: 140rem;
     margin: 0 auto;
+	transform: none;
 }
 .page_title.type01 .txt {
     margin-bottom: 3rem;
@@ -205,18 +189,43 @@ gnb : 200
 	font-size: 1.8rem;
 	line-height: 2.3rem;
 	color: #AA9B7A;
+	opacity: 0;
+	transform: translateY(10rem);
 }
 .page_title.type01 .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
 	line-height: 7.5rem;
 	color: #433a34;
+	opacity: 0;
+	transform: translateY(10rem);
 }
 .page_title.type01 .sub_txt {
     margin-top: 1.6rem;
 	font-size: 2rem;
 	line-height: 3rem;
 	color: #433a34;
+	opacity: 0;
+	transform: translateY(10rem);
+}
+.page_title.type01.active {
+	max-width: 140rem;
+    margin: 0 auto;
+}
+.page_title.type01.active .txt {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s;
+}
+.page_title.type01.active .tit {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s 0.5s;
+}
+.page_title.type01.active .sub_txt {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s 1s;
 }
 .page_title.type02 {
 	padding: 13.8rem 0 10rem;
@@ -225,6 +234,7 @@ gnb : 200
 	background-repeat: no-repeat;
 	background-position: top 9.1rem center ;
 	background-size: 2.7rem ;
+	transform: none;
 }
 .page_title.type02 .txt {
     margin-bottom: 1.1rem;
@@ -232,12 +242,16 @@ gnb : 200
 	font-size: 1.8rem;
 	line-height: 2.3rem;
 	color: #AA9B7A;
+	opacity: 0;
+	transform: translateY(10rem);
 }
 .page_title.type02 .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
 	line-height: 7.5rem;
 	color: #433a34;
+	opacity: 0;
+	transform: translateY(10rem);
 }
 .page_title.type02 .txt:first-child {
 	/* padding-top: 2rem; */
@@ -247,7 +261,27 @@ gnb : 200
 	font-size: 1.8rem;
 	line-height: 3rem;
 	color: #433a34;
+	opacity: 0;
+	transform: translateY(10rem);
 }
+.page_title.type02.active {
+}
+.page_title.type02.active .txt {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s;
+}
+.page_title.type02.active .tit {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s 0.5s;
+}
+.page_title.type02.active .sub_txt {
+	opacity: 1;
+	transform: translateY(0rem);
+	transition: all 1s 1s;
+}
+
 
 .input_tit {
 	margin-bottom: 4.5rem;

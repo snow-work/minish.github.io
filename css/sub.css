@@ -1,0 +1,30 @@
+/* 병원 소개 서브비주얼 세팅 */
+.sub_visual_con.vision {
+    background-image: url(./../images/sub_visual_vision.png);
+} 
+.sub_visual_con.drs {
+    background-image: url(./../images/sub_visual_drs.png);
+} 
+.sub_visual_con.sapce {
+    background-image: url(./../images/sub_visual_sapce.png);
+} 
+.sub_visual_con.location {
+    background-image: url(./../images/sub_visual_location.png);
+} 
+@media screen and (max-width:768px){
+    .sub_visual_con.vision {
+        background-image: url(./../images/sub_visual_vision_mo.png);
+    } 
+    .sub_visual_con.drs {
+        background-image: url(./../images/sub_visual_drs_mo.png);
+    } 
+    .sub_visual_con.sapce {
+        background-image: url(./../images/sub_visual_sapce_mo.png);
+    } 
+    .sub_visual_con.location {
+        background-image: url(./../images/sub_visual_location_mo.png);
+    } 
+}
+
+
+/* 병원소개 컨텐츠 */

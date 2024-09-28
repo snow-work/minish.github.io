@@ -307,7 +307,7 @@ const optionIn = {
     rootMargin: '-100px 0px 0px 0px'
 }
 const optionOut = {
-    rootMargin: '0'
+    rootMargin: '0px'
 }
 
 // 영역안으로 들어옴
@@ -341,7 +341,7 @@ const scrEfectOut = (entries, observerOut) => {
 
 const observerIn = new IntersectionObserver(scrEfectIn, optionIn);
 scrEl.forEach(scr => observerIn.observe(scr));
-const observerOut = new IntersectionObserver(scrEfectOut, option);
+const observerOut = new IntersectionObserver(scrEfectOut, optionOut);
 scrEl.forEach(scr => observerOut.observe(scr));
 
 
