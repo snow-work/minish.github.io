@@ -310,10 +310,10 @@ const optionOut = {
     rootMargin: '0'
 }
 
+// 영역안으로 들어옴
 const scrEfectIn = (entries, observerIn) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-        // 영역안으로 들어옴
         entry.target.classList.add("active")
         // 메인 비디오영역 영상재생
         if(entry.target.classList.contains("main_video_con")) {
@@ -328,18 +328,19 @@ const scrEfectIn = (entries, observerIn) => {
     }
   });
 }
-const observerIn = new IntersectionObserver(scrEfectIn, optionIn);
-scrEl.forEach(scr => observerIn.observe(scr));
 
-
+// 영역 벗어남
 const scrEfectOut = (entries, observerOut) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-        // 영역 벗어남
         entry.target.classList.remove("active")
     }
   });
 }
+
+
+const observerIn = new IntersectionObserver(scrEfectIn, optionIn);
+scrEl.forEach(scr => observerIn.observe(scr));
 const observerOut = new IntersectionObserver(scrEfectOut, option);
 scrEl.forEach(scr => observerOut.observe(scr));
 
