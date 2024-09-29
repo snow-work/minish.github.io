@@ -537,10 +537,42 @@ function calSet(){
 }
 
 // 예약정보 슬라이드
-var swiper = new Swiper(".current_reserve_box", {
+var reserveSwiper = new Swiper(".current_reserve_box", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".space_swiper02 .swiper-button-next",
+      prevEl: ".space_swiper02 .swiper-button-prev",
     },
-  });
+});
 
+
+// 병원소개 - 비전 슬라이드
+var reserveSwiper = new Swiper(".vis_slogan_swiper", {
+    slidesPerView: 1,
+    autoplay:true,
+    loop: true,
+    breakpoints: {
+        768: {
+          slidesPerView: auto,
+        },
+    }
+});
+
+
+// 공간안내 슬라이드
+var spaceSwiper01 = new Swiper(".space_swiper01", {
+    autoplay:true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+});
+var spaceSwiper02 = new Swiper(".space_swiper02", {
+    slidesPerView: "auto",
+    // slidesPerView: 4,
+    // slidesPerGroup: 4,
+    loop: true,
+    navigation: {
+      nextEl: ".space_swiper02_wrap .swiper-button-next",
+      prevEl: ".space_swiper02_wrap .swiper-button-prev",
+    },
+});

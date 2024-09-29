@@ -125,6 +125,7 @@
 	position: absolute;
 	bottom: 6.56vw;
     left: calc(50% - 15rem);
+	z-index:100;
 }
 .main_visual_con .btn_wrap::before {
 	content: '';

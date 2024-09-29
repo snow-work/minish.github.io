@@ -87,8 +87,9 @@ img {max-width: 100%;}
 /*   zindex 정리 
 
 셀렉트박스 : 1
-헤더 : 20  (스크롤시 픽스 고려) 
 메인비주얼 공지사항 : 10
+메인 상담예약 버튼 : 10
+헤더 : 20  (스크롤시 픽스 고려) 
 인트로 : 시작시 1000 -> 종료시 1  (메인 비디오 때문에 1이상 줘야함)
 gnb : 200
 하단 플로트 300
@@ -314,6 +315,38 @@ gnb : 200
 .input_info .txt.info {
 	color: #7593A7;
 }
+
+
+
+
+/* 서브콘텐츠 */
+.imp_point {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.imp_point li {
+    position: relative;
+    text-align: center;
+}
+.imp_point li img {
+    width: 15rem;
+}
+.imp_point li .txt {
+    margin-top: 1.3rem;
+    font-size: 2.2rem;
+	font-weight: 500;
+    line-height: 3.2rem;
+    letter-spacing: -0.03rem;
+    color: #000000;
+}
+.imp_point li .sub_txt {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.03rem;
+    color: rgba(0,0,0,0.8);
+}
+
 
 
 
@@ -574,6 +607,57 @@ gnb : 200
 }
 
 
+.btn_arr {
+	display: inline-block;
+    position: relative;
+    width: 30rem;
+    padding-left: 2.7rem;
+    border-radius: 2.4rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.1rem;
+    line-height: 4.8rem;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center right 3.8rem;
+    background-size: 3rem;
+}
+
+.btn_arr.dark  {
+    background-image: url(../images/btn_icon_arr_white.svg);
+    background-color: #433A34;
+    color: #fff;
+}
+.btn_arr.light {
+    background-image: url(../images/btn_icon_arr_dark.svg);
+    background-color: #FAEFD8;
+    color: #433A34;
+}
+.btn_arr_border {
+	display: inline-block;
+    position: relative;
+    width: 30rem;
+    padding-left: 2.7rem;
+    border-radius: 2.4rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.1rem;
+    line-height: 4.8rem;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center right 3.8rem;
+    background-size: 3rem;
+	background-color: transparent;
+}
+.btn_arr_border.dark  {
+    background-image: url(../images/btn_icon_arr_dark.svg);
+    border: 0.1rem solid #8D7F74;
+    color: #433A34;
+}
+.btn_arr_border.light {
+    background-image: url(../images/btn_icon_arr_whtie.svg);
+    border: 0.1rem solid #8D7F74;
+    color: #FAEFD8;
+}
+
 
 /* 공통 탭, 모바일은 셀렉트박스와 동일 디자인 */
 .ui_tab ul{
@@ -662,8 +746,8 @@ gnb : 200
 	font-size: 1.5rem;
 	line-height: 1.7;
 	letter-spacing: -0.1rem;
-	color:rgba(255,255,255,0.4);
 	background: url(../images/header_icon_quick_arr.svg) no-repeat center right;
+	color:rgba(255,255,255,0.4);
 }
 .header_con .top_tnb ul li a:hover {
 	color: #FAEFD8;
@@ -676,12 +760,12 @@ gnb : 200
     top: 4.7rem;
     right: 26rem;
 	padding-left: 3rem;
+	font-family: 'Pretendard';
+	font-size: 1.5rem;
+	letter-spacing: -0.03rem;
 	background-image: url(../images/header_icon_location.png);
 	background-repeat: no-repeat;
 	background-position: center left;
-	font-size: 1.5rem;
-	font-family: 'Pretendard';
-	letter-spacing: -0.03rem;
 }
 .header_con .top_menu {
 	position: absolute;
