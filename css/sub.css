@@ -153,27 +153,29 @@
 	letter-spacing: -0.025rem;
 	color: #433A34;
 }
+.vis_slogan_swiper {
+    overflow: hidden;
+}
 .vis_slogan_wrap .swiper-wrapper {
     display: flex;
     justify-content: space-between;
 }
 .vis_slogan_wrap .swiper-slide {
-    position: relative;
-    width: 40rem;
-    height: 50rem;
-    background-color: #F0EEE8;
+    width: 31.3%;
 }
 .vis_slogan_wrap .swiper-slide .wrap {
+    position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 125%;
+    background-color: #F0EEE8;
 }
 .vis_slogan_wrap .swiper-slide img {
     position: absolute;
     bottom: 0;
     right: 0;
-    width:34.6rem;
+    width: 86.5%;
 }
-.vis_slogan_wrap .center img {
+.vis_slogan_wrap .swiper-slide.center img {
     width: 100%;
 }
 .vis_slogan_wrap .left img {
@@ -223,34 +225,34 @@
 	font-size: 1.8rem;
 	line-height: 2.1rem;
 	letter-spacing: -0.025rem;
+    word-break: keep-all;
     background-image: url(../images/icon_title_deco.png);
     background-repeat: no-repeat;
     background-size: 2.1rem;
-    background-position: center left 0.3rem;
+    background-position: top left 0.3rem;
 	color: #433A34;
 }
 .vis_slogan_wrap .swiper-slide.left .bul_txt {
     padding: 0 3rem 0 0;
     text-align: right;
-    background-position: center right 0.3rem;
+    background-position: top right 0.3rem;
 }
 
 .vis_brand_wrap {
-    padding-bottom: 10rem;
+    padding: 0 3rem 10rem;
 }
 .vis_brand_wrap > .wrap{
     max-width: 132rem;
     margin:0 auto;
 }
-.vis_brand_wrap .page_title {}
 .vis_brand_wrap .page_title .tit {
     font-family: "AmstelvarAlpha";
     font-weight: 400;
     color:#8D7F74;
-    transform: scaleX(0.9);
+    transform: scaleX(0.9) translateY(10rem);
 }
 .page_title.type02.active .tit {
-    transform: scaleX(0.9) translateY(0rem);;
+    transform: scaleX(0.9) translateY(0rem);
 }
 .vis_brand_wrap .brand_con {
     display: flex;
@@ -296,6 +298,7 @@
     width: 51rem;
 }
 .vis_brand_wrap .right_con .tit {
+    margin-bottom: 0.6rem;
     font-family: "AmstelvarAlpha";
 	font-size: 1.8rem;
 	line-height: 2.2rem;
@@ -303,11 +306,13 @@
 	color: #AA9B7A;
 }
 .vis_brand_wrap .right_con .txt {
-    margin-top: 0.6rem;
-	font-size: 1.8rem;
+    font-size: 1.8rem;
 	line-height: 3rem;
 	letter-spacing: -0.025rem;
 	color: #433A34;
+}
+.vis_brand_wrap .right_con .txt~.txt {
+    margin-top: 2.3rem;
 }
 .vis_brand_wrap .right_con a {
     margin-top: 2.5rem;
@@ -317,7 +322,9 @@
     background-color: #A6B7C2;
 }
 
-.vis_ex_wrap {}
+.vis_ex_wrap {
+    padding: 10rem 3rem;
+}
 .vis_ex_wrap .wrap {
     max-width: 140rem;
     margin: 0 auto;
@@ -326,8 +333,12 @@
     display: flex;
     justify-content: space-between;
 }
-.vis_ex_wrap .ex_box {
+.vis_ex_wrap .ex_box~.ex_box {
     margin-top: 26rem;
+}
+.vis_ex_wrap .txt_wrap {
+    width: 50rem;
+    flex: 1 0 auto;
 }
 .vis_ex_wrap .txt_wrap .tit_en {
     font-family: "AmstelvarAlpha";
@@ -337,6 +348,7 @@
 	color: #AA9B7A;
 }
 .vis_ex_wrap .txt_wrap .tit_kr {
+    margin-top: 0.5rem;
     font-size: 1.8rem;
     line-height: 2.1rem;
     color: #433A34;
@@ -348,9 +360,6 @@
     line-height: 5.5rem;
     color: #433A34;
 }
-
-.vis_ex_wrap .img_wrap{}
-.vis_ex_wrap .img_wrap{}
 
 
 
@@ -540,6 +549,9 @@
         line-height: 6rem;
     }
 }
+@media screen and (max-width:1200px){
+
+}
 /* 태블릿 */
 @media screen and (max-width:1024px){
     /* 의료진 소개 */
@@ -574,23 +586,162 @@
 /* 모바일 */
 @media screen and (max-width:768px){
     /* 병원소개 */
+    .vis_point_wrap {
+        padding: 4rem 2.2rem;
+    }
+
+    .vis_fc_wrap {
+        padding: 2rem 1.5rem 2rem;
+    }
+    .vis_fc_wrap .tit {
+        font-size: 6rem;
+        line-height: 9rem;
+    }
+    .vis_fc_wrap img {
+        margin: -19rem 0 2rem; 
+    }
+    .vis_fc_wrap .txt {
+        width: 120%;
+        margin-left: -10%;
+        font-size: 6rem;
+        line-height: 9rem;
+    }
+    
     .vis_care_wrap .wrap {
 		height: auto;
-		padding: 3rem 0 15rem;
+		padding: 8rem 0;
 		background: none;
 	}
 	.vis_care_wrap .tit {
 		font-size: 6rem;
 		line-height: 8rem;
 	}
+    .vis_care_wrap .txt {
+        margin-top: 4rem;
+    }
 	.vis_care_wrap .wrap::before {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: 22rem;
+		bottom: 18rem;
 		left: 25rem;
-		border-bottom: 1px solid #433a34;
 	}
+    
+    .vis_slogan_wrap {
+        padding: 6.8rem 1.5rem 8rem;
+    }
+    .vis_slogan_wrap .top_wrap {
+        margin-bottom: 10rem;
+    }
+    .vis_slogan_wrap .top_wrap .tit {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_slogan_wrap .top_wrap .txt {
+        margin-top: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+    .vis_slogan_wrap .swiper-slide img {
+        width: 31.9rem;
+    }
+    .vis_slogan_wrap .left .txt_wrap {
+        right: 2.7rem;
+    }
+    .vis_slogan_wrap .txt_wrap .tit {
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+    }
+    .vis_slogan_wrap .txt_wrap .txt {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_slogan_wrap .txt_wrap .sub_txt {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+    .vis_slogan_wrap .swiper-slide .bul_txt {
+        margin-top: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        background-size: 2rem;
+    }
+
+    .vis_brand_wrap {
+        padding: 0 2.8rem 8rem;
+    }
+    .vis_brand_wrap .page_title {
+        padding: 12.4rem 0 6rem;
+    }
+    .vis_brand_wrap .brand_con {
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
+    }
+    .vis_brand_wrap .left_con {
+        margin-top: 8rem;
+        width: 100%;
+        height: 30.8rem;
+    }
+    .vis_brand_wrap .left_con img {
+        width: 12rem;
+    }
+    .vis_brand_wrap .left_con .txt_wrap .tit {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .vis_brand_wrap .left_con .txt_wrap .txt {
+        margin-top: 0.8rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .vis_brand_wrap .right_con {
+        width: 100%
+    }
+    .vis_brand_wrap .right_con .tit {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_brand_wrap .right_con .txt {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .vis_brand_wrap .right_con .txt~.txt {
+        margin-top: 0.5rem;
+    }
+    .vis_brand_wrap .right_con a {
+        margin-top: 2rem;
+    }
+
+    .vis_ex_wrap {
+        padding: 0 1.5rem 10rem;
+    }
+    .vis_ex_wrap > .wrap {
+        padding-top: 8rem;
+        border-top: 1px solid #CED9E0;
+    }
+    .vis_ex_wrap .ex_box {
+        flex-flow: column-reverse;
+    }
+    .vis_ex_wrap .ex_box~.ex_box {
+        margin-top: 8rem;
+    }
+    .vis_ex_wrap .txt_wrap {
+        width: 100%;
+        padding: 2rem 1.3rem 0;
+    }
+    .vis_ex_wrap .txt_wrap .tit_en {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .vis_ex_wrap .txt_wrap .tit_kr {
+        margin-top: 0.2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_ex_wrap .txt_wrap .txt {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
 
     /* 의료진 소개 */
     .drs_info_wrap .dr_info {

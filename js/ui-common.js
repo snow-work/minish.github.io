@@ -209,7 +209,9 @@ $(".ui_textarea textarea").focus(function(){
     $(this).parent().addClass("active")
 })
 $(".ui_textarea textarea").focusout(function(){
-    $(this).parent().removeClass("active")
+    if($(this).prop("value").length==0){
+        $(this).parent().removeClass("active")
+    }
 })
 
 
@@ -276,12 +278,11 @@ function chage_subvisaul(svClass){
 }
 // 페이지 스위칭 - ex 공지사항 새소식
 function page_swiching(tpage){
-    // alert($("'." + tpage + "'"))
-    $(".swich_page").removeClass("on")
-    $("." + tpage).addClass("on")
+    $(".swich_page").removeClass("on");
+    $("." + tpage).addClass("on");
     if(tpage=='bbs_view_wrap'){
         // 글보기 페이지로 갔을 때
-        // 스크롤이 일정 이상이먄
+        // 제목 안보이는 상태면 스크롤 올림
         nowScr = window.scrollY;
         let vmPoint = $(".notice_page_con").offset().top;
         if (vmPoint < nowScr){
@@ -289,11 +290,8 @@ function page_swiching(tpage){
         }
         // let titEndPoint= $('.scr_chk_point.point02').offset().top;
         // nowScr = window.scrollY+window.innerHeight/2;
-        console.log(nowScr, vmPoint)
+        // console.log(nowScr, vmPoint)
     }
-    // 스크롤 당겨줘
-    // 컨텐츠 시작점까지
-
 }
 
 
@@ -328,7 +326,6 @@ const scrEfectIn = (entries, observerIn) => {
     }
   });
 }
-
 // 영역 벗어남
 const scrEfectOut = (entries, observerOut) => {
   entries.forEach(entry => {
@@ -337,8 +334,6 @@ const scrEfectOut = (entries, observerOut) => {
     }
   });
 }
-
-
 const observerIn = new IntersectionObserver(scrEfectIn, optionIn);
 scrEl.forEach(scr => observerIn.observe(scr));
 const observerOut = new IntersectionObserver(scrEfectOut, optionOut);
@@ -489,7 +484,6 @@ if (nowDate < 10) {
     calTomorrow += "0";
 }
 calTomorrow += nowDate;
-console.log(calMonth ,calTomorrow)
 // FullCalendar 플러그인
 document.addEventListener('DOMContentLoaded', function() {
     if(document.getElementById('calendar')){
@@ -552,7 +546,7 @@ var reserveSwiper = new Swiper(".vis_slogan_swiper", {
     loop: true,
     breakpoints: {
         768: {
-          slidesPerView: auto,
+          slidesPerView: "auto",
         },
     }
 });

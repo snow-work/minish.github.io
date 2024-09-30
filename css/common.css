@@ -125,7 +125,6 @@ gnb : 200
     padding-left: 3rem;
 	transform: none;
 }
-
 .sub_visual_txt .txt {
     margin-bottom: 3rem;
 	font-family: "NanumMyeongjo";
@@ -159,7 +158,6 @@ gnb : 200
 	opacity: 0;
 	transform: translateY(10rem);
 }
-
 .sub_visual_txt.active .txt {
 	opacity: 1;
 	transform: translateY(0rem);
@@ -381,14 +379,12 @@ gnb : 200
 .ui_radio input:checked + span::before {
 	background-image: url(../images/icon_ui_radio_chk.svg);
 }
-
 .ui_radio_set .ui_radio {
 	display: inline-block;
 }
 .ui_radio_set .ui_radio~.ui_radio{
 	margin-left: 2rem;
 }
-
 .ui_textarea {
 	padding: 2rem 0.85rem 2rem 1.5rem;
 	border: 1px solid #A6B7C2;
@@ -457,7 +453,6 @@ gnb : 200
 	border: none;
 	outline: none;
 }
-
 .ui_select {
 	position: relative;
 	width: 100%;
@@ -614,7 +609,6 @@ gnb : 200
     flex: 1 1 auto;
 }
 
-
 .btn_arr {
 	display: inline-block;
     position: relative;
@@ -629,7 +623,6 @@ gnb : 200
     background-position: center right 3.8rem;
     background-size: 3rem;
 }
-
 .btn_arr.dark  {
     background-image: url(../images/btn_icon_arr_white.svg);
     background-color: #433A34;
@@ -1352,12 +1345,12 @@ gnb : 200
 		right: 13rem;
 	}
 }
+
 @media screen and (max-width:1400px){
     html {
 		font-size: 9px;
 	}
 }
-
 
 /* 태블릿 */
 @media screen and (max-width:1024px){
@@ -1435,6 +1428,25 @@ gnb : 200
 		font-size: 1.2rem;
     }
 
+	
+	/* 서브콘텐츠 */
+	.imp_point li img {
+		width: 7.5rem;
+	}
+	.imp_point li .txt {
+		margin-top: 1rem;
+		font-size: 1.3rem;
+		line-height: 1.4rem;
+	}
+	.imp_point li .sub_txt {
+		margin-top: 0.5rem;
+		font-size: 1rem;
+		line-height: 1rem;
+	}
+
+
+
+	/* 공통 input */
 	.ui_radio span {
 		font-size: 1.2rem;
 	}
