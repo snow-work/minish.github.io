@@ -550,10 +550,34 @@
     }
 }
 @media screen and (max-width:1200px){
-
+    .vis_brand_wrap .brand_con {
+        justify-content: space-around;
+    }
+    .vis_brand_wrap .left_con {
+        width: 60rem;
+    }
+    .vis_brand_wrap .right_con {
+        width: 40rem;
+    }
 }
 /* 태블릿 */
 @media screen and (max-width:1024px){
+    /* 병원소개 */
+    
+    .vis_brand_wrap .brand_con {
+        flex-flow: column-reverse;
+    }
+    .vis_brand_wrap .left_con {
+        margin-top: 8rem;
+    }
+    .vis_brand_wrap .right_con {
+        text-align: center;
+    }
+    .vis_ex_wrap .txt_wrap .txt {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+   
     /* 의료진 소개 */
     .drs_info_wrap .img_wrap {
         max-width: 65rem;
@@ -671,7 +695,6 @@
         padding: 12.4rem 0 6rem;
     }
     .vis_brand_wrap .brand_con {
-        flex-wrap: wrap;
         flex-flow: column-reverse;
     }
     .vis_brand_wrap .left_con {
@@ -692,7 +715,8 @@
         line-height: 2.4rem;
     }
     .vis_brand_wrap .right_con {
-        width: 100%
+        width: 100%;
+        text-align: left;
     }
     .vis_brand_wrap .right_con .tit {
         margin-bottom: 2rem;
