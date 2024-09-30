@@ -355,6 +355,23 @@
 }
 
 
+/* 마이페이지 */
+.mypage_title {
+    margin-bottom: 1.8rem;
+    padding-left: 3.7rem;
+    font-family: "NanumMyeongjo";
+    font-size: 3rem;
+    line-height: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.025rem;
+    background-image: url(../images/icon_title_deco.png);
+    background-repeat: no-repeat;
+    background-size: 2.7rem;
+    background-position: center left;
+    color: #433A34;
+}
+
+
 @media screen and (max-width:1400px){
     .find_idpw_page_con {
         padding: 24rem 3rem 9.7rem;
@@ -586,5 +603,17 @@
     }
     .step03_txt img {
         width: 2.4rem;
+    }
+
+    
+    /* 마이페이지 */
+    .mypage_title {
+        margin-top: 4rem;
+        margin-bottom: 0.8rem;
+        padding: 3rem 0 0 0;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        background-size: 2rem;
+        background-position: left top;
     }
  }
