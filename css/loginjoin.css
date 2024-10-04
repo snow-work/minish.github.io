@@ -140,7 +140,7 @@
 .find_info {
     padding: 13.5rem 0 6rem;
     text-align: center;
-    background-image: url(../images/icon_title_deco.png);
+    background-image: url(../images/icon_title_deco.svg);
     background-repeat: no-repeat;
     background-position: top 8rem center;
     background-size: 2.7rem;
@@ -364,7 +364,7 @@
     line-height: 3.8rem;
     font-weight: 700;
     letter-spacing: -0.025rem;
-    background-image: url(../images/icon_title_deco.png);
+    background-image: url(../images/icon_title_deco.svg);
     background-repeat: no-repeat;
     background-size: 2.7rem;
     background-position: center left;

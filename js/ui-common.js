@@ -128,6 +128,12 @@ $(document).ready(function() {
     if($(".page_wrap").hasClass("join")||$(".page_wrap").hasClass("login")){
         $('.header_con .top_wrap').addClass("black")
     }
+
+    
+    // TwentyTwenty 플러그인 (케이스 전후비교)
+    if($(".twentytwenty-container").length>0){
+       $(".twentytwenty-container").twentytwenty();
+    }
 });
 
 
@@ -266,10 +272,12 @@ function moveTab(tgTab, tgIndex){
     // tgTab 이동할 탭 클래스
     // tgIndex 이동할 탭 인덱스
     tgTabBox = $(tgTab).next(".tab_box_wrap");
-    tgTxt = $(tgTab).find(".ui_tab ul li").eq(tgIndex).find("button").text();
+    tgTxt = $(tgTab).find("ul li").eq(tgIndex).find("button").text();
     $(tgTab).find(".btn_tab_open").html(tgTxt);
-    $(tgTab).find(".ui_tab ul li").eq(tgIndex).find("button").addClass("on")
-    tgTabBox.find(".tab_box").addClass("on");
+    $(tgTab).find("ul li").find("button").removeClass("on")
+    $(tgTab).find("ul li").eq(tgIndex).find("button").addClass("on")
+    tgTabBox.find(".tab_box").removeClass("on");
+    tgTabBox.find(".tab_box").eq(tgIndex).addClass("on");
 }
 // 서브비주얼 변경 함수
 function chage_subvisaul(svClass){
@@ -313,6 +321,11 @@ const scrEfectIn = (entries, observerIn) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
         entry.target.classList.add("active")
+        // 영상 자동재생
+        if(entry.target.querySelector(".video_box")) {
+            new Vimeo.Player(entry.target.querySelector("iframe")).play()
+        }
+        // if()
         // 메인 비디오영역 영상재생
         if(entry.target.classList.contains("main_video_con")) {
             if(window.visualViewport.width>768){
@@ -323,6 +336,7 @@ const scrEfectIn = (entries, observerIn) => {
                 new Vimeo.Player(entry.target.querySelector(".ver_mo iframe")).play()
             }
         }
+        // 
     }
   });
 }
@@ -568,5 +582,21 @@ var spaceSwiper02 = new Swiper(".space_swiper02", {
     navigation: {
       nextEl: ".space_swiper02_wrap .swiper-button-next",
       prevEl: ".space_swiper02_wrap .swiper-button-prev",
+    },
+});
+
+
+// 미니쉬 탭
+var minishTabSwiper = new Swiper(".mt_tab_wrap", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".mt_tab_wrap .swiper-pagination",
+    },
+    breakpoints: {
+        768: {
+          slidesPerView: "auto",
+          spaceBetween:0
+        },
     },
 });

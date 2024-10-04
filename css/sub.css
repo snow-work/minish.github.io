@@ -1,3 +1,25 @@
+
+.swiper-pagination-bullet {
+    background-color: #DED0B0;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #433A34;
+}
+
+/* 모바일 */
+@media screen and (max-width:768px){
+    .swiper-pagination-bullet {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+}
+
+
+
+
+
+/* -------------- 병원소개 START ------------- */
 /* 병원 소개 서브비주얼 세팅 */
 .sub_visual_con.vision {
     background-image: url(./../images/sub_visual_vision.png);
@@ -26,9 +48,6 @@
     } 
 }
 
-
-
-/* -------------- 병원소개 START ------------- */
 
 /* 병원소개 */
 .vis_point_wrap {
@@ -226,7 +245,7 @@
 	line-height: 2.1rem;
 	letter-spacing: -0.025rem;
     word-break: keep-all;
-    background-image: url(../images/icon_title_deco.png);
+    background-image: url(../images/icon_title_deco.svg);
     background-repeat: no-repeat;
     background-size: 2.1rem;
     background-position: top left 0.3rem;
@@ -251,7 +270,7 @@
     color:#8D7F74;
     transform: scaleX(0.9) translateY(10rem);
 }
-.page_title.type02.active .tit {
+.vis_brand_wrap .page_title.type02.active .tit {
     transform: scaleX(0.9) translateY(0rem);
 }
 .vis_brand_wrap .brand_con {
@@ -474,13 +493,6 @@
 .space_swiper01 .swiper-pagination {
     position: static;
     margin-top: 1.3rem;
-}
-.space_swiper01 .swiper-pagination-bullet {
-    background-color: #DED0B0;
-    opacity: 1;
-}
-.space_swiper01 .swiper-pagination-bullet-active {
-    background-color: #433A34;
 }
 .space_txt_wrap {
     /* padding:8rem 0 11.5rem; */
@@ -811,10 +823,6 @@
     .space_swiper01 .swiper-pagination {
         margin-top: 2rem;
     }
-    .space_swiper01 .swiper-pagination-bullet {
-        width: 0.6rem;
-        height: 0.6rem;
-    }
     .space_txt_wrap {
         padding: 8rem 0;
         font-size: 2rem;
@@ -828,8 +836,653 @@
 
 
 
-
 /* -------------- 미니쉬 START ------------- */
+/* 미니쉬 서브비주얼 세팅 */
+.sub_visual_con.minish {
+    background-image: url(./../images/sub_visual_minish.png);
+} 
+.sub_visual_con.minish_type {
+    background-image: url(./../images/sub_visual_minish_type.png);
+} 
+.sub_visual_con.make {
+    background-image: url(./../images/sub_visual_make.png);
+} 
+.sub_visual_con.bna {
+    background-image: url(./../images/sub_visual_bna.png);
+} 
+.sub_visual_con.certification {
+    background-image: url(./../images/sub_visual_certification.png);
+} 
+@media screen and (max-width:768px){
+    .sub_visual_con.minish {
+        background-image: url(./../images/sub_visual_minish_mo.png);
+    } 
+    .sub_visual_con.minish_type {
+        background-image: url(./../images/sub_visual_minish_type_mo.png);
+    } 
+    .sub_visual_con.make {
+        background-image: url(./../images/sub_visual_make_mo.png);
+    } 
+    .sub_visual_con.bna {
+        background-image: url(./../images/sub_visual_bna_mo.png);
+    } 
+    .sub_visual_con.certification {
+        background-image: url(./../images/sub_visual_certification_mo.png);
+    } 
+}
+
+/* 공통 */
+.whatis_wrap {
+    padding: 8.4rem 3rem 23rem;
+}
+.whatis_wrap > .wrap {
+    display: flex;
+    max-width: 160rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.whatis_wrap .left_wrap {
+    width: 80rem;
+    margin-right: 11.7rem;
+}
+.whatis_wrap .right_wrap {
+    width: 64rem;
+}
+.whatis_wrap .right_wrap .whatis_tit span {
+    display: inline-block;
+    padding-top: 2.7rem;
+	font-family: "AmstelvarAlpha";
+	font-size: 6rem;
+	line-height: 2;
+    letter-spacing: -0.025rem;
+	background-image: url(../images/icon_title_deco.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 3rem 2.7rem;
+	color:#8D7F74;
+    transform: scalex(0.9);
+    margin-left: -5%;
+}
+
+.bna_case_wrap {
+    padding:23rem 3rem 13rem;
+}
+.bna_case_wrap > .wrap {
+    max-width: 135rem;
+    margin: 0 auto;
+}
+.bna_case_wrap .tit_wrap {
+    text-align: center;
+}
+.bna_case_wrap .tit_wrap .sub_tit {
+	font-family: "AmstelvarAlpha";
+	font-size: 3rem;
+    line-height: 3.6rem;
+	letter-spacing: -0.025rem;
+	color: #8D7F74;
+}
+.bna_case_wrap .tit_wrap .sub_tit span {
+	color: #AA9B7A;
+}
+.bna_case_wrap .tit_wrap .tit {
+    margin-top: 2.4rem;
+	font-family: "NanumMyeongjo";
+	font-size: 4rem;
+    line-height: 1;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #8D7F74;
+}
+.bna_case_wrap .case_wrap {
+    display: flex;
+    margin-top: 9rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bna_case_wrap .case_wrap .case_box {
+    width: 48.2%;
+}
+.bna_case_wrap .case_wrap .case_box:nth-child(n+3) {
+    margin-top: 6.4rem;
+}
+.bna_case_wrap .twentytwenty-overlay {
+    pointer-events: none;
+}
+.bna_case_wrap .twentytwenty-handle {
+    width: 5rem;
+    height: 5rem;
+    border:none;
+    background-color: rgba(250,237,216,0.5);
+}
+.bna_case_wrap .twentytwenty-handle span {
+    top: 0;
+    width: 2.5rem;
+    height: 5rem;
+    margin-top: 0;
+    border:none;
+    background-image: url(../images/icon_arrow_white.svg);
+    background-repeat: no-repeat;
+    background-size: 1.4rem;
+    background-position: center center;
+}
+.bna_case_wrap .twentytwenty-left-arrow {
+    left: 0;
+    margin-left: 0;
+    transform: rotate(180deg);
+} 
+.bna_case_wrap .twentytwenty-right-arrow {
+    right: 0;
+    margin-right: 0;
+}
+.bna_case_wrap .twentytwenty-horizontal .twentytwenty-handle:before, 
+.bna_case_wrap .twentytwenty-horizontal .twentytwenty-handle:after {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #FAEFD8;
+}
+.bna_case_wrap .case_wrap .case_box .tit01 {
+    margin-bottom: 1.2rem;
+	font-size: 1.8rem;
+    line-height: 2.1rem;
+	letter-spacing: -0.025rem;
+	color: rgba(67,58,52,0.7);
+}
+.bna_case_wrap .case_wrap .case_box .tit02 {
+    margin-bottom: 1.2rem;
+	font-family: "NanumMyeongjo";
+	font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.4rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.bna_case_wrap .case_wrap .case_box .date {
+    display: flex;
+    width: 41.7rem;
+    margin: 2rem auto 0;
+	font-size: 1.8rem;
+    line-height: 2.1rem;
+	letter-spacing: -0.025rem;
+	color: rgba(67,58,52,0.7);
+    justify-content: space-between;
+}
+.bna_case_wrap .case_wrap .case_box p {}
+.bna_case_wrap .case_txt {
+    margin-top: 9rem;
+	font-size: 1.8rem;
+    line-height: 2.8rem;
+	letter-spacing: -0.025rem;
+    text-align: center;
+	color: rgba(67,58,52,0.7);
+}
+
+/* 미니쉬 */
+.whatis_wrap.minish {
+    padding-bottom: 15rem;
+}
+.minish_video_wrap > .wrap {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.minish_sec01_wrap {
+    padding: 20rem 3rem;
+}
+.minish_sec01_wrap.solution {
+    background-color: rgba(221,209,180,0.2);
+}
+.minish_sec01_wrap.tech {
+    background-color: rgba(188,185,195,0.2);
+}
+.minish_sec01_wrap > .wrap {
+    display: flex;
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.minish_sec01_wrap .left_wrap {
+    width: 80rem;
+}
+.minish_sec01_wrap .right_wrap {
+    display: flex;
+    width: 48rem;
+    margin-left: 12rem;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.minish_sec01_wrap .right_wrap .txt_box {
+    width: 100%;
+	font-family: "NanumMyeongjo";
+	font-size: 1.8rem;
+    line-height: 3.8rem;
+	letter-spacing: -0.025rem;
+    text-align: center;
+    color:#AA9B7A;
+    background-color: #fff;
+}
+.minish_sec01_wrap .imp_point li img {
+    width: 12rem;
+}
+.minish_sec01_wrap .imp_point li .txt {
+    margin-top: 0.6rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.minish_sec01_wrap .imp_point li .sub_txt {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+.minish_sec02_wrap {
+    padding-bottom: 20rem;
+}
+.minish_sec02_wrap > .wrap {
+    max-width: 140rem;
+    margin: 0 auto
+}
+.minish_sec02_wrap .con_box {
+    display: flex;
+    position: relative;
+    margin-top: 20rem;
+    justify-content: space-between;
+}
+.minish_sec02_wrap .box02 {
+    flex-flow: row-reverse;;
+}
+.minish_sec02_wrap .media_wrap {
+    width: 80rem;
+}
+.minish_sec02_wrap .text_wrap {
+    width: 48rem;
+    margin-left: 12rem;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.minish_sec02_wrap .box03 .media_wrap {
+    display: flex;
+    width: 100%;
+    font-size: 0;
+    align-items: flex-end;
+}
+.minish_sec02_wrap .box03 .sec03 img:first-child {
+    width: 38.4%;
+    vertical-align: top;
+}
+.minish_sec02_wrap .box03 .sec03 img:last-child {
+    width: 61.6%;
+}
+.minish_sec02_wrap .box03 .text_wrap {
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+.minish_sec03_wrap {
+    padding: 15rem 0 20rem;
+    text-align: center;
+}
+.minish_sec03_wrap .top_wrap .tit {
+    padding-top: 6rem;
+	font-family: "NanumMyeongjo";
+	font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+	letter-spacing: -0.025rem;
+    background-image: url(../images/icon_title_deco.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 2.7rem;
+    color:#433A34;
+}
+.minish_sec03_wrap .mid_wrap { 
+    padding: 1.7rem 0 1.6rem;
+    margin: 6.8rem 0 4.8rem;
+    background-color: #000;
+}
+.minish_sec03_wrap .mid_wrap img {
+    max-width: 81.7rem;
+    width: 100%;
+}
+.minish_sec03_wrap .bot_wrap .tit {
+	font-family: "NanumMyeongjo";
+	font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.4rem;
+	letter-spacing: -0.025rem;
+    color:#433A34;
+}
+.minish_sec03_wrap .bot_wrap .txt {
+    margin-top: 3.3rem;
+	font-size: 1.8rem;
+    line-height: 3rem;
+	letter-spacing: -0.025rem;
+    color:#433A34;
+}
+
+
+
+/* 미니쉬 타입 */
+.mt_tab_wrap {
+    overflow: hidden;
+    padding: 10rem 3.8rem 20rem;
+}
+.mt_tab_wrap ul {
+    display: flex;
+    max-width: 140rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.mt_tab_wrap li {
+    width: 24%;
+}
+.mt_tab_wrap li button {
+    position: relative;
+    width: 100%;
+    padding-top: 193.5%;
+    border-radius: 18rem;
+    box-shadow: 0 0.4rem 1rem rgba(67,58,52,0.2);
+    background-image: url(../images/icon_title_deco.svg);
+    background-repeat: no-repeat;
+    background-position: top 2.5rem center;
+    background-size: 2.7rem;
+    background-color: #F8F6F0;
+}
+.mt_tab_wrap li button img {
+    position: absolute;
+    width: 100%;
+    bottom: 39%;
+    left:0;
+}
+.mt_tab_wrap li button .text_wrap {
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom: 9.25%;
+}
+.mt_tab_wrap li button .tit_en {
+    margin-top: 1.5rem;
+    font-family: 'AmstelvarAlpha';
+	font-size: 3.5rem;
+    line-height: 6rem;
+    letter-spacing: -0.025rem;
+    color: #322C28;
+}
+.mt_tab_wrap li button .tit_kr {
+	font-family: "NanumMyeongjo";
+	font-size: 2.2rem;
+    line-height: 3.4rem;
+	letter-spacing: -0.025rem;
+    color:#8D7F74;
+}
+.mt_tab_wrap li button .txt {
+    margin-top: 1.4rem;
+	font-size: 1.8rem;
+    line-height: 3rem;
+	letter-spacing: -0.045rem;
+    color:#433A34;
+}
+.mt_tab_wrap li button.on {
+    background-image: url(../images/icon_title_deco_dark.svg);
+    background-color: #C7C7C7;
+}
+.mt_tab_wrap li button.on .tit_kr {
+    color:#433A34;
+}
+
+@media screen and (max-width:1200px){
+    .whatis_wrap .left_wrap {
+        margin-right: 5rem;
+    }
+    .whatis_wrap .right_wrap .whatis_tit span {
+        font-size: 4rem;
+    }
+    .mt_tab_wrap li button .tit_en {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+    .mt_tab_wrap li button .tit_kr {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+    .mt_tab_wrap li button .txt {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+}    
+/* 태블릿 */
+@media screen and (max-width:1024px){
+}    
+@media screen and (max-width:768px){
+    
+    /* 공통 */
+    .whatis_wrap {
+        padding: 0 2.5rem 10rem;
+    }
+    .whatis_wrap > .wrap {
+        flex-flow: column-reverse;
+    }
+    .whatis_wrap .left_wrap {
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .whatis_wrap .right_wrap {
+        width: 100%;
+    }
+    .whatis_wrap .right_wrap .whatis_tit {
+        text-align: center;
+    }
+    .whatis_wrap .right_wrap .whatis_tit span {
+        padding-top: 4.7rem;
+        margin-left: 0;
+        margin-bottom: 6rem;
+        font-size: 3rem;
+        line-height: 4rem;
+        background-image: url(../images/icon_title_deco.svg);
+        background-size: 2.7rem 2.4rem;
+    }
+
+    .bna_case_wrap {
+        padding:10rem 1.5rem;
+    }
+    .bna_case_wrap .tit_wrap .sub_tit {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .bna_case_wrap .tit_wrap .tit {
+        margin-top: 0.6rem;
+        font-size: 1.8rem;
+        line-height: 4rem;
+    }
+    .bna_case_wrap .case_wrap {
+        margin-top: 3rem;
+    }
+    .bna_case_wrap .case_wrap .case_box {
+        width: 100%;
+    }
+    .bna_case_wrap .case_wrap .case_box:nth-child(n+2) {
+        margin-top: 3rem;
+    }
+    .bna_case_wrap .twentytwenty-handle {
+        width: 3rem;
+        height: 3rem;
+        margin-left: -1.5rem;
+    }
+    .bna_case_wrap .twentytwenty-handle span {
+        width: 1.5rem;
+        height: 3rem;
+        background-size: 0.8rem;
+    }
+    .bna_case_wrap .case_wrap .case_box .tit01 {
+        margin-bottom: 0.5rem;
+        font-size: 1.28rem;
+        line-height: 1.4rem;
+    }
+    .bna_case_wrap .case_wrap .case_box .tit02 {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        text-align: center;
+        background: rgba(250, 239, 216, 0.40);
+    }
+    .bna_case_wrap .case_wrap .case_box .date {
+        width: 28rem;
+        margin: 1rem auto 0;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .bna_case_wrap .case_txt {
+        margin-top: 6rem;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+    }
+        
+    /* 미니쉬 */
+    .minish_sec01_wrap {
+        padding: 0;
+    }
+    .minish_sec01_wrap > .wrap {
+        display: block;
+        position: relative;
+    }
+    .minish_sec01_wrap .left_wrap {
+        width: 100%;
+        position: absolute;
+        top: 27.5rem;
+        left: 0;
+    }
+    .minish_sec01_wrap .right_wrap {
+        width: 100%;
+        margin-left: 0;
+        padding : 8rem  2.5rem;
+    }
+    .minish_sec01_wrap .right_wrap .txt_box {
+        width: 100%;
+        margin-bottom: 6.2rem;
+        font-size: 1.4rem;
+    }
+    .minish_sec01_wrap .right_wrap .text_set {
+        margin-bottom: 30rem;
+    }
+    .minish_sec01_wrap .right_wrap .text_set .tit {
+        font-size: 2.2rem;
+        line-height: 3.4rem;
+    }
+    .minish_sec01_wrap .imp_point li img {
+        width: 8rem;
+    }
+    .minish_sec01_wrap .imp_point li .txt {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+    .minish_sec01_wrap .imp_point li .sub_txt {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    .minish_sec02_wrap {
+        padding-bottom: 10rem;
+    }
+    .minish_sec02_wrap .con_box {
+        margin-top: 10rem;
+        flex-flow: column-reverse;
+    }
+    .minish_sec02_wrap .media_wrap {
+        width: 100%;
+    }
+    .minish_sec02_wrap .text_wrap {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 2.8rem 6rem;
+    }
+    .minish_sec02_wrap .box03 .media_wrap {
+        flex-wrap: wrap;
+    }
+    .minish_sec02_wrap .box03 .sec01 {
+        width: 55.8%;
+        height: 28.7rem;
+    }
+    .minish_sec02_wrap .box03 .sec02 {
+        width: 44.2%;
+        height: 28.7rem;
+    }
+    .minish_sec02_wrap .box03 .sec03 {
+        height: 13.5rem;
+    }
+    .minish_sec02_wrap .box03 .text_wrap {
+        position: static;
+    }
+
+    .minish_sec03_wrap {
+        padding: 15rem 0 20rem;
+        text-align: center;
+    }
+    .minish_sec03_wrap .top_wrap .tit {
+        padding-top: 6rem;
+        font-family: "NanumMyeongjo";
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 5rem;
+        letter-spacing: -0.025rem;
+        background-image: url(../images/icon_title_deco.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 2.7rem;
+        color:#433A34;
+    }
+    
+    .minish_sec03_wrap {
+        padding: 10rem 0;
+    }
+    .minish_sec03_wrap .top_wrap .tit {
+        padding-top: 4.4rem;
+        font-size: 3rem;
+        line-height: 4.2rem;
+        background-size: 2.4rem;
+    }
+    .minish_sec03_wrap .mid_wrap { 
+        padding: 4.6rem 0;
+        margin: 10rem 0 6rem;
+    }
+    .minish_sec03_wrap .bot_wrap .tit {
+        font-size: 1.8rem;
+        line-height: 3.4rem;
+    }
+    .minish_sec03_wrap .bot_wrap .txt {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+
+    /* 미니쉬타입 */
+    .mt_tab_wrap {
+        padding: 0 3.8rem 10rem;
+    } 
+    .mt_tab_wrap li {
+        width: 100%;
+    }
+    .mt_tab_wrap li button .text_wrap {
+        bottom: 8%;
+    }
+    .mt_tab_wrap li button .tit_en {
+        margin-top: 1.5rem;
+        font-size: 2.2rem;
+        line-height: 6rem;
+    }
+    .mt_tab_wrap li button .tit_kr {
+        font-size: 2.2rem;
+        line-height: 3.4rem;
+    }
+    .mt_tab_wrap li button .txt {
+        margin-top: 1.4rem;
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+    .mt_tab_wrap .swiper-pagination {
+        position: static;
+        margin-top: 2.3rem;
+    }
+}
+
 /* -------------- 미니쉬 END --------------- */
 
 
@@ -838,4 +1491,34 @@
 
 
 /* -------------- 진료과목 START ------------- */
+/* 진료과목 서브비주얼 세팅 */
+.sub_visual_con.vision {
+    background-image: url(./../images/sub_visual_vision.png);
+} 
+.sub_visual_con.drs {
+    background-image: url(./../images/sub_visual_drs.png);
+} 
+.sub_visual_con.sapce {
+    background-image: url(./../images/sub_visual_sapce.png);
+} 
+.sub_visual_con.location {
+    background-image: url(./../images/sub_visual_location.png);
+} 
+@media screen and (max-width:768px){
+    .sub_visual_con.vision {
+        background-image: url(./../images/sub_visual_vision_mo.png);
+    } 
+    .sub_visual_con.drs {
+        background-image: url(./../images/sub_visual_drs_mo.png);
+    } 
+    .sub_visual_con.sapce {
+        background-image: url(./../images/sub_visual_sapce_mo.png);
+    } 
+    .sub_visual_con.location {
+        background-image: url(./../images/sub_visual_location_mo.png);
+    } 
+}
+
+
+@media screen and (max-width:768px){}
 /* -------------- 진료과목 END --------------- */
