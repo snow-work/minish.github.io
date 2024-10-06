@@ -643,6 +643,15 @@
 }
 
 
+
+
+
+/* 정품인증 */
+.sub_page_con.certification {
+    padding: 0 3rem 10rem;
+    background-color: #f9f9f9;;
+}
+
 @media screen and (max-width:1600px){
     .whatis_wrap .left_wrap {
         width: 48.5%;
@@ -1154,6 +1163,12 @@
     }
     .solution_wrap.molar .right_wrap {
         margin-bottom: 5.3rem;
+    }
+
+
+    /* 정품인증 */
+    .sub_page_con.certification {
+        padding: 0 1.3rem 10rem;
     }
 
 }

@@ -595,7 +595,6 @@ gnb : 200
 }
 
 
-
 /* 공통 button */
 .btn_cancel {
 	display: flex;
@@ -759,6 +758,44 @@ gnb : 200
     letter-spacing: -0.03rem;
     color: rgba(0,0,0,0.8);
 }
+
+
+
+/* 입력페이지  ex-정품인증 */
+.input_contents_wrap {
+    max-width: 98rem;
+    margin: 0 auto;
+	border-radius: 1.2rem;
+    background-color: #FFFFFF;
+}
+.input_contents_wrap > .wrap {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+}
+.input_contents_wrap .text_wrap {
+    margin-bottom: 6rem;
+    text-align: center;
+}
+.input_contents_wrap .text_wrap h3 {
+	font-size: 2.4rem;
+    letter-spacing: -0.03rem;
+	color:#433A34;
+}
+.input_contents_wrap .text_wrap p {
+    margin-top: 1.5rem;
+	font-size: 1.5rem;
+	line-height: 2.6rem;
+    letter-spacing: -0.025rem;
+	color:#888;
+}
+.input_contents_wrap .input_box {
+    margin-bottom: 5rem;
+}
+.input_contents_wrap .input_box input~input {
+    margin-top: 1rem;
+}
+
 
 
 /* 공통 - 헤더 */
@@ -1590,6 +1627,13 @@ gnb : 200
 		bottom: 0.5rem;
 		width: calc(100% - 3.6rem);
 	}
+	.input_grid2 {
+		display: block;
+	}
+	.input_grid2 > .wrap {
+		width: 100%;
+	}
+
 
 	.btn_cancel,
 	.btn_main {
@@ -1602,12 +1646,6 @@ gnb : 200
 	.btn_confirm_wrap .btn_cancel {
 		flex: 0 0 8rem;
 		margin-right: 1rem;
-	}
-	.input_grid2 {
-		display: block;
-	}
-	.input_grid2 > .wrap {
-		width: 100%;
 	}
 
 	.tab_wrap {
@@ -1685,6 +1723,26 @@ gnb : 200
 	.ui_tab.active .btn_tab_open {
 		color: #4C6677;
 		background-image: url(../images/icon_ui_select_on.png);
+	}
+
+	
+	/* 입력페이지  ex-정품인증 */
+	.input_contents_wrap > .wrap {
+		padding: 5rem 1.3rem 6rem;
+	}
+	.input_contents_wrap .text_wrap {
+		margin-bottom: 4rem;
+	}
+	.input_contents_wrap .text_wrap h3 {
+		font-size: 1.8rem;
+	}
+	.input_contents_wrap .text_wrap p {
+		margin-top: 2rem;
+		font-size: 1.2rem;
+		line-height: 2.2rem;
+	}
+	.input_contents_wrap .input_box {
+		margin-bottom: 3rem;
 	}
 
 	
