@@ -10,10 +10,13 @@
 
 	<script src="../../js/jquery-3.7.1.min.js"></script>
 	<script src="../../js/swiper-bundle.min.js"></script>
+	<script src="../../js/jquery.twentytwenty.js"></script>
+	<script src="../../js/jquery.event.move.js"></script>
 	<script src="https://player.vimeo.com/api/player.js"></script>
 	<script type="text/javascript" src="../../js/ui-common.js" defer ></script>
-	
+
 	<link href="../../css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+	<link href="../../css/twentytwenty.css" rel="stylesheet" type="text/css">
 	<link href="../../css/common.css" rel="stylesheet" type="text/css">
 	<link href="../../css/sub.css" rel="stylesheet" type="text/css">
 </head>
@@ -157,12 +160,12 @@
                 </div>
             </div>
             <div class="sub_page_con">
-                <div class="page_title type02 scr_chk active">
+                <div class="page_title type02 scr_chk">
                     <h2 class="tit">미니쉬 TYPE</h2>
                     <p class="sub_txt">증상별 적합한 미니쉬 타입은?<br>
 						앞니, 잇몸 어금니까지 모든 증상에 적용 가능합니다.</p>
                 </div>
-				<div class="mt_tab_wrap">
+				<div class="mt_tab_wrap scr_chk">
 					<ul class="swiper-wrapper">
 						<li class="swiper-slide">
 							<button onclick="moveTab('.mt_tab_wrap','0')">
@@ -206,38 +209,500 @@
 						</li>
 					</ul>
     				<div class="swiper-pagination"></div>
+					<div class="btn_wrap ver_mo">
+						<button class="btn_return">다른 미니쉬 타입 알아보기</button>
+					</div>
 				</div>
 				<div class="tab_box_wrap">
-					<div class="tab_box on">
-						
-						<div class="whatis_wrap minish scr_chk">
+					<div class="tab_box">
+						<div class="whatis_wrap dual scr_chk">
 							<div class="wrap">
 								<div class="left_wrap">
-									<div class="video_box">
-										<iframe src="https://player.vimeo.com/video/1010842826?h=6daed9bc9d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;muted=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write" title="0910_B&amp;A_mk2_ver2"></iframe>
-									</div>
+									<img src="../../images/sub_dual_whatis_img.png" alt="">
 								</div>
 								<div class="right_wrap">
 									<p class="whatis_tit">
-										<span>What is MINISH?</span>
+										<span>What is DUAL MINISH?</span>
 									</p>
-
 									<div class="text_set type01">
-										<p class="tit_sub">MINISH</p>
-										<p class="tit">치아복구 솔루션 미니쉬입니다</p>
+										<p class="tit_sub">DUAL MINISH</p>
+										<p class="tit">듀얼 미니쉬는 무엇인가요?</p>
 										<p class="txt">
-											미니쉬는 라미네이트,치아성형이 아닌 치아 복구 솔루션입니다<br>
-											자연치아 물성과 가장 유사한 재료로 수복물을 만든 후<br class="ver_mo"> 손상된 치아와<br class="ver_pc">
-											접착시켜 원래 내 치아처럼 기능과 심미를<br class="ver_mo"> 모두 회복시켜드립니다
+											듀얼 미니쉬는 광범위한 치아 손상으로 치아의<br> 
+											전반적인 보호가 필요할 경우,불필요한 치아 삭제 없이<br> 
+											손상된 치아의 전문 (순, 설면)을 보호해주는 치료 방법입니다.
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="solution_wrap dual scr_chk">
+							<div class="wrap">
+								<div class="left_wrap scr_chk">
+									<div class="img_wrap">
+										<img src="../../images/sub_dual_solution_img01.png" alt="">
+										<p>치아 파절</p>
+									</div>
+									<div class="img_wrap">
+										<img src="../../images/sub_dual_solution_img01.png" alt="">
+										<p>치아 부식</p>
+									</div>
+									<div class="img_wrap">
+										<img src="../../images/sub_dual_solution_img01.png" alt="">
+										<p>치아 마모</p>
+									</div>
+									<div class="img_wrap">
+										<img src="../../images/sub_dual_solution_img01.png" alt="">
+										<p>치아 실금(크랙)</p>
+									</div>
+								</div>
+								<div class="right_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">MINISH Solution</p>
+										<p class="tit">[어떤 경우 듀얼 미니쉬가 적당할까?]</p>
+										<p class="txt">
+											앞니의 광범위한 손상이 있을 경우 치아는 외부의 자극에<br> 
+											더 쉽게 손상될 수 있어 치아를 전면(순면, 설면)에서<br class="ver_mo"> 감싸줘야합니다. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bna_case_wrap type02">
+							<div class="wrap">
+								<div class="tit_wrap scr_chk">
+									<p class="sub_tit">DUAL MINISH <span>Case</span></p>
+									<p class="tit">증상으로 살펴보는 <span>듀얼 미니쉬 전후 변화</span></p>
+								</div>
+								<div class="case_wrap scr_chk">
+									<p class="tit"># 치아 마모</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img01.png" alt="">
+												<img src="../../images/sub_dual_bna_img02.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img03.png" alt="">
+												<img src="../../images/sub_dual_bna_img04.png" alt="">
+											</div>
+										</div>
+									</div>
+									<p class="tit"># 치아 부식</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img05.png" alt="">
+												<img src="../../images/sub_dual_bna_img06.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img07.png" alt="">
+												<img src="../../images/sub_dual_bna_img08.png" alt="">
+											</div>
+										</div>
+									</div>
+									<p class="tit"># 치아 파절</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img09.png" alt="">
+												<img src="../../images/sub_dual_bna_img10.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img11.png" alt="">
+												<img src="../../images/sub_dual_bna_img12.png" alt="">
+											</div>
+										</div>
+									</div>
+									<p class="tit"># 치아 실금 (크랙)</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img13.png" alt="">
+												<img src="../../images/sub_dual_bna_img14.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_dual_bna_img15.png" alt="">
+												<img src="../../images/sub_dual_bna_img16.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="case_txt scr_chk">
+									개인에 따라 치료 기간이 다를 수 있으며, 부작용이 발생할 수 있으니<br>
+									의료진의 정확한 진료를 받고 치료를 진행하시기 바랍니다.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="tab_box">탭2</div>
-					<div class="tab_box">탭3</div>
-					<div class="tab_box">탭4</div>
+					<div class="tab_box">
+						<div class="whatis_wrap pink scr_chk">
+							<div class="wrap">
+								<div class="left_wrap">
+									<img src="../../images/sub_pink_whatis_img.png" alt="">
+								</div>
+								<div class="right_wrap">
+									<p class="whatis_tit">
+										<span>What is PINK MINISH?</span>
+									</p>
+									<div class="text_set type01">
+										<p class="tit_sub">PINK MINISH</p>
+										<p class="tit">핑크 미니쉬는 무엇인가요?</p>
+										<p class="txt">
+											핑크 미니쉬는 치아와 자연스러운 연분홍빛 잇몸을<br>기능적·심미적으로 개선하는 치료 방법입니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="solution_wrap pink scr_chk">
+							<div class="wrap">
+								<div class="left_wrap ">
+									<div class="img_wrap">
+										<img src="../../images/sub_pink_solution_img.png" alt="">
+										<p>내려간 잇몸, 치아뿌리 노출, 길어보이는 치아</p>
+									</div>
+								</div>
+								<div class="right_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">MINISH Solution</p>
+										<p class="tit">[어떤 경우 핑크 미니쉬가 적당할까?]</p>
+										<p class="txt">
+											치아 노화나 외부의 충격으로 인해 앞니의 잇몸이 꺼지거나<br>
+											풍치가 심해 치아의 뿌리가 보이거나, 교정 후에 심한 잇몸<br>
+											현상이 생겼을 경우 심미적인 개선과 잇몸 건강 관리에<br>
+											용이한 구강 환경을 만들어 주어야 합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bna_case_wrap type02">
+							<div class="wrap">
+								<div class="tit_wrap scr_chk">
+									<p class="sub_tit">PINK MINISH <span>Case</span></p>
+									<p class="tit">증상으로 살펴보는 <span>핑크 미니쉬 전후 변화</span></p>
+								</div>
+								<div class="case_wrap scr_chk">
+									<p class="tit"># 치아 뿌리 노출</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_pink_bna_img01.png" alt="">
+												<img src="../../images/sub_pink_bna_img02.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_pink_bna_img03.png" alt="">
+												<img src="../../images/sub_pink_bna_img04.png" alt="">
+											</div>
+										</div>
+									</div>
+									<p class="tit"># 내려간 잇몸</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_pink_bna_img05.png" alt="">
+												<img src="../../images/sub_pink_bna_img06.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_pink_bna_img07.png" alt="">
+												<img src="../../images/sub_pink_bna_img08.png" alt="">
+											</div>
+										</div>
+									</div>
+									<p class="tit"># 길어보이는 치아</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_pink_bna_img09.png" alt="">
+												<img src="../../images/sub_pink_bna_img10.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_pink_bna_img11.png" alt="">
+												<img src="../../images/sub_pink_bna_img12.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="case_txt scr_chk">
+									개인에 따라 치료 기간이 다를 수 있으며, 부작용이 발생할 수 있으니<br>
+									의료진의 정확한 진료를 받고 치료를 진행하시기 바랍니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab_box">
+						<div class="whatis_wrap bridge scr_chk">
+							<div class="wrap">
+								<div class="left_wrap">
+									<img src="../../images/sub_bridge_whatis_img.png" alt="">
+								</div>
+								<div class="right_wrap">
+									<p class="whatis_tit">
+										<span>What is MINISH BRIDGE?</span>
+									</p>
+									<div class="text_set type01">
+										<p class="tit_sub">BRIDGE MINISH</p>
+										<p class="tit">미니쉬 브릿지는 무엇인가요?</p>
+										<p class="txt">
+											미니쉬 브릿지는 치아가 상실되었을 때, 상실된 치아의<br>앞뒤 치아를 이용하여 상실된 치아를 수복합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="solution_wrap bridge scr_chk">
+							<div class="wrap">
+								<div class="left_wrap">
+									<div class="img_wrap">
+										<img src="../../images/sub_bridge_solution_img.png" alt="">
+										<p>치아와 잇몸뼈 상실</p>
+									</div>
+								</div>
+								<div class="right_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">MINISH Solution</p>
+										<p class="tit">[어떤 경우 미니쉬 브릿지가 적당할까?]</p>
+										<p class="txt">
+											치아 상실 후 치조골(잇몸뼈)의 상실로 임플란트 수술이 어렵거나,<br>
+											수술에 대한 공포감이 있는 경우 또는 전치부 치아를 상실한 경우<br>
+											건강한 치아 생활을 위해 상실된 치아를 복구해야 합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bridge_sec01_wrap scr_chk">
+							<div class="wrap">
+								<div class="left_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">MINISH Solution</p>
+										<p class="tit">일반 크라운 브릿지 VS 미니쉬 브릿지</p>
+										<p class="txt">
+											일반 크라운 브릿지와 미니쉬 브릿지 차이점을 확인하세요!
+										</p>
+									</div>
+								</div>
+								<div class="right_wrap">
+									<div class="img_wrap">
+										<img src="../../images/sub_bridge_sec01_img.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bridge_sec02_wrap scr_chk">
+							<div class="wrap">
+								<div class="tit_wrap">
+									<p class="tit">증상으로 따라 달라지는<br class="ver_mo"> <span>미니쉬 브릿지 종류</span></p>
+								</div>
+								<div class="con_wrap">
+									<div class="img_wrap">
+										<img src="../../images/sub_bridge_sec02_img01.png" alt="">
+										<p>미니쉬 윙 브릿지</p>
+									</div>
+									<div class="img_wrap">
+										<img src="../../images/sub_bridge_sec02_img02.png" alt="">
+										<p>미니쉬 비니어 브릿지</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bridge_sec03_wrap wing scr_chk">
+							<div class="wrap">
+								<div class="text_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">미니쉬 윙 브릿지</p>
+										<p class="tit">
+											상실된 치아의 양 옆에 위치한<br>
+											치아가 건강할 경우</p>
+										<p class="txt">
+											상실된 치아 공간을 보철로 메워준 후 양옆 날개<br>
+											형태의 구조물을 달아서 접착을 합니다.
+										</p>
+										<p class="txt">
+											[추천 유형]<br>
+											① 결손치 양옆 치아가 건강한 상태<br>
+											② 치아 삭제에 대한 거부감이 있는 경우
+										</p>
+									</div>
+								</div>
+								<div class="img_wrap">
+									<img class="ver_pc" src="../../images/sub_bridge_wing_img.png" alt="">
+									<img class="ver_mo" src="../../images/sub_bridge_wing_img_01_mo.png" alt="">
+									<img class="ver_mo" src="../../images/sub_bridge_wing_img_02_mo.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="bridge_sec03_wrap veneer scr_chk">
+							<div class="wrap">
+								<div class="text_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">미니쉬 비니어 브릿지</p>
+										<p class="tit">
+											상실된 양옆 치아의 치료가<br>함께 필요한 경우
+										</p>
+										<p class="txt">
+											손상된  부위에 수복될 비니어 형태의 보철물과 결손된 치아<br>
+											부분에 들어갈 인공치아 부분을 하나로 연결하는 방법입니다.
+										</p>
+										<p class="txt">
+											[추천 유형]<br>
+											① 결손치 양옆 치아가 손상된 상태<br>
+											② 마모,부식,충치,크랙 등으로 치료가 필요한 경우
+										</p>
+									</div>
+								</div>
+								<div class="img_wrap">
+									<img class="ver_pc" src="../../images/sub_bridge_wing_img.png" alt="">
+									<img class="ver_mo" src="../../images/sub_bridge_wing_img_01_mo.png" alt="">
+									<img class="ver_mo" src="../../images/sub_bridge_wing_img_02_mo.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="bna_case_wrap type02">
+							<div class="wrap">
+								<div class="tit_wrap scr_chk">
+									<p class="sub_tit">BRIDGE MINISH <span>Case</span></p>
+									<p class="tit">증상으로 살펴보는 <span>미니쉬 브릿지 전후 변화</span></p>
+								</div>
+								<div class="case_wrap scr_chk">
+									<p class="tit"># 상실된 치아</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_bridge_bna_img01.png" alt="">
+												<img src="../../images/sub_bridge_bna_img02.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_bridge_bna_img03.png" alt="">
+												<img src="../../images/sub_bridge_bna_img04.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_bridge_bna_img05.png" alt="">
+												<img src="../../images/sub_bridge_bna_img06.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_bridge_bna_img07.png" alt="">
+												<img src="../../images/sub_bridge_bna_img08.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="case_txt scr_chk">
+									개인에 따라 치료 기간이 다를 수 있으며, 부작용이 발생할 수 있으니<br>
+									의료진의 정확한 진료를 받고 치료를 진행하시기 바랍니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab_box">
+						<div class="whatis_wrap molar scr_chk">
+							<div class="wrap">
+								<div class="left_wrap">
+									<img src="../../images/sub_molar_whatis_img.png" alt="">
+								</div>
+								<div class="right_wrap">
+									<p class="whatis_tit">
+										<span>What is MOLAR MINISH?</span>
+									</p>
+									<div class="text_set type01">
+										<p class="tit_sub">MOLAR MINISH</p>
+										<p class="tit">어금니 미니쉬는 무엇인가요?</p>
+										<p class="txt">
+											어금니 미니쉬는 수복물 파절, 2차 충치 등의 부작용 발생 시<br>크라운을 재시행 할 수 있는 보존적인 방법입니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="solution_wrap molar scr_chk">
+							<div class="wrap">
+								<div class="left_wrap">
+									<div class="img_wrap">
+										<img class="ver_pc" src="../../images/sub_molar_solution_img.png" alt="">
+										<img class="ver_mo" src="../../images/sub_molar_solution_img_mo.png" alt="">
+									</div>
+								</div>
+								<div class="right_wrap">
+									<div class="text_set type01">
+										<p class="tit_sub">MINISH Solution</p>
+										<p class="tit">[어떤 경우 어금니 미니쉬가 적당할까?]</p>
+										<p class="txt">
+											충치가 큰 치아, 금이 간 치아, 파절된 치아, 신경치료 한 치아 등<br>
+											어금니에 광범위한 치아 손상이 있을 경우 치아 손상을<br>
+											최소화하여 진행할 수 있습니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bna_case_wrap type02">
+							<div class="wrap">
+								<div class="tit_wrap scr_chk">
+									<p class="sub_tit">MOLAR MINISH <span>Case</span></p>
+									<p class="tit">증상으로 살펴보는 <span>어금니 미니쉬 전후 변화</span></p>
+								</div>
+								<div class="case_wrap scr_chk">
+									<p class="tit"># 마모된 어금니</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_molar_bna_img01.png" alt="">
+												<img src="../../images/sub_molar_bna_img02.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_molar_bna_img03.png" alt="">
+												<img src="../../images/sub_molar_bna_img04.png" alt="">
+											</div>
+										</div>
+									</div>
+									<p class="tit"># 충치가 큰 어금니</p>
+									<div class="row">
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_molar_bna_img05.png" alt="">
+												<img src="../../images/sub_molar_bna_img06.png" alt="">
+											</div>
+										</div>
+										<div class="case_box">
+											<div class="twentytwenty-container">
+												<img src="../../images/sub_molar_bna_img07.png" alt="">
+												<img src="../../images/sub_molar_bna_img08.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="case_txt scr_chk">
+									개인에 따라 치료 기간이 다를 수 있으며, 부작용이 발생할 수 있으니<br>
+									의료진의 정확한 진료를 받고 치료를 진행하시기 바랍니다.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
             </div>
 		</div>

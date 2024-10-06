@@ -1,0 +1,812 @@
+/* -------------- 병원소개 START ------------- */
+/* 병원 소개 서브비주얼 세팅 */
+.sub_visual_con.vision {
+    background-image: url(./../images/sub_visual_vision.png);
+} 
+.sub_visual_con.drs {
+    background-image: url(./../images/sub_visual_drs.png);
+} 
+.sub_visual_con.sapce {
+    background-image: url(./../images/sub_visual_sapce.png);
+} 
+.sub_visual_con.location {
+    background-image: url(./../images/sub_visual_location.png);
+} 
+@media screen and (max-width:768px){
+    .sub_visual_con.vision {
+        background-image: url(./../images/sub_visual_vision_mo.png);
+    } 
+    .sub_visual_con.drs {
+        background-image: url(./../images/sub_visual_drs_mo.png);
+    } 
+    .sub_visual_con.sapce {
+        background-image: url(./../images/sub_visual_sapce_mo.png);
+    } 
+    .sub_visual_con.location {
+        background-image: url(./../images/sub_visual_location_mo.png);
+    } 
+}
+
+
+/* 병원소개 */
+.vis_point_wrap {
+    padding:6rem 3rem 3.2rem; 
+}
+.vis_point_wrap ul {
+    max-width: 108rem;
+    margin: 0 auto;
+}
+
+.vis_fc_wrap {
+    padding: 8rem 3rem 5.4rem;
+    background-color: rgba(221,209,180,0.2);
+}
+.vis_fc_wrap > .wrap {
+    max-width: 160rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.vis_fc_wrap .tit {
+    font-family: "AmstelvarAlpha";
+    font-size: 8rem;
+    line-height: 10rem;
+    letter-spacing: -0.025rem;
+    color: #322C28;
+    transform: scaleX(0.8);
+}
+.vis_fc_wrap img {
+    margin:3rem 0; 
+}
+.vis_fc_wrap .txt {
+    font-family: "AmstelvarAlpha";
+    font-size: 9rem;
+    line-height: 12rem;
+    letter-spacing: -0.025rem;
+    color: #8D7F74;
+    transform: scaleX(0.8);
+}
+
+.vis_care_wrap .wrap {
+	position: relative;
+	height: 60rem;
+    padding: 12.4rem 0;
+	text-align: center;
+	background: url(../images/main_deco_sym.png) no-repeat;
+	background-position: bottom 16.4rem left 26.1rem;
+	background-size: 16.9rem ;
+	opacity: 0;
+}
+.vis_care_wrap .tit {
+	font-family: "AmstelvarAlpha";
+	font-size: 8rem;
+	line-height: 10rem;
+	letter-spacing: -0.1rem;
+	color: #433A34;
+    transform: scaleX(0.8) translateY(3rem);
+	opacity: 0;
+}
+.vis_care_wrap .wrap::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 19.8rem;
+	left: calc(50% + 25rem);
+	right: 50%;
+	border-bottom: 1px solid #433a34;	
+}
+.vis_care_wrap .txt {
+    margin-top: 1rem;
+	font-family: "AmstelvarAlpha";
+	font-size: 3.4rem;
+	line-height: 4rem;
+	letter-spacing: -0.1rem;
+	color: #8D7F74;
+    filter: blur(2px);
+    transform: translateY(3rem);
+	opacity: 0
+}
+.vis_care_wrap.active .wrap {
+	opacity: 1;
+	background-position: bottom 19.4rem left 26.1rem;
+	transition: all 1s;
+}
+.vis_care_wrap.active .tit {
+	opacity: 1;
+    transform: scaleX(0.8) translateY(0);
+	transition: all 1s 0.5s;
+}
+.vis_care_wrap.active .txt {
+	opacity: 1;
+    transform: translateY(0);
+	transition: all 1s 1s;
+}
+.vis_care_wrap.active .wrap::before {
+	right: 0;
+	transition: all 1s 1.5s;
+}
+
+.vis_slogan_wrap {
+    padding: 8.9rem 3rem 10.4rem;
+    background-color: rgba(221,209,180,0.2);
+}
+.vis_slogan_wrap > .wrap {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+.vis_slogan_wrap .top_wrap {
+    margin-bottom: 6.8rem;
+    text-align: center;
+}
+.vis_slogan_wrap .top_wrap .tit {
+	font-family: "AmstelvarAlpha";
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	letter-spacing: -0.025rem;
+	color: #AA9B7A;
+}
+.vis_slogan_wrap .top_wrap .txt {
+    margin-top: 1rem;
+	font-size: 1.8rem;
+	line-height: 2.1rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.vis_slogan_swiper {
+    overflow: hidden;
+}
+.vis_slogan_wrap .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.vis_slogan_wrap .swiper-slide {
+    width: 31.3%;
+}
+.vis_slogan_wrap .swiper-slide .wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 125%;
+    background-color: #F0EEE8;
+}
+.vis_slogan_wrap .swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 86.5%;
+}
+.vis_slogan_wrap .swiper-slide.center img {
+    width: 100%;
+}
+.vis_slogan_wrap .left img {
+    right: auto;
+    left: 0;
+}
+.vis_slogan_wrap .txt_wrap {
+    position: absolute;
+    top: 4.3rem;
+    right: 2.2rem;
+    text-align: right;
+}
+.vis_slogan_wrap .left .txt_wrap {
+    right: 4.7rem;
+}
+.vis_slogan_wrap .txt_wrap .tit {
+    font-family: "AmstelvarAlpha";
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	letter-spacing: -0.025rem;
+	color: #AA9B7A;
+}
+.vis_slogan_wrap .txt_wrap .tit b {
+    font-weight: 400;
+    color:#8D7F74;
+}
+.vis_slogan_wrap .txt_wrap .txt {
+    margin-top: 1rem;
+	font-size: 1.8rem;
+	line-height: 2.1rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.vis_slogan_wrap .center .txt_wrap .txt {
+    color: rgba(170,155,122,0.7);
+}
+.vis_slogan_wrap .txt_wrap .sub_txt {
+    margin-top: 1.1rem;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	letter-spacing: -0.025rem;
+	color: #DED0B0;
+}
+.vis_slogan_wrap .swiper-slide .bul_txt {
+    margin-top: 1.5rem;
+    padding-left: 3rem;
+	font-size: 1.8rem;
+	line-height: 2.1rem;
+	letter-spacing: -0.025rem;
+    word-break: keep-all;
+    background-image: url(../images/icon_title_deco.svg);
+    background-repeat: no-repeat;
+    background-size: 2.1rem;
+    background-position: top left 0.3rem;
+	color: #433A34;
+}
+.vis_slogan_wrap .swiper-slide.left .bul_txt {
+    padding: 0 3rem 0 0;
+    text-align: right;
+    background-position: top right 0.3rem;
+}
+
+.vis_brand_wrap {
+    padding: 0 3rem 10rem;
+}
+.vis_brand_wrap > .wrap{
+    max-width: 132rem;
+    margin:0 auto;
+}
+.vis_brand_wrap .page_title .tit {
+    font-family: "AmstelvarAlpha";
+    font-weight: 400;
+    color:#8D7F74;
+    transform: scaleX(0.9) translateY(10rem);
+}
+.vis_brand_wrap .page_title.type02.active .tit {
+    transform: scaleX(0.9) translateY(0rem);
+}
+.vis_brand_wrap .brand_con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vis_brand_wrap .left_con {
+    display: flex;
+    position: relative;
+    width: 63rem;
+    height: 36rem;
+    justify-content: center;
+    align-items: center;
+}
+.vis_brand_wrap .left_con .txt_wrap.wrap01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.vis_brand_wrap .left_con .txt_wrap.wrap02 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.vis_brand_wrap .left_con img {
+    width: 17.5rem;
+}
+.vis_brand_wrap .left_con .txt_wrap .tit {
+    font-family: "AmstelvarAlpha";
+	font-size: 3rem;
+	line-height: 3.6rem;
+	letter-spacing: -0.025rem;
+	color: #A8B9C3;
+}
+.vis_brand_wrap .left_con .txt_wrap .txt {
+    margin-top: 2rem;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.vis_brand_wrap .right_con {
+    width: 51rem;
+}
+.vis_brand_wrap .right_con .tit {
+    margin-bottom: 0.6rem;
+    font-family: "AmstelvarAlpha";
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	letter-spacing: -0.025rem;
+	color: #AA9B7A;
+}
+.vis_brand_wrap .right_con .txt {
+    font-size: 1.8rem;
+	line-height: 3rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.vis_brand_wrap .right_con .txt~.txt {
+    margin-top: 2.3rem;
+}
+.vis_brand_wrap .right_con a {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    border-radius: 2rem;
+    background-color: #A6B7C2;
+}
+
+.vis_ex_wrap {
+    padding: 10rem 3rem;
+}
+.vis_ex_wrap .wrap {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.vis_ex_wrap .ex_box {
+    display: flex;
+    justify-content: space-between;
+}
+.vis_ex_wrap .ex_box~.ex_box {
+    margin-top: 26rem;
+}
+.vis_ex_wrap .txt_wrap {
+    width: 50rem;
+    flex: 1 0 auto;
+}
+.vis_ex_wrap .txt_wrap .tit_en {
+    font-family: "AmstelvarAlpha";
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	letter-spacing: -0.025rem;
+	color: #AA9B7A;
+}
+.vis_ex_wrap .txt_wrap .tit_kr {
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #433A34;
+}
+.vis_ex_wrap .txt_wrap .txt {
+    margin-top: 3rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 5.5rem;
+    color: #433A34;
+}
+
+
+
+/* 의료진 소개 */
+.drs_info_wrap {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.drs_info_wrap .dr_info {
+    display: flex;
+}
+.drs_info_wrap .dr_info.dr02 {
+    flex-flow: row-reverse;
+}
+.drs_info_wrap .img_wrap {
+    position: relative;
+}
+.drs_info_wrap .img_wrap::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0,1), rgba(0, 0, 0, 0))
+}
+.drs_info_wrap .img_wrap p {
+    position: absolute;
+    left:8rem;
+    bottom: 8rem;
+	font-family: "NanumMyeongjo";
+	font-size: 3rem;
+	line-height: 5rem;
+	letter-spacing: 0.25rem;
+	color: #fff;
+}
+.drs_info_wrap .info_wrap {
+    position: relative;
+    flex: 1 1 auto;
+    background-color: #F8F6F0;
+}
+.drs_info_wrap .info_wrap > .wrap {
+    position: absolute;
+    bottom: 10rem;
+    left: 9.5%;;
+}
+.drs_info_wrap .info_wrap .pos {
+	font-family: "AmstelvarAlpha";
+	font-size: 3rem;
+    line-height: 3.6rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.drs_info_wrap .info_wrap .name_kr {
+	font-family: "NanumMyeongjo";
+	font-size: 8rem;
+    line-height: 10rem;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #AA9B7A;
+}
+.drs_info_wrap .info_wrap .name_en {
+	font-family: "AmstelvarAlpha";
+	font-size: 2.8rem;
+    line-height: 3rem;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.drs_info_wrap .info_wrap .history {
+	margin-top: 3.5rem;
+	font-size: 2rem;
+    line-height: 3.2rem;
+	letter-spacing: -0.03rem;
+	color: #433A34;
+}
+
+.drs_slogan_wrap {
+    padding: 15.9rem 2.8rem 16.3rem;
+    text-align: center;
+}
+.drs_slogan_wrap p {
+    display: inline-block;
+    position: relative;
+	font-family: "NanumMyeongjo";
+	font-size: 4rem;
+    line-height: 7rem;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.drs_slogan_wrap p::before,
+.drs_slogan_wrap p::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3.1rem;
+    height: 2.5rem;
+    background: url(./../images/icon_drs_dqm.svg) no-repeat center center / contain;
+}
+.drs_slogan_wrap p::before {
+    top: -2.5rem;
+    left: -4.5rem;
+}
+.drs_slogan_wrap p::after {
+    bottom: -1.2rem;
+    right: 9rem;
+    transform: rotate(180deg);
+}
+
+/* 공간안내 */
+.space_swiper01 .swiper-pagination {
+    position: static;
+    margin-top: 1.3rem;
+}
+.space_txt_wrap {
+    /* padding:8rem 0 11.5rem; */
+    padding: 7.5rem 0 9.5rem;
+	font-family: "NanumMyeongjo";
+	font-size: 3rem;
+    line-height: 5rem;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+    text-align: center;
+	color: #433A34;
+}
+.space_swiper02_wrap {
+    position: relative;
+    display: flex;
+    margin-bottom: 15rem;
+}
+.space_swiper02 {
+    overflow: hidden;
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.space_swiper02 .swiper-wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.space_swiper02 .swiper-slide {
+    width: 20.65%
+}
+.space_swiper02 .swiper-slide.center,
+.space_swiper02 .swiper-slide.slide04 {
+    width: 29.4%;
+} 
+.space_swiper02_wrap .swiper_btn_wrap {
+    display: flex;
+    width: 16rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #fff, #8D7F74)
+}
+.space_swiper02_wrap .swiper_btn_wrap.btn_prev {
+    transform: rotate(180deg);
+}
+.space_swiper02_wrap .swiper-button-prev,
+.space_swiper02_wrap .swiper-button-next {
+    position: static;
+    width: 3.6rem;
+    height: 7.2rem;
+    margin-top: 0;
+    background: url(./../images/icon_arrow_white.svg) no-repeat center center / 3rem;
+}
+.space_swiper02_wrap .swiper-button-next:after,
+.space_swiper02_wrap .swiper-button-prev:after {content: none;}
+
+/* 반응형 */
+@media screen and (max-width:1400px){
+    /* 의료진 소개 */
+    .drs_info_wrap .img_wrap {
+        max-width: 78rem;
+    }
+    .drs_info_wrap .info_wrap > .wrap {
+        bottom: 5rem;
+    }
+    .drs_info_wrap .info_wrap .name_kr {
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+}
+@media screen and (max-width:1200px){
+    .vis_brand_wrap .brand_con {
+        justify-content: space-around;
+    }
+    .vis_brand_wrap .left_con {
+        width: 60rem;
+    }
+    .vis_brand_wrap .right_con {
+        width: 40rem;
+    }
+}
+/* 태블릿 */
+@media screen and (max-width:1024px){
+    /* 병원소개 */
+    
+    .vis_brand_wrap .brand_con {
+        flex-flow: column-reverse;
+    }
+    .vis_brand_wrap .left_con {
+        margin-top: 8rem;
+    }
+    .vis_brand_wrap .right_con {
+        text-align: center;
+    }
+    .vis_ex_wrap .txt_wrap .txt {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+   
+    /* 의료진 소개 */
+    .drs_info_wrap .img_wrap {
+        max-width: 65rem;
+    } 
+    .drs_info_wrap .info_wrap .pos {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .drs_info_wrap .info_wrap {
+        padding: 3rem 1.3rem 4.5rem;
+    }
+    .drs_info_wrap .dr02 .info_wrap {
+        text-align: right;
+    }
+    .drs_info_wrap .info_wrap .name_kr {
+        font-size: 2.6rem;
+        line-height: 4.1rem;
+    }
+    .drs_info_wrap .info_wrap .name_en {
+        margin-top: 0.4rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    .drs_info_wrap .info_wrap .history {
+        margin-top: 3rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+}
+/* 모바일 */
+@media screen and (max-width:768px){
+    /* 병원소개 */
+    .vis_point_wrap {
+        padding: 4rem 2.2rem;
+    }
+
+    .vis_fc_wrap {
+        padding: 2rem 1.5rem 2rem;
+    }
+    .vis_fc_wrap .tit {
+        font-size: 6rem;
+        line-height: 9rem;
+    }
+    .vis_fc_wrap img {
+        margin: -19rem 0 2rem; 
+    }
+    .vis_fc_wrap .txt {
+        width: 120%;
+        margin-left: -10%;
+        font-size: 6rem;
+        line-height: 9rem;
+    }
+    
+    .vis_care_wrap .wrap {
+		height: auto;
+		padding: 8rem 0;
+		background: none;
+	}
+	.vis_care_wrap .tit {
+		font-size: 6rem;
+		line-height: 8rem;
+	}
+    .vis_care_wrap .txt {
+        margin-top: 4rem;
+    }
+	.vis_care_wrap .wrap::before {
+		bottom: 18rem;
+		left: 25rem;
+	}
+    
+    .vis_slogan_wrap {
+        padding: 6.8rem 1.5rem 8rem;
+    }
+    .vis_slogan_wrap .top_wrap {
+        margin-bottom: 10rem;
+    }
+    .vis_slogan_wrap .top_wrap .tit {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_slogan_wrap .top_wrap .txt {
+        margin-top: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+    .vis_slogan_wrap .swiper-slide img {
+        width: 31.9rem;
+    }
+    .vis_slogan_wrap .left .txt_wrap {
+        right: 2.7rem;
+    }
+    .vis_slogan_wrap .txt_wrap .tit {
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+    }
+    .vis_slogan_wrap .txt_wrap .txt {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_slogan_wrap .txt_wrap .sub_txt {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+    .vis_slogan_wrap .swiper-slide .bul_txt {
+        margin-top: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        background-size: 2rem;
+    }
+
+    .vis_brand_wrap {
+        padding: 0 2.8rem 8rem;
+    }
+    .vis_brand_wrap .page_title {
+        padding: 12.4rem 0 6rem;
+    }
+    .vis_brand_wrap .brand_con {
+        flex-flow: column-reverse;
+    }
+    .vis_brand_wrap .left_con {
+        margin-top: 8rem;
+        width: 100%;
+        height: 30.8rem;
+    }
+    .vis_brand_wrap .left_con img {
+        width: 12rem;
+    }
+    .vis_brand_wrap .left_con .txt_wrap .tit {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .vis_brand_wrap .left_con .txt_wrap .txt {
+        margin-top: 0.8rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .vis_brand_wrap .right_con {
+        width: 100%;
+        text-align: left;
+    }
+    .vis_brand_wrap .right_con .tit {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_brand_wrap .right_con .txt {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .vis_brand_wrap .right_con .txt~.txt {
+        margin-top: 0.5rem;
+    }
+    .vis_brand_wrap .right_con a {
+        margin-top: 2rem;
+    }
+
+    .vis_ex_wrap {
+        padding: 0 1.5rem 10rem;
+    }
+    .vis_ex_wrap > .wrap {
+        padding-top: 8rem;
+        border-top: 1px solid #CED9E0;
+    }
+    .vis_ex_wrap .ex_box {
+        flex-flow: column-reverse;
+    }
+    .vis_ex_wrap .ex_box~.ex_box {
+        margin-top: 8rem;
+    }
+    .vis_ex_wrap .txt_wrap {
+        width: 100%;
+        padding: 2rem 1.3rem 0;
+    }
+    .vis_ex_wrap .txt_wrap .tit_en {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .vis_ex_wrap .txt_wrap .tit_kr {
+        margin-top: 0.2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .vis_ex_wrap .txt_wrap .txt {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+
+    /* 의료진 소개 */
+    .drs_info_wrap .dr_info {
+        display: block;
+        width: 34.5rem;
+        margin: 0 auto;
+    }
+    .drs_info_wrap .img_wrap {
+        position: relative;
+    }
+    .drs_info_wrap .img_wrap p {
+        left:1.3rem;
+        bottom: 1.2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .drs_info_wrap .info_wrap > .wrap {
+        position: static;
+    }
+        
+    .drs_slogan_wrap {
+        padding: 10.9rem 2.8rem 11.3rem
+    }
+    .drs_slogan_wrap p {
+        font-size: 2.2rem;
+        line-height: 4rem;
+        letter-spacing: 0;
+    }
+    .drs_slogan_wrap p::before,
+    .drs_slogan_wrap p::after {
+        width: 1.8rem;
+        height: 1.4rem;
+    }
+    .drs_slogan_wrap p::before {
+        top: -1.4rem;
+        left: -2.4rem;
+    }
+    .drs_slogan_wrap p::after {
+        bottom: -0.7rem;
+        right: 5rem;
+    }
+    /* 공간안내 */
+    .space_swiper01 .swiper-pagination {
+        margin-top: 2rem;
+    }
+    .space_txt_wrap {
+        padding: 8rem 0;
+        font-size: 2rem;
+        line-height: 3.4rem;
+    }
+}
+/* --------------- 병원소개 END -------------- */
+

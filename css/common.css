@@ -743,9 +743,7 @@ gnb : 200
 .imp_point li {
     position: relative;
     text-align: center;
-}
-.imp_point li img {
-    width: 15rem;
+	width: 15rem;
 }
 .imp_point li .txt {
     margin-top: 1.3rem;
@@ -1525,7 +1523,7 @@ gnb : 200
 
 	
 	/* 서브콘텐츠 */
-	.imp_point li img {
+	.imp_point li {
 		width: 7.5rem;
 	}
 	.imp_point li .txt {
