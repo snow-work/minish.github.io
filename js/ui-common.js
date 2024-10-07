@@ -135,6 +135,38 @@ window.onload=function(){
 	if($(".twentytwenty-container").length>0){
 		$(".twentytwenty-container").twentytwenty();
 	}
+
+
+	// fullpage 플러그인 (B&A, )
+	if($('.bna_page').length>0){
+		$('.bna_page').fullpage({
+			//options here
+			scrollHorizontally: true,
+			responsiveWidth: 768,
+			// normalScrollElements:'.sec_last',
+			onLeave: function(origin, destination, direction, trigger) {
+				if(destination.index==0){
+					$("#header .top_wrap").removeClass("fixed down")
+				}else{
+					$("#header .top_wrap").addClass("fixed")
+					if(direction == "up"){
+						$("#header .top_wrap").addClass("down")
+					}else{
+						$("#header .top_wrap").removeClass("down")
+					}
+				}
+				origin.item.querySelector(".scr_chk").classList.remove('active')
+				// console.log(origin.item.classList)
+			},
+			onScrollOverflow: function( section, slide, position, direction){
+				if(direction == "up"){
+					$("#header .top_wrap").addClass("down")
+				}else{
+					$("#header .top_wrap").removeClass("down")
+				}
+			},
+		});
+	}
 }
 
 
@@ -610,3 +642,11 @@ $(".mt_tab_wrap .btn_return").click(function(){
 	$(".tab_box_wrap  .tab_box").removeClass("on");
 	minishTabSwiper.slideTo(0, 0);
 })
+
+
+
+// B&A 
+$(document).ready(function() {
+	
+});
+
