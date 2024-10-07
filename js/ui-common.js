@@ -131,13 +131,15 @@ window.onload=function(){
 		$('.header_con .top_wrap').addClass("black")
 	}
 
-	// TwentyTwenty 플러그인 (케이스 전후비교)
+
+
+	// TwentyTwenty 플러그인 (미니쉬 - 케이스 전후비교)
 	if($(".twentytwenty-container").length>0){
 		$(".twentytwenty-container").twentytwenty();
 	}
 
 
-	// fullpage 플러그인 (B&A, )
+	// fullpage 플러그인 (B&A, 진료과목 전체)
 	if($('.bna_page').length>0){
 		$('.bna_page').fullpage({
 			//options here
@@ -253,6 +255,8 @@ $(".ui_textarea textarea").focusout(function(){
 })
 
 
+
+
 // 셀렉트박스 열림/닫힘
 $(".ui_select button").click(function(){
 	if($(this).parents(".ui_select").hasClass("active")) {
@@ -270,6 +274,8 @@ $(".ui_select .option label").click(function(){
 	el.find("button").html(optionValue);
 	el.removeClass("active")
 })
+
+
 
 
 // 탭 동작
@@ -311,11 +317,13 @@ function moveTab(tgTab, tgIndex){
 	tgTabBox.find(".tab_box").removeClass("on");
 	tgTabBox.find(".tab_box").eq(tgIndex).addClass("on");
 }
+
 // 서브비주얼 변경 함수
 function chage_subvisaul(svClass){
 	$(".sub_visual_con").attr('class', 'sub_visual_con');
 	$(".sub_visual_con").addClass(svClass)
 }
+
 // 페이지 스위칭 - ex 공지사항 새소식
 function page_swiching(tpage){
 	$(".swich_page").removeClass("on");
@@ -354,7 +362,6 @@ const scrEfectIn = (entries, observerIn) => {
 		if(entry.target.querySelector(".video_box")) {
 			new Vimeo.Player(entry.target.querySelector("iframe")).play()
 		}
-		// if()
 		// 메인 비디오영역 영상재생
 		if(entry.target.classList.contains("main_video_con")) {
 			if(window.visualViewport.width>768){
@@ -413,11 +420,9 @@ document.addEventListener("scroll", (e) => {
 			// oao fiexd 범위 
 			let titStartPoint= $('.scr_chk_point.point01').offset().top;
 			let titEndPoint= $('.scr_chk_point.point02').offset().top;
-			// let nowScr = window.scrollY+window.innerHeight/2;
 			let imgStartPoint= $('.scr_chk_point.point03').offset().top;
 			let imgEndPoint= $('.scr_chk_point.point04').offset().top;
 			let nowScr = window.scrollY+window.innerHeight/2;
-			//  console.log(imgStartPoint, imgEndPoint)
 			// 타이틀 고정 처리
 			if(titStartPoint<=nowScr&&titEndPoint>=nowScr){
 				// 범위 내 fiexd  
@@ -573,6 +578,8 @@ function calSet(){
 	})
 }
 
+
+
 // 예약정보 슬라이드
 var reserveSwiper = new Swiper(".current_reserve_box", {
 	navigation: {
@@ -580,6 +587,7 @@ var reserveSwiper = new Swiper(".current_reserve_box", {
 	  prevEl: ".space_swiper02 .swiper-button-prev",
 	},
 });
+
 
 
 // 병원소개 - 비전 슬라이드
@@ -593,6 +601,7 @@ var reserveSwiper = new Swiper(".vis_slogan_swiper", {
 		},
 	}
 });
+
 
 
 // 병원소개 - 공간안내 슬라이드
@@ -615,7 +624,8 @@ var spaceSwiper02 = new Swiper(".space_swiper02", {
 });
 
 
-// 미니쉬 - 타입 탭 
+
+// 미니쉬 타입 - 탭 모바일 슬라이드 처리
 var minishTabSwiper = new Swiper(".mt_tab_wrap", {
 	slidesPerView: 1,
 	spaceBetween: 20,
@@ -630,11 +640,44 @@ var minishTabSwiper = new Swiper(".mt_tab_wrap", {
 	},
 });
 
-$(".mt_tab_wrap li button").click(function(){
+
+
+
+// 미니쉬 타입 - 탭 동작
+// 타 페이지에서 링크이동 -> 탭 랜딩 해 올 수 있으므로  hash 처리
+// ex) 충치클리닉 페이지 -> 어금니 미니쉬탭으로 랜딩
+$(window).on('hashchange', function(){
+	// alert( location.hash)
+	switch(location.hash) {
+		// case '':
+		// case '#':
+		// alert('nothing');
+		// break;
+		case '#dual':
+		moveTab('.mt_tab_wrap','0')
+		mtTabSetting()
+		break;
+		case '#pink':
+		moveTab('.mt_tab_wrap','1')
+		mtTabSetting()
+		break;
+		case '#bridge':
+		moveTab('.mt_tab_wrap','2')
+		mtTabSetting()
+		break;
+		case '#molar':
+		moveTab('.mt_tab_wrap','3')
+		mtTabSetting()
+		break;
+	};
+}).trigger('hashchange');
+
+function mtTabSetting(){
 	$(".twentytwenty-container").twentytwenty();
 	$(".mt_tab_wrap .swiper-pagination").hide();
-	$(".mt_tab_wrap .btn_return").show();
-})
+	$(".mt_tab_wrap .btn_return").show()
+}
+
 $(".mt_tab_wrap .btn_return").click(function(){
 	$(".mt_tab_wrap .swiper-pagination").show();
 	$(".mt_tab_wrap .btn_return").hide();
@@ -644,9 +687,4 @@ $(".mt_tab_wrap .btn_return").click(function(){
 })
 
 
-
-// B&A 
-$(document).ready(function() {
-	
-});
 
