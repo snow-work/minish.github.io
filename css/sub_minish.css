@@ -136,6 +136,7 @@
     height: 5rem;
     border:none;
     background-color: rgba(250,237,216,0.5);
+    box-shadow: none;
 }
 .bna_case_wrap .twentytwenty-handle span {
     top: 0;
@@ -162,6 +163,7 @@
     margin-top: 0;
     margin-bottom: 0;
     background: #FAEFD8;
+    box-shadow: none;
 }
 .bna_case_wrap .case_txt {
     margin-top: 9rem;
