@@ -207,6 +207,7 @@ gnb : 200
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
 	line-height: 7.5rem;
+	letter-spacing: -0.03rem;
 	color: #433a34;
 	opacity: 0;
 	transform: translateY(10rem);
@@ -252,6 +253,7 @@ gnb : 200
 	font-family: "NanumMyeongjo";
 	font-size: 1.8rem;
 	line-height: 2.3rem;
+	letter-spacing: -0.15rem;
 	color: #AA9B7A;
 	opacity: 0;
 	transform: translateY(10rem);
@@ -260,6 +262,7 @@ gnb : 200
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
 	line-height: 7.5rem;
+	letter-spacing: -0.05rem;
 	color: #433a34;
 	opacity: 0;
 	transform: translateY(10rem);
@@ -658,9 +661,9 @@ gnb : 200
     color: #fff;
 }
 .btn_arr.light {
-    background-image: url(../images/btn_icon_arr_dark.svg);
+    background-image: url(../images/btn_icon_arr_light.svg);
     background-color: #FAEFD8;
-    color: #433A34;
+    color: #AA9B7A;
 }
 .btn_arr_border {
 	display: inline-block;
@@ -683,8 +686,8 @@ gnb : 200
     color: #433A34;
 }
 .btn_arr_border.light {
-    background-image: url(../images/btn_icon_arr_whtie.svg);
-    border: 0.1rem solid #8D7F74;
+    background-image: url(../images/btn_icon_arr_white.svg);
+    border: 0.1rem solid #FAEFD8;
     color: #FAEFD8;
 }
 

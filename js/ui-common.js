@@ -145,7 +145,6 @@ window.onload=function(){
 			//options here
 			scrollHorizontally: true,
 			responsiveWidth: 768,
-			// normalScrollElements:'.sec_last',
 			onLeave: function(origin, destination, direction, trigger) {
 				if(destination.index==0){
 					$("#header .top_wrap").removeClass("fixed down")
@@ -158,7 +157,6 @@ window.onload=function(){
 					}
 				}
 				origin.item.querySelector(".scr_chk").classList.remove('active')
-				// console.log(origin.item.classList)
 			},
 			onScrollOverflow: function( section, slide, position, direction){
 				if(direction == "up"){
@@ -169,6 +167,35 @@ window.onload=function(){
 			},
 		});
 	}
+	// if($('.clinic_page').length>0){
+	// 	$('.clinic_page').fullpage({
+	// 		//options here
+	// 		// scrollHorizontally: true,
+	// 		responsiveWidth: 768,
+	// 		// normalScrollElements:'.sec_last',
+	// 		onLeave: function(origin, destination, direction, trigger) {
+	// 			if(destination.index==0){
+	// 				$("#header .top_wrap").removeClass("fixed down")
+	// 			}else{
+	// 				$("#header .top_wrap").addClass("fixed")
+	// 				if(direction == "up"){
+	// 					$("#header .top_wrap").addClass("down")
+	// 				}else{
+	// 					$("#header .top_wrap").removeClass("down")
+	// 				}
+	// 			}
+	// 			// origin.item.querySelector(".scr_chk").classList.remove('active')
+	// 			// console.log(origin.item.classList)
+	// 		},
+	// 		onScrollOverflow: function( section, slide, position, direction){
+	// 			if(direction == "up"){
+	// 				$("#header .top_wrap").addClass("down")
+	// 			}else{
+	// 				$("#header .top_wrap").removeClass("down")
+	// 			}
+	// 		},
+	// 	});
+	// }
 }
 
 

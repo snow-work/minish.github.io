@@ -1,36 +1,244 @@
 
-/* -------------- 진료과목 START ------------- */
+/* -------------- 클리닉 START ------------- */
 /* 진료과목 서브비주얼 세팅 */
-.sub_visual_con.vision {
-    background-image: url(./../images/sub_visual_vision.png);
+.sub_visual_con.laminate {
+    background-image: url(./../images/sub_visual_laminate.png);
 } 
-.sub_visual_con.drs {
-    background-image: url(./../images/sub_visual_drs.png);
+.sub_visual_con.whitening {
+    background-image: url(./../images/sub_visual_whitening.png);
 } 
-.sub_visual_con.sapce {
-    background-image: url(./../images/sub_visual_sapce.png);
+.sub_visual_con.cavity {
+    background-image: url(./../images/sub_visual_cavity.png);
 } 
-.sub_visual_con.location {
-    background-image: url(./../images/sub_visual_location.png);
+.sub_visual_con.gum {
+    background-image: url(./../images/sub_visual_gum.png);
 } 
 @media screen and (max-width:768px){
-    .sub_visual_con.vision {
-        background-image: url(./../images/sub_visual_vision_mo.png);
+    .sub_visual_con.laminate {
+        background-image: url(./../images/sub_visual_laminate_mo.png);
     } 
-    .sub_visual_con.drs {
-        background-image: url(./../images/sub_visual_drs_mo.png);
+    .sub_visual_con.whitening {
+        background-image: url(./../images/sub_visual_whitening_mo.png);
     } 
-    .sub_visual_con.sapce {
-        background-image: url(./../images/sub_visual_sapce_mo.png);
+    .sub_visual_con.cavity {
+        background-image: url(./../images/sub_visual_cavity_mo.png);
     } 
-    .sub_visual_con.location {
-        background-image: url(./../images/sub_visual_location_mo.png);
+    .sub_visual_con.gum {
+        background-image: url(./../images/sub_visual_gum_mo.png);
     } 
 }
 
 
+
+/* 클리닉 전체 */
+
+.clinic_page {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+.clinic_page .swiper-slide {
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.clinic_page .sec_minish {
+    background-image: url(./../images/sub_clinic_minish.png);
+}
+.clinic_page .sec_laminate {
+    background-image: url(./../images/sub_clinic_laminate.png);
+}
+.clinic_page .sec_whitening {
+    background-image: url(./../images/sub_clinic_whitening.png);
+}
+.clinic_page .sec_cavity {
+    background-image: url(./../images/sub_clinic_cavity.png);
+}
+.clinic_page .sec_gum {
+    background-image: url(./../images/sub_clinic_gum.png);
+}
+.clinic_page .text_wrap {
+    position: absolute;
+    top: 22%;
+    left: 13.5%;
+    text-align: left;
+}
+.clinic_page .text_wrap .tit {
+    font-family: "NanumMyeongjo";
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 7.5rem;
+    letter-spacing: -0.3rem;
+    color: #fff;
+}
+.clinic_page .text_wrap .txt {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #fff;
+}
+.clinic_page .text_wrap a {
+    display: inline-block;
+    width: 31.8rem;
+    margin-top: 2rem;
+    padding: 0 8.4rem 0 3.2rem;
+    border-radius: 2.7rem;
+    font-family: "NanumMyeongjo";
+    font-size: 1.8rem;
+    letter-spacing: -0.1rem;
+    line-height: 5.4rem;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center right 3.4rem;
+    background-size: 4.9rem;
+    background-image: url(../images/btn_icon_larr_light.svg);
+    border: 0.1rem solid #AA9B7A;
+    color: #AA9B7A;
+    transition: all 0.5s;
+}
+.clinic_page .text_wrap a:hover {
+    background-image: url(../images/btn_icon_larr_white.svg);
+    background-color: #AA9B7A;
+    color: #fff;
+}
+.clinic_page .sec_laminate .text_wrap a {
+    background-image: url(../images/btn_icon_larr_light2.svg);
+    border: 0.1rem solid #FAEFD8;
+    color: #FAEFD8;
+}
+.clinic_page .sec_laminate .text_wrap a:hover {
+    background-image: url(../images/btn_icon_larr_light.svg);
+    background-color: #FAEFD8;
+    color: #AA9B7A;
+}
+.clinic_page .swiper-pagination {display: none;}
+.clinic_page .swipe_info {
+    position: fixed;
+    bottom: 11%;
+    left: calc(50% - 15rem);
+    z-index: 1;
+}
+.clinic_page .swipe_info::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 6vw;
+	height: 6vw;
+    bottom: -1vw;
+    right: -3.6vw;
+	background: url(../images/main_deco_sym_light.png) no-repeat;
+	background-size: 6vw ;
+	/* animation: mv_deco_roatae 10s linear infinite;  */
+}
+@keyframes mv_deco_roatae {
+	0% {transform: rotate(0)}
+	100% {transform: rotate(360deg)}
+}
+.clinic_page .swipe_info span {
+    display: inline-block;
+    position: relative;
+    width: 30rem;
+    padding:0 7rem 0 3rem;
+    border-radius: 2.7rem;
+    font-family: "NanumMyeongjo";
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+    line-height: 5.4rem;
+    background-color: #F8F6F0;
+    color: #AA9B7A;
+}
+.clinic_page .swipe_info span.left {
+    display: none;
+}
+.clinic_page .swipe_info span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 3.8rem;
+    width: 3rem;
+    height: 5.4rem;
+    background-image: url(../images/btn_icon_arr_light.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3rem;
+}
+.clinic_page .swipe_info span.left::before {
+    transform: rotate(180deg);
+}
+
 @media screen and (max-width:1400px){}
 @media screen and (max-width:1200px){}
 @media screen and (max-width:1024px){}
-@media screen and (max-width:768px){}
+@media screen and (max-width:768px){
+    .clinic_page .sec_minish {
+        background-image: url(./../images/sub_clinic_minish_mo.png);
+    }
+    .clinic_page .sec_laminate {
+        background-image: url(./../images/sub_clinic_laminate_mo.png);
+    }
+    .clinic_page .sec_whitening {
+        background-image: url(./../images/sub_clinic_whitening_mo.png);
+    }
+    .clinic_page .sec_cavity {
+        background-image: url(./../images/sub_clinic_cavity_mo.png);
+    }
+    .clinic_page .sec_gum {
+        background-image: url(./../images/sub_clinic_gum_mo.png);
+    }
+    .clinic_page .text_wrap {
+        top: auto;
+        left: 2rem;
+        bottom: 8rem;
+    }
+    .clinic_page .text_wrap .tit {
+        font-size: 3.4rem;
+        line-height: 4.3rem;
+    }
+    .clinic_page .text_wrap .txt {
+        margin-top: 0rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .clinic_page .text_wrap a {
+        width: 23rem;
+        margin-top: 2rem;
+        padding: 0 7rem 0 3rem;
+        border-radius: 2.4rem;
+        font-size: 1.4rem;
+        line-height: 4.8rem;
+        background-position: center right 2rem;
+    }
+    .clinic_page .sec_laminate .text_wrap a {
+        background-image: url(../images/btn_icon_larr_light.svg);
+        border: 0.1rem solid #AA9B7A;
+        color: #AA9B7A;
+    }
+    .clinic_page .sec_laminate .text_wrap a:hover {
+        background-image: url(../images/btn_icon_larr_white.svg);
+        background-color: #AA9B7A;
+        color: #fff;
+    }
+    .clinic_page .swipe_info {
+        display: none;
+    }
+    .clinic_page .swiper-pagination {
+        display: block;
+        bottom: 1.6rem;
+    }
+    .clinic_page .swiper-pagination .swiper-pagination-bullet {
+        width: 1rem;
+        height: 1rem;
+        background-color: #A6B7C2;
+        opacity: 0.5;
+    }
+    .clinic_page .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: #433A34;
+    }
+    .clinic_page .swiper-pagination {}
+    .clinic_page .swiper-pagination {}
+}
 /* -------------- 진료과목 END --------------- */

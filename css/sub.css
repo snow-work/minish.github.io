@@ -3,17 +3,17 @@
 @import url(./sub_clinic.css);
 
 
-.swiper-pagination-bullet {
+.swiper-pagination .swiper-pagination-bullet {
     background-color: #DED0B0;
     opacity: 1;
 }
-.swiper-pagination-bullet-active {
+.swiper-pagination .swiper-pagination-bullet-active {
     background-color: #433A34;
 }
 
 /* 모바일 */
 @media screen and (max-width:768px){
-    .swiper-pagination-bullet {
+    .swiper-pagination .swiper-pagination-bullet {
         width: 0.6rem;
         height: 0.6rem;
     }
