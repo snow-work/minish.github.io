@@ -11,6 +11,22 @@
     background-color: #433A34;
 }
 
+
+.video_sec_wrap > .wrap {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.img_sec_wrap > .wrap {
+
+}
+.img_sec_wrap > .wrap {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+
+
+
+
 /* 모바일 */
 @media screen and (max-width:768px){
     .swiper-pagination .swiper-pagination-bullet {

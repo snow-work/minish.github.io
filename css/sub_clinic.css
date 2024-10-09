@@ -31,7 +31,6 @@
 
 
 /* 클리닉 전체 */
-
 .clinic_page {
     position: fixed;
     overflow: hidden;
@@ -170,10 +169,406 @@
     transform: rotate(180deg);
 }
 
-@media screen and (max-width:1400px){}
-@media screen and (max-width:1200px){}
-@media screen and (max-width:1024px){}
+
+
+
+/* 공통  */
+.clinic_qna_wrap {
+    display: flex;
+    height: 60rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.clinic_qna_wrap .tit {
+    font-family: "NanumMyeongjo";
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 9rem;
+    letter-spacing: -0.025rem;
+    color: #fff;
+}
+.clinic_qna_wrap .txt {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.025rem;
+    color: #433A34;
+}
+.clinic_qna_wrap .blue1 {
+    color: #7593A7;
+}
+.clinic_qna_wrap .blue2 {
+    color: #4C6677;
+}
+.clinic_qna_wrap .red {
+    color: rgba(213, 100, 86, 0.74);
+}
+
+
+.clinic_bna_wrap {
+    padding:10rem 3rem;
+    background-color: rgba(221, 209, 180, 0.2);
+}
+.clinic_bna_wrap > .wrap {
+    max-width: 132rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.clinic_bna_wrap .tit_wrap .sub_tit {
+	font-family: "AmstelvarAlpha";
+	font-size: 3rem;
+    line-height: 3.6rem;
+	letter-spacing: -0.025rem;
+	color: #8D7F74;
+}
+.clinic_bna_wrap .tit_wrap span {
+	color: #AA9B7A;
+}
+.clinic_bna_wrap .tit_wrap .tit {
+    margin-top: 2.4rem;
+	font-family: "NanumMyeongjo";
+	font-size: 4rem;
+    line-height: 1;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #8D7F74;
+}
+.clinic_bna_wrap .case_wrap {
+    display: flex;
+    margin-top: 9rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.clinic_bna_wrap .case_wrap .case_box {
+    width: 49.25%;
+}
+.clinic_bna_wrap .case_txt {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    font-family: "NanumMyeongjo";
+	font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2rem;
+	letter-spacing: -0.025rem;
+    text-align: center;
+	color: #8D7F74;
+}
+.clinic_bna_wrap .btn_arr {
+    margin: 0 auto;
+    width: 50rem;
+    padding-left: 3.1rem;
+	font-family: "NanumMyeongjo";
+    font-size: 1.8rem;
+    background-position: center right 2rem;
+    color:#FAEFD8;
+    background-color: #AA9B7A;
+}
+
+
+/* 무삭제라미네이트 */
+.laminate_page .page_title {
+    padding: 16.7rem 0 10rem;
+    background-position: top 10rem center;
+}
+.laminate_page .page_title .tit {
+    position: relative;
+    display: inline-block;
+}
+.laminate_page .page_title b {
+    color:#7593A7
+}
+.laminate_page .page_title span {
+    position: absolute;
+    font-family: "AmstelvarAlpha";
+	font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+	letter-spacing: 0.9rem;
+	color: #4C6677;
+}
+.laminate_page .page_title .top {
+    top: -1.8rem;
+    left: 21rem;
+}
+.laminate_page .page_title .bottom {
+    bottom: -1.8rem;
+    left: 0;
+}
+.laminate_page .tab_wrap {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 8.5rem 2.8rem 10rem;
+}
+.lami_sec01_wrap {
+    height: 40rem;
+    padding: 8rem 2.8rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.lami_sec01_wrap.prep {
+    background-image: url(../images/sub_lami_sec01_prep_bg.png);
+}
+.lami_sec01_wrap.nonprep {
+    background-image: url(../images/sub_lami_sec01_nonprep_bg.png);
+}
+.lami_sec01_wrap > .wrap {
+    position: relative;
+    max-width: 140rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.lami_sec01_wrap .txt {
+    font-family: "NanumMyeongjo";
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 5rem;
+    letter-spacing: -0.03rem;
+    color: #8D7F74;
+}
+.lami_sec01_wrap .tit {
+    margin-top: 2.4rem;
+    font-family: "NanumMyeongjo";
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 8.8rem;
+    letter-spacing: -0.03rem;
+    color: #5E5E5E;
+}
+.lami_sec01_wrap .deco {
+    position: absolute;
+    bottom: 3.4rem;
+    right: 13rem;
+    font-family: "YaldeviColombo";
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 13.3rem;
+    letter-spacing: -0.3rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(141, 127, 116, 0.60);
+}
+.lami_sec01_wrap .deco02 {
+    display: none;
+}
+.lami_sec02_wrap {
+    padding: 23rem 3rem 10rem;
+}
+.lami_sec02_wrap > .wrap {
+    display: flex;
+    position: relative;
+    max-width: 140rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.lami_sec02_wrap .img_wrap {
+    width: 80rem;
+    margin-left: 11.7rem;
+}
+
+.lami_sec03_wrap {
+    padding: 8rem 3rem;
+    background-color: rgba(221,209,180,0.2);
+}
+.lami_sec03_wrap.nonprep > .wrap {
+    display: flex;
+    max-width: 160rem;
+    margin: 0 auto;
+    align-items: center;
+}
+.lami_sec03_wrap.nonprep .left_wrap {
+    width: 78.7rem;
+    margin-right: 14.8rem;
+}
+.lami_sec03_wrap.nonprep .right_wrap {
+    width: 41rem;
+}
+.lami_sec03_wrap.nonprep .right_wrap .text_set {
+    margin-bottom: 2rem;
+}
+.lami_sec03_wrap.nonprep .right_wrap .imp_point::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 7.5rem;
+    left: calc(50% - 1.5rem);
+    background-image: url(../images/icon_plus_main.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2.1rem;
+}
+.lami_sec03_wrap.nonprep .imp_point li {
+    width: 18rem;
+}
+.lami_sec03_wrap.nonprep .imp_point li .txt {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+.lami_sec03_wrap.nonprep .imp_point li .sub_txt {
+    color:#E73333;
+}
+
+.lami_sec03_wrap.prep > .wrap {
+    display: flex;
+    max-width: 140rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.lami_sec03_wrap.prep .left_wrap {
+    position: relative;
+    width: 81%;
+}
+.lami_sec03_wrap.prep .left_wrap .txt {
+    position: absolute;
+    right: -20rem;
+    bottom: 0;
+    font-family: "NanumMyeongjo";
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: #AA9B7A;
+
+}
+.lami_sec03_wrap.prep .right_wrap .text_set.type02 {
+    text-align: right;
+    background-position: top right;
+}
+
+.lami_sec04_wrap {
+    padding: 10rem 3rem;
+}
+.lami_sec04_wrap .tit_wrap {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.lami_sec04_wrap .tit_wrap .sub_tit {
+    margin-bottom: 1rem;
+    font-family: "AmstelvarAlpha";
+	font-size: 1.8rem;
+    line-height: 2.2rem;
+	letter-spacing: -0.025rem;
+	color: #AA9B7A;
+}
+.lami_sec04_wrap .tit_wrap .tit {
+	font-family: "NanumMyeongjo";
+	font-size: 2.8rem;
+    line-height: 4rem;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.lami_sec04_wrap .con_wrap {
+    display: flex;
+    max-width: 140rem;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+}
+.lami_sec04_wrap .img_wrap {
+    width: 32%;
+}
+.lami_sec04_wrap .img_wrap p {
+    margin-top: 1rem;
+	font-family: "NanumMyeongjo";
+	font-size: 2.2rem;
+    line-height: 4.2rem;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #8D7F74;
+    background: rgba(221, 209, 180, 0.20);
+}
+
+.prod_process_wrap.lami ul {
+    padding: 11.8rem 0 18rem;
+}
+
+.clinic_qna_wrap.nonprep {
+    background-image: url(./../images/sub_lami_qna_nonprep_bg.png);
+}
+.clinic_qna_wrap.prep {
+    background-image: url(./../images/sub_lami_qna_prep_bg.png);
+}
+
+.lami_sec05_wrap {
+    position:relative;
+    height: 78rem;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.lami_sec05_wrap.nonprep {
+    background-image: url(./../images/sub_lami_sec05_nonprep_bg.png);
+}
+.lami_sec05_wrap.prep {
+    background-image: url(./../images/sub_lami_sec05_prep_bg.png);
+}
+.lami_sec05_wrap .text_wrap {
+    position:absolute;
+    top: 14.7rem;
+    left: calc(50% - 69rem);
+}
+.lami_sec05_wrap .text_wrap .txt {
+	font-family: "NanumMyeongjo";
+	font-size: 3rem;
+    line-height: 5rem;
+	font-weight: 700;
+	letter-spacing: -0.025rem;
+	color: #433A34;
+}
+.lami_sec05_wrap .text_wrap img {
+    margin-top: 7.3rem;
+    width: 18.6rem;
+    height: 7rem;
+}
+@media screen and (max-width:1400px){
+    .laminate_page .page_title .tit {
+        font-size: 5rem;
+    }
+    .lami_sec05_wrap {
+        background-position: -5rem center;
+    }
+    .lami_sec05_wrap .text_wrap {
+        left: 4.2rem;
+    }
+
+}
+@media screen and (max-width:1200px){
+    
+    .lami_sec01_wrap .txt {
+        font-size: 2.4rem;
+        line-height: 4rem;
+    }
+    .lami_sec01_wrap .tit {
+        font-size: 5rem;
+        line-height: 7rem;
+    }
+    .lami_sec01_wrap .deco {
+        right: 6rem;
+        font-size: 8rem;
+    }
+    .lami_sec02_wrap .img_wrap {
+        width: 48.5%;
+        margin-left: 5%;
+    }
+    .lami_sec03_wrap.nonprep .left_wrap {
+        width: 48.5%;
+        margin-right: 5%;
+    }
+}
+@media screen and (max-width:1024px){
+    .lami_sec05_wrap {
+        background-position: -20rem center;
+    }
+}
 @media screen and (max-width:768px){
+    /* 클리닉 전체 */
     .clinic_page .sec_minish {
         background-image: url(./../images/sub_clinic_minish_mo.png);
     }
@@ -238,7 +633,279 @@
     .clinic_page .swiper-pagination .swiper-pagination-bullet-active {
         background-color: #433A34;
     }
-    .clinic_page .swiper-pagination {}
-    .clinic_page .swiper-pagination {}
+
+
+
+    .clinic_qna_wrap {
+        height: 54.8rem;
+    }
+    .clinic_qna_wrap .tit {
+        font-size: 3rem;
+        line-height: 4.3rem;
+    }
+    .clinic_qna_wrap .txt {
+        margin-top: 4rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    
+    
+    .clinic_bna_wrap {
+        padding:8rem 2.8rem 9.2rem;
+    }
+    .clinic_bna_wrap .tit_wrap .sub_tit {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .clinic_bna_wrap .tit_wrap .tit {
+        margin-top: 1.4rem;
+        font-size: 1.8rem;
+    }
+    .clinic_bna_wrap .case_wrap {
+        margin-top: 4rem;
+        flex-flow: column;
+    }
+    .clinic_bna_wrap .case_wrap .case_box {
+        width: 100%;
+    }
+    .clinic_bna_wrap .case_wrap .case_box:first-child {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .clinic_bna_wrap .case_wrap .case_box:first-child::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        bottom: -2rem;
+        right: calc(50% - 2rem);
+        border-radius: 50%;
+        background-image: url(../images/btn_icon_arr_dark.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 2rem;
+        background-color: #EDF1F3;
+        transform: rotate(90deg);
+    }
+    .clinic_bna_wrap .case_txt {
+        margin-top: 4rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+    }
+    .clinic_bna_wrap .btn_arr {
+        width: 100%;
+        padding-left: 2rem;
+        font-size: 1.2rem;
+        line-height: 4rem;
+        background-size: 2.6rem;
+    }
+
+
+
+    /* 무삭제라미네이트 */
+    .laminate_page .page_title {
+        padding: 12.4rem 0 10rem;
+        background-position: top 8rem center;
+    }
+    .laminate_page .page_title span {
+        font-size: 1rem;
+        letter-spacing: 0.5rem;
+    }
+    .laminate_page .page_title .top {
+        top: -1rem;
+        left: 0;
+    }
+    .laminate_page .page_title .bottom {
+        bottom: -1.5rem;
+        left: auto;
+        right: 0;;
+    }
+    .laminate_page .tab_wrap {
+        padding: 4rem 2.8rem;
+    }
+    .lami_sec01_wrap {
+        height: 30rem;
+        padding: 4.8rem 2.8rem 0;
+    }
+    .lami_sec01_wrap.prep {
+        background-image: url(../images/sub_lami_sec01_prep_bg_mo.png);
+    }
+    .lami_sec01_wrap.nonprep {
+        background-image: url(../images/sub_lami_sec01_nonprep_bg_mo.png);
+    }
+    .lami_sec01_wrap .txt {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+    .lami_sec01_wrap .tit {
+        margin-top: 1.2rem;
+        font-size: 3.2rem;
+        line-height: 4rem;
+    }
+    .lami_sec01_wrap .deco {
+        bottom: 2.1rem;
+        right: 0;;
+        font-size: 6rem;
+        line-height: 8rem;
+    }
+    .lami_sec01_wrap .deco02 {
+        display: block;
+        position: absolute;
+        bottom: 8rem;
+        right: 11rem;
+        font-size: 3rem;
+        line-height: 4rem;
+        letter-spacing: -0.09rem;
+        color: #D9D9D9;
+    }
+    .lami_sec02_wrap {
+        padding: 8rem 2.8rem;
+    }
+    .lami_sec02_wrap > .wrap {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .lami_sec02_wrap .img_wrap {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6rem;
+    }
+
+    .lami_sec03_wrap {
+        padding: 8rem 2.8rem 2rem;
+    }
+    .lami_sec03_wrap > .wrap {
+        flex-flow: column-reverse;
+    }
+    .lami_sec03_wrap.nonprep .left_wrap {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 4rem;
+    }
+    .lami_sec03_wrap.nonprep .right_wrap {
+        width: 100%;
+    }
+    .lami_sec03_wrap.nonprep .right_wrap .text_set {
+        margin-bottom: 6rem;
+    }
+    .lami_sec03_wrap.nonprep .right_wrap .imp_point::before {
+        width: 3rem;
+        height: 3rem;
+        top: 4.5rem;
+        left: calc(50% - 1.5rem);
+    }
+    .lami_sec03_wrap.nonprep .imp_point li {
+        width: 12rem;
+    }
+    .lami_sec03_wrap.nonprep .imp_point li .txt {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .lami_sec03_wrap.nonprep .imp_point li .sub_txt {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+   
+    .lami_sec03_wrap.prep .left_wrap {
+        width: 100%;
+        margin-top: 2.8rem;
+    }
+    .lami_sec03_wrap.prep .left_wrap .txt {
+        position: static;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+        text-align: center;
+        background: #FFF;
+    }
+    
+    
+    .lami_sec04_wrap {
+        padding: 6rem 0 2rem;
+    }
+    .lami_sec04_wrap .tit_wrap {
+        margin-bottom: 6rem;
+        text-align: center;
+    }
+    .lami_sec04_wrap .tit_wrap .sub_tit {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .lami_sec04_wrap .tit_wrap .tit {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .lami_sec04_wrap .con_wrap {
+        flex-flow: column;
+        padding: 0 2.8rem;
+    }
+    .lami_sec04_wrap .img_wrap {
+        width: 100%;
+    }
+    .lami_sec04_wrap .img_wrap p {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+
+    .prod_process_wrap.lami .page_title {
+        background-position: top 7rem center;
+    }
+    .prod_process_wrap.lami .page_title .tit {
+        font-size: 3rem;
+    }
+    .prod_process_wrap.lami ul {
+        padding: 0 0 12.4rem;
+    }
+    .prod_process_wrap.lami li .text_set {
+        
+    }
+    .prod_process_wrap.lami li:nth-child(1) .text_set {
+        background: url(./../images/sub_lami_process_icon01.svg) no-repeat right 9.8rem top 1rem;
+    }
+    .prod_process_wrap.lami li:nth-child(2) .text_set {
+        background: url(./../images/sub_lami_process_icon02.svg) no-repeat left 11.9rem top 0.8rem;
+    }
+    .prod_process_wrap.lami li:nth-child(3) .text_set {
+        background: url(./../images/sub_lami_process_icon03.svg) no-repeat right 15.3rem top 1.1rem;
+    }
+    .prod_process_wrap.lami li:nth-child(4) .text_set {
+        background: url(./../images/sub_lami_process_icon04.svg) no-repeat left 13.6rem top 1.1rem;
+    }
+
+    .clinic_qna_wrap.nonprep {
+        background-image: url(./../images/sub_lami_qna_nonprep_bg_mo.png);
+    }
+    .clinic_qna_wrap.prep {
+        background-image: url(./../images/sub_lami_qna_prep_bg_mo.png);
+    }
+
+    .lami_sec05_wrap {
+        height: 60rem;
+        background-position: center;
+    }
+    .lami_sec05_wrap.nonprep {
+        background-image: url(./../images/sub_lami_sec05_nonprep_bg_mo.png);
+    }
+    .lami_sec05_wrap.prep {
+        background-image: url(./../images/sub_lami_sec05_prep_bg_mo.png);
+    }
+    .lami_sec05_wrap .text_wrap {
+        top: 5rem;
+        left: 4.2rem;
+    }
+    .lami_sec05_wrap .text_wrap .txt {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        color: #8D7F74;
+    }
+    .lami_sec05_wrap .text_wrap img {
+        margin-top: 2.6rem;
+        width: 9.3rem;
+        height: 4.5rem;
+    }
 }
 /* -------------- 진료과목 END --------------- */

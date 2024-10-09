@@ -387,7 +387,7 @@ const scrEfectIn = (entries, observerIn) => {
 		entry.target.classList.add("active")
 		// 영상 자동재생
 		if(entry.target.querySelector(".video_box")) {
-			new Vimeo.Player(entry.target.querySelector("iframe")).play()
+			// new Vimeo.Player(entry.target.querySelector("iframe")).play()
 		}
 		// 메인 비디오영역 영상재생
 		if(entry.target.classList.contains("main_video_con")) {
@@ -713,5 +713,27 @@ $(".mt_tab_wrap .btn_return").click(function(){
 	minishTabSwiper.slideTo(0, 0);
 })
 
+
+
+// 클리닉 전체보기
+var swiper = new Swiper(".clinic_page", {
+	slidesPerView: 1,
+	mousewheel: true,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	on: {
+		slideChangeTransitionEnd:function(){
+			if(swiper.activeIndex>2){
+				$(".swipe_info .left").css("display","block")
+				$(".swipe_info .right").hide()
+			}else{
+				$(".swipe_info .left").hide()
+				$(".swipe_info .right").css("display","block")
+			}
+		}
+	}
+});
 
 
