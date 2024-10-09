@@ -1963,6 +1963,7 @@
     }
     .make_sec03_wrap .text_wrap .btn_arr_border {
         width: 25rem;
+        line-height: 4rem;
     }
     
     .make_sec04_wrap {
@@ -2012,6 +2013,10 @@
         margin-bottom: 2rem;
         font-size: 2rem;
         line-height: 3.2rem;
+    }
+    .make_sec05_wrap .text_wrap .btn_arr_border {
+        width: 24rem;
+        line-height: 4rem;
     }
 
 
