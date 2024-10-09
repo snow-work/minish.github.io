@@ -491,17 +491,17 @@ document.addEventListener("scroll", (e) => {
 	let currScr = window.scrollY;
 	// 스크롤시 헤더 픽스
 	if(window.scrollY>0){
-		$(".top_wrap").addClass("fixed");
+		$("#header .top_wrap").addClass("fixed");
 		// 스크롤 올리면 나타남
 		if (lastScr > currScr){
-			$(".top_wrap").addClass("down");
+			$("#header .top_wrap").addClass("down");
 		}else{
-			$(".top_wrap").removeClass("down");
+			$("#header .top_wrap").removeClass("down");
 		}
 		// 스크롤 내리면 사라짐
 	}else{
 		// 스크롤 0일때 픽스 풂}
-		$(".top_wrap").removeClass("fixed");
+		$("#header .top_wrap").removeClass("fixed");
 	}
 	lastScr = currScr;
 })

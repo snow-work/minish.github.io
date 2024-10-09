@@ -89,7 +89,7 @@ img {max-width: 100%;}
 셀렉트박스 : 1
 메인비주얼 공지사항 : 10
 메인 상담예약 버튼 : 10
-헤더 : 20  (스크롤시 픽스 고려) 
+헤더 : 100  (스크롤시 픽스 고려) 
 인트로 : 시작시 1000 -> 종료시 1  (메인 비디오 때문에 1이상 줘야함)
 gnb : 200
 하단 플로트 300
@@ -178,6 +178,9 @@ gnb : 200
 .sub_visual_txt.active .tit {
 	opacity: 1;
 	transform: translateY(0rem)  scaleY(1.1);
+	transition: all 1s;
+}
+.sub_visual_txt.active .txt + .tit {
 	transition: all 1s 0.5s;
 }
 .sub_visual_txt.active .sub_txt {
@@ -232,6 +235,9 @@ gnb : 200
 .page_title.type01.active .tit {
 	opacity: 1;
 	transform: translateY(0rem);
+	transition: all 1s;
+}
+.page_title.type01.active .tit + .tit {
 	transition: all 1s 0.5s;
 }
 .page_title.type01.active .sub_txt {
@@ -267,9 +273,6 @@ gnb : 200
 	opacity: 0;
 	transform: translateY(10rem);
 }
-.page_title.type02 .txt:first-child {
-	/* padding-top: 2rem; */
-}
 .page_title.type02 .sub_txt {
 	margin-top: 1.6rem;
 	font-size: 1.8rem;
@@ -288,6 +291,9 @@ gnb : 200
 .page_title.type02.active .tit {
 	opacity: 1;
 	transform: translateY(0rem);
+	transition: all 1s;
+}
+.page_title.type02.active .txt +.tit {
 	transition: all 1s 0.5s;
 }
 .page_title.type02.active .sub_txt {
@@ -323,6 +329,7 @@ gnb : 200
 .text_set .txt~.txt {
 	margin-top: 3.5rem;
 }
+
 
 .text_set.type02 {
 	padding-top: 4.7rem;
@@ -807,7 +814,7 @@ gnb : 200
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 20;
+	z-index: 100;
 	color:#fff;
 }
 .header_con .top_logo {
@@ -1649,6 +1656,10 @@ gnb : 200
 	.btn_confirm_wrap .btn_cancel {
 		flex: 0 0 8rem;
 		margin-right: 1rem;
+	}
+	.btn_arr_border,
+	.btn_arr {
+		font-size: 1.4rem;
 	}
 
 	.tab_wrap {
