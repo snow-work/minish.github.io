@@ -387,7 +387,7 @@ const scrEfectIn = (entries, observerIn) => {
 		entry.target.classList.add("active")
 		// 영상 자동재생
 		if(entry.target.querySelector(".video_box")) {
-			// new Vimeo.Player(entry.target.querySelector("iframe")).play()
+			new Vimeo.Player(entry.target.querySelector("iframe")).play()
 		}
 		// 메인 비디오영역 영상재생
 		if(entry.target.classList.contains("main_video_con")) {

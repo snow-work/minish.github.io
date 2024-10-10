@@ -209,6 +209,7 @@ gnb : 200
 .page_title.type01 .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
+	font-weight: 600;
 	line-height: 7.5rem;
 	letter-spacing: -0.03rem;
 	color: #433a34;
@@ -245,6 +246,7 @@ gnb : 200
 	transform: translateY(0rem);
 	transition: all 1s 1s;
 }
+
 .page_title.type02 {
 	padding: 13.8rem 0 10rem;
 	text-align: center;
@@ -253,6 +255,10 @@ gnb : 200
 	background-position: top 9.1rem center ;
 	background-size: 2.7rem ;
 	transform: none;
+}
+.page_title.type02.no_pd {
+	padding: 4.7rem 0 0rem;
+	background-position: top center ;
 }
 .page_title.type02 .txt {
     margin-bottom: 1.1rem;
@@ -267,6 +273,7 @@ gnb : 200
 .page_title.type02 .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
+	font-weight: 600;
 	line-height: 7.5rem;
 	letter-spacing: -0.05rem;
 	color: #433a34;
@@ -314,7 +321,7 @@ gnb : 200
 .text_set .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 2.2rem;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 3.4rem;
     letter-spacing: -0.025rem;
 	color:#433A34;
@@ -716,7 +723,7 @@ gnb : 200
 	font-family: "NanumMyeongjo";
 	font-size: 2.2rem;
 	line-height: 3.4rem;
-	font-weight: 700;
+	font-weight: 600;
     letter-spacing: -0.025rem;
 	text-align: center;
 	border-bottom: 0.3rem solid #D9D9D9;
@@ -1032,7 +1039,7 @@ gnb : 200
 .gnb_bot .gnb_list strong {
 	font-family: "NanumMyeongjo";
 	font-size: 2.8rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.1rem;
 	color:#A2B3BE;
 }
@@ -1547,11 +1554,13 @@ gnb : 200
 		margin-bottom: 1rem;
 	}
 	.text_set.type02 .tit {
+		font-size: 2rem;
 		line-height: 2.5rem;
 	}
 	.text_set.type02 .txt {
 		margin-top: 2rem;
 		font-size: 1.4rem;
+		line-height: 2.4rem;
 	}
 
 	.input_tit {

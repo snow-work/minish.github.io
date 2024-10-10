@@ -136,7 +136,7 @@
 	font-family: "NanumMyeongjo";
 	font-size: 4rem;
     line-height: 1;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.025rem;
 	color: #8D7F74;
 }
@@ -224,7 +224,7 @@
     margin-bottom: 1.2rem;
 	font-family: "NanumMyeongjo";
 	font-size: 3rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 3.4rem;
 	letter-spacing: -0.025rem;
 	color: #433A34;
@@ -423,7 +423,7 @@
     padding-top: 6rem;
 	font-family: "NanumMyeongjo";
 	font-size: 4rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 5rem;
 	letter-spacing: -0.025rem;
     background-image: url(../images/icon_title_deco.svg);
@@ -444,7 +444,7 @@
 .minish_sec03_wrap .bot_wrap .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 3rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 3.4rem;
 	letter-spacing: -0.025rem;
     color:#433A34;
@@ -647,7 +647,7 @@
 	font-family: "NanumMyeongjo";
 	font-size: 4rem;
     line-height: 1;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.025rem;
 	color: #8D7F74;
 }
@@ -666,7 +666,7 @@
 	font-family: "NanumMyeongjo";
 	font-size: 2rem;
     line-height: 3.4rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.025rem;
 	color: #433A34;
 }
@@ -754,12 +754,12 @@
 .make_sv_bot span {
 	font-family: "NanumMyeongjo";
 	font-size: 6rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.15rem;
 	color: #E8F6FF;
 }
 .make_page .page_title {
-    padding: 16.7rem 0 10rem;
+    padding: 15.7rem 0 10rem;
     background-position: top 10rem center;
 }
 .make_page .page_title .tit {
@@ -792,8 +792,8 @@
     font-size: 1.8rem;
 }
 
-.make_process_wrap01 { 
-    padding:11.8rem 0 12.3rem
+.prod_process_wrap.make01 { 
+    padding: 4rem 0 12.3rem
 }
 
 .make_sec01_wrap {
@@ -870,13 +870,13 @@
     margin-top: 1rem;
     font-family: "NanumMyeongjo";
     font-size: 2.4rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 3rem;
     letter-spacing: -0.025rem;
     color: #433A34;
 }
 
-.make_process_wrap.make02 {
+.prod_process_wrap.make02 {
     padding: 20rem 0 10rem;
 }
 
@@ -945,7 +945,7 @@
 .make_sec03_wrap .text_wrap .tit {
     font-family: "NanumMyeongjo";
     font-size: 3.4rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 4.3rem;
     letter-spacing: -0.025rem;
     color: #433A34;
@@ -976,7 +976,7 @@
 .make_sec04_wrap .tit {
     font-family: "NanumMyeongjo";
     font-size: 6rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 9rem;
     letter-spacing: -0.025rem;
     color: #FAEFD8;
@@ -1021,7 +1021,7 @@
     margin-bottom: 4rem;;
     font-family: "NanumMyeongjo";
     font-size: 3.4rem;
-    font-weight: 700;
+	font-weight: 600;
     line-height: 5.4rem;
     letter-spacing: -0.025rem;
     color: #433A34;
@@ -1046,7 +1046,7 @@
 	font-family: "NanumMyeongjo";
 	font-size: 1.8rem;
     line-height: 5rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.045rem;
     text-align: center;
 	color: #433A34;
@@ -1114,7 +1114,7 @@
 	font-family: "NanumMyeongjo";
 	font-size: 3rem;
     line-height: 1;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -0.2rem;
     vertical-align: sub;
 	color: #8D7F74;
@@ -1171,7 +1171,7 @@
     font-family: "NanumMyeongjo";
     font-size: 2.2rem;
     line-height: 4rem;
-    font-weight: 700;
+	font-weight: 600;
     letter-spacing: -0.025rem;
     text-align: center;
     color: #8D7F74;
@@ -1208,7 +1208,7 @@
     font-family: "NanumMyeongjo";
     font-size: 3rem;
     line-height: 3.8rem;
-    font-weight: 700;
+	font-weight: 600;
     letter-spacing: -0.025rem;
     color: #433A34;
 }
@@ -1664,7 +1664,7 @@
         padding-top: 6rem;
         font-family: "NanumMyeongjo";
         font-size: 4rem;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 5rem;
         letter-spacing: -0.025rem;
         background-image: url(../images/icon_title_deco.svg);
@@ -1868,7 +1868,7 @@
         font-size: 1.4rem;
     }
 
-    .prod_process_wrap.process01 {
+    .prod_process_wrap.make01 {
         padding: 0 0 8rem
     }
 
