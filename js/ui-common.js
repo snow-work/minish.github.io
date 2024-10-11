@@ -126,8 +126,8 @@ window.onload=function(){
 
 
 
-	// 로그인, 회원가입, 인재채용 검은헤더
-	if($(".page_wrap").hasClass("join")||$(".page_wrap").hasClass("login")){
+	// 로그인, 회원가입, 에러 검은헤더
+	if($(".page_wrap").hasClass("join")||$(".page_wrap").hasClass("login")||$(".page_wrap").hasClass("error")){
 		$('.header_con .top_wrap').addClass("black")
 	}
 
