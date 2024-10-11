@@ -1,117 +1,3 @@
-// var device = {
-//     agent: navigator.userAgent.toLocaleLowerCase(),
-//     os: null,
-//     ver: null,
-//     isApp: null,
-//     appHgt: 0,
-//     val: "",
-//     isGnb: false,
-//     init: function() {
-//         var str;
-//         var ver;
-//         if (device.agent !== undefined) {
-//             if (device.agent.indexOf("iphone") > -1 || device.agent.indexOf("ipad") > -1) {
-//                 str = device.agent.substring(device.agent.indexOf("os") + 3);
-//                 ver = str.substring(0, str.indexOf(" like"));
-//                 device.os = "ios";
-//                 device.ver = device.os + ver
-//             }
-//             if (device.agent.indexOf("android") > -1) {
-//                 str = device.agent.substring(device.agent.indexOf("android") + 8);
-//                 var strSub = str.substring(0, str.indexOf(";"));
-//                 ver = strSub.replace(/[.]/gi, "_");
-//                 device.os = "android";
-//                 device.ver = device.os + ver
-//             }
-//         }
-//         device.set()
-//     },
-//     set: function() {
-//         var html = document.querySelector("html");
-//         var htmlClass = html.getAttribute("class");
-//         var etc = "";
-//         if (device.agent.indexOf("samsung") > -1)
-//             etc += " samsung";
-//         if (device.agent.indexOf("naver") > -1)
-//             etc += " naver";
-//         if (device.agent.indexOf("secapp") > -1 || device.agent.indexOf("sectest") > -1) {
-//             device.ver += " secapp";
-//             device.isApp = true
-//         }
-//         if (device.os !== null)
-//             htmlClass ? html.setAttribute("class", htmlClass + " " + device.ver + etc) : html.setAttribute("class", device.ver + etc);
-//         device.resp();
-//         window.addEventListener("resize", device.resp)
-//     },
-//     resp: function() {
-//         if (window.innerWidth > 1100)
-//             device.val = "p";
-//         if (window.innerWidth <= 1100 && window.innerWidth >= 801)
-//             device.val = "t";
-//         if (window.innerWidth < 801)
-//             device.val = "m";
-//         if (window.innerWidth > 1281)
-//             device.isGnb = true;
-//         setTimeout(function() {
-//             if (window.innerWidth > 1100)
-//                 device.val = "p";
-//             if (window.innerWidth <= 1100 && window.innerWidth >= 801)
-//                 device.val = "t";
-//             if (window.innerWidth < 801)
-//                 device.val = "m";
-//             if (window.innerWidth > 1281)
-//                 device.isGnb = true
-//         }, 100)
-//     }
-// };
-// device.init();
-
-// var viewportChange = function() {
-//     var pcView = "width=802,maximum-scale=1.0";
-//     var normalView = "width=device-width,initial-scale=1.0";
-//     var viewPort = document.querySelector('[name="viewport"]');
-//     function widthChk() {
-//         var winW = window.outerWidth;
-//         if (device.agent !== undefined)
-//             if (device.agent.indexOf("iphone") > -1 || device.agent.indexOf("ipad") > -1 || device.agent.indexOf("android") > -1)
-//                 if (540 < winW && winW < 1100)
-//                     viewPort.setAttribute("content", pcView);
-//                 else
-//                     viewPort.setAttribute("content", normalView)
-//     }
-//     widthChk();
-//     window.addEventListener("resize", function() {
-//         if (viewPort.getAttribute("content") == pcView || viewPort.getAttribute("content") == normalView)
-//             widthChk();
-//         else
-//             return false
-//     })
-// };
-// !function() {
-//     viewportChange()
-// }();
-
-
-
-// window.addEventListener('load', function() {
-//     var allElements = document.getElementsByTagName('*');
-//     Array.prototype.forEach.call(allElements, function(el) {
-//         var includePath = el.dataset.includePath;
-//         if (includePath) {
-//             var xhttp = new XMLHttpRequest();
-//             xhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             el.outerHTML = this.responseText;
-//         }
-//             };
-//             xhttp.open('GET', includePath, true);
-//             xhttp.send();
-//         }
-//     });
-// });
-
-
-// $(document).ready(function() {});
 
 window.onload=function(){
 	// 인트로 처리
@@ -794,4 +680,14 @@ var gumBnaSwiper = new Swiper(".gum_bna_slider", {
 
 
 
-
+var cavitySwiper = new Swiper(".cavity_slider", {
+	loop: true,
+	navigation: {
+		nextEl: ".cavity_slider .swiper-button-next",
+		prevEl: ".cavity_slider .swiper-button-prev",
+	  },
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+});

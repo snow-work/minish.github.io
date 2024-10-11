@@ -17,7 +17,7 @@
 .sub_visual_txt .tit {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 6rem;
     font-weight: 700;
     color: #433a43;
@@ -312,7 +312,7 @@
 .bbs_view_wrap .view_head .tit { 
     padding: 0 2.5rem;
     flex: 1 1 auto;
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 2.8rem;
     line-height: 3.4rem;
     color: #433A34;
@@ -431,7 +431,7 @@
 }
 .youtube_con .youtube_info .yt_name {
     margin-top: 2rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 6rem;
 	font-weight: 700;
 	letter-spacing: -0.03rem;
@@ -580,7 +580,7 @@
 	}
 	.ui_tab ul button {
         text-align: center;
-        font-family: "NanumMyeongjo";
+        font-family: "Nanum Myeongjo";
         border-top: 0;
         border-bottom: 0.3rem solid #D9D9D9;
     }

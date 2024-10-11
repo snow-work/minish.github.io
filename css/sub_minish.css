@@ -101,7 +101,7 @@
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 2.2rem;
     line-height: 3.4rem;
 	letter-spacing: -0.025rem;
@@ -133,7 +133,7 @@
 }
 .bna_case_wrap .tit_wrap .tit {
     margin-top: 2.4rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 4rem;
     line-height: 1;
 	font-weight: 600;
@@ -222,7 +222,7 @@
 .bna_case_wrap.type02 .case_wrap .tit {
     margin-top: 8rem;
     margin-bottom: 1.2rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 3rem;
 	font-weight: 600;
     line-height: 3.4rem;
@@ -337,7 +337,7 @@
 }
 .minish_sec01_wrap .right_wrap .txt_box {
     width: 100%;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 1.8rem;
     line-height: 3.8rem;
 	letter-spacing: -0.025rem;
@@ -421,7 +421,7 @@
 }
 .minish_sec03_wrap .top_wrap .tit {
     padding-top: 6rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 4rem;
 	font-weight: 600;
     line-height: 5rem;
@@ -442,7 +442,7 @@
     width: 100%;
 }
 .minish_sec03_wrap .bot_wrap .tit {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 3rem;
 	font-weight: 600;
     line-height: 3.4rem;
@@ -507,7 +507,7 @@
     color: #322C28;
 }
 .mt_tab_wrap li button .tit_kr {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 2.2rem;
     line-height: 3.4rem;
 	letter-spacing: -0.025rem;
@@ -644,7 +644,7 @@
 }
 .bridge_sec02_wrap .tit_wrap .tit {
     margin-bottom: 8rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 4rem;
     line-height: 1;
 	font-weight: 600;
@@ -663,7 +663,7 @@
 }
 .bridge_sec02_wrap .con_wrap p {
     margin-top: 2rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 2rem;
     line-height: 3.4rem;
 	font-weight: 600;
@@ -752,7 +752,7 @@
     justify-content: space-between;
 }
 .make_sv_bot span {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 6rem;
 	font-weight: 600;
 	letter-spacing: -0.15rem;
@@ -868,7 +868,7 @@
 }
 .make_sec02_wrap .text_wrap .txt {
     margin-top: 1rem;
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 2.4rem;
 	font-weight: 600;
     line-height: 3rem;
@@ -943,7 +943,7 @@
     margin-top: 3.5rem;
 }
 .make_sec03_wrap .text_wrap .tit {
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 3.4rem;
 	font-weight: 600;
     line-height: 4.3rem;
@@ -974,7 +974,7 @@
     margin-bottom: 8rem;
 }
 .make_sec04_wrap .tit {
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 6rem;
 	font-weight: 600;
     line-height: 9rem;
@@ -1019,7 +1019,7 @@
 .make_sec05_wrap .text_wrap .txt {
     margin-top: 1.5rem;
     margin-bottom: 4rem;;
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 3.4rem;
 	font-weight: 600;
     line-height: 5.4rem;
@@ -1043,7 +1043,7 @@
     padding-top: 28vh;
 }
 .sub_visual_con.bna + .svb_txt {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 1.8rem;
     line-height: 5rem;
 	font-weight: 600;
@@ -1111,7 +1111,7 @@
 }
 .bna_model_wrap .text_wrap .name .kr {
     display: inline-block;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 3rem;
     line-height: 1;
 	font-weight: 600;
@@ -1168,7 +1168,7 @@
 }
 .bna_list_wrap .tit {  
     margin-bottom: 1rem;
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 2.2rem;
     line-height: 4rem;
 	font-weight: 600;
@@ -1205,7 +1205,7 @@
     position: absolute;
     top: 3rem;
     left: 3rem;
-    font-family: "NanumMyeongjo";
+    font-family: "Nanum Myeongjo";
     font-size: 3rem;
     line-height: 3.8rem;
 	font-weight: 600;
@@ -1662,7 +1662,7 @@
     }
     .minish_sec03_wrap .top_wrap .tit {
         padding-top: 6rem;
-        font-family: "NanumMyeongjo";
+        font-family: "Nanum Myeongjo";
         font-size: 4rem;
         font-weight: 600;
         line-height: 5rem;

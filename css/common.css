@@ -139,7 +139,7 @@ gnb : 200
 }
 .sub_visual_txt .txt {
     margin-bottom: 3rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 1.8rem;
 	line-height: 2.3rem;
 	color: #AA9B7A;
@@ -199,7 +199,7 @@ gnb : 200
 }
 .page_title.type01 .txt {
     margin-bottom: 3rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 1.8rem;
 	line-height: 2.3rem;
 	color: #AA9B7A;
@@ -207,7 +207,7 @@ gnb : 200
 	transform: translateY(10rem);
 }
 .page_title.type01 .tit {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 6rem;
 	font-weight: 600;
 	line-height: 7.5rem;
@@ -262,7 +262,7 @@ gnb : 200
 }
 .page_title.type02 .txt {
     margin-bottom: 1.1rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 1.8rem;
 	line-height: 2.3rem;
 	letter-spacing: -0.15rem;
@@ -271,7 +271,7 @@ gnb : 200
 	transform: translateY(10rem);
 }
 .page_title.type02 .tit {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 6rem;
 	font-weight: 600;
 	line-height: 7.5rem;
@@ -319,7 +319,7 @@ gnb : 200
 	color:#AA9B7A;
 }
 .text_set .tit {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 2.2rem;
 	font-weight: 700;
 	line-height: 3.4rem;
@@ -695,6 +695,7 @@ gnb : 200
 	display: inline-block;
     position: relative;
     width: 30rem;
+    height: 4.8rem;
     padding-left: 2.7rem;
     border-radius: 2.4rem;
     font-size: 1.5rem;
@@ -732,7 +733,7 @@ gnb : 200
 	display: block;
 	width: 100%;
 	padding: 1.5rem 0;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 2.2rem;
 	line-height: 3.4rem;
 	font-weight: 600;
@@ -1085,7 +1086,7 @@ gnb : 200
     margin-bottom: 4rem;
 }
 .gnb_bot .gnb_list strong {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 2.8rem;
 	font-weight: 600;
 	letter-spacing: -0.1rem;

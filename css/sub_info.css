@@ -389,7 +389,7 @@
     position: absolute;
     left:8rem;
     bottom: 8rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 3rem;
 	line-height: 5rem;
 	letter-spacing: 0.25rem;
@@ -413,7 +413,7 @@
 	color: #433A34;
 }
 .drs_info_wrap .info_wrap .name_kr {
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 8rem;
     line-height: 10rem;
 	font-weight: 600;
@@ -442,7 +442,7 @@
 .drs_slogan_wrap p {
     display: inline-block;
     position: relative;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 4rem;
     line-height: 7rem;
 	font-weight: 600;
@@ -476,7 +476,7 @@
 .space_txt_wrap {
     /* padding:8rem 0 11.5rem; */
     padding: 7.5rem 0 9.5rem;
-	font-family: "NanumMyeongjo";
+	font-family: "Nanum Myeongjo";
 	font-size: 3rem;
     line-height: 5rem;
 	font-weight: 600;
