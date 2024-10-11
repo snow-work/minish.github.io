@@ -716,6 +716,7 @@ $(".mt_tab_wrap .btn_return").click(function(){
 
 
 // 클리닉 전체보기
+if($(".clinic_page").length>0){
 var swiper = new Swiper(".clinic_page", {
 	slidesPerView: 1,
 	mousewheel: true,
@@ -735,5 +736,62 @@ var swiper = new Swiper(".clinic_page", {
 		}
 	}
 });
+}
+
+
+//  단계별 증상 슬라이드
+var sympSwiper = new Swiper(".symp_slide_wrap .img_slider", {
+	// loop: true,
+	navigation: {
+	  nextEl: ".symp_slide_wrap .swiper-button-next",
+	  prevEl: ".symp_slide_wrap .swiper-button-prev",
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	on: {
+		slideChangeTransitionEnd:function(){
+			// if(swiper.activeIndex>2){
+			let targetLi = $(".symp_slide_wrap .detail_wrap ul li").eq(sympSwiper.activeIndex);
+			let targetDH = targetLi.find((".detail_hidden"));
+			console.log(sympSwiper.activeIndex ,targetLi)
+			if(targetLi.hasClass("on")==0){
+				$(".symp_slide_wrap .detail_wrap ul li").removeClass("on")
+				$(".detail_hidden").slideUp();
+				targetLi.addClass("on")	
+				targetDH.slideDown()
+			};
+		}
+	}
+});
+
+// 단계별 상세보기 버튼
+$(".btn_detail_open").click(function(){
+	let rtEl = $(this).parents(".symp_slide_wrap");
+	let thisEl = $(this).parents("li");
+	if(thisEl.hasClass("on")){
+		thisEl.find(".detail_hidden").slideUp()
+		thisEl.removeClass("on")
+	}else{
+		rtEl.find(".detail_hidden").slideUp()
+		thisEl.find(".detail_hidden").slideDown();
+		rtEl.find("li").removeClass("on")
+		thisEl.addClass("on")
+	}
+})
+
+
+
+//  잇몸치료 슬라이드
+var gumBnaSwiper = new Swiper(".gum_bna_slider", {
+	// loop: true,
+	navigation: {
+	  nextEl: ".gum_bna_slider .swiper-button-next",
+	  prevEl: ".gum_bna_slider .swiper-button-prev",
+	},
+});
+
+
 
 

@@ -710,10 +710,6 @@
 }
 .whitening_sec05_wrap.nonvital .text_wrap .warning {
     margin-top: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    letter-spacing: -0.09rem;
-    color: #E73333;
 }
 .whitening_sec05_wrap .step_wrap ul {
     display: flex;
@@ -811,9 +807,319 @@
     padding: 10rem 3rem 13rem;
     background-color: transparent;
 }
-
 .clinic_qna_wrap.whitening {
     background-image: url(./../images/sub_whitening_qna_bg.png);
+}
+
+.whitening_sec05_wrap {
+    padding: 10rem 3rem;
+    background: rgba(221, 209, 180, 0.20);
+}
+.whitening_sec05_wrap > .wrap {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+
+
+
+
+.symp_slide_wrap {
+    padding:8rem 3rem 6.7rem;
+    background-color: #EEF1F3;
+}
+.symp_slide_wrap > .wrap {
+    display: flex;
+    max-width: 140rem;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.symp_slide_wrap .slide_wrap {
+    overflow: hidden;
+    position: relative;
+    width: 51rem;
+    padding: 0 7.8rem;
+    margin-right: 19rem;
+}
+.symp_slide_wrap .slide_wrap .img_slider {
+    margin-top:3.5rem;
+    overflow: hidden;
+    position: relative;
+    width:35.4rem;
+    height:44.8rem;
+}
+.symp_slide_wrap .swiper-button-next,
+.symp_slide_wrap .swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    top: 32rem;
+    flex: none;
+    background-image: url(../images/icon_cal_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-color: transparent;
+    border: none;
+
+}
+.symp_slide_wrap .swiper-button-prev {
+    left: 3rem;
+    transform: rotate(180deg);
+}
+.symp_slide_wrap .swiper-button-next {
+    right: 3rem;
+}
+.symp_slide_wrap .swiper-button-next:after,
+.symp_slide_wrap .swiper-button-prev:after {
+    content: none;
+}
+.symp_slide_wrap .swiper-button-next.swiper-button-disabled,
+.symp_slide_wrap .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.5;
+}
+.symp_slide_wrap .detail_wrap {
+    margin-top: 1.8rem;
+}
+.symp_slide_wrap .detail_wrap li {
+    border-bottom: 1px solid #A2B3BE;
+}
+.symp_slide_wrap .detail_wrap .detail_tit {
+    display: flex;
+    padding: 2.5rem 0;
+	font-family: "NanumMyeongjo";
+	font-size: 2.4rem;
+    line-height: 3.4rem;
+	font-weight: 600;
+	letter-spacing: -0.025rem;
+    text-align: center;
+	color: #433A34;
+}
+.symp_slide_wrap .detail_wrap .detail_tit b {
+    width: 16.5rem;
+}
+.symp_slide_wrap .detail_wrap .detail_tit span {
+    width: 36.5rem;
+}
+.symp_slide_wrap .detail_wrap .detail_tit .btn_detail_open {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 5rem;
+    background-image: url(../images/icon_plus_main.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.8rem;
+    background-color: transparent;
+    transition: transform 0.5s;
+}
+.symp_slide_wrap .detail_wrap .detail_hidden {
+    padding: 1.6rem 0 3.7rem 14.8rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.025rem;
+}
+.symp_slide_wrap .detail_wrap .detail_hidden dl {
+    display: flex;
+}
+
+.symp_slide_wrap .detail_wrap li.on .btn_detail_open {
+    transform: rotate(45deg);
+}
+.symp_slide_wrap .detail_wrap li.on .detail_hidden {
+    display: block;
+}
+
+
+
+
+
+
+
+/* 잇몸 클리닉 */
+.sub_visual_con.gum .sub_visual_txt .sub_txt,
+.sub_visual_con.gum .sub_visual_txt .tit {
+    color: #433A34;
+}
+.gum_page .text_set.type01 .tit {
+    font-size: 2.8rem;
+}
+
+
+.gum_sec01_wrap {
+    padding: 15rem 3rem;
+}
+.gum_sec01_wrap > .wrap {
+    display: flex;
+    max-width: 121rem;
+    margin: 0 auto;
+    align-items: center;
+}
+.gum_sec01_wrap .img_wrap {
+    width: 60.5rem;
+    margin-right: 16rem;
+}
+.gum_sec01_wrap .img_wrap {
+    width: 60.5rem;
+    margin-right: 16rem;
+}
+
+.gum_sec02_wrap {
+    padding: 15rem 3rem 14.7rem;
+}
+.gum_sec02_wrap .tit_wrap {
+    margin-bottom: 8rem;
+}
+.gum_sec02_wrap .text_set.type02 {
+    text-align: center;
+    background-position: top center;
+}
+.gum_sec02_wrap .step_wrap {
+    display: flex;
+    max-width: 117.4rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.gum_sec02_wrap .step_wrap li {
+    width: 23.1%;
+}
+.gum_sec02_wrap .text_wrap {
+	margin-top: 2rem;
+    text-align: center;
+}
+.gum_sec02_wrap .step_wrap .tit_sub {
+	font-size: 1.8rem;
+	line-height: 2.1rem;
+    letter-spacing: -0.025rem;
+	color:#AA9B7A;
+}
+.gum_sec02_wrap .text_wrap .tit {
+	margin: 1rem 0 0.8rem;
+	font-family: "NanumMyeongjo";
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 3.4rem;
+    letter-spacing: -0.025rem;
+	color:#433A34;
+}
+.gum_sec02_wrap .text_wrap .txt {
+	font-size: 1.8rem;
+	line-height: 3rem;
+    letter-spacing: -0.025rem;
+	color:#433A34;
+}
+
+.gum_sec03_wrap {
+    padding: 11rem 3rem 16.5rem;
+    background: rgba(221, 209, 180, 0.20);
+}
+.gum_sec03_wrap > .wrap {
+    overflow: hidden;
+    max-width: 122rem;
+    margin: 0 auto;
+}
+.gum_sec03_wrap .tit_wrap {
+    margin-bottom: 8rem;
+    text-align: center;
+}
+.gum_sec03_wrap .tit_wrap .tit {
+    padding-top: 4.7rem;
+	font-family: "NanumMyeongjo";
+	font-size: 4rem;
+    line-height: 6rem;
+	font-weight: 600;
+	letter-spacing: -0.025rem;
+    background-image: url(../images/icon_title_deco.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 2.7rem;
+	color: #8D7F74;
+}
+.gum_sec03_wrap .gum_bna_slider {
+    position: relative;
+}
+.gum_sec03_wrap .gum_bna_slider .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+}
+.gum_sec03_wrap .gum_bna_slider .swiper-slide img {
+    width:49.2%;
+    background-color: #000;
+}
+
+.gum_sec03_wrap .swiper-button-next,
+.gum_sec03_wrap .swiper-button-prev {
+    width: 3.6rem;
+    height: 7.2rem;
+    flex: none;
+    background-image: url(../images/icon_arrow_white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+
+}
+.gum_sec03_wrap .swiper-button-prev {
+    left: 0.5rem;
+    transform: rotate(180deg);
+}
+.gum_sec03_wrap .swiper-button-next {
+    right: 0.5rem;
+}
+.gum_sec03_wrap .swiper-button-next:after,
+.gum_sec03_wrap .swiper-button-prev:after {
+    content: none;
+}
+.gum_sec03_wrap .swiper-button-next.swiper-button-disabled,
+.gum_sec03_wrap .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.5;
+}
+.gum_sec03_wrap .swiper-pagination {
+    display: none;
+    position: static;
+    margin-top: 2rem;
+}
+
+.gum_sec04_wrap {
+    padding: 20rem 3rem
+}
+.gum_sec04_wrap .wrap {
+    display: flex;
+    max-width: 128.3rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.gum_sec04_wrap .text_set {
+    position: relative;
+}
+.gum_sec04_wrap .text_set::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25.5rem;
+    height :16.7rem;
+    bottom: 13.7rem;
+    left: 4.1rem;
+    background-image: url(../images/minish_type_pink.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-37.47deg);
+}
+.gum_sec04_wrap .text_set .btn_arr {
+    width: 32rem;
+    margin-top: 2.6rem;
+    padding-left: 2.2rem;
+    border-radius: 2rem;
+    line-height: 4rem;
+    background-position: center right 3.1rem;
+    background-size: 3rem;
+    background-color: #A6B7C2;
+}
+.gum_sec04_wrap .img_wrap {
+    width: 46.2rem;
+}
+.gum_sec04_wrap .img_wrap .img_box {
+    position: relative;
+}
+.gum_sec04_wrap .img_wrap .img_box~.img_box {
+    margin-top: 2rem;
 }
 
 
@@ -827,6 +1133,8 @@
     .lami_sec05_wrap .text_wrap {
         left: 4.2rem;
     }
+    .symp_slide_wrap .slide_wrap {margin-right:0%}
+    
 
 }
 @media screen and (max-width:1200px){
@@ -869,6 +1177,21 @@
         margin-left: 5%;
     }
 
+    .symp_slide_wrap > .wrap {  
+        justify-content: space-evenly;
+    }
+    .symp_slide_wrap .detail_wrap .detail_tit b {
+        width: 20%;
+    }
+    .symp_slide_wrap .detail_wrap .detail_tit span {
+        width: 65%;
+    }
+    .symp_slide_wrap .detail_wrap .detail_tit .btn_detail_open {
+        margin-left: 0;
+    }
+    .symp_slide_wrap .detail_wrap .detail_hidden {
+        padding: 1.6rem 0 3.7rem 11.8rem;
+    }
     
 }
 @media screen and (max-width:1024px){
@@ -890,6 +1213,11 @@
     }
     .whitening_sec05_wrap .step_wrap ul li .txt {
         font-size: 2rem;
+    }
+
+    .gum_sec01_wrap .img_wrap {
+        width: 50.5rem;
+        margin-right: 13%;
     }
 }
 @media screen and (max-width:768px){
@@ -1401,8 +1729,6 @@
     }
     .whitening_sec05_wrap.nonvital .text_wrap .warning {
         margin-top: 1rem;
-        font-size: 1.2rem;
-        letter-spacing: -0.07rem;
     }
     .whitening_sec05_wrap .step_wrap ul {
         margin-bottom: 4rem;
@@ -1463,6 +1789,200 @@
 
     .clinic_qna_wrap.whitening {
         background-image: url(./../images/sub_whitening_qna_bg_mo.png);
+    }
+
+
+
+    
+.symp_slide_wrap {
+    padding:6rem 2rem 11.2rem;
+}
+.symp_slide_wrap > .wrap {
+    flex-flow: column;
+}
+.symp_slide_wrap .slide_wrap {
+    width: 100%;
+    padding: 0 4.2rem;
+    margin-right: 0;
+}
+.symp_slide_wrap .slide_wrap .img_slider {
+    margin-top:6rem;
+    width:25rem;
+    height:31.6rem;
+}
+.symp_slide_wrap .swiper-button-next,
+.symp_slide_wrap .swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    top: 32rem;
+    flex: none;
+    background-image: url(../images/icon_cal_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-color: transparent;
+    border: none;
+
+}
+.symp_slide_wrap .swiper-button-prev {
+    left: 0;
+}
+.symp_slide_wrap .swiper-button-next {
+    right: 0;
+}
+.symp_slide_wrap .detail_wrap {
+    margin-top: 7.8rem;
+    width: 100%;
+}
+.symp_slide_wrap .detail_wrap .detail_tit {
+    padding: 1rem 0;
+	font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+.symp_slide_wrap .detail_wrap .detail_tit b {
+    width: 5rem;
+}
+.symp_slide_wrap .detail_wrap .detail_tit span {
+    width: 22rem;
+}
+.symp_slide_wrap .detail_wrap .detail_tit .btn_detail_open {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 2.6rem;
+    background-size: 1.7rem;
+}
+.symp_slide_wrap .detail_wrap .detail_hidden {
+    border-top: 1px solid #A2B3BE;;
+    padding: 4rem 0 2.8rem 7.5rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+
+    /*  */
+    .gum_page .text_set.type01 .tit {
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+
+    .gum_sec01_wrap {
+        padding: 10rem 1.5rem 8rem;
+    }
+    .gum_sec01_wrap > .wrap {
+        flex-flow: column-reverse;
+        align-items: flex-start;
+    }
+    .gum_sec01_wrap .text_wrap {
+        padding: 0 0.8rem;
+        margin-bottom: 5rem;
+    }
+    .gum_sec01_wrap .img_wrap {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .gum_sec02_wrap {
+        padding: 10rem 1.5rem 6rem;
+    }
+    .gum_sec02_wrap .step_wrap {
+        flex-wrap: wrap;
+    }
+    .gum_sec02_wrap .step_wrap li {
+        width: 47.5%;
+    }
+    .gum_sec02_wrap .step_wrap li:nth-child(n+3) {
+       margin-top: 4.4rem;
+    }
+    .gum_sec02_wrap .text_wrap {
+        margin-top: 1rem;
+    }
+    .gum_sec02_wrap .step_wrap .tit_sub {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .gum_sec02_wrap .text_wrap .tit {
+        margin: 0 0 0.5rem;
+        font-size: 1.6rem;
+        line-height: 3.4rem;
+    }
+    .gum_sec02_wrap .text_wrap .txt {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+    .gum_sec03_wrap {
+        padding: 6rem 2.8rem 4rem;
+    }
+    .gum_sec03_wrap .tit_wrap {
+        margin-bottom: 6rem;
+    }
+    .gum_sec03_wrap .tit_wrap .tit {
+        padding-top: 4.4rem;
+        font-size: 2rem;
+        line-height: 1rem;
+        background-size: 2.4rem;
+    }
+    .gum_sec03_wrap .gum_bna_slider .swiper-slide {
+        flex-wrap: wrap;
+    }
+    .gum_sec03_wrap .gum_bna_slider .swiper-slide img {
+        width:100%;
+    }
+    .gum_sec03_wrap .gum_bna_slider .swiper-slide img~img {
+        margin-top: 1rem;
+    }
+    .gum_sec03_wrap .swiper-button-next,
+    .gum_sec03_wrap .swiper-button-prev {
+        display: none;
+    }
+    .gum_sec03_wrap .swiper-pagination {
+        display: block;
+    }
+
+    .gum_sec04_wrap {
+        padding: 8rem 2.8rem 10rem;
+    }
+    .gum_sec04_wrap .wrap {
+        flex-flow: column;
+    }
+    .gum_sec04_wrap .text_set::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 12rem;
+        height :7.7rem;
+        bottom: 2.8rem;
+        left: auto;
+        right: -0.2rem;
+    }
+
+    .gum_sec04_wrap .text_set {
+        height: 39rem;
+    }
+    .gum_sec04_wrap .text_set .btn_arr {
+        width: 27rem;
+        margin-top: 2.2rem;
+        padding-left: 2rem;
+        background-position: center right 2rem;
+        background-size: 2.6rem;
+    }
+    .gum_sec04_wrap .img_wrap {
+        width: 100%;
+    }
+    .gum_sec04_wrap .img_box:nth-child(-n+2):after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        bottom: -2rem;
+        right: calc(50% - 2rem);
+        border-radius: 50%;
+        background-image: url(../images/btn_icon_arr_dark.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 2rem;
+        background-color: #EDF1F3;
+        transform: rotate(90deg);
     }
 }
 /* -------------- 진료과목 END --------------- */

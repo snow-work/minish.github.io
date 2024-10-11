@@ -321,7 +321,7 @@ gnb : 200
 .text_set .tit {
 	font-family: "NanumMyeongjo";
 	font-size: 2.2rem;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 3.4rem;
     letter-spacing: -0.025rem;
 	color:#433A34;
@@ -336,7 +336,13 @@ gnb : 200
 .text_set .txt~.txt {
 	margin-top: 3.5rem;
 }
-
+.text_set .warning {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.09rem;
+    color: #E73333;
+}
 
 .text_set.type02 {
 	padding-top: 4.7rem;
@@ -1545,6 +1551,11 @@ gnb : 200
 	.text_set .txt~.txt {
 		margin-top: 2rem;
 	}
+	.text_set .warning {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        letter-spacing: -0.07rem;
+    }
 
 	.text_set.type02 {
 		padding-top: 4.4rem;
