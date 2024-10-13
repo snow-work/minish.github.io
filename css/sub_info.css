@@ -369,7 +369,7 @@
 .drs_info_wrap .dr_info {
     display: flex;
 }
-.drs_info_wrap .dr_info.dr02 {
+.drs_info_wrap .dr_info:nth-child(even) {
     flex-flow: row-reverse;
 }
 .drs_info_wrap .img_wrap {
@@ -387,12 +387,12 @@
 }
 .drs_info_wrap .img_wrap p {
     position: absolute;
-    left:8rem;
-    bottom: 8rem;
+    left:6.2rem;
+    bottom: 5rem;
 	font-family: "Nanum Myeongjo";
 	font-size: 3rem;
 	line-height: 5rem;
-	letter-spacing: 0.25rem;
+	letter-spacing: 0.075rem;
 	color: #fff;
 }
 .drs_info_wrap .info_wrap {
@@ -403,8 +403,11 @@
 .drs_info_wrap .info_wrap > .wrap {
     position: absolute;
     bottom: 10rem;
-    left: 9.5%;;
+    left: 15rem;
 }
+/* .drs_info_wrap .dr_info:nth-child(even) .info_wrap > .wrap {
+    left: 21.5%;
+} */
 .drs_info_wrap .info_wrap .pos {
 	font-family: "AmstelvarAlpha";
 	font-size: 3rem;
@@ -434,7 +437,6 @@
 	letter-spacing: -0.03rem;
 	color: #433A34;
 }
-
 .drs_slogan_wrap {
     padding: 15.9rem 2.8rem 16.3rem;
     text-align: center;
@@ -499,12 +501,12 @@
     margin: 0 auto;
 }
 .space_swiper02 .swiper-slide {
-    width: 20.65%
+    display: flex;
+    flex-wrap: wrap;
 }
-.space_swiper02 .swiper-slide.center,
-.space_swiper02 .swiper-slide.slide04 {
-    width: 29.4%;
-} 
+.space_swiper02 .swiper-slide img {
+    width: 50%;
+}
 .space_swiper02_wrap .swiper_btn_wrap {
     display: flex;
     width: 16rem;
@@ -527,18 +529,21 @@
 .space_swiper02_wrap .swiper-button-prev:after {content: none;}
 
 /* 반응형 */
-@media screen and (max-width:1400px){
+@media screen and (max-width:1600px){
     /* 의료진 소개 */
-    .drs_info_wrap .img_wrap {
-        max-width: 78rem;
-    }
     .drs_info_wrap .info_wrap > .wrap {
+        left: 8rem;
         bottom: 5rem;
+    }
+    .drs_info_wrap .img_wrap {
+        width: 55%;
     }
     .drs_info_wrap .info_wrap .name_kr {
         font-size: 5rem;
         line-height: 6rem;
     }
+}
+@media screen and (max-width:1400px){
 }
 @media screen and (max-width:1200px){
     .vis_brand_wrap .brand_con {
@@ -549,6 +554,37 @@
     }
     .vis_brand_wrap .right_con {
         width: 40rem;
+    }
+
+    
+    /* 의료진 소개 */
+    .drs_info_wrap .info_wrap > .wrap {
+        left: 3rem;
+    }
+    .drs_info_wrap .img_wrap p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .drs_info_wrap .info_wrap .pos {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .drs_info_wrap .dr02 .info_wrap {
+        text-align: right;
+    }
+    .drs_info_wrap .info_wrap .name_kr {
+        font-size: 2.6rem;
+        line-height: 4.1rem;
+    }
+    .drs_info_wrap .info_wrap .name_en {
+        margin-top: 0.4rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    .drs_info_wrap .info_wrap .history {
+        margin-top: 3rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
     }
 }
 /* 태블릿 */
@@ -567,35 +603,6 @@
     .vis_ex_wrap .txt_wrap .txt {
         font-size: 2.5rem;
         line-height: 4rem;
-    }
-   
-    /* 의료진 소개 */
-    .drs_info_wrap .img_wrap {
-        max-width: 65rem;
-    } 
-    .drs_info_wrap .info_wrap .pos {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-    }
-    .drs_info_wrap .info_wrap {
-        padding: 3rem 1.3rem 4.5rem;
-    }
-    .drs_info_wrap .dr02 .info_wrap {
-        text-align: right;
-    }
-    .drs_info_wrap .info_wrap .name_kr {
-        font-size: 2.6rem;
-        line-height: 4.1rem;
-    }
-    .drs_info_wrap .info_wrap .name_en {
-        margin-top: 0.4rem;
-        font-size: 1.8rem;
-        line-height: 2rem;
-    }
-    .drs_info_wrap .info_wrap .history {
-        margin-top: 3rem;
-        font-size: 1.4rem;
-        line-height: 2.4rem;
     }
 }
 /* 모바일 */
@@ -765,7 +772,7 @@
         margin: 0 auto;
     }
     .drs_info_wrap .img_wrap {
-        position: relative;
+        width: 100%;
     }
     .drs_info_wrap .img_wrap p {
         left:1.3rem;
@@ -775,8 +782,11 @@
     }
     .drs_info_wrap .info_wrap > .wrap {
         position: static;
+        padding: 3rem 1.3rem 4.5rem;
     }
-        
+    .drs_info_wrap .dr_info:nth-child(even) .info_wrap > .wrap {
+        text-align: right;
+    }
     .drs_slogan_wrap {
         padding: 10.9rem 2.8rem 11.3rem
     }
@@ -807,6 +817,16 @@
         font-size: 2rem;
         line-height: 3.4rem;
     }
+    .space_swiper02_wrap {
+        margin-bottom: 10rem;
+    }
+    .space_swiper02 .swiper-slide img {
+        width: 100%;
+    }
+    .space_swiper02_wrap .swiper_btn_wrap {
+        display: none;
+    }
+    
 }
 /* --------------- 병원소개 END -------------- */
 

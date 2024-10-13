@@ -75,7 +75,7 @@ $(window).resize(function(){
 
 // 헤더 퀵
 $(".top_tnb").hover(function(){
-	$(".top_tnb ul").slideToggle("fast");	
+	$(".top_tnb ul").stop().slideToggle("fast");	
 });
 
 
@@ -288,402 +288,419 @@ scrEl.forEach(scr => observerOut.observe(scr));
 
 
 //----------메인페이지 start------------- //
-// 메인 공지사항
-$(".notice_wrap button").click(function(){
-	$(".notice_wrap").hide()
-})
+	// 메인 공지사항
+	$(".notice_wrap button").click(function(){
+		$(".notice_wrap").hide()
+	})
 
 
-// 메인 의사 스와이퍼
-var miniDrSwiper = undefined;
-function drSliderSet(){
-	if(window.innerWidth>768 && miniDrSwiper == undefined){
-		// pc이면서 스와이퍼 실행중이 아님
-		miniDrSwiper = new Swiper(".main_dr_con .dr_slider", {
-			slidesPerView: "auto",
-			spaceBetween:0,
-			touchRatio: 0.25,
-			autoplay:true,
-			loop:true,
-		})
-	}else{
-		if(window.innerWidth<=768 && miniDrSwiper != undefined){
-			// mo이면서, pc에서 모바일로 넘어옴 => destroy
-			miniDrSwiper.destroy();
-			miniDrSwiper = undefined;
+	// 메인 의사 스와이퍼
+	var miniDrSwiper = undefined;
+	function drSliderSet(){
+		if(window.innerWidth>768 && miniDrSwiper == undefined){
+			// pc이면서 스와이퍼 실행중이 아님
+			miniDrSwiper = new Swiper(".main_dr_con .dr_slider", {
+				slidesPerView: "auto",
+				spaceBetween:0,
+				touchRatio: 0.25,
+				autoplay:true,
+				loop:true,
+			})
+		}else{
+			if(window.innerWidth<=768 && miniDrSwiper != undefined){
+				// mo이면서, pc에서 모바일로 넘어옴 => destroy
+				miniDrSwiper.destroy();
+				miniDrSwiper = undefined;
+			}
 		}
 	}
-}
 
 
 
 
 
-// oao 영역, 헤더 스크롤 이벤트
-let lastScr = 0;
-document.addEventListener("scroll", (e) => {
-	// oao 텍스트, 이미지 fixed
-	if($(".main_oao_con").length>0){
-		// PC에서만
-		if(window.innerWidth>768){
-			// oao fiexd 범위 
-			let titStartPoint= $('.scr_chk_point.point01').offset().top;
-			let titEndPoint= $('.scr_chk_point.point02').offset().top;
-			let imgStartPoint= $('.scr_chk_point.point03').offset().top;
-			let imgEndPoint= $('.scr_chk_point.point04').offset().top;
-			let nowScr = window.scrollY+window.innerHeight/2;
-			// 타이틀 고정 처리
-			if(titStartPoint<=nowScr&&titEndPoint>=nowScr){
-				// 범위 내 fiexd  
-				$(".main_oao_con .txt_wrap").addClass('fixed')
-			}else{
-				// 범위 밖, fixed 삭제
-				$(".main_oao_con .txt_wrap").removeClass('fixed')
-				// 타이틀 위치 지정
-				if(imgStartPoint>=nowScr){
-					// 위로 스크롤 되었을 때
-					$(".main_oao_con .txt_wrap").removeClass('bottom')
+	// oao 영역, 헤더 스크롤 이벤트
+	let lastScr = 0;
+	document.addEventListener("scroll", (e) => {
+		// oao 텍스트, 이미지 fixed
+		if($(".main_oao_con").length>0){
+			// PC에서만
+			if(window.innerWidth>768){
+				// oao fiexd 범위 
+				let titStartPoint= $('.scr_chk_point.point01').offset().top;
+				let titEndPoint= $('.scr_chk_point.point02').offset().top;
+				let imgStartPoint= $('.scr_chk_point.point03').offset().top;
+				let imgEndPoint= $('.scr_chk_point.point04').offset().top;
+				let nowScr = window.scrollY+window.innerHeight/2;
+				// 타이틀 고정 처리
+				if(titStartPoint<=nowScr&&titEndPoint>=nowScr){
+					// 범위 내 fiexd  
+					$(".main_oao_con .txt_wrap").addClass('fixed')
 				}else{
-					$(".main_oao_con .txt_wrap").addClass('bottom')
+					// 범위 밖, fixed 삭제
+					$(".main_oao_con .txt_wrap").removeClass('fixed')
+					// 타이틀 위치 지정
+					if(imgStartPoint>=nowScr){
+						// 위로 스크롤 되었을 때
+						$(".main_oao_con .txt_wrap").removeClass('bottom')
+					}else{
+						$(".main_oao_con .txt_wrap").addClass('bottom')
+					}
 				}
-			}
-			// 이미지 고정 처리
-			if(imgStartPoint<=nowScr&&imgEndPoint>=nowScr){
-				// 범위 내 fiexd// 범위 내 fiexd
-				$(".main_oao_con .img_04").addClass('fixed')
-				$(".main_oao_con .img_04").removeClass('bottom')
-			}else{
-				// 범위 밖, fixed 삭제
-				$(".main_oao_con .img_04").removeClass('fixed')
-				// 타이틀 위치 지정
-				if(imgStartPoint>=nowScr){
-					// 위로 스크롤 되었을 때
+				// 이미지 고정 처리
+				if(imgStartPoint<=nowScr&&imgEndPoint>=nowScr){
+					// 범위 내 fiexd// 범위 내 fiexd
+					$(".main_oao_con .img_04").addClass('fixed')
 					$(".main_oao_con .img_04").removeClass('bottom')
 				}else{
-					$(".main_oao_con .img_04").addClass('bottom')
+					// 범위 밖, fixed 삭제
+					$(".main_oao_con .img_04").removeClass('fixed')
+					// 타이틀 위치 지정
+					if(imgStartPoint>=nowScr){
+						// 위로 스크롤 되었을 때
+						$(".main_oao_con .img_04").removeClass('bottom')
+					}else{
+						$(".main_oao_con .img_04").addClass('bottom')
+					}
 				}
+			}else{
+				$(".main_oao_con .txt_wrap").removeClass('fixed')
+				$(".main_oao_con .img_04").removeClass('fixed')
+				$(".main_oao_con .img_04").removeClass('bottom')
 			}
-		}else{
-			$(".main_oao_con .txt_wrap").removeClass('fixed')
-			$(".main_oao_con .img_04").removeClass('fixed')
-			$(".main_oao_con .img_04").removeClass('bottom')
 		}
-	}
-	
-	let currScr = window.scrollY;
-	// 스크롤시 헤더 픽스
-	if(window.scrollY>0){
-		$("#header .top_wrap").addClass("fixed");
-		// 스크롤 올리면 나타남
-		if (lastScr > currScr){
-			$("#header .top_wrap").addClass("down");
+		
+		let currScr = window.scrollY;
+		// 스크롤시 헤더 픽스
+		if(window.scrollY>0){
+			$("#header .top_wrap").addClass("fixed");
+			// 스크롤 올리면 나타남
+			if (lastScr > currScr){
+				$("#header .top_wrap").addClass("down");
+			}else{
+				$("#header .top_wrap").removeClass("down");
+			}
+			// 스크롤 내리면 사라짐
 		}else{
-			$("#header .top_wrap").removeClass("down");
+			// 스크롤 0일때 픽스 풂}
+			$("#header .top_wrap").removeClass("fixed");
 		}
-		// 스크롤 내리면 사라짐
-	}else{
-		// 스크롤 0일때 픽스 풂}
-		$("#header .top_wrap").removeClass("fixed");
-	}
-	lastScr = currScr;
-})
+		lastScr = currScr;
+	})
 //----------메인페이지 end------------- //
 
 
 
 
-// 아이디 찾기 탭
-// 탭 동작
-$(".find_tab button").click(function(){
-	let elTab = $(".find_tab");
-	let elIndex = $(this).parent().index();
 
-	elTab.find("button").removeClass("on");
-	$(".tab_box").removeClass("on");
-	$(this).addClass("on")
-	
-	if(elIndex==0){
-		$(".tab_box.find_id").addClass("on")
-	}else{
-		$(".tab_box.find_pw").addClass("on")
+//----------회원가입, 로그인 start------------- //
+	// 아이디 찾기 탭
+	// 탭 동작
+	$(".find_tab button").click(function(){
+		let elTab = $(".find_tab");
+		let elIndex = $(this).parent().index();
+
+		elTab.find("button").removeClass("on");
+		$(".tab_box").removeClass("on");
+		$(this).addClass("on")
+		
+		if(elIndex==0){
+			$(".tab_box.find_id").addClass("on")
+		}else{
+			$(".tab_box.find_pw").addClass("on")
+		}
+	})
+
+
+	// 회원가입 전체동의
+	$(".btn_chk_all input").change(function(){
+		if($(this).is(':checked')){
+			$(".join_step01 .join_input_wrap input[value='agree']").prop('checked',true)
+		}else{
+			$(".join_step01 .join_input_wrap input[value='agree']").prop('checked',false)
+		}
+	})
+//----------회원가입, 로그인 end------------- //
+
+
+
+
+
+//----------예약 start------------- //
+	// 상담예약 캘린더
+	// calMonth => 현재 달 설정, 오늘 기준 이전 달 버튼 비활성화
+	// calTomorrow => 내일, 초기 날짜 선택
+	const sToday = new Date();
+	const nowYear = sToday.getFullYear();
+	const nowMonth = sToday.getMonth() + 1;
+	const nowDate = sToday.getDate() + 1;
+	let calMonth = nowYear + "-"; 
+	let calTomorrow = nowYear + "-"; 
+	if (nowMonth < 10) {
+		calMonth += "0";
+		calTomorrow += "0";
 	}
-})
-
-
-// 회원가입 전체동의
-$(".btn_chk_all input").change(function(){
-	if($(this).is(':checked')){
-		$(".join_step01 .join_input_wrap input[value='agree']").prop('checked',true)
-	}else{
-		$(".join_step01 .join_input_wrap input[value='agree']").prop('checked',false)
+	calMonth += nowMonth + "-" + "01";
+	calTomorrow += nowMonth + "-";
+	if (nowDate < 10) {
+		calTomorrow += "0";
 	}
-})
-
-
-
-
-// 상담예약 캘린더
-// calMonth => 현재 달 설정, 오늘 기준 이전 달 버튼 비활성화
-// calTomorrow => 내일, 초기 날짜 선택
-const sToday = new Date();
-const nowYear = sToday.getFullYear();
-const nowMonth = sToday.getMonth() + 1;
-const nowDate = sToday.getDate() + 1;
-let calMonth = nowYear + "-"; 
-let calTomorrow = nowYear + "-"; 
-if (nowMonth < 10) {
-	calMonth += "0";
-	calTomorrow += "0";
-}
-calMonth += nowMonth + "-" + "01";
-calTomorrow += nowMonth + "-";
-if (nowDate < 10) {
-	calTomorrow += "0";
-}
-calTomorrow += nowDate;
-// FullCalendar 플러그인
-document.addEventListener('DOMContentLoaded', function() {
-	if(document.getElementById('calendar')){
-		var calendarEl = document.getElementById('calendar');
-		var calendar = new FullCalendar.Calendar(calendarEl, {
-			initialView: 'dayGridMonth',
-			headerToolbar: {
-				left: 'prev,next title',
-				center: '',
-				right: ''
-				// left: 'prev,next today',
-				// center: 'title',
-				// right: 'dayGridMonth,timeGridWeek,timeGridDay'
-			},
-			locale: "ko",
-			fixedWeekCount:false,
-			showNonCurrentDates: false,
-			validRange: {
-				start: calMonth
-			},
-			dateClick: function(info) {
-				if(info.dayEl.classList.contains("fc-day-future")){
-					if(document.querySelector(".fc-daygrid-day.on")){
-						document.querySelector(".fc-daygrid-day.on").classList.remove("on")
+	calTomorrow += nowDate;
+	// FullCalendar 플러그인
+	document.addEventListener('DOMContentLoaded', function() {
+		if(document.getElementById('calendar')){
+			var calendarEl = document.getElementById('calendar');
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				initialView: 'dayGridMonth',
+				headerToolbar: {
+					left: 'prev,next title',
+					center: '',
+					right: ''
+					// left: 'prev,next today',
+					// center: 'title',
+					// right: 'dayGridMonth,timeGridWeek,timeGridDay'
+				},
+				locale: "ko",
+				fixedWeekCount:false,
+				showNonCurrentDates: false,
+				validRange: {
+					start: calMonth
+				},
+				dateClick: function(info) {
+					if(info.dayEl.classList.contains("fc-day-future")){
+						if(document.querySelector(".fc-daygrid-day.on")){
+							document.querySelector(".fc-daygrid-day.on").classList.remove("on")
+						}
+						info.dayEl.classList.add("on")
 					}
-					info.dayEl.classList.add("on")
+				}
+			});
+			calendar.render();
+			document.querySelector(".fc-day-future[data-date='" +calTomorrow+ "']").classList.add("on")
+			calSet()
+
+			$(".fc-button-group button").click(function(){
+				calSet()
+			});
+		}
+	});
+	function calSet(){
+		// 날짜 "일"삭제
+		$(".fc-daygrid-day-top a").each(function(index, item){
+			var chageD = $(item).text().replace("일","");
+			$(item).text(chageD);
+		})
+	}
+
+
+
+	// 예약정보 슬라이드
+	var reserveSwiper = new Swiper(".current_reserve_box", {
+		navigation: {
+		nextEl: ".space_swiper02 .swiper-button-next",
+		prevEl: ".space_swiper02 .swiper-button-prev",
+		},
+	});
+//----------예약 end------------- //
+
+
+
+
+
+//----------병원소개 start------------- //
+	// 병원소개 - 비전 슬라이드
+	var reserveSwiper = new Swiper(".vis_slogan_swiper", {
+		slidesPerView: 1,
+		autoplay:true,
+		loop: true,
+		breakpoints: {
+			768: {
+			slidesPerView: "auto",
+			},
+		}
+	});
+
+
+
+	// 병원소개 - 공간안내 슬라이드
+	var spaceSwiper01 = new Swiper(".space_swiper01", {
+		autoplay:true,
+		loop: true,
+		pagination: {
+		el: ".swiper-pagination",
+		},
+	});
+	var spaceSwiper02 = new Swiper(".space_swiper02", {
+		// slidesPerView: "2",
+		// slidesPerGroup: "2",
+		// loop: true,
+		navigation: {
+		nextEl: ".space_swiper02_wrap .swiper-button-next",
+		prevEl: ".space_swiper02_wrap .swiper-button-prev",
+		},
+	});
+//----------병원소개 end------------- //
+
+
+
+
+
+
+//----------미니쉬 start------------- //
+	// 미니쉬 타입 - 탭 모바일 슬라이드 처리
+	var minishTabSwiper = new Swiper(".mt_tab_wrap", {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		pagination: {
+		el: ".mt_tab_wrap .swiper-pagination",
+		},
+		breakpoints: {
+			768: {
+			slidesPerView: "auto",
+			spaceBetween:0
+			},
+		},
+	});
+
+
+	// 미니쉬 타입 - 탭 동작
+	// 타 페이지에서 링크이동 -> 탭 랜딩 해 올 수 있으므로  hash 처리
+	// ex) 충치클리닉 페이지 -> 어금니 미니쉬탭으로 랜딩
+	$(window).on('hashchange', function(){
+		// alert( location.hash)
+		switch(location.hash) {
+			// case '':
+			// case '#':
+			// alert('nothing');
+			// break;
+			case '#dual':
+			moveTab('.mt_tab_wrap','0')
+			mtTabSetting()
+			break;
+			case '#pink':
+			moveTab('.mt_tab_wrap','1')
+			mtTabSetting()
+			break;
+			case '#bridge':
+			moveTab('.mt_tab_wrap','2')
+			mtTabSetting()
+			break;
+			case '#molar':
+			moveTab('.mt_tab_wrap','3')
+			mtTabSetting()
+			break;
+		};
+	}).trigger('hashchange');
+
+	function mtTabSetting(){
+		$(".twentytwenty-container").twentytwenty();
+		$(".mt_tab_wrap .swiper-pagination").hide();
+		$(".mt_tab_wrap .btn_return").show()
+	}
+
+	$(".mt_tab_wrap .btn_return").click(function(){
+		$(".mt_tab_wrap .swiper-pagination").show();
+		$(".mt_tab_wrap .btn_return").hide();
+		$(".mt_tab_wrap  li button").removeClass("on");
+		$(".tab_box_wrap  .tab_box").removeClass("on");
+		minishTabSwiper.slideTo(0, 0);
+	})
+//----------미니쉬 end------------- //
+
+
+
+
+
+//----------클리닉 start------------- //
+	// 클리닉 전체보기
+	if($(".clinic_page").length>0){
+	var swiper = new Swiper(".clinic_page", {
+		slidesPerView: 1,
+		mousewheel: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		on: {
+			slideChangeTransitionEnd:function(){
+				if(swiper.activeIndex>2){
+					$(".swipe_info .left").css("display","block")
+					$(".swipe_info .right").hide()
+				}else{
+					$(".swipe_info .left").hide()
+					$(".swipe_info .right").css("display","block")
 				}
 			}
-		});
-		calendar.render();
-		document.querySelector(".fc-day-future[data-date='" +calTomorrow+ "']").classList.add("on")
-		calSet()
-
-		$(".fc-button-group button").click(function(){
-			calSet()
-		});
+		}
+	});
 	}
-});
-function calSet(){
-	// 날짜 "일"삭제
-	$(".fc-daygrid-day-top a").each(function(index, item){
-		var chageD = $(item).text().replace("일","");
-		$(item).text(chageD);
-	})
-}
 
 
-
-// 예약정보 슬라이드
-var reserveSwiper = new Swiper(".current_reserve_box", {
-	navigation: {
-	  nextEl: ".space_swiper02 .swiper-button-next",
-	  prevEl: ".space_swiper02 .swiper-button-prev",
-	},
-});
-
-
-
-// 병원소개 - 비전 슬라이드
-var reserveSwiper = new Swiper(".vis_slogan_swiper", {
-	slidesPerView: 1,
-	autoplay:true,
-	loop: true,
-	breakpoints: {
-		768: {
-		  slidesPerView: "auto",
+	//  단계별 증상 슬라이드
+	var sympSwiper = new Swiper(".symp_slide_wrap .img_slider", {
+		// loop: true,
+		navigation: {
+		nextEl: ".symp_slide_wrap .swiper-button-next",
+		prevEl: ".symp_slide_wrap .swiper-button-prev",
 		},
-	}
-});
-
-
-
-// 병원소개 - 공간안내 슬라이드
-var spaceSwiper01 = new Swiper(".space_swiper01", {
-	autoplay:true,
-	loop: true,
-	pagination: {
-	  el: ".swiper-pagination",
-	},
-});
-var spaceSwiper02 = new Swiper(".space_swiper02", {
-	slidesPerView: "auto",
-	// slidesPerView: 4,
-	// slidesPerGroup: 4,
-	loop: true,
-	navigation: {
-	  nextEl: ".space_swiper02_wrap .swiper-button-next",
-	  prevEl: ".space_swiper02_wrap .swiper-button-prev",
-	},
-});
-
-
-
-// 미니쉬 타입 - 탭 모바일 슬라이드 처리
-var minishTabSwiper = new Swiper(".mt_tab_wrap", {
-	slidesPerView: 1,
-	spaceBetween: 20,
-	pagination: {
-	  el: ".mt_tab_wrap .swiper-pagination",
-	},
-	breakpoints: {
-		768: {
-		  slidesPerView: "auto",
-		  spaceBetween:0
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
 		},
-	},
-});
-
-
-
-
-// 미니쉬 타입 - 탭 동작
-// 타 페이지에서 링크이동 -> 탭 랜딩 해 올 수 있으므로  hash 처리
-// ex) 충치클리닉 페이지 -> 어금니 미니쉬탭으로 랜딩
-$(window).on('hashchange', function(){
-	// alert( location.hash)
-	switch(location.hash) {
-		// case '':
-		// case '#':
-		// alert('nothing');
-		// break;
-		case '#dual':
-		moveTab('.mt_tab_wrap','0')
-		mtTabSetting()
-		break;
-		case '#pink':
-		moveTab('.mt_tab_wrap','1')
-		mtTabSetting()
-		break;
-		case '#bridge':
-		moveTab('.mt_tab_wrap','2')
-		mtTabSetting()
-		break;
-		case '#molar':
-		moveTab('.mt_tab_wrap','3')
-		mtTabSetting()
-		break;
-	};
-}).trigger('hashchange');
-
-function mtTabSetting(){
-	$(".twentytwenty-container").twentytwenty();
-	$(".mt_tab_wrap .swiper-pagination").hide();
-	$(".mt_tab_wrap .btn_return").show()
-}
-
-$(".mt_tab_wrap .btn_return").click(function(){
-	$(".mt_tab_wrap .swiper-pagination").show();
-	$(".mt_tab_wrap .btn_return").hide();
-	$(".mt_tab_wrap  li button").removeClass("on");
-	$(".tab_box_wrap  .tab_box").removeClass("on");
-	minishTabSwiper.slideTo(0, 0);
-})
-
-
-
-// 클리닉 전체보기
-if($(".clinic_page").length>0){
-var swiper = new Swiper(".clinic_page", {
-	slidesPerView: 1,
-	mousewheel: true,
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-	on: {
-		slideChangeTransitionEnd:function(){
-			if(swiper.activeIndex>2){
-				$(".swipe_info .left").css("display","block")
-				$(".swipe_info .right").hide()
-			}else{
-				$(".swipe_info .left").hide()
-				$(".swipe_info .right").css("display","block")
+		on: {
+			slideChangeTransitionEnd:function(){
+				// if(swiper.activeIndex>2){
+				let targetLi = $(".symp_slide_wrap .detail_wrap ul li").eq(sympSwiper.activeIndex);
+				let targetDH = targetLi.find((".detail_hidden"));
+				console.log(sympSwiper.activeIndex ,targetLi)
+				if(targetLi.hasClass("on")==0){
+					$(".symp_slide_wrap .detail_wrap ul li").removeClass("on")
+					$(".detail_hidden").slideUp();
+					targetLi.addClass("on")	
+					targetDH.slideDown()
+				};
 			}
 		}
-	}
-});
-}
+	});
 
-
-//  단계별 증상 슬라이드
-var sympSwiper = new Swiper(".symp_slide_wrap .img_slider", {
-	// loop: true,
-	navigation: {
-	  nextEl: ".symp_slide_wrap .swiper-button-next",
-	  prevEl: ".symp_slide_wrap .swiper-button-prev",
-	},
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-	on: {
-		slideChangeTransitionEnd:function(){
-			// if(swiper.activeIndex>2){
-			let targetLi = $(".symp_slide_wrap .detail_wrap ul li").eq(sympSwiper.activeIndex);
-			let targetDH = targetLi.find((".detail_hidden"));
-			console.log(sympSwiper.activeIndex ,targetLi)
-			if(targetLi.hasClass("on")==0){
-				$(".symp_slide_wrap .detail_wrap ul li").removeClass("on")
-				$(".detail_hidden").slideUp();
-				targetLi.addClass("on")	
-				targetDH.slideDown()
-			};
+	// 단계별 상세보기 버튼
+	$(".btn_detail_open").click(function(){
+		let rtEl = $(this).parents(".symp_slide_wrap");
+		let thisEl = $(this).parents("li");
+		if(thisEl.hasClass("on")){
+			thisEl.find(".detail_hidden").slideUp()
+			thisEl.removeClass("on")
+		}else{
+			rtEl.find(".detail_hidden").slideUp()
+			thisEl.find(".detail_hidden").slideDown();
+			rtEl.find("li").removeClass("on")
+			thisEl.addClass("on")
 		}
-	}
-});
-
-// 단계별 상세보기 버튼
-$(".btn_detail_open").click(function(){
-	let rtEl = $(this).parents(".symp_slide_wrap");
-	let thisEl = $(this).parents("li");
-	if(thisEl.hasClass("on")){
-		thisEl.find(".detail_hidden").slideUp()
-		thisEl.removeClass("on")
-	}else{
-		rtEl.find(".detail_hidden").slideUp()
-		thisEl.find(".detail_hidden").slideDown();
-		rtEl.find("li").removeClass("on")
-		thisEl.addClass("on")
-	}
-})
+	})
 
 
 
-//  잇몸치료 슬라이드
-var gumBnaSwiper = new Swiper(".gum_bna_slider", {
-	// loop: true,
-	navigation: {
-	  nextEl: ".gum_bna_slider .swiper-button-next",
-	  prevEl: ".gum_bna_slider .swiper-button-prev",
-	},
-});
+	//  잇몸치료 슬라이드
+	var gumBnaSwiper = new Swiper(".gum_bna_slider", {
+		// loop: true,
+		navigation: {
+		nextEl: ".gum_bna_slider .swiper-button-next",
+		prevEl: ".gum_bna_slider .swiper-button-prev",
+		},
+	});
 
 
 
-var cavitySwiper = new Swiper(".cavity_slider", {
-	loop: true,
-	navigation: {
-		nextEl: ".cavity_slider .swiper-button-next",
-		prevEl: ".cavity_slider .swiper-button-prev",
-	  },
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-});
+	// 충치치료 슬라이드
+	var cavitySwiper = new Swiper(".cavity_slider", {
+		loop: true,
+		navigation: {
+			nextEl: ".cavity_slider .swiper-button-next",
+			prevEl: ".cavity_slider .swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+//----------클리닉 end------------- //

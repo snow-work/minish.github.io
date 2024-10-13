@@ -899,18 +899,16 @@ gnb : 200
 	min-width: 11.1rem;
 }
 .header_con .top_tnb > p {
+	padding-bottom: 0.5rem;
 	font-size: 1.6rem;
 	font-family: "AmstelvarAlpha", serif;
 	letter-spacing: -0.1rem;
 }
 .header_con .top_tnb ul {
 	display: none;
-    /* height: 13.4rem; */
-	margin-top: 0.5rem;
     padding: 1.6rem 0.9rem 1.2rem;
     background: rgba(59, 50, 66, 0.2);
     border-radius: 0.6rem;
-	transition: height 0.5s;
 }
 .header_con .top_tnb ul li a {
 	display: block;
