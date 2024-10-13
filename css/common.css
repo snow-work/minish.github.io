@@ -67,7 +67,7 @@ a {
 ul li {
 	list-style: none;
 }
-img {max-width: 100%;}
+img {width: 100%;}
 .ver_pc {
 	display: block;
 }
@@ -711,6 +711,13 @@ gnb : 200
     background-image: url(../images/btn_icon_arr_dark.svg);
     border: 0.1rem solid #8D7F74;
     color: #433A34;
+	transition: all 0.3s;
+}
+.btn_arr_border.dark:hover {
+	background-image: url(../images/btn_icon_arr_white.svg);
+    background-color: #8D7F74;
+    border: 0.1rem solid #8D7F74;
+    color: #F8F6F0;
 }
 .btn_arr_border.light {
     background-image: url(../images/btn_icon_arr_white.svg);
@@ -1333,7 +1340,9 @@ gnb : 200
 	line-height: 2.6rem;
 	color: rgba(255,255,255,0.4)
 }
-
+.footer_bottom .footer_logo {
+	width: 11.2rem;
+}
 
 
 /* 팝업 공통 */

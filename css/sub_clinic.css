@@ -1340,6 +1340,9 @@
 .gum_sec02_wrap .step_wrap li {
     width: 23.1%;
 }
+.gum_sec02_wrap .step_wrap li img {
+    width: 100%
+}
 .gum_sec02_wrap .text_wrap {
 	margin-top: 2rem;
     text-align: center;
@@ -1481,6 +1484,9 @@
 }
 .gum_sec04_wrap .img_wrap .img_box~.img_box {
     margin-top: 2rem;
+}
+.gum_sec04_wrap .img_wrap .img_box img {
+    width: 100%;
 }
 
 

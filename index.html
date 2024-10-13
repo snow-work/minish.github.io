@@ -13,6 +13,8 @@
 	<script src="https://player.vimeo.com/api/player.js"></script>
 	<script type="text/javascript" src="./js/ui-common.js" defer ></script>
 	
+	
+	<link href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 	<link href="./css/common.css" rel="stylesheet" type="text/css">
 	<link href="./css/main.css" rel="stylesheet" type="text/css">
 </head>
@@ -266,8 +268,7 @@
 			<div class="main_personal_con scr_chk">
 				<div class="wrap">
 					<div class="personal_img_wrap">
-						<img class="img01 ver_pc" src="./images/main_personal_img01.png" alt="">
-						<img class="img01 ver_mo" src="./images/main_personal_img01_m.png" alt="">
+						<img class="img01" src="./images/main_personal_img01.png" alt="">
 						<img class="img02" src="./images/main_personal_img02.png" alt="">
 						<img class="img03" src="./images/main_personal_img03.png" alt="">
 						<img class="img04" src="./images/main_personal_img04.png" alt="">
@@ -311,8 +312,8 @@
 						</div>
 						<div class="care_left">
 							<img src="./images/main_care_img02-01.png" alt="">
-							<p class="txt">고객님의 머무름이 휴식이 될 수 있도록 안정감을 주는 </p>
-							<p class="tit">휴게 및 대기 공간</p>
+							<p class="txt">강남 대형치과병원의 경력 보유</p>
+							<p class="tit">축적된 경험으로 이야기 하는 스페셜리스트</p>
 						</div>
 					</div>
 					<div class="care_wrap care_03 scr_chk">
@@ -323,8 +324,8 @@
 						</div>
 						<div class="care_left">
 							<img src="./images/main_care_img03-01.png" alt="">
-							<p class="txt">고객님의 머무름이 휴식이 될 수 있도록 안정감을 주는 </p>
-							<p class="tit">휴게 및 대기 공간</p>
+							<p class="txt">고객님의 높은 만족도와 최고의 완성도를 위한</p>
+							<p class="tit">하이엔드 퀄리티의 시술 장비 보유</p>
 						</div>
 					</div>
 				</div>
@@ -341,38 +342,101 @@
 				</div>
 			</div>
 
-			<div class="main_dr_con ">
-				<div class="wrap">
-					<div class="dr_wrap dr01">
-						<div class="dr_info">
-							<p class="pos">Doctor</p>
-							<p class="name_kr">이주홍</p>
-							<p class="name_en">Lee Zhu - Hong</p>
-							<div class="btn_wrap">
-								<button>대표 원장  더 알아보기</button>
+			<div class="main_dr_con">
+				<div class="dr_slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dr_wrap scr_chk">
+							<div class="dr_img">
+								<img class="ver_pc" src="./images/main_dr_img_zhuhong.png" alt="">
+								<img class="ver_mo" src="./images/main_dr_img_zhuhong_mo.png" alt="">
+							</div>
+							<div class="dr_con">
+								<div class="dr_info">
+									<p class="pos">Doctor</p>
+									<p class="name_kr">이주홍</p>
+									<p class="name_en">Lee Zhu - Hong</p>
+								</div>
+								<p class="dr_motto ver_pc">
+									교과서적인 형식적인<br> 
+									치료는 이제 그만!
+								</p>
+								<p class="dr_motto ver_mo">
+									“교과서적인 형식적인<br>치료는 이제 그만!”
+								</p>
 							</div>
 						</div>
-						<p class="dr_motto">“교과서적인&emsp;형식적인<br>
-							&emsp;&emsp;치료는&emsp;이제&emsp;그만!”</p>
-						<div class="dr_img">
-							<img class="ver_pc" src="./images/main_dr_img_zhuhong.png" alt="">
-							<img class="ver_mo" src="./images/main_dr_img_zhuhong_mo.png" alt="">
+						<div class="swiper-slide dr_wrap scr_chk">
+							<div class="dr_img">
+								<img class="ver_pc" src="./images/main_dr_img_anna.png" alt="">
+								<img class="ver_mo" src="./images/main_dr_img_anna_mo.png" alt="">
+							</div>
+							<div class="dr_con">
+								<div class="dr_info">
+									<p class="pos">Doctor</p>
+									<p class="name_kr">이애나</p>
+									<p class="name_en">Lee Anna</p>
+								</div>
+								<p class="dr_motto ver_pc">
+									완벽한 스마일라인을 위한<br>
+									당신의 스마일 주치의
+								</p>
+								<p class="dr_motto ver_mo">
+									“완벽한 스마일라인을 위한<br>당신의 스마일 주치의”
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide dr_wrap scr_chk">
+							<div class="dr_img">
+								<img class="ver_pc" src="./images/main_dr_img_jungho.png" alt="">
+								<img class="ver_mo" src="./images/main_dr_img_jungho_mo.png" alt="">
+							</div>
+							<div class="dr_con">
+								<div class="dr_info">
+									<p class="pos">Doctor</p>
+									<p class="name_kr">이주홍</p>
+									<p class="name_en">Lee Zhu - Hong</p>
+								</div>
+								<p class="dr_motto ver_pc">
+									내 가족에게 치료한다는<br>
+									마음으로 진료하겠습니다
+								</p>
+								<p class="dr_motto ver_mo">
+									“내 가족에게 치료한다는<br>마음으로 진료하겠습니다”
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide dr_wrap scr_chk">
+							<div class="dr_img">
+								<img class="ver_pc" src="./images/main_dr_img_pilsang.png" alt="">
+								<img class="ver_mo" src="./images/main_dr_img_pilsang_mo.png" alt="">
+							</div>
+							<div class="dr_con">
+								<div class="dr_info">
+									<p class="pos">Doctor</p>
+									<p class="name_kr">윤필상</p>
+									<p class="name_en">Yoon Pil-Sang</p>
+								</div>
+								<p class="dr_motto ver_pc">
+									따뜻한 마음과 정직한 진료로<br>
+									당당한 웃음을<br>
+									찾아 드리겠습니다
+								</p>
+								<p class="dr_motto ver_mo">
+									“따듯한 마음과 정직한 진료로<br>당당한 웃음을 찾아 드리겠습니다”
+								</p>
+							</div>
 						</div>
 					</div>
-					<div class="dr_wrap dr02">
-						<div class="dr_info">
-							<p class="pos">Doctor</p>
-							<p class="name_kr">이애나</p>
-							<p class="name_en">Lee Anna</p>
-							<div class="btn_wrap">
-								<button>대표 원장  더 알아보기</button>
-							</div>
-						</div>
-						<p class="dr_motto">“완벽한&emsp;스마일라인을&emsp;위한<br>
-							&emsp;&emsp;당신의&emsp;스마일&emsp;주치의”</p>
-						<div class="dr_img">
-							<img class="ver_pc" src="./images/main_dr_img_anna.png" alt="">
-							<img class="ver_mo" src="./images/main_dr_img_anna_mo.png" alt="">
+				</div>
+				<div class="dr_fix_wrap">
+					<div class="df_top">
+						<img src="./images/main_dr_img_logo.svg" alt="">
+					</div>
+					<div class="df_bot">
+						<img src="./images/main_dr_img_oao.svg" alt="">
+						<p class="txt">당신의 미소를 더욱 특별하게</p>
+						<div class="btn_wrap">
+							<a href="./html/sub/sub1-2.html" class="btn_arr_border dark">대표 원장  더 알아보기</a>
 						</div>
 					</div>
 				</div>

@@ -11,6 +11,9 @@ window.onload=function(){
 	}, 2000);
 
 
+	// 메인 의사소개 영역
+	drSliderSet();
+
 
 	// 로그인, 회원가입, 에러 검은헤더
 	if($(".page_wrap").hasClass("join")||$(".page_wrap").hasClass("login")||$(".page_wrap").hasClass("error")){
@@ -53,36 +56,21 @@ window.onload=function(){
 			},
 		});
 	}
-	// if($('.clinic_page').length>0){
-	// 	$('.clinic_page').fullpage({
-	// 		//options here
-	// 		// scrollHorizontally: true,
-	// 		responsiveWidth: 768,
-	// 		// normalScrollElements:'.sec_last',
-	// 		onLeave: function(origin, destination, direction, trigger) {
-	// 			if(destination.index==0){
-	// 				$("#header .top_wrap").removeClass("fixed down")
-	// 			}else{
-	// 				$("#header .top_wrap").addClass("fixed")
-	// 				if(direction == "up"){
-	// 					$("#header .top_wrap").addClass("down")
-	// 				}else{
-	// 					$("#header .top_wrap").removeClass("down")
-	// 				}
-	// 			}
-	// 			// origin.item.querySelector(".scr_chk").classList.remove('active')
-	// 			// console.log(origin.item.classList)
-	// 		},
-	// 		onScrollOverflow: function( section, slide, position, direction){
-	// 			if(direction == "up"){
-	// 				$("#header .top_wrap").addClass("down")
-	// 			}else{
-	// 				$("#header .top_wrap").removeClass("down")
-	// 			}
-	// 		},
-	// 	});
-	// }
 }
+
+
+
+$(window).resize(function(){
+	// 모바일에서 태블릿으로 넘어갈때 GNB 아코디언 처리 해제
+	if($(document).width()>768){
+		$(".gnb_list ul").attr("style","");
+	}
+
+
+	// 메인 의사소개 영역 스와이퍼 조정
+	drSliderSet();
+})
+
 
 
 // 헤더 퀵
@@ -102,19 +90,11 @@ $(".btn_gnb_close").click(function(){
 })
 //  gnb 모바일에서 하단메뉴 아코디언처리
 $(".gnb_list strong").click(function(){
-	console.log( $(this))
 	if($(document).width()<=768){
 		$(".gnb_list ul").slideUp();
 		$(this).next().slideDown();
 	}
 })
-$(window).resize(function(){
-	// 모바일에서 태블릿으로 넘어갈때 아코디언 처리 해제
-	if($(document).width()>768){
-		$(".gnb_list ul").attr("style","");
-	}
-})
-
 
 
 
@@ -255,6 +235,7 @@ function page_swiching(tpage){
 
 
 
+
 // 스크롤 fade  
 // 스크롤 체크할 객체
 const scrEl = document.querySelectorAll(".scr_chk")
@@ -313,14 +294,29 @@ $(".notice_wrap button").click(function(){
 })
 
 
-// 의사 마우스오버 이벤트
-$(".dr_wrap").hover(function(){
-	if($(document).width()>768){
-		$(".dr_wrap").toggleClass('off');
-		$(this).removeClass('off');
-		$(this).toggleClass('on');
+// 메인 의사 스와이퍼
+var miniDrSwiper = undefined;
+function drSliderSet(){
+	if(window.innerWidth>768 && miniDrSwiper == undefined){
+		// pc이면서 스와이퍼 실행중이 아님
+		miniDrSwiper = new Swiper(".main_dr_con .dr_slider", {
+			slidesPerView: "auto",
+			spaceBetween:0,
+			touchRatio: 0.25,
+			autoplay:true,
+			loop:true,
+		})
+	}else{
+		if(window.innerWidth<=768 && miniDrSwiper != undefined){
+			// mo이면서, pc에서 모바일로 넘어옴 => destroy
+			miniDrSwiper.destroy();
+			miniDrSwiper = undefined;
+		}
 	}
-})
+}
+
+
+
 
 
 // oao 영역, 헤더 스크롤 이벤트
@@ -329,7 +325,7 @@ document.addEventListener("scroll", (e) => {
 	// oao 텍스트, 이미지 fixed
 	if($(".main_oao_con").length>0){
 		// PC에서만
-		if($(document).width()>768){
+		if(window.innerWidth>768){
 			// oao fiexd 범위 
 			let titStartPoint= $('.scr_chk_point.point01').offset().top;
 			let titEndPoint= $('.scr_chk_point.point02').offset().top;
