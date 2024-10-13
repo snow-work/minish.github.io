@@ -28,7 +28,7 @@ window.onload=function(){
 	}
 
 
-	// fullpage 플러그인 (B&A, 진료과목 전체)
+	// fullpage 플러그인 (B&A)
 	if($('.bna_page').length>0){
 		$('.bna_page').fullpage({
 			//options here
@@ -45,7 +45,10 @@ window.onload=function(){
 						$("#header .top_wrap").removeClass("down")
 					}
 				}
-				origin.item.querySelector(".scr_chk").classList.remove('active')
+				if(window.visualViewport.width>768){
+					// PC에서 scr_chk기능 보정
+					origin.item.querySelector(".scr_chk").classList.remove('active')
+				}
 			},
 			onScrollOverflow: function( section, slide, position, direction){
 				if(direction == "up"){
