@@ -181,16 +181,14 @@ $(".ui_tab ul li button").click(function(){
 	let elIndex = $(this).parent().index();
 	let eltxt = $(this).text();
 	if($(this).hasClass("on")==0){
-		// console.log(elContants.find(".tab_box").eq(elIndex))
+		// 
 		elTab.find("button").removeClass("on");
 		elContants.find(".tab_box").removeClass("on");
 		$(this).addClass("on")
 		elContants.find(".tab_box").eq(elIndex).addClass("on")
 		elTab.find(".btn_tab_open").html(eltxt);
-		elTab.find(".ui_tab").removeClass("active")
-	}else{
-		elTab.find(".ui_tab").removeClass("active")
 	}
+	elTab.find(".ui_tab").removeClass("active")
 })
 // 모바일 탭 열림/닫힘
 $(".ui_tab .btn_tab_open").click(function(){
@@ -201,7 +199,7 @@ $(".ui_tab .btn_tab_open").click(function(){
 		$(this).parents(".ui_tab").addClass("active");
 	}
 });
-// 특정탭으로 이동
+// 특정탭으로 이동  - ex 예약
 function moveTab(tgTab, tgIndex){
 	// tgTab 이동할 탭 클래스
 	// tgIndex 이동할 탭 인덱스
@@ -214,7 +212,7 @@ function moveTab(tgTab, tgIndex){
 	tgTabBox.find(".tab_box").eq(tgIndex).addClass("on");
 }
 
-// 서브비주얼 변경 함수
+// 서브비주얼 변경 - ex 공지사항 새소식
 function chage_subvisaul(svClass){
 	$(".sub_visual_con").attr('class', 'sub_visual_con');
 	$(".sub_visual_con").addClass(svClass)
@@ -301,7 +299,7 @@ scrEl.forEach(scr => observerOut.observe(scr));
 	var miniDrSwiper = undefined;
 	function drSliderSet(){
 		if(window.innerWidth>768 && miniDrSwiper == undefined){
-			// pc이면서 스와이퍼 실행중이 아님
+			// pc 스와이퍼 실행, 중복실행 방지
 			miniDrSwiper = new Swiper(".main_dr_con .dr_slider", {
 				slidesPerView: "auto",
 				spaceBetween:0,
@@ -311,7 +309,7 @@ scrEl.forEach(scr => observerOut.observe(scr));
 			})
 		}else{
 			if(window.innerWidth<=768 && miniDrSwiper != undefined){
-				// mo이면서, pc에서 모바일로 넘어옴 => destroy
+				// pc에서 모바일로 넘어오면 destroy
 				miniDrSwiper.destroy();
 				miniDrSwiper = undefined;
 			}
@@ -524,7 +522,6 @@ scrEl.forEach(scr => observerOut.observe(scr));
 	});
 
 
-
 	// 병원소개 - 공간안내 슬라이드
 	var spaceSwiper01 = new Swiper(".space_swiper01", {
 		autoplay:true,
@@ -534,9 +531,6 @@ scrEl.forEach(scr => observerOut.observe(scr));
 		},
 	});
 	var spaceSwiper02 = new Swiper(".space_swiper02", {
-		// slidesPerView: "2",
-		// slidesPerGroup: "2",
-		// loop: true,
 		navigation: {
 		nextEl: ".space_swiper02_wrap .swiper-button-next",
 		prevEl: ".space_swiper02_wrap .swiper-button-prev",
@@ -570,12 +564,7 @@ scrEl.forEach(scr => observerOut.observe(scr));
 	// 타 페이지에서 링크이동 -> 탭 랜딩 해 올 수 있으므로  hash 처리
 	// ex) 충치클리닉 페이지 -> 어금니 미니쉬탭으로 랜딩
 	$(window).on('hashchange', function(){
-		// alert( location.hash)
 		switch(location.hash) {
-			// case '':
-			// case '#':
-			// alert('nothing');
-			// break;
 			case '#dual':
 			moveTab('.mt_tab_wrap','0')
 			mtTabSetting()
@@ -685,7 +674,6 @@ scrEl.forEach(scr => observerOut.observe(scr));
 
 	//  잇몸치료 슬라이드
 	var gumBnaSwiper = new Swiper(".gum_bna_slider", {
-		// loop: true,
 		navigation: {
 		nextEl: ".gum_bna_slider .swiper-button-next",
 		prevEl: ".gum_bna_slider .swiper-button-prev",
